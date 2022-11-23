@@ -1,0 +1,36 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 20px 19% 0;
+  background: url("../imgs/index/banner.png") no-repeat;
+  background-size: 100% 993px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 341px;
+  height: 92px;
+}
+.old_page {
+  margin-top: 10px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 15px;
+  color: #186daa;
+}
