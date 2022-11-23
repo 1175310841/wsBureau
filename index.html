@@ -6,15 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>青岛水务</title>
     <link rel="stylesheet" href="/css/index.css" />
+    <script src="/js/vue.global.js"></script>
   </head>
   <body>
-    <div class="header">
-      <img src="/imgs/index/logo.png" alt="" class="logo" />
-      <span class="old_page">
-        访问青岛水务集团“
-        <span style="color: #ec6941; font-weight: bold">旧版</span>
-        ”官方网站！
-      </span>
+    <div id="app">
+      <div class="carousel">
+        <!-- 轮播图 -->
+        <div>
+          <img src="/imgs/index/carouselBg.png" alt="" class="carousel_bg" />
+        </div>
+        <!-- 轮播按钮 -->
+        <div class="carousel_btn">
+          <img
+            src="/imgs/index/carouselBtn.png"
+            alt=""
+            style="margin-right: 14px"
+          />
+          <div class="carousel_btn_item"></div>
+          <div class="carousel_btn_item"></div>
+          <div class="carousel_btn_item"></div>
+        </div>
+      </div>
+
+      <div class="body">
+        <!-- 头部 -->
+        <div class="header">
+          <img src="/imgs/index/logo.png" alt="" class="logo" />
+          <span class="old_page">
+            访问青岛水务集团“
+            <span style="color: #ec6941; font-weight: bold">旧版</span>
+            ”官方网站！
+          </span>
+        </div>
+
+        <!-- 导航 -->
+        <ul class="nav">
+          <li>首页</li>
+          <li>集团概况</li>
+          <li>新闻资讯</li>
+          <li>党建工作</li>
+          <li>信息公开</li>
+          <li>网上服务厅</li>
+          <li>营商环境</li>
+          <li>水务科技</li>
+        </ul>
+      </div>
     </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {};
+        },
+      }).mount("#app");
+    </script>
   </body>
 </html>
