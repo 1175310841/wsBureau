@@ -1,66 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>青岛水务</title>
-    <link rel="stylesheet" href="/css/index.css" />
-    <script src="/js/vue.global.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <div class="carousel">
-        <!-- 轮播图 -->
-        <div>
-          <img src="/imgs/index/carouselBg.png" alt="" class="carousel_bg" />
-        </div>
-        <!-- 轮播按钮 -->
-        <div class="carousel_btn">
-          <img
-            src="/imgs/index/carouselBtn.png"
-            alt=""
-            style="margin-right: 14px"
-          />
-          <div class="carousel_btn_item"></div>
-          <div class="carousel_btn_item"></div>
-          <div class="carousel_btn_item"></div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青岛水务</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <script src="/js/vue.global.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="carousel">
+      <!-- 轮播图 -->
+      <div class="carousel_bg">
+        <img src="/imgs/index/carouselBg.png" alt="" />
       </div>
-
-      <div class="body">
-        <!-- 头部 -->
-        <div class="header">
-          <img src="/imgs/index/logo.png" alt="" class="logo" />
-          <span class="old_page">
-            访问青岛水务集团“
-            <span style="color: #ec6941; font-weight: bold">旧版</span>
-            ”官方网站！
-          </span>
+      <!-- 头部 -->
+      <div class="header">
+        <img src="/imgs/index/logo.png" alt="" class="logo" />
+        <span class="old_page">
+          访问青岛水务集团“
+          <span style="color: #ec6941; font-weight: bold">旧版</span>
+          ”官方网站！
+        </span>
+      </div>
+      <!-- 导航 -->
+      <ul class="nav">
+        <li>首页</li>
+        <li>集团概况</li>
+        <li>新闻资讯</li>
+        <li>党建工作</li>
+        <li>信息公开</li>
+        <li>网上服务厅</li>
+        <li>营商环境</li>
+        <li>水务科技</li>
+      </ul>
+      <!-- 轮播按钮 -->
+      <div class="carousel_btn">
+        <img src="/imgs/index/carouselBtn.png" alt="" style="margin-right: 14px" />
+        <div class="carousel_btn_item"></div>
+        <div class="carousel_btn_item"></div>
+        <div class="carousel_btn_item"></div>
+      </div>
+      <!-- 视频 -->
+      <div class="video_area">
+        <video class="video" controls>
+          <source src="/imgs/1.mp4">
+          </source>
+          您的浏览器不支持 HTML5 video 标签。
+        </video>
+        <div class="video_str">
+          <div class="arrows">
+            <img src="/imgs/index/leftjt.png" alt="">
+            <span></span>
+            <img src="/imgs/index/rightjt.png" alt="">
+          </div>
+          <div class="arrows_tit">水载民生，务泽万家</div>
+          <div class="arrows_txt">
+            青岛水务集团承担青岛市城乡水务投资建设与运营管理及城市固体废弃物处理处置两大主业，产业链涉及城乡供水、排水防汛、污水处理、中水回用、海水淡化、河道运维、污泥处置、固废转运处置及相关产业链延伸发展等领域……</div>
+          <div class="arrows_border"></div>
+          <div class="video_more">
+            <div class="video_more_txt">View More</div>
+            <img src="/imgs/index/morejt.png" alt="">
+          </div>
         </div>
-
-        <!-- 导航 -->
-        <ul class="nav">
-          <li>首页</li>
-          <li>集团概况</li>
-          <li>新闻资讯</li>
-          <li>党建工作</li>
-          <li>信息公开</li>
-          <li>网上服务厅</li>
-          <li>营商环境</li>
-          <li>水务科技</li>
-        </ul>
       </div>
     </div>
 
-    <script>
-      const { createApp } = Vue;
+    <!-- 新闻资讯 -->
+    <div class="news">
+      <div class="news_head">
+        <span class="small_title">新闻资讯</span>
+        <ul class="news_nav">
+          <li class="news_nav_active">图片新闻</li>
+          <li>水务新闻</li>
+          <li>党建新闻</li>
+          <li>更多</li>
+        </ul>
+      </div>
+      <div class="news_body">
+        <div class="news_left">
+          <div class="img">
+            <img src="/imgs/index/carouselBg.png" alt="">
+          </div>
+          <div class="news_arrows">
+            <div class="news_arrows_date">
+              <span>06</span>
+              <span>2022-09</span>
+            </div>
+            <div style="flex: 1;">
+              <div class="news_arrows_title">青岛水务集团举办“智水观澜”论坛</div>
+              <div class="news_arrows_draw"></div>
+              <div class="news_arrows_txt">加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news_list">
+          <div class="news_item_active">
+            <div style="width: 75%;">
+              <p class="news_item_title">水务集团召开第一届第九次职工代表大会</p>
+              <p class="news_item_txt">
+                青岛水务集团有限公司召开第一届第九次职工代表大会。根据疫情防控工作要求，本次大会设主会场和四个分会场，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议...</p>
+            </div>
+            <div class="news_item_active_date">
+              <p>31</p>
+              <p>2022-10</p>
+            </div>
+          </div>
+          <div class="news_item">
+            <p>
+              <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
+              <span>2022-10-31</span>
+            </p>
+          </div>
+          <div class="news_item">
+            <p>
+              <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
+              <span>2022-10-31</span>
+            </p>
+          </div>
+          <div class="news_item">
+            <p>
+              <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
+              <span>2022-10-31</span>
+            </p>
+          </div>
+          <div class="news_item">
+            <p>
+              <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
+              <span>2022-10-31</span>
+            </p>
+          </div>
+          <div class="news_item">
+            <p>
+              <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
+              <span>2022-10-31</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      createApp({
-        data() {
-          return {};
-        },
-      }).mount("#app");
-    </script>
-  </body>
+    <!-- 便民服务 -->
+    <div class="serve">
+      <div class="news_head">
+        <span class="small_title">便民服务</span>
+      </div>
+      <div class="serve_body">
+        <div class="serve_body_left">
+          <div class="serve_item serve_item_top" v-for="(item,index) in serveTopList" :key="index">
+            <img :src="item.url" alt="">
+            <p></p>
+            <div>{{item.txt}}</div>
+          </div>
+          <div class="serve_item serve_item_bottom" v-for="(item,index) in serveBottomList" :key="index">
+            <img :src="item.url" alt="">
+            <p></p>
+            <div>{{item.txt}}</div>
+          </div>
+        </div>
+        <div class="serve_body_right">
+          <img src="/imgs/index/hotline.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- 公司信息 -->
+    <div class="info">
+      <img class="logo_bottom" src="/imgs/index/logo-bottom.png" alt="">
+      <div class="info_middle">
+        <div class="info_middle_div">
+          <div>
+            <span>水行业相关网站</span>
+            <span>▼</span>
+          </div>
+          <div>
+            <span>供排水企业网站</span>
+            <span>▼</span>
+          </div>
+          <div>
+            <span>其它行业网站</span>
+            <span>▼</span>
+          </div>
+        </div>
+        <p>青岛水务集团有限公司版权所有Copyright © 2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 鲁ICP备05053132号 </p>
+      </div>
+      <div class="info_right">
+        <p style="margin-right: 23px;">
+          <img src="/imgs/index/swgzh.png" alt="">
+          <span>青岛水务集团</span>
+          <span>公众微信号</span>
+        </p>
+        <p>
+          <img src="/imgs/index/xfgzh.png" alt="">
+          <span>青岛水务先锋</span>
+          <span>公众微信号</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>http://www.qdwater.com.cn</span>
+      <span>青岛亚讯图航网络科技有限公司&nbsp;&nbsp;&nbsp;技术支持</span>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          serveTopList: [
+            { url: '/imgs/index/counter.png', txt: '供水价格' },
+            { url: '/imgs/index/serce.png', txt: '服务窗口查询' },
+            { url: '/imgs/index/transact.png', txt: '业务办理' },
+            { url: '/imgs/index/horn.png', txt: '停水公告' },
+          ],
+          serveBottomList: [
+            { url: '/imgs/index/mic.png', txt: '水质水压公告' },
+            { url: '/imgs/index/note.png', txt: '用水抄表计划' },
+            { url: '/imgs/index/guide.png', txt: '办事指南' },
+            { url: '/imgs/index/museum.png', txt: '网上博物馆' },
+          ]
+        };
+      },
+    }).mount("#app");
+  </script>
+</body>
+
 </html>
