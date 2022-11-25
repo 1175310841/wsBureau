@@ -32,12 +32,75 @@ ul {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: -100;
+  /* z-index: -100; */
 }
-.carousel .carousel_bg img {
-  width: 100%;
+
+/* 轮播图样式 */
+.SwiperBox {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.imgBox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* 图片默认样式 */
+.imgBox img {
+  flex-shrink: 0;
   height: 100%;
 }
+
+/* 两个按钮共有的样式,也可直接使用箭头图片替代 */
+.leftBtn,
+.rightBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(109, 109, 109, 0.445);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.leftBtn {
+  left: 10px;
+}
+
+.rightBtn {
+  right: 10px;
+}
+
+/* 下方指示器盒子 */
+.instBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  display: flex;
+}
+
+/* 小圆点 */
+.carousel_btn .carousel_btn_item.instActv {
+  width: 42px;
+  border-radius: 14px;
+}
+
 .carousel_btn {
   display: flex;
   position: absolute;
@@ -58,6 +121,7 @@ ul {
 .carousel_btn .carousel_btn_item:last-child {
   margin-right: 0;
 }
+/* **************** */
 
 .header,
 .nav,
@@ -475,6 +539,7 @@ ul {
   box-sizing: border-box;
   background-color: #c1e6f6;
 }
+
 .info_area {
   width: 100%;
   padding: 60px 19% 0;
@@ -482,6 +547,7 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
 .logo_bottom {
   width: 118px;
   height: 129px;
@@ -546,9 +612,11 @@ ul {
   color: #394e69;
   line-height: 18px;
 }
+
 .info_wave {
   height: calc(100% - 204px);
 }
+
 .waves {
   position: relative;
   width: 100%;
@@ -556,31 +624,38 @@ ul {
   min-height: 100px;
   max-height: 150px;
 }
+
 /* Animation */
 
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
+
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
+
 .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
+
 .parallax > use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
+
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
 @keyframes move-forever {
   0% {
     transform: translate3d(-90px, 0, 0);
   }
+
   100% {
     transform: translate3d(85px, 0, 0);
   }

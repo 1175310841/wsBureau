@@ -15,7 +15,23 @@
     <div class="carousel">
       <!-- 轮播图 -->
       <div class="carousel_bg">
-        <img src="/imgs/index/carouselBg.png" alt="" />
+        <div class="SwiperBox" :style="{width: `${imgWidth}px`}" @mouseenter="MouseFun('移入')"
+          @mouseleave="MouseFun('移出')">
+          <!-- 图片 -->
+          <div class="imgBox" :style="{left:`-${leftVal}px`,transition:`${ition}s`}">
+            <img :style="{width: `${imgWidth}px`}" :src="item.imgUrl" v-for="(item,index) in imgList" :key="index" />
+            <!-- 复制第一张放到最后,以实现无缝无线循环滚动效果 -->
+            <img :style="{width: `${imgWidth}px`}" :src="imgList[0].imgUrl" alt="" />
+          </div>
+          <!-- 左箭头按钮 -->
+          <!-- <div class="leftBtn" @click="throttle(PrevFun)">&larr;</div> -->
+          <!-- 右箭头按钮 -->
+          <!-- <div class="rightBtn" @click="throttle(NextFun)">&rarr;</div> -->
+          <div class="carousel_btn">
+            <div @click="instFun(index)" v-for="(item,index) in imgList.length" :key="index"
+              :class="['carousel_btn_item',index==imgShow?'instActv':'']"></div>
+          </div>
+        </div>
       </div>
       <!-- 头部 -->
       <div class="header">
@@ -37,13 +53,6 @@
         <li>营商环境</li>
         <li>水务科技</li>
       </ul>
-      <!-- 轮播按钮 -->
-      <div class="carousel_btn">
-        <img src="/imgs/index/carouselBtn.png" alt="" style="margin-right: 14px" />
-        <div class="carousel_btn_item"></div>
-        <div class="carousel_btn_item"></div>
-        <div class="carousel_btn_item"></div>
-      </div>
       <!-- 视频 -->
       <div class="video_area">
         <video class="video" controls>
@@ -229,6 +238,18 @@
     createApp({
       data() {
         return {
+          imgList: [
+            { imgUrl: "/imgs/index/carouselBg.png" },
+            { imgUrl: "/imgs/index/carouselBg.png" },
+            { imgUrl: "/imgs/index/carouselBg.png" },
+            { imgUrl: "/imgs/index/carouselBg.png" },
+          ],
+          leftVal: 0, // 轮播图盒子的偏移值
+          flag: true, // 用来节流防止重复点击
+          start: null, // 自动执行下一张定的时器
+          imgWidth: 0, // 在这里填写你需要的图片宽度
+          ition: 0.8, // 设置轮播图过度时间
+          imgShow: 0, // 表示当前显示的图片索引
           serveTopList: [
             { url: '/imgs/index/counter.png', txt: '供水价格' },
             { url: '/imgs/index/serce.png', txt: '服务窗口查询' },
@@ -242,6 +263,75 @@
             { url: '/imgs/index/museum.png', txt: '网上博物馆' },
           ]
         };
+      },
+      mounted() {
+        this.timing();
+        this.imgWidth = document.body.clientWidth
+      },
+      methods: {
+
+        MouseFun(type) {
+          type == "移入" ? clearTimeout(this.start) : this.timing();
+        },
+        timing() {
+          this.start = setInterval(() => {
+            this.NextFun();
+          }, 2500);
+        },
+        // 这里通过额外封装的节流函数触发 PrevFun() 和 NextFun(),以达到防止重复点击的效果
+        throttle(fun) {
+          if (this.flag) {
+            this.flag = false;
+            fun(); // 此为模板中传递进来的PrevFun()或NextFun()函数
+            setTimeout(() => {
+              this.flag = true;
+            }, 1200); // 节流间隔时间
+          }
+        },
+        // 上一张
+        PrevFun() {
+          if (this.leftVal == 0) {
+            // 判断显示的图片 是 第一张时执行
+            // this.imgList.length是指循环图片数组的图片个数
+            this.ition = 0; // 将过渡时间变成0，瞬间位移到最后一张图
+            this.imgShow = this.imgList.length - 1; // 将高亮小点改为最后一张图
+            this.leftVal = this.imgList.length * this.imgWidth; // 瞬间移动
+            setTimeout(() => {
+              // 通过延时障眼法,归原过渡时间,执行真正的“上一张”函数
+              this.ition = 0.8;
+              this.leftVal -= this.imgWidth;
+            }, this.ition * 1000);
+          } else {
+            // 判断显示的图片 不是 第一张时执行
+            this.ition = 0.8;
+            this.leftVal -= this.imgWidth;
+            this.imgShow--;
+          }
+        },
+        // 下一张
+        NextFun() {
+          if (this.leftVal == (this.imgList.length - 1) * this.imgWidth) {
+            // 判断显示的图片 是 最后一张时执行
+            this.ition = 0.8;
+            this.leftVal += this.imgWidth;
+            this.imgShow = 0;
+            setTimeout(() => {
+              this.ition = 0;
+              this.leftVal = 0;
+            }, this.ition * 1000);
+          } else {
+            // 判断显示的图片 不是 最后一张时执行
+            this.ition = 0.8;
+            this.leftVal += this.imgWidth;
+            this.imgShow++;
+          }
+        },
+        // 点击小圆点
+        instFun(index) {
+          this.ition = 0.8;
+          this.leftVal = index * this.imgWidth;
+          this.imgShow = index;
+        },
       },
     }).mount("#app");
   </script>
