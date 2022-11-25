@@ -267,9 +267,17 @@
       mounted() {
         this.timing();
         this.imgWidth = document.body.clientWidth
+        window.onresize =  ()=> {  //监听屏幕的改变
+          setTimeout( ()=> {
+            this.refresh();
+          }, 10)
+        };
       },
       methods: {
-
+        refresh() {
+          let width = document.body.clientWidth;
+          this.imgWidth = width
+        },
         MouseFun(type) {
           type == "移入" ? clearTimeout(this.start) : this.timing();
         },
