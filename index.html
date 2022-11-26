@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>青岛水务</title>
+  <script src="/libs/vue.global.js"></script>
+  <script src="/libs/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="/css/index.css" />
-  <script src="/js/vue.global.js"></script>
 </head>
 
 <body>
   <div id="app">
-    <div class="carousel">
+    <div class="carousel flex_column_center">
       <!-- 轮播图 -->
       <div class="carousel_bg">
         <div class="SwiperBox" :style="{width: `${imgWidth}px`}" @mouseenter="MouseFun('移入')"
@@ -44,7 +45,7 @@
       </div>
       <!-- 导航 -->
       <ul class="nav">
-        <li>首页</li>
+        <li class="navAct">首页</li>
         <li>集团概况</li>
         <li>新闻资讯</li>
         <li>党建工作</li>
@@ -79,7 +80,7 @@
     </div>
 
     <!-- 新闻资讯 -->
-    <div class="news">
+    <div class="news flex_column_center">
       <div class="news_head">
         <span class="small_title">新闻资讯</span>
         <ul class="news_nav">
@@ -154,8 +155,8 @@
     </div>
 
     <!-- 便民服务 -->
-    <div class="serve">
-      <div class="news_head">
+    <div class="serve flex_column_center">
+      <div class="news_head serve_head">
         <span class="small_title">便民服务</span>
       </div>
       <div class="serve_body">
@@ -178,7 +179,7 @@
     </div>
 
     <!-- 公司信息 -->
-    <div class="info">
+    <div class="info flex_column_center">
       <div class="info_area">
         <img class="logo_bottom" src="/imgs/index/logo-bottom.png" alt="">
         <div class="info_middle">
@@ -284,7 +285,7 @@
         timing() {
           this.start = setInterval(() => {
             this.NextFun();
-          }, 2500);
+          }, 250000000000);
         },
         // 这里通过额外封装的节流函数触发 PrevFun() 和 NextFun(),以达到防止重复点击的效果
         throttle(fun) {
@@ -343,6 +344,7 @@
       },
     }).mount("#app");
   </script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>
