@@ -14,6 +14,10 @@
 <body>
   <div id="app">
     <div class="carousel flex_column_center">
+      <!-- 菜单 -->
+      <div class="burger">
+        <div class="menu"></div>
+      </div>
       <!-- 轮播图 -->
       <div class="carousel_bg">
         <div class="SwiperBox" :style="{width: `${imgWidth}px`}" @mouseenter="MouseFun('移入')"
@@ -161,12 +165,7 @@
       </div>
       <div class="serve_body">
         <div class="serve_body_left">
-          <div class="serve_item serve_item_top" v-for="(item,index) in serveTopList" :key="index">
-            <img :src="item.url" alt="">
-            <p></p>
-            <div>{{item.txt}}</div>
-          </div>
-          <div class="serve_item serve_item_bottom" v-for="(item,index) in serveBottomList" :key="index">
+          <div class="serve_item" v-for="(item,index) in serveList" :key="index">
             <img :src="item.url" alt="">
             <p></p>
             <div>{{item.txt}}</div>
@@ -227,9 +226,11 @@
       </div>
     </div>
 
-    <div class="footer">
-      <span>http://www.qdwater.com.cn</span>
-      <span>青岛亚讯图航网络科技有限公司&nbsp;&nbsp;&nbsp;技术支持</span>
+    <div class="footer flex_column_center">
+      <div>
+        <span>http://www.qdwater.com.cn</span>
+        <span>青岛亚讯图航网络科技有限公司&nbsp;&nbsp;&nbsp;技术支持</span>
+      </div>
     </div>
   </div>
 
@@ -251,13 +252,11 @@
           imgWidth: 0, // 在这里填写你需要的图片宽度
           ition: 0.8, // 设置轮播图过度时间
           imgShow: 0, // 表示当前显示的图片索引
-          serveTopList: [
+          serveList: [
             { url: '/imgs/index/counter.png', txt: '供水价格' },
             { url: '/imgs/index/serce.png', txt: '服务窗口查询' },
             { url: '/imgs/index/transact.png', txt: '业务办理' },
             { url: '/imgs/index/horn.png', txt: '停水公告' },
-          ],
-          serveBottomList: [
             { url: '/imgs/index/mic.png', txt: '水质水压公告' },
             { url: '/imgs/index/note.png', txt: '用水抄表计划' },
             { url: '/imgs/index/guide.png', txt: '办事指南' },
@@ -268,8 +267,8 @@
       mounted() {
         this.timing();
         this.imgWidth = document.body.clientWidth
-        window.onresize =  ()=> {  //监听屏幕的改变
-          setTimeout( ()=> {
+        window.onresize = () => {  //监听屏幕的改变
+          setTimeout(() => {
             this.refresh();
           }, 10)
         };

@@ -28,3 +28,4 @@ ScrollReveal().reveal(".serve_head", { ...staggeringOption });
 ScrollReveal().reveal(".serve_item", { ...staggeringOption, interval: 150 });
 ScrollReveal().reveal(".serve_body_right", { ...staggeringOption });
 ScrollReveal().reveal(".info_area", { ...staggeringOption });
+ScrollReveal().reveal(".burger", { ...staggeringOption });
