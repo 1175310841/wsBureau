@@ -29,3 +29,13 @@ ScrollReveal().reveal(".serve_item", { ...staggeringOption, interval: 150 });
 ScrollReveal().reveal(".serve_body_right", { ...staggeringOption });
 ScrollReveal().reveal(".info_area", { ...staggeringOption });
 ScrollReveal().reveal(".burger", { ...staggeringOption });
+
+// burger点击事件
+const burgerEl = document.querySelector(".burger");
+burgerEl.addEventListener("click", () => {
+  if (!navEl.classList.contains("phoneNav")) {
+    navEl.classList.add("phoneNav");
+  } else {
+    navEl.classList.remove("phoneNav");
+  }
+});
