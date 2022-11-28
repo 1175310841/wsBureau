@@ -300,7 +300,7 @@
         timing() {
           this.start = setInterval(() => {
             this.NextFun();
-          }, 250000000000);
+          }, 2500);
         },
         // 这里通过额外封装的节流函数触发 PrevFun() 和 NextFun(),以达到防止重复点击的效果
         throttle(fun) {
