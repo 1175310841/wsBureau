@@ -196,7 +196,7 @@ ul.sticky {
   }
 }
 
-.phoneNav {
+#phoneNav {
   display: none;
 }
 .nav li,
