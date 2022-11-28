@@ -196,9 +196,9 @@ ul.sticky {
   }
 }
 
-#phoneNav {
+/* #phoneNav {
   display: none;
-}
+} */
 .nav li,
 .phoneNav li {
   height: 19px;
