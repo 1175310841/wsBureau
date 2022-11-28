@@ -28,14 +28,17 @@ ScrollReveal().reveal(".serve_head", { ...staggeringOption });
 ScrollReveal().reveal(".serve_item", { ...staggeringOption, interval: 150 });
 ScrollReveal().reveal(".serve_body_right", { ...staggeringOption });
 ScrollReveal().reveal(".info_area", { ...staggeringOption });
-ScrollReveal().reveal(".burger", { ...staggeringOption });
+// ScrollReveal().reveal(".burger", { ...staggeringOption });
 
 // burger点击事件
 const burgerEl = document.querySelector(".burger");
+const phoneNavEl = document.getElementById("phoneNav");
 burgerEl.addEventListener("click", () => {
-  if (!navEl.classList.contains("phoneNav")) {
-    navEl.classList.add("phoneNav");
+  if (!phoneNavEl.classList.contains("phoneNav")) {
+    phoneNavEl.classList.add("phoneNav");
+    phoneNavEl.style.display = "flex";
   } else {
-    navEl.classList.remove("phoneNav");
+    phoneNavEl.classList.remove("phoneNav");
+    phoneNavEl.style.display = "none";
   }
 });
