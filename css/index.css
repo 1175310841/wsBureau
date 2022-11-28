@@ -859,12 +859,15 @@ ul.sticky {
     box-sizing: border-box;
   }
   .carousel {
-    height: auto;
+    height: 640px;
     position: relative;
     padding-bottom: 60px;
   }
   .carousel .carousel_bg {
     position: absolute;
+  }
+  .carousel_btn {
+    top: 660px;
   }
   .burger {
     position: fixed;
