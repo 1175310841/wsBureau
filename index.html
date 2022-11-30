@@ -50,19 +50,28 @@
       </div>
       <!-- 导航 -->
       <ul class="nav">
-        <li class="navAct">首页</li>
-        <li>集团概况</li>
-        <li>新闻资讯</li>
-        <li>党建工作</li>
-        <li>信息公开</li>
-        <li>网上服务厅</li>
-        <li>营商环境</li>
-        <li>水务科技</li>
+        <li class="navAct"><span>首页</span></li>
+        <li>
+          <span>集团概况</span>
+          <ul class="second_menu">
+            <li><a href=""><span></span>企业简介</a></li>
+            <li><a href=""><span></span>机构设置</a></li>
+            <li><a href=""><span></span>企业文化</a></li>
+          </ul>
+        </li>
+        <li><span>新闻资讯</span></li>
+        <li><span>党建工作</span></li>
+        <li><span>信息公开</span></li>
+        <li><span>网上服务厅</span></li>
+        <li><span>营商环境</span></li>
+        <li><span>水务科技</span></li>
       </ul>
       <!-- 导航 -->
       <ul id="phoneNav" style="display: none;">
         <li class="navAct">首页</li>
-        <li>集团概况</li>
+        <li>
+          集团概况
+        </li>
         <li>新闻资讯</li>
         <li>党建工作</li>
         <li>信息公开</li>
@@ -79,13 +88,27 @@
         </video>
         <div class="video_str">
           <div class="arrows">
-            <img src="./imgs/index/leftjt.png" alt="">
+            <img src="./imgs/index/leftjt.png" alt="" @click="arrowsLeftImg()">
             <span></span>
-            <img src="./imgs/index/rightjt.png" alt="">
+            <img src="./imgs/index/rightjt.png" alt="" @click="arrowsRightImg()">
           </div>
           <div class="arrows_tit">水载民生，务泽万家</div>
-          <div class="arrows_txt">
-            青岛水务集团承担青岛市城乡水务投资建设与运营管理及城市固体废弃物处理处置两大主业，产业链涉及城乡供水、排水防汛、污水处理、中水回用、海水淡化、河道运维、污泥处置、固废转运处置及相关产业链延伸发展等领域……</div>
+          <div class="arrows_txt" ref="arrowsTxt">
+            <div class="arrows_txt_carousel" :style="{left:`-${leftArrowVal}px`,transition:`all 0.5s ease`}">
+              <div :style="{width: `${arrowsTxtWidth}px`}">
+                青岛水务集团有限公司是由青岛市海润自来水集团有限公司、青岛城投集团所属9户污水处理企业和市排水管理处所属第一至第五工区、城市排水监测站、排水收费管理所、机运队、排水监管服务中心、维修队等二级单位组建的市直国有大型企业……
+              </div>
+              <div :style="{width: `${arrowsTxtWidth}px`}">
+                水务集团承担青岛市城乡水务投资建设与运营管理及城市固体废弃物处理处置两大主业，产业链涉及城乡供水、排水防汛、污水处理、中水回用、海水淡化、河道运维、污泥处置、固废转运处置及相关产业链延伸发展等领域……
+              </div>
+              <div :style="{width: `${arrowsTxtWidth}px`}">
+                水务集团确定公司战略规划、管理模式，对内业务进行优化整合，建立新组织架构，各项工作正常开展，实现平稳过渡，较好地完成城市水务保障任务，对外投资、平台建设、资本运营等方面实现新突破，为下一步跨越发展奠定良好基础……
+              </div>
+              <div :style="{width: `${arrowsTxtWidth}px`}">
+                水务集团严格贯彻落实市委、市政府的工作部署，全力做好各项工作为青岛市经济社会发展提供有力的支撑和保障。所辖全资及控股、参股企业50家，以强劲的发展势头和良好的经营业绩，赢得了社会和业界的广泛认可和好评。
+              </div>
+            </div>
+          </div>
           <div class="arrows_border"></div>
           <div class="video_more">
             <div class="video_more_txt">View More</div>
@@ -109,7 +132,7 @@
       <div class="news_body">
         <div class="news_left">
           <div class="img">
-            <img src="./imgs/index/carouselBg.png" alt="">
+            <img src="./imgs/index/carouselBg1.png" alt="">
           </div>
           <div class="news_arrows">
             <div class="news_arrows_date">
@@ -177,11 +200,11 @@
       </div>
       <div class="serve_body">
         <div class="serve_body_left">
-          <div class="serve_item" v-for="(item,index) in serveList" :key="index">
+          <a :href="item.path" class="serve_item" v-for="(item,index) in serveList" :key="index">
             <img :src="item.url" alt="">
             <p></p>
             <div>{{item.txt}}</div>
-          </div>
+          </a>
         </div>
         <div class="serve_body_right">
           <img src="./imgs/index/hotline.png" alt="">
@@ -194,18 +217,29 @@
       <div class="info_area">
         <img class="logo_bottom" src="./imgs/index/logo-bottom.png" alt="">
         <div class="info_middle">
-          <div class="info_middle_div">
-            <div>
-              <span>水行业相关网站</span>
-              <span>▼</span>
+          <div class="info_middle_select">
+            <div class="info_middle_div">
+              <p>
+                <span>水行业相关网站</span>
+                <span>▼</span>
+              </p>
+              <div>
+                <div>123</div>
+              </div>
             </div>
-            <div>
-              <span>供排水企业网站</span>
-              <span>▼</span>
+            <div class="info_middle_div">
+              <p>
+                <span>供排水企业网站</span>
+                <span>▼</span>
+              </p>
+              <div></div>
             </div>
-            <div>
-              <span>其它行业网站</span>
-              <span>▼</span>
+            <div class="info_middle_div">
+              <p>
+                <span>其他行业网站</span>
+                <span>▼</span>
+              </p>
+              <div></div>
             </div>
           </div>
           <p>青岛水务集团有限公司版权所有Copyright © 2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 鲁ICP备05053132号 </p>
@@ -257,10 +291,11 @@
       data() {
         return {
           imgList: [
-            { imgUrl: "./imgs/index/carouselBg.png" },
-            { imgUrl: "./imgs/index/carouselBg.png" },
-            { imgUrl: "./imgs/index/carouselBg.png" },
-            { imgUrl: "./imgs/index/carouselBg.png" },
+            { imgUrl: "./imgs/index/carouselBg1.png" },
+            { imgUrl: "./imgs/index/carouselBg2.png" },
+            { imgUrl: "./imgs/index/carouselBg3.png" },
+            { imgUrl: "./imgs/index/carouselBg4.png" },
+            { imgUrl: "./imgs/index/carouselBg5.png" },
           ],
           leftVal: 0, // 轮播图盒子的偏移值
           flag: true, // 用来节流防止重复点击
@@ -269,15 +304,18 @@
           ition: 0.8, // 设置轮播图过度时间
           imgShow: 0, // 表示当前显示的图片索引
           serveList: [
-            { url: './imgs/index/counter.png', txt: '供水价格' },
-            { url: './imgs/index/serce.png', txt: '服务窗口查询' },
-            { url: './imgs/index/transact.png', txt: '业务办理' },
-            { url: './imgs/index/horn.png', txt: '停水公告' },
-            { url: './imgs/index/mic.png', txt: '水质水压公告' },
-            { url: './imgs/index/note.png', txt: '用水抄表计划' },
-            { url: './imgs/index/guide.png', txt: '办事指南' },
-            { url: './imgs/index/museum.png', txt: '网上博物馆' },
-          ]
+            { path: '#', url: './imgs/index/counter.png', txt: '供水价格' },
+            { path: '#', url: './imgs/index/serce.png', txt: '服务窗口查询' },
+            { path: '#', url: './imgs/index/transact.png', txt: '业务办理' },
+            { path: '#', url: './imgs/index/horn.png', txt: '停水公告' },
+            { path: '#', url: './imgs/index/mic.png', txt: '水质水压公告' },
+            { path: '#', url: './imgs/index/note.png', txt: '用水抄表计划' },
+            { path: '#', url: './imgs/index/guide.png', txt: '办事指南' },
+            { path: '#', url: './imgs/index/museum.png', txt: '网上博物馆' },
+          ],
+          arrowsTxtWidth: 0,
+          leftArrowVal: 0,
+          height: 0
         };
       },
       mounted() {
@@ -288,6 +326,8 @@
             this.refresh();
           }, 10)
         };
+
+        this.arrowsTxtWidth = this.$refs.arrowsTxt.offsetWidth
       },
       methods: {
         refresh() {
@@ -300,7 +340,7 @@
         timing() {
           this.start = setInterval(() => {
             this.NextFun();
-          }, 2500);
+          }, 10000);
         },
         // 这里通过额外封装的节流函数触发 PrevFun() 和 NextFun(),以达到防止重复点击的效果
         throttle(fun) {
@@ -356,6 +396,18 @@
           this.leftVal = index * this.imgWidth;
           this.imgShow = index;
         },
+        arrowsLeftImg() {
+          if (this.leftArrowVal == 0) return
+          this.leftArrowVal = this.leftArrowVal - this.arrowsTxtWidth
+        },
+        arrowsRightImg() {
+          if (this.leftArrowVal == 1200) return
+          this.leftArrowVal = this.leftArrowVal + this.arrowsTxtWidth
+        },
+        asd() {
+          console.log(111);
+          this.height = 300
+        }
       },
     }).mount("#app");
   </script>
