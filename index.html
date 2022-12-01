@@ -49,23 +49,26 @@
         </span>
       </div>
       <!-- 导航 -->
-      <ul class="nav">
-        <li class="navAct"><span>首页</span></li>
-        <li>
-          <span>集团概况</span>
-          <ul class="second_menu">
-            <li><a href=""><span></span>企业简介</a></li>
-            <li><a href=""><span></span>机构设置</a></li>
-            <li><a href=""><span></span>企业文化</a></li>
-          </ul>
-        </li>
-        <li><span>新闻资讯</span></li>
-        <li><span>党建工作</span></li>
-        <li><span>信息公开</span></li>
-        <li><span>网上服务厅</span></li>
-        <li><span>营商环境</span></li>
-        <li><span>水务科技</span></li>
-      </ul>
+      <div class="navigation">
+        <img src="./imgs/navLogo.png" alt="">
+        <ul class="nav">
+          <li class="navAct"><span>首页</span></li>
+          <li>
+            <span>集团概况</span>
+            <ul class="second_menu">
+              <li><a href=""><span></span>企业简介</a></li>
+              <li><a href=""><span></span>机构设置</a></li>
+              <li><a href=""><span></span>企业文化</a></li>
+            </ul>
+          </li>
+          <li><span>新闻资讯</span></li>
+          <li><span>党建工作</span></li>
+          <li><span>信息公开</span></li>
+          <li><span>网上服务厅</span></li>
+          <li><span>营商环境</span></li>
+          <li><span>水务科技</span></li>
+        </ul>
+      </div>
       <!-- 导航 -->
       <ul id="phoneNav" style="display: none;">
         <li class="navAct">首页</li>
@@ -123,14 +126,14 @@
       <div class="news_head">
         <span class="small_title">新闻资讯</span>
         <ul class="news_nav">
-          <li class="news_nav_active">图片新闻</li>
-          <li>水务新闻</li>
-          <li>党建新闻</li>
-          <li>更多</li>
+          <li class="news_nav_active"><a href="">图片新闻</a></li>
+          <li><a href="">水务新闻</a></li>
+          <li><a href="">党建新闻</a></li>
+          <li><a href="">更多</a></li>
         </ul>
       </div>
       <div class="news_body">
-        <div class="news_left">
+        <a class="news_left">
           <div class="img">
             <img src="./imgs/index/carouselBg1.png" alt="">
           </div>
@@ -146,9 +149,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </a>
         <div class="news_list">
-          <div class="news_item_active">
+          <a class="news_item_active">
             <div style="width: 75%;">
               <p class="news_item_title">水务集团召开第一届第九次职工代表大会</p>
               <p class="news_item_txt">
@@ -158,37 +161,37 @@
               <p>31</p>
               <p>2022-10</p>
             </div>
-          </div>
-          <div class="news_item">
+          </a>
+          <a class="news_item">
             <p>
               <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
               <span>2022-10-31</span>
             </p>
-          </div>
-          <div class="news_item">
+          </a>
+          <a class="news_item">
             <p>
               <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
               <span>2022-10-31</span>
             </p>
-          </div>
-          <div class="news_item">
+          </a>
+          <a class="news_item">
             <p>
               <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
               <span>2022-10-31</span>
             </p>
-          </div>
-          <div class="news_item">
+          </a>
+          <a class="news_item">
             <p>
               <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
               <span>2022-10-31</span>
             </p>
-          </div>
-          <div class="news_item">
+          </a>
+          <a class="news_item">
             <p>
               <span>水务集团召开党委扩大会议 传达学习党的二十大精神</span>
               <span>2022-10-31</span>
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -206,9 +209,11 @@
             <div>{{item.txt}}</div>
           </a>
         </div>
-        <div class="serve_body_right">
-          <img src="./imgs/index/hotline.png" alt="">
-        </div>
+        <a class="serve_body_right">
+          <div>
+            <img src="./imgs/index/hotline.png" alt="">
+          </div>
+        </a>
       </div>
     </div>
 

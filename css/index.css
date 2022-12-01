@@ -21,6 +21,7 @@ ol {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .flex_column_center {
@@ -141,7 +142,7 @@ a {
 /* **************** */
 
 .header,
-.nav,
+.navigation,
 .video_area,
 .news_head,
 .news_body,
@@ -171,27 +172,59 @@ a {
   color: #186daa;
 }
 
-.nav {
+.navigation {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid #84c1e9;
   position: absolute;
   top: 131px;
 }
 
-ul.sticky {
+.navigation img {
+  display: none;
+  width: 254px;
+  height: 47px;
+  margin-right: 150px;
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navigation.sticky {
   position: fixed;
   top: 0;
   z-index: 100;
-  background: #fff;
+  background-color: rgba(183, 227, 253, 0.75);
   width: 100%;
-  height: 60px;
+  height: 78px;
   border-bottom: 0;
-  padding: 10px 5% 0;
   box-sizing: border-box;
   box-shadow: 0 0 18px 0 rgb(0 0 0 / 20%);
   animation: dropDown 1s ease-in-out forwards;
+  justify-content: center;
+}
+
+.navigation.sticky img {
+  display: block;
+}
+
+.navigation.sticky .nav {
+  flex: none;
+  height: 60px;
+  padding-top: 10px;
+}
+
+.sticky .nav li {
+  margin-right: 50px;
+}
+
+.sticky .nav li:last-child {
+  margin-right: 0;
 }
 
 @keyframes dropDown {
@@ -259,7 +292,7 @@ ul.sticky {
   padding: 10px 30px;
   position: absolute;
   top: 32px;
-  background-color: rgba(193, 231, 252, 0.5);
+  background-color: rgba(193, 231, 252, 0.75);
 }
 
 .second_menu > li {
@@ -429,15 +462,21 @@ ul.sticky {
 
 .news_nav li {
   margin-left: 50px;
+}
+.news_nav li a {
+  padding: 7px 11px;
   height: 15px;
   font-size: 15px;
   color: #186daa;
   line-height: 15px;
+  transition: all 0.3s ease;
 }
-
-.news_nav li.news_nav_active {
+.news_nav li:hover a {
   color: #ffffff;
-  padding: 7px 11px;
+  background-color: #186daa;
+}
+.news_nav li.news_nav_active a {
+  color: #ffffff;
   background-color: #186daa;
 }
 
@@ -455,13 +494,17 @@ ul.sticky {
 .news_left .img {
   width: 100%;
   height: 308px;
+  overflow: hidden;
 }
 
 .news_left .img img {
   width: 100%;
   height: 100%;
+  transition: all 0.3s ease;
 }
-
+.news_left:hover .img img {
+  transform: scale(1.2);
+}
 .news_arrows {
   height: 151px;
   display: flex;
@@ -531,8 +574,14 @@ ul.sticky {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.3s ease;
 }
-
+.news_item:hover p,
+.news_item_active:hover .news_item_title,
+.news_item_active:hover .news_item_active_date {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .news_item p,
 .news_item_title {
   border-bottom: 1px solid #9cc9e8;
@@ -545,6 +594,7 @@ ul.sticky {
   font-size: 18px;
   color: #186daa;
   line-height: 19px;
+  transition: all 0.3s ease;
 }
 
 .news_item p span:last-child {
@@ -558,7 +608,6 @@ ul.sticky {
   display: flex;
   justify-content: space-between;
 }
-
 .news_item_txt {
   height: 56px;
   font-size: 15px;
@@ -571,6 +620,7 @@ ul.sticky {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .news_item_active_date p:first-child {
@@ -624,12 +674,23 @@ ul.sticky {
   justify-content: space-between;
   cursor: pointer;
 }
-
-.serve_item:hover,
-.serve_body_right:hover {
-  box-shadow: 0px 0px 24px rgba(129, 205, 255, 0.925);
+.serve_body_right div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-
+.serve_item img,
+.serve_body_right img {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+.serve_item:hover img,
+.serve_body_right:hover img {
+  transform: scale(1.2);
+}
+.serve_item:hover div {
+  font-size: 18px;
+}
 .serve_item:nth-child(1),
 .serve_item:nth-child(3),
 .serve_item:nth-child(6),
@@ -654,6 +715,7 @@ ul.sticky {
   font-size: 15px;
   color: #186daa;
   line-height: 15px;
+  transition: all 0.3s ease;
 }
 
 .serve_body_right {
@@ -696,21 +758,24 @@ ul.sticky {
   display: flex;
   justify-content: space-between;
 }
+
 .info_middle_div {
   cursor: pointer;
   position: relative;
 }
+
 .info_middle_div > div {
   height: 0;
   visibility: hidden;
   position: absolute;
 }
-.info_middle_div:hover > div {
+
+/* .info_middle_div:hover > div {
   visibility: inherit;
   height: 100px;
   background-color: red;
   transition: 0.5s;
-}
+} */
 .info_middle_div > p {
   width: 160px;
   padding: 7px 13px;

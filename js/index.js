@@ -1,5 +1,10 @@
+// 刷新页面自动回到顶部
+window.onbeforeunload = function () {
+  document.documentElement.scrollTop = 0; //ie下
+  document.body.scrollTop = 0; //非ie
+};
 // y轴滚动条滚动到500以上出现导航栏
-const navEl = document.querySelector(".nav");
+const navEl = document.querySelector(".navigation");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 500) {
     if (!navEl.classList.contains("sticky")) {
