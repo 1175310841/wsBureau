@@ -19,8 +19,17 @@ ol {
   list-style: none;
 }
 
+a,
+i,
+em,
+/* span, */
+b,
+img {
+  display: block;
+}
 a {
   text-decoration: none;
+  outline: none;
   cursor: pointer;
 }
 
@@ -292,7 +301,7 @@ a {
   padding: 10px 30px;
   position: absolute;
   top: 32px;
-  background-color: rgba(193, 231, 252, 0.75);
+  background-color: rgba(183, 227, 253, 0.75);
 }
 
 .second_menu > li {
@@ -732,7 +741,6 @@ a {
 .info {
   position: relative;
   width: 100%;
-  height: 344px;
   box-sizing: border-box;
   background-color: #c1e6f6;
 }
@@ -742,6 +750,7 @@ a {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .logo_bottom {
@@ -762,20 +771,44 @@ a {
 .info_middle_div {
   cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.info_middle_div > div {
-  height: 0;
+.info_middle_div > .website {
+  /* height: 0; */
   visibility: hidden;
+  opacity: 0;
+  background-color: rgba(183, 227, 253, 0.75);
+  transition: all 0.3s ease;
   position: absolute;
+  top: 31px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px 0;
+  max-height: 100px;
+  overflow: auto;
 }
-
-/* .info_middle_div:hover > div {
+.website::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.website a {
+  color: #186daa;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+.website a:hover {
+  color: #ffffff;
+  background-color: #186daa;
+}
+.info_middle_div:hover > .website {
   visibility: inherit;
-  height: 100px;
-  background-color: red;
-  transition: 0.5s;
-} */
+  opacity: 1;
+  /* height: 110px; */
+}
 .info_middle_div > p {
   width: 160px;
   padding: 7px 13px;
@@ -828,7 +861,7 @@ a {
 
 .info_wave {
   width: 100%;
-  height: calc(100% - 204px);
+  margin-bottom: -4px;
 }
 
 .waves {
@@ -837,6 +870,7 @@ a {
   height: 100%;
   min-height: 100px;
   max-height: 150px;
+  pointer-events: none;
 }
 
 /* Animation */

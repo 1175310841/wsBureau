@@ -25,7 +25,7 @@ const staggeringOption = {
 };
 
 ScrollReveal().reveal(".header", { ...staggeringOption });
-ScrollReveal().reveal(".nav", { ...staggeringOption });
+ScrollReveal().reveal(".navigation", { ...staggeringOption });
 ScrollReveal().reveal(".video_area", { ...staggeringOption });
 ScrollReveal().reveal(".news_head", { ...staggeringOption });
 ScrollReveal().reveal(".news_body", { ...staggeringOption });
