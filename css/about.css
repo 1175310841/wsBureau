@@ -13,7 +13,7 @@
   background-color: #186daa;
   position: absolute;
   top: 50%;
-  left: 15%;
+  left: 17%;
 }
 .banner_title {
   height: 50px;
@@ -40,16 +40,163 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 60px;
+  color: #394e69;
+  line-height: 33px;
 }
 .company_profile_title {
+  width: 68%;
   height: 37px;
   line-height: 37px;
   font-size: 37px;
-  color: #394e69;
-  margin-left: 100px;
+  box-sizing: border-box;
+  padding-left: 100px;
   position: absolute;
-  top: -100%;
+  top: -37px;
+  border-bottom: 1px solid #bbd3de;
+}
+.company_profile_title span {
+  display: inline-block;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddf5fc;
+  position: relative;
+  top: -1px;
+}
+.develop {
+  width: 68%;
+  position: relative;
 }
 .intro_img {
-  width: 68%;
+  width: 100%;
+  margin-bottom: 60px;
+}
+.develop div {
+  width: 62%;
+  /* height: 28%;
+  overflow: auto; */
+  color: #394e69;
+  position: absolute;
+  top: 64%;
+  left: 34%;
+}
+.information,
+.course {
+  width: 62%;
+}
+.information p {
+  text-indent: 2em;
+  margin-bottom: 30px;
+}
+.information p span {
+  color: #394e69;
+  font-size: 18px;
+  font-weight: bold;
+}
+.information p:last-child {
+  margin-bottom: 90px;
+}
+.course {
+  margin-bottom: 100px;
+}
+.iceberg {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.iceberg img {
+  width: 100%;
+}
+.important_people {
+  width: 62%;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.important_people li {
+  padding-left: 15%;
+  border-bottom: 1px solid #abcfe7;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  line-height: 40px;
+  margin-top: 2%;
+}
+.important_people li:first-child {
+  margin-top: 0;
+}
+.important_people li:last-child {
+  border-bottom: 0;
+}
+.people_name {
+  position: absolute;
+  left: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.main {
+  padding-top: 150px;
+  margin-bottom: 100px;
+  position: relative;
+  width: 100%;
+}
+.main_content {
+  position: relative;
+  width: 1182px;
+}
+.main_title {
+  height: 34px;
+  line-height: 34px;
+  font-size: 37px;
+  font-weight: bold;
+  position: absolute;
+  top: -6%;
+}
+.main_img {
+  width: 100%;
+}
+.company_name {
+  position: absolute;
+}
+.company_name div a {
+  font-size: 18px;
+  line-height: 40px;
+  color: #394e69;
+}
+.company_name p a {
+  text-indent: 2em;
+  line-height: 25px;
+  color: #5086c2;
+}
+.company_name_one {
+  top: 20%;
+  left: 67%;
+}
+.company_name_two {
+  top: 39%;
+  left: 73%;
+}
+.company_name_three {
+  top: 469px;
+  left: 69%;
+}
+.company_name_four {
+  top: 71%;
+  left: 23%;
+}
+.company_name_five {
+  top: 61%;
+  left: 12%;
+}
+.company_name_six {
+  top: 41%;
+  left: 8%;
+}
+.company_name_seven {
+  top: 148px;
+  left: 110px;
+}
+.company_name_eight {
+  top: 2%;
+  left: 600px;
 }
