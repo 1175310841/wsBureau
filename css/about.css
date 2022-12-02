@@ -1,0 +1,55 @@
+.banner {
+  position: relative;
+}
+.about_img {
+  width: 100%;
+}
+.banner_slogan {
+  color: #e7f8fd;
+  width: 382px;
+  height: 175px;
+  box-sizing: border-box;
+  padding: 58px 0 0 41px;
+  background-color: #186daa;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+.banner_title {
+  height: 50px;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+}
+.banner_title_en {
+  margin-top: 10px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 29px;
+}
+.banner_crumbs {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  height: 16px;
+  line-height: 16px;
+  color: #186daa;
+}
+.company {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.company_profile_title {
+  height: 37px;
+  line-height: 37px;
+  font-size: 37px;
+  color: #394e69;
+  margin-left: 100px;
+  position: absolute;
+  top: -100%;
+}
+.intro_img {
+  width: 68%;
+}

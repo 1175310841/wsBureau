@@ -60,12 +60,15 @@ footer,
 .burger {
   display: none;
 }
-
+.empty {
+  height: 135px;
+}
 /* 头部 */
 .head {
   width: 100%;
   position: fixed;
   background: linear-gradient(-90deg, #42a4f0, #186daa);
+  z-index: 100;
 }
 
 header {
@@ -438,7 +441,8 @@ footer {
 
 @media (max-width: 800px) {
   .head,
-  #phoneNav {
+  #phoneNav,
+  .empty {
     display: none;
   }
 
