@@ -1,40 +1,3 @@
-.banner {
-  position: relative;
-}
-.about_img {
-  width: 100%;
-}
-.banner_slogan {
-  color: #e7f8fd;
-  width: 382px;
-  height: 175px;
-  box-sizing: border-box;
-  padding: 58px 0 0 41px;
-  background-color: #186daa;
-  position: absolute;
-  top: 50%;
-  left: 17%;
-}
-.banner_title {
-  height: 50px;
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: bold;
-}
-.banner_title_en {
-  margin-top: 10px;
-  height: 25px;
-  line-height: 25px;
-  font-size: 29px;
-}
-.banner_crumbs {
-  position: absolute;
-  top: 70%;
-  left: 70%;
-  height: 16px;
-  line-height: 16px;
-  color: #186daa;
-}
 .company {
   position: relative;
   display: flex;
@@ -43,24 +6,6 @@
   padding-top: 60px;
   color: #394e69;
   line-height: 33px;
-}
-.company_profile_title {
-  width: 68%;
-  height: 37px;
-  line-height: 37px;
-  font-size: 37px;
-  box-sizing: border-box;
-  padding-left: 100px;
-  position: absolute;
-  top: -37px;
-  border-bottom: 1px solid #bbd3de;
-}
-.company_profile_title span {
-  display: inline-block;
-  padding: 0 20px;
-  border-bottom: 1px solid #ddf5fc;
-  position: relative;
-  top: -1px;
 }
 .develop {
   width: 68%;
@@ -105,6 +50,7 @@
 }
 .iceberg img {
   width: 100%;
+  height: 776px;
 }
 .important_people {
   width: 62%;
@@ -136,7 +82,6 @@
 }
 .main {
   padding-top: 150px;
-  margin-bottom: 100px;
   position: relative;
   width: 100%;
 }
@@ -199,4 +144,49 @@
 .company_name_eight {
   top: 2%;
   left: 600px;
+}
+.mask_layer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  z-index: 90;
+  color: #ddf5fc;
+  padding-top: 99px;
+  box-sizing: border-box;
+}
+.mask_img {
+  position: absolute;
+  top: 37px;
+  right: 40px;
+  cursor: pointer;
+}
+.mask_title {
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #186daa;
+  margin-bottom: 60px;
+}
+.mask_main {
+  width: 1200px;
+  line-height: 26px;
+}
+
+@media (max-width: 1800px) {
+  .develop div {
+    top: 57%;
+  }
+}
+@media (max-width: 1600px) {
+  .develop div {
+    top: 53%;
+  }
+}
+@media (max-width: 1500px) {
+  .company {
+    line-height: 25px;
+  }
 }

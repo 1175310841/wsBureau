@@ -8,7 +8,6 @@ window.onbeforeunload = function () {
 const menuEl = document.querySelector(".menu");
 const phoneNavEl = document.getElementById("phoneNav");
 menuEl.addEventListener("click", () => {
-  console.log(111);
   if (!phoneNavEl.classList.contains("phoneNav")) {
     phoneNavEl.classList.add("phoneNav");
     phoneNavEl.style.display = "flex";

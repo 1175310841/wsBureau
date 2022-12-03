@@ -13,7 +13,7 @@
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/about.css" />
+    <link rel="stylesheet" href="../../css/aboutUs/about.css" />
   </head>
 
   <body>
@@ -71,22 +71,24 @@
       </ul>
       <div class="empty"></div>
 
-      <div class="banner">
-        <img src="../../imgs/groupProfile/aboutBg.png" class="about_img" />
-        <div class="banner_slogan">
-          <p class="banner_title">集团概况</p>
-          <p class="banner_title_en">About us</p>
+      <div class="banner flex_column_center">
+        <img src="../../imgs/aboutUs/aboutBg.png" class="about_img" />
+        <div class="banner_content">
+          <div class="banner_slogan">
+            <p class="banner_title">集团概况</p>
+            <p class="banner_title_en">About us</p>
+          </div>
+          <div class="banner_crumbs">
+            您当前的位置：首页 / 集团概况 / 企业简介
+          </div>
         </div>
-        <div class="banner_crumbs">
-          您当前的位置：首页 / 集团概况 / 企业简介
-        </div>
-      </div>
-      <div class="company">
         <div class="company_profile_title">
           <span>企业简介</span>
         </div>
+      </div>
+      <div class="company">
         <div class="develop">
-          <img src="../../imgs/groupProfile/intro.png" class="intro_img" />
+          <img src="../../imgs/aboutUs/intro.png" class="intro_img" />
           <div>
             青岛水务集团有限公司是经青岛市人民政府批准，由青岛市海润自来水集团有限公司、青岛城投集团所属9户污水处理企业和市排水管理处所属第一至第五工区、城市排水监测站、排水收费管理所、机运队、排水监管服务中心、维修队等二级单位组建的市直国有大型企业，于2013年1月30日挂牌成立，注册资本10亿元。2016年11月，胶州市自来水公司整体无偿划转至水务集团，集团公司服务区域进一步延伸；2018年底，青岛市固体废弃物处置有限责任公司整建制划转至水务集团，集团公司业务范围进一步拓展。
           </div>
@@ -108,11 +110,11 @@
         </div>
 
         <!-- 发展历程 -->
-        <img src="../../imgs/groupProfile/course.png" alt="" class="course" />
+        <img src="../../imgs/aboutUs/course.png" alt="" class="course" />
 
         <!-- 冰山 -->
         <div class="iceberg">
-          <img src="../../imgs/groupProfile/iceberg.png" alt="" />
+          <img src="../../imgs/aboutUs/iceberg.png" alt="" />
           <ul class="important_people">
             <li>
               <span class="people_name">夏正启</span>
@@ -153,56 +155,88 @@
 
         <!-- 企业概况 -->
         <div class="main flex_column_center">
+          <div class="mask_layer flex_column_center" v-show="maskShow">
+            <img
+              src="../../imgs/aboutUs/close.png"
+              class="mask_img"
+              @click="closeMask()"
+            />
+            <div class="mask_title">{{deptList[index].name}}</div>
+            <div class="mask_main" v-html="deptList[index].content"></div>
+          </div>
           <div class="main_content">
             <div class="main_title">所属企业概况</div>
-            <img
-              src="../../imgs/groupProfile/information.png"
-              class="main_img"
-            />
+            <img src="../../imgs/aboutUs/information.png" class="main_img" />
             <div class="company_name company_name_one">
-              <div><a href="">一、青岛市海润自来水集团有限公司</a></div>
-              <p><a href="">（一）青岛海润丰供水有限责任公司</a></p>
-              <p><a href="">（二）青岛即东海润水务有限公司</a></p>
+              <div>
+                <a @click="openMask(0)">一、青岛市海润自来水集团有限公司</a>
+              </div>
+              <p>
+                <a @click="openMask(1)">（一）青岛海润丰供水有限责任公司</a>
+              </p>
+              <p><a @click="openMask(2)">（二）青岛即东海润水务有限公司</a></p>
             </div>
             <div class="company_name company_name_two">
-              <div><a href="">二、青岛排水有限公司</a></div>
+              <div><a @click="openMask(3)">二、青岛排水有限公司</a></div>
             </div>
             <div class="company_name company_name_three">
-              <div><a href="">三、青岛水务集团环境能源公司</a></div>
-              <p><a href="">（一）青岛海泊河水务运营有限公司</a></p>
-              <p><a href="">（二）青岛首创瑞海水务有限公司</a></p>
-              <p><a href="">（三）青岛市团岛污水处理厂</a></p>
-              <p><a href="">（四）青岛海湾中水有限公司</a></p>
-              <p><a href="">（五）青岛双元水务有限公司</a></p>
-              <p><a href="">（六）青岛大任水务有限公司</a></p>
-              <p><a href="">（七）青岛娄山河水务有限公司</a></p>
-              <p><a href="">（八）青岛张村河水务有限公司</a></p>
-              <p><a href="">（九）青岛娄山河水务资源有限公司</a></p>
+              <div>
+                <a @click="openMask(4)">三、青岛水务集团环境能源公司</a>
+              </div>
+              <p>
+                <a @click="openMask(5)">（一）青岛海泊河水务运营有限公司</a>
+              </p>
+              <p><a @click="openMask(6)">（二）青岛首创瑞海水务有限公司</a></p>
+              <p><a @click="openMask(7)">（三）青岛市团岛污水处理厂</a></p>
+              <p><a @click="openMask(8)">（四）青岛海湾中水有限公司</a></p>
+              <p><a @click="openMask(9)">（五）青岛双元水务有限公司</a></p>
+              <p><a @click="openMask(10)">（六）青岛大任水务有限公司</a></p>
+              <p><a @click="openMask(11)">（七）青岛娄山河水务有限公司</a></p>
+              <p><a @click="openMask(12)">（八）青岛张村河水务有限公司</a></p>
+              <p>
+                <a @click="openMask(13)">（九）青岛娄山河水务资源有限公司</a>
+              </p>
             </div>
             <div class="company_name company_name_four">
-              <div><a href="">四、青岛市固体废弃物处置有限责任公司</a></div>
-              <p><a href="">（一）青岛洁宝生态科技有限公司</a></p>
+              <div>
+                <a @click="openMask(14)"
+                  >四、青岛市固体废弃物处置有限责任公司</a
+                >
+              </div>
+              <p><a @click="openMask(15)">（一）青岛洁宝生态科技有限公司</a></p>
               <p>
-                <a href="">
+                <a @click="openMask(16)">
                   （二）青岛小涧西渗沥液处理有限公司、青岛洁源环境有限公司
                 </a>
               </p>
             </div>
             <div class="company_name company_name_five">
-              <div><a href="">五、青岛胶州自来水有限公司</a></div>
+              <div><a @click="openMask(17)">五、青岛胶州自来水有限公司</a></div>
             </div>
             <div class="company_name company_name_six">
-              <div><a href="">六、青岛市益水工程股份有限公司</a></div>
-              <p><a href="">（一）青岛市自来水物资工程公司</a></p>
+              <div>
+                <a @click="openMask(18)">六、青岛市益水工程股份有限公司</a>
+              </div>
+              <p><a @click="openMask(19)">（一）青岛市自来水物资工程公司</a></p>
             </div>
             <div class="company_name company_name_seven">
-              <div><a href="">七、青岛高新海润水务有限公司</a></div>
+              <div>
+                <a @click="openMask(20)">七、青岛高新海润水务有限公司</a>
+              </div>
             </div>
             <div class="company_name company_name_eight">
-              <p><a href="">（一）青岛百发海水淡化有限公司</a></p>
-              <p><a href="">（二）青岛青水津膜高新科技有限公司</a></p>
-              <p><a href="">（三）青岛水务碧水源科技发展有限公司</a></p>
-              <div><a href="">八、青岛水务海水淡化科技公司</a></div>
+              <p><a @click="openMask(21)">（一）青岛百发海水淡化有限公司</a></p>
+              <p>
+                <a @click="openMask(22)">（二）青岛青水津膜高新科技有限公司</a>
+              </p>
+              <p>
+                <a @click="openMask(23)"
+                  >（三）青岛水务碧水源科技发展有限公司</a
+                >
+              </p>
+              <div>
+                <a @click="openMask(24)">八、青岛水务海水淡化科技公司</a>
+              </div>
             </div>
           </div>
         </div>
@@ -255,14 +289,58 @@
                   <span>供排水企业网站</span>
                   <span>▼</span>
                 </p>
-                <div></div>
+                <div class="website">
+                  <a href="https://www.bdc.cn/" target="_blank"
+                    >北京城市排水集团有限责任公司</a
+                  >
+                  <a href="http://www.tjwatergroup.com/" target="_blank"
+                    >天津水务集团</a
+                  >
+                  <a href="http://www.jlwater.com/" target="_blank"
+                    >南京水务集团有限公司</a
+                  >
+                  <a href="https://www.cncqsw.com/" target="_blank"
+                    >重庆水务集团股份有限公司</a
+                  >
+                  <a href="http://www.hzwgc.com/" target="_blank"
+                    >杭州市水务集团有限公司</a
+                  >
+                  <a href="http://www.ningbowater.com/" target="_blank"
+                    >宁波市水务环境集团有限公司
+                  </a>
+                  <a href="https://www.cdenvironment.com/" target="_blank"
+                    >成都环境集团</a
+                  >
+                  <a href="http://www.changchunwater.com/" target="_blank"
+                    >吉林省长春水务集团有限责任公司</a
+                  >
+                  <a href="http://www.hrbgongshui.com/" target="_blank"
+                    >哈尔滨供水集团有限责任公司</a
+                  >
+                  <a href="http://www.syswgw.com/" target="_blank"
+                    >沈阳水务集团</a
+                  >
+                  <a href="https://www.xashuiwu.com/" target="_blank"
+                    >西安水务（集团）有限责任公司</a
+                  >
+                </div>
               </div>
               <div class="info_middle_div">
                 <p>
                   <span>其他行业网站</span>
                   <span>▼</span>
                 </p>
-                <div></div>
+                <div class="website">
+                  <a href="http://www.projectbidding.cn/" target="_blank"
+                    >工程信息与招标网</a
+                  >
+                  <a href="http://www.pv365.com/" target="_blank"
+                    >中国泵阀信息网</a
+                  >
+                  <a href="http://www.1718cn.com/" target="_blank"
+                    >中国中国仪器仪表大市场</a
+                  >
+                </div>
               </div>
             </div>
             <p>
@@ -314,7 +392,7 @@
         </footer>
       </div>
     </div>
-    <script src="../../js/about.js"></script>
+    <script src="../../js/aboutUs/about.js"></script>
     <script src="../../js/common.js"></script>
   </body>
 </html>

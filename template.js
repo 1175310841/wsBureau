@@ -2,9 +2,7 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {
-      hello: "Hello World",
-    };
+    return {};
   },
   mounted() {},
   methods: {},

@@ -184,7 +184,72 @@ nav {
   opacity: 1;
   transition: all 0.7s ease;
 }
-
+.banner {
+  position: relative;
+}
+.about_img {
+  width: 100%;
+}
+.banner_content {
+  width: 68%;
+  height: 29%;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner_slogan {
+  color: #e7f8fd;
+  width: 29%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 4%;
+  padding-left: 2%;
+  background-color: #186daa;
+  /* position: absolute;
+  top: 50%;
+  left: 17%; */
+}
+.banner_title {
+  height: 50px;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+}
+.banner_title_en {
+  margin-top: 10px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 29px;
+}
+.banner_crumbs {
+  position: absolute;
+  top: 71%;
+  right: 0;
+  height: 16px;
+  line-height: 16px;
+  color: #186daa;
+}
+.company_profile_title {
+  width: 68%;
+  height: 37px;
+  line-height: 37px;
+  font-size: 37px;
+  box-sizing: border-box;
+  padding-left: 100px;
+  position: absolute;
+  bottom: 0;
+  color: #394e69;
+  border-bottom: 1px solid #bbd3de;
+}
+.company_profile_title span {
+  display: inline-block;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddf5fc;
+  position: relative;
+  top: -1px;
+}
 /*****************************/
 
 /* 底部 */
@@ -235,7 +300,7 @@ nav {
   transition: all 0.3s ease;
   position: absolute;
   top: 31px;
-  width: 200px;
+  width: 224px;
   border-radius: 10px;
   padding: 10px 0;
   max-height: 100px;
@@ -579,5 +644,41 @@ footer {
   .phoneNav > li {
     padding-bottom: 5px;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 1420px) {
+  .banner_title {
+    height: 35px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .banner_title_en {
+    height: 20px;
+    line-height: 20px;
+    font-size: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner_title {
+    height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .banner_title_en {
+    height: 15px;
+    line-height: 15px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 750px) {
+  .banner_title {
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .banner_title_en {
+    height: 10px;
+    line-height: 10px;
+    font-size: 14px;
   }
 }

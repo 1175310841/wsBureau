@@ -1,0 +1,10 @@
+.main {
+  padding-top: 60px;
+}
+.list {
+  width: 68%;
+  color: #394e69;
+}
+.list li {
+  padding: 64px 0 51px 40px;
+}
