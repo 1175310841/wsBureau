@@ -1,0 +1,24 @@
+.list li a {
+  padding-left: 0;
+}
+.list a:hover {
+  padding-left: 20px;
+}
+.news_list_img {
+  width: 300px;
+}
+.date {
+  margin-left: 85px;
+  margin-right: 65px;
+}
+.year {
+  height: 25px;
+  line-height: 25px;
+  font-size: 33px;
+  margin-bottom: 11px;
+}
+.day {
+  height: 11px;
+  line-height: 11px;
+  font-size: 15px;
+}

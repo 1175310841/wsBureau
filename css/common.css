@@ -682,3 +682,52 @@ footer {
     font-size: 14px;
   }
 }
+
+/* 
+element plus
+*/
+.el-pagination {
+  margin-top: 50px;
+}
+.el-pagination__total,
+.el-pagination .el-input__inner,
+.el-pagination__sizes .el-select .el-input .el-select__caret,
+.el-pagination button,
+.el-pager li,
+.el-pagination__jump,
+.page_selece_down .el-select-dropdown__item.selected {
+  color: #186daa;
+}
+.el-pagination__sizes .el-select .el-input__wrapper,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .el-pager li,
+.el-pagination__jump .el-input__wrapper,
+.el-pagination__sizes .el-select .el-input.is-focus .el-input__wrapper,
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .btn-next:disabled {
+  box-shadow: none !important;
+  background-color: transparent;
+}
+.el-pagination__jump .el-input__wrapper {
+  padding: 0;
+}
+.el-pagination__sizes
+  .el-select:hover:not(.el-select--disabled)
+  .el-input__wrapper {
+  box-shadow: none;
+}
+.el-pagination .el-select .el-input {
+  width: 110px;
+}
+.el-pagination__editor.el-input {
+  width: 30px;
+}
+.page_selece_down .el-select-dropdown__item {
+  padding-right: 20px;
+}
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: #186daa;
+  color: #fff;
+}
+/*******************/

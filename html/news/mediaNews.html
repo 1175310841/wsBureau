@@ -10,13 +10,13 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
-    <!-- <link rel="stylesheet" href="../../libs/element-plus.css" /> -->
+    <link rel="stylesheet" href="../../libs/element-plus.css" />
     <link rel="stylesheet" href="../../css/common.css" />
     <link rel="stylesheet" href="../../css/news/index.css" />
-    <link rel="stylesheet" href="../../css/news/waterNews.css" />
+    <link rel="stylesheet" href="../../css/news/imgNews.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
-    <!-- <script src="../../libs/element-plus.js"></script> -->
+    <script src="../../libs/element-plus.js"></script>
     <script src="../../libs/zh-cn.js"></script>
   </head>
   <body>
@@ -34,15 +34,9 @@
             <li>
               <span>集团概况</span>
               <ul class="second_menu">
-                <li>
-                  <a href=""><span></span>企业简介</a>
-                </li>
-                <li>
-                  <a href=""><span></span>机构设置</a>
-                </li>
-                <li>
-                  <a href=""><span></span>企业文化</a>
-                </li>
+                <li><a href=""><span></span>企业简介</a></li>
+                <li><a href=""><span></span>机构设置</a></li>
+                <li><a href=""><span></span>企业文化</a></li>
               </ul>
             </li>
             <li><span>新闻资讯</span></li>
@@ -82,11 +76,11 @@
             <p class="banner_title_en">News</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 新闻资讯 / 水务新闻
+            您当前的位置：首页 / 新闻资讯 / 媒体新闻
           </div>
         </div>
         <div class="company_profile_title">
-          <span>水务新闻</span>
+          <span>媒体新闻</span>
         </div>
       </div>
 
@@ -94,10 +88,12 @@
         <ul class="list">
           <li v-for="(item,index) in list" ::key="index">
             <a>
-              <div class="date flex_column_center">
-                <div class="day">30</div>
-                <div class="line"></div>
-                <div class="year">2022/10</div>
+              <div class="news_list_img">
+                <img :src="item.url" />
+              </div>
+              <div class="date">
+                <div class="year">2022</div>
+                <div class="day">10-31</div>
               </div>
               <div class="specific">
                 <div class="news_title">{{item.name}}</div>
@@ -280,26 +276,25 @@
           return {
             list: [
               {
+                url: "../../imgs/news/imgNews.png",
                 name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
                 content:
                   "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
               },
               {
+                url: "../../imgs/news/imgNews.png",
                 name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
                 content:
                   "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
               },
               {
+                url: "../../imgs/news/imgNews.png",
                 name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
                 content:
                   "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
               },
               {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
+                url: "../../imgs/news/imgNews.png",
                 name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
                 content:
                   "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
