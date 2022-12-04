@@ -10,10 +10,13 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
-    <script src="../../libs/vue.global.js"></script>
-    <script src="../../libs/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="../../libs/element-plus.css" />
     <link rel="stylesheet" href="../../css/common.css" />
     <link rel="stylesheet" href="../../css/news/waterNews.css" />
+    <script src="../../libs/vue.global.js"></script>
+    <script src="../../libs/scrollreveal.min.js"></script>
+    <script src="../../libs/element-plus.js"></script>
+    <script src="../../libs/zh-cn.js"></script>
   </head>
   <body>
     <div id="app">
@@ -88,15 +91,34 @@
 
       <div class="main flex_column_center">
         <ul class="list">
-          <li>
+          <li v-for="(item,index) in list" ::key="index">
             <a>
-              <div class="date">
-                <div class="day"></div>
-                <div class="draw"></div>
+              <div class="date flex_column_center">
+                <div class="day">30</div>
+                <div class="line"></div>
+                <div class="year">2022/10</div>
+              </div>
+              <div class="specific">
+                <div class="news_title">{{item.name}}</div>
+                <div class="news_content">{{item.content}}</div>
               </div>
             </a>
           </li>
         </ul>
+        <el-pagination
+          v-model:current-page="currentPage"
+          v-model:page-size="pageSize"
+          :pager-count="10"
+          :page-sizes="[10, 20, 30, 50]"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="200"
+          background
+          popper-class="page_selece_down"
+          prev-text="上一页"
+          next-text="下一页"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+        />
       </div>
       <!-- 底部 -->
       <div class="info flex_column_center">

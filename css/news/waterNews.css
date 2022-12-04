@@ -1,10 +1,95 @@
 .main {
-  padding-top: 60px;
+  padding: 60px 0 60px;
 }
 .list {
   width: 68%;
   color: #394e69;
 }
-.list li {
+.list li a {
   padding: 64px 0 51px 40px;
+  border-bottom: 1px solid #c5dce6;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+}
+.list a:hover {
+  padding-left: 60px;
+}
+.date {
+  color: #186daa;
+  margin-right: 40px;
+}
+.day {
+  height: 43px;
+  line-height: 43px;
+  font-size: 54px;
+  color: #186daa;
+}
+.line {
+  width: 88px;
+  height: 1px;
+  background-color: #186daa;
+  margin: 9px 0 14px;
+}
+.year {
+  height: 15px;
+  line-height: 15px;
+  font-size: 16px;
+}
+.specific {
+  flex: 1;
+}
+.news_title {
+  height: 22px;
+  line-height: 22px;
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+.news_content {
+  font-size: 17px;
+  line-height: 30px;
+}
+.el-pagination {
+  margin-top: 50px;
+}
+.el-pagination__total,
+.el-pagination .el-input__inner,
+.el-pagination__sizes .el-select .el-input .el-select__caret,
+.el-pagination button,
+.el-pager li,
+.el-pagination__jump,
+.page_selece_down .el-select-dropdown__item.selected {
+  color: #186daa;
+}
+.el-pagination__sizes .el-select .el-input__wrapper,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .el-pager li,
+.el-pagination__jump .el-input__wrapper,
+.el-pagination__sizes .el-select .el-input.is-focus .el-input__wrapper,
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .btn-next:disabled {
+  box-shadow: none !important;
+  background-color: transparent;
+}
+.el-pagination__jump .el-input__wrapper {
+  padding: 0;
+}
+.el-pagination__sizes
+  .el-select:hover:not(.el-select--disabled)
+  .el-input__wrapper {
+  box-shadow: none;
+}
+.el-pagination .el-select .el-input {
+  width: 110px;
+}
+.el-pagination__editor.el-input {
+  width: 30px;
+}
+.page_selece_down .el-select-dropdown__item {
+  padding-right: 20px;
+}
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: #186daa;
+  color: #fff;
 }
