@@ -1,0 +1,68 @@
+.main_content {
+  width: 1200px;
+  padding: 60px 0;
+  color: #394e69;
+}
+.crumbs {
+  font-size: 15px;
+  height: 15px;
+  line-height: 15px;
+  color: #186daa;
+  margin-bottom: 65px;
+}
+.details_title {
+  height: 30px;
+  font-size: 30px;
+  line-height: 30px;
+}
+.release_time {
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #28a6e2;
+  margin: 24px 0 44px;
+}
+.details_essay {
+  line-height: 30px;
+}
+.details_essay p {
+  text-indent: 2em;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #bcd4df;
+  margin: 60px 0;
+}
+.operate_menu {
+  line-height: 48px;
+}
+.operate_menu a,
+.operate_menu i {
+  display: inline-block;
+}
+.operate_menu p {
+  text-align: end;
+}
+.operate_menu p a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.operate_menu p i {
+  width: 22px;
+  height: 20px;
+  margin-left: 21px;
+}
+.operate_menu p:first-child i {
+  width: 18px;
+  height: 20px;
+  margin-left: 25px;
+}
+.operate_menu p img {
+  width: 100%;
+  height: 100%;
+}
+.operate_menu span {
+  color: #186daa;
+}

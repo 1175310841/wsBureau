@@ -10,15 +10,12 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../../libs/element-plus.css" />
-    <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/news/index.css" />
-    <link rel="stylesheet" href="../../css/news/imgNews.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
-    <script src="../../libs/element-plus.js"></script>
-    <script src="../../libs/zh-cn.js"></script>
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/news/newsDetail.css" />
   </head>
+
   <body>
     <div id="app">
       <!-- 头部 -->
@@ -30,7 +27,7 @@
         <div style="width: 100%; height: 1px; background-color: #359ccd"></div>
         <nav>
           <ul class="navigation">
-            <li><span>首页</span></li>
+            <li class="navAct"><span>首页</span></li>
             <li>
               <span>集团概况</span>
               <ul class="second_menu">
@@ -49,7 +46,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct">
+            <li>
               <span>新闻资讯</span>
               <ul class="second_menu">
                 <li>
@@ -97,54 +94,69 @@
       </ul>
       <div class="empty"></div>
 
-      <div class="banner flex_column_center">
-        <img src="../../imgs/aboutUs/aboutBg.png" class="about_img" />
-        <div class="banner_content">
-          <div class="banner_slogan">
-            <p class="banner_title">新闻资讯</p>
-            <p class="banner_title_en">News</p>
-          </div>
-          <div class="banner_crumbs">
-            您当前的位置：首页 / 新闻资讯 / 图片新闻
-          </div>
-        </div>
-        <div class="company_profile_title">
-          <span>图片新闻</span>
-        </div>
-      </div>
-
       <div class="main flex_column_center">
-        <ul class="list">
-          <li v-for="(item,index) in list" ::key="index">
-            <a href="../../html/news/newsDetail.html">
-              <div class="news_list_img">
-                <img :src="item.url" />
-              </div>
-              <div class="date">
-                <div class="year">2022</div>
-                <div class="day">10-31</div>
-              </div>
-              <div class="specific">
-                <div class="news_title">{{item.name}}</div>
-                <div class="news_content">{{item.content}}</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <el-pagination
-          v-model:current-page="currentPage"
-          v-model:page-size="pageSize"
-          :pager-count="10"
-          :page-sizes="[10, 20, 30, 50]"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="200"
-          background
-          popper-class="page_selece_down"
-          prev-text="上一页"
-          next-text="下一页"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-        />
+        <div class="main_content">
+          <div class="crumbs">
+            您当前的位置：首页 / 新闻资讯 / 图片新闻 / 详情页
+          </div>
+          <div class="details flex_column_center">
+            <div class="details_title">
+              青岛水务集团有限公司召开第一届第九次职工代表大会
+            </div>
+            <div class="release_time">发布时间：2022/10/30</div>
+            <div class="details_essay flex_column_center">
+              <p>
+                10月27日上午，青岛水务集团有限公司召开第一届第九次职工代表大会。根据疫情防控工作要求，本次大会设主会场和四个分会场，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持。
+              </p>
+              <br />
+              <img src="../../imgs/news/1.png" alt="" />
+              <br />
+              <p>
+                水务集团一届九次职代会审议并通过了《青岛水务集团有限公司2022年工作报告》《青岛水务集团有限公司2021年财务收支决算及2022年财务收支预算报告》《青岛水务集团有限公司2021年业务招待费使用情况的说明》《青岛水务集团有限公司一届八次职代会决议落实情况、厂务公开和提案处理工作情况报告》。集团党委书记、董事长夏正启，集团工会副主席付海洋分别作为企业方与职工方签订了《青岛水务集团有限公司工资专项集体合同》。
+              </p>
+              <br />
+              <img src="../../imgs/news/1.png" alt="" />
+              <br />
+              <img src="../../imgs/news/1.png" alt="" />
+              <br />
+              <p>
+                代表们一致认为，大会作的《青岛水务集团有限公司2022年工作报告》对集团2021年的工作总结实事求是，充分肯定了全体职工在集团党委的带领下，全面贯彻落实习近平新时代中国特色社会主义思想、党的十九大和十九届历次全会精神，落实山东省第十二次党代会精神、青岛市第十三次党代会精神及市委、市政府工作部署，集团发展质量和实力实现新突破。各项报告实事求是，全面准确，充分发扬民主，集中体现了广大职工意愿。
+              </p>
+              <br />
+              <p>
+                大会号召，全体代表要以习近平新时代中国特色社会主义思想为指导，深入贯彻党的二十大会议精神，完整准确全面贯彻新发展理念，在推动集团高质量发展上展现更大作为，在服务和融入新发展格局上取得更大突破，在履行参政议政职责上作出更大贡献。始终保持“赶考”的清醒和坚定，确保供水安全优质、排水畅通不涝、污水处理达标排放、固废处置清洁循环、夯实海水淡化全国领先地位，积极助力城市更新和城市建设，深度匹配城市发展战略，自信自强、守正创新，踔厉奋发、勇毅前行，为推动水务事业站在新起点谱写新篇章而团结奋斗！
+              </p>
+              <br />
+            </div>
+            <div class="line"></div>
+          </div>
+          <div class="operate_menu">
+            <p>
+              <a>
+                返回列表 <i><img src="../../imgs//news/list.png" alt="" /></i>
+              </a>
+            </p>
+            <p>
+              <a>
+                <span>
+                  水务集团召开党委扩大会议
+                  传达学习党的二十大精神和市委常委会扩大会议精神：
+                </span>
+                上一篇
+                <i><img src="../../imgs/news/prev.png" alt="" /></i>
+              </a>
+            </p>
+            <p>
+              <a>
+                <span>
+                  水务集团召开“转变作风提升能力 锚定目标大干100天”动员大会：
+                </span>
+                下一篇
+                <i><img src="../../imgs/news/next.png" alt="" /></i>
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- 底部 -->
@@ -297,55 +309,7 @@
         </footer>
       </div>
     </div>
-    <script>
-      const { createApp } = Vue;
-
-      createApp({
-        data() {
-          return {
-            list: [
-              {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-            ],
-            currentPage: 1,
-            pageSize: 10,
-          };
-        },
-        mounted() {},
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-        },
-      })
-        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
-        .mount("#app");
-    </script>
+    <script src="../../template.js"></script>
     <script src="../../js/common.js"></script>
   </body>
 </html>

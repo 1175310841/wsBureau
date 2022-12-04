@@ -686,9 +686,6 @@ footer {
 /* 
 element plus
 */
-.el-pagination {
-  margin-top: 50px;
-}
 .el-pagination__total,
 .el-pagination .el-input__inner,
 .el-pagination__sizes .el-select .el-input .el-select__caret,

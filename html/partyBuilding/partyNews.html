@@ -12,8 +12,7 @@
     />
     <link rel="stylesheet" href="../../libs/element-plus.css" />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/news/index.css" />
-    <link rel="stylesheet" href="../../css/news/imgNews.css" />
+    <link rel="stylesheet" href="../../css/partyBuilding/partyNews.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
     <script src="../../libs/element-plus.js"></script>
@@ -49,7 +48,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct">
+            <li>
               <span>新闻资讯</span>
               <ul class="second_menu">
                 <li>
@@ -69,7 +68,7 @@
                 </li>
               </ul>
             </li>
-            <li><span>党建工作</span></li>
+            <li class="navAct"><span>党建工作</span></li>
             <li><span>信息公开</span></li>
             <li><span>网上服务厅</span></li>
             <li><span>营商环境</span></li>
@@ -98,36 +97,32 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/aboutUs/aboutBg.png" class="about_img" />
+        <img src="../../imgs/partybuilding/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">新闻资讯</p>
-            <p class="banner_title_en">News</p>
+            <p class="banner_title">党建工作</p>
+            <p class="banner_title_en">Party Building</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 新闻资讯 / 图片新闻
+            您当前的位置：首页 / 党建工作 / 党建新闻
           </div>
         </div>
         <div class="company_profile_title">
-          <span>图片新闻</span>
+          <span>党建新闻</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
         <ul class="list">
           <li v-for="(item,index) in list" ::key="index">
-            <a href="../../html/news/newsDetail.html">
-              <div class="news_list_img">
-                <img :src="item.url" />
+            <a class="item">
+              <div class="img">
+                <img :src="item.url" alt="" />
               </div>
-              <div class="date">
-                <div class="year">2022</div>
-                <div class="day">10-31</div>
-              </div>
-              <div class="specific">
-                <div class="news_title">{{item.name}}</div>
-                <div class="news_content">{{item.content}}</div>
-              </div>
+              <div class="title">{{item.title}}</div>
+              <div class="content">{{item.content}}</div>
+              <div class="line"></div>
+              <div class="date">{{item.date}}</div>
             </a>
           </li>
         </ul>
@@ -305,28 +300,46 @@
           return {
             list: [
               {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/partybuilding/1.png",
+                title: "固废公司党委召开二十大精神专题学习",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "固废公司党委召开党的二十大精神专题学习班动员大会，组织党员干部深入学习党的二十大精神，动员部署学习贯彻落实工作。党委书记、董事长田洪领主持会议并作动员讲话，党委班子，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持",
+                date: "2022-10-31",
               },
               {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/partybuilding/1.png",
+                title: "固废公司党委召开二十大精神专题学习",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "固废公司党委召开党的二十大精神专题学习班动员大会，组织党员干部深入学习党的二十大精神，动员部署学习贯彻落实工作。党委书记、董事长田洪领主持会议并作动员讲话，党委班子，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持",
+                date: "2022-10-31",
               },
               {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/partybuilding/1.png",
+                title: "固废公司党委召开二十大精神专题学习",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "固废公司党委召开党的二十大精神专题学习班动员大会，组织党员干部深入学习党的二十大精神，动员部署学习贯彻落实工作。党委书记、董事长田洪领主持会议并作动员讲话，党委班子，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持",
+                date: "2022-10-31",
               },
               {
-                url: "../../imgs/news/imgNews.png",
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/partybuilding/1.png",
+                title: "固废公司党委召开二十大精神专题学习",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "固废公司党委召开党的二十大精神专题学习班动员大会，组织党员干部深入学习党的二十大精神，动员部署学习贯彻落实工作。党委书记、董事长田洪领主持会议并作动员讲话，党委班子，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持",
+                date: "2022-10-31",
+              },
+              {
+                url: "../../imgs/partybuilding/1.png",
+                title: "固废公司党委召开二十大精神专题学习",
+                content:
+                  "固废公司党委召开党的二十大精神专题学习班动员大会，组织党员干部深入学习党的二十大精神，动员部署学习贯彻落实工作。党委书记、董事长田洪领主持会议并作动员讲话，党委班子，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持",
+                date: "2022-10-31",
+              },
+              {
+                url: "../../imgs/partybuilding/1.png",
+                title: "固废公司党委召开二十大精神专题学习",
+                content:
+                  "固废公司党委召开党的二十大精神专题学习班动员大会，组织党员干部深入学习党的二十大精神，动员部署学习贯彻落实工作。党委书记、董事长田洪领主持会议并作动员讲话，党委班子，以视频会议形式召开。集团党委班子成员、各单位职工代表以及列席代表共125人参加会议。会议由集团党委委员、纪委书记王法体主持",
+                date: "2022-10-31",
               },
             ],
             currentPage: 1,
