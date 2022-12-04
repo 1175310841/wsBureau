@@ -151,7 +151,9 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.nav a {
+  color: #186daa;
+}
 .index_navigation.sticky {
   position: fixed;
   top: 0;
