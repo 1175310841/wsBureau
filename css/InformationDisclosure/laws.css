@@ -5,21 +5,6 @@
 .main_list {
   width: 1200px;
 }
-.main_nav {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  float: right;
-}
-.main_nav li a {
-  height: 18px;
-  font-size: 18px;
-  line-height: 18px;
-  padding: 8px 12px;
-}
-.main_nav_active {
-  background-color: #bbd3df;
-}
 .main_list {
   display: flex;
   flex-wrap: wrap;
