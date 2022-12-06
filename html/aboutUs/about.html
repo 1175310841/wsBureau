@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="../../css/aboutUs/about.css" />
   </head>
 
-  <body>
-    <div id="app">
+  <body ref="body">
+    <div id="app" style="position: relative">
       <!-- 头部 -->
       <div class="head flex_column_center">
         <header>
@@ -207,15 +207,6 @@
 
         <!-- 企业概况 -->
         <div class="main flex_column_center">
-          <div class="mask_layer flex_column_center" v-show="maskShow">
-            <img
-              src="../../imgs/aboutUs/close.png"
-              class="mask_img"
-              @click="closeMask()"
-            />
-            <div class="mask_title">{{deptList[index].name}}</div>
-            <div class="mask_main" v-html="deptList[index].content"></div>
-          </div>
           <div class="main_content">
             <div class="main_title">所属企业概况</div>
             <img src="../../imgs/aboutUs/information.png" class="main_img" />
@@ -292,6 +283,20 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- 所属企业概况遮罩层 -->
+      <div
+        class="mask_layer flex_column_center"
+        v-show="maskShow"
+        :style="{top:`${maskTop}px`}"
+      >
+        <img
+          src="../../imgs/aboutUs/close.png"
+          class="mask_img"
+          @click="closeMask()"
+        />
+        <div class="mask_title">{{deptList[index].name}}</div>
+        <div class="mask_main" v-html="deptList[index].content"></div>
       </div>
 
       <!-- 底部 -->
