@@ -11,40 +11,6 @@
   <script src="./libs/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/index.css" />
-  <style>
-    .news {
-      overflow: hidden;
-    }
-    span.buble {
-      position: absolute;
-      bottom: 0;
-      border-radius: 50%;
-      animation: myMove 4s linear infinite;
-      transition: 2s;
-    }
-
-    @keyframes myMove {
-      0% {
-        transform: translateY(0%);
-        opacity: 1;
-      }
-
-      50% {
-        transform: translate(10%, -1000%);
-      }
-
-      75% {
-        transform: translate(-20%, -1200%);
-      }
-      99% {
-        opacity: 0.9;
-      }
-      100% {
-        transform: translateY(-1800%) scale(1.5);
-        opacity: 0;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -253,6 +219,8 @@
           </a>
         </div>
       </div>
+      <img src="./imgs/index/wave-1.png" class="wave_first">
+      <img src="./imgs/index/wave-2.png" class="wave_second">
     </div>
 
     <!-- 便民服务 -->
@@ -502,27 +470,6 @@
   </script>
   <script src="./js/common.js"></script>
   <script src="./js/index.js"></script>
-  <script>
-      const bubleCreate = () => {
-        const news = document.querySelector('.news');
-        const width = news.getBoundingClientRect().width
-        const buble = document.createElement("span");
-        buble.classList.add("buble");
-        let r = Math.floor(Math.random() * 6 + 18); //18-24
-        buble.style.width = r + "px";
-        buble.style.height = r + "px";
-        buble.style.border = 4 + "px solid #B0DBF3";
-        buble.style.left = Math.random() * width + "px";
-
-        news.append(buble);
-        setTimeout(() => {
-          buble.remove();
-        }, 4000);
-      };
-      setInterval(() => {
-        bubleCreate();
-      }, 200);
-    </script>
 </body>
 
 </html>

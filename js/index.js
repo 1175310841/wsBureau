@@ -29,3 +29,23 @@ ScrollReveal().reveal(".serve_item", { ...staggeringOption, interval: 150 });
 ScrollReveal().reveal(".serve_body_right", { ...staggeringOption });
 ScrollReveal().reveal(".info_area", { ...staggeringOption });
 // ScrollReveal().reveal(".burger", { ...staggeringOption });
+
+const bubleCreate = () => {
+  const news = document.querySelector(".news");
+  const width = news.getBoundingClientRect().width;
+  const buble = document.createElement("span");
+  buble.classList.add("buble");
+  let r = Math.floor(Math.random() * 6 + 18); //18-24
+  buble.style.width = r + "px";
+  buble.style.height = r + "px";
+  buble.style.border = 4 + "px solid #B0DBF3";
+  buble.style.left = Math.random() * width + "px";
+
+  news.append(buble);
+  setTimeout(() => {
+    buble.remove();
+  }, 4000);
+};
+setInterval(() => {
+  bubleCreate();
+}, 200);
