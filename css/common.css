@@ -290,7 +290,7 @@ nav {
 }
 
 .info_middle {
-  width: 626px;
+  width: 700px;
 }
 
 .info_middle_select {
@@ -305,14 +305,14 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 160px;
+  width: 224px;
 }
 
 .info_middle_div > .website {
   /* height: 0; */
   visibility: hidden;
   opacity: 0;
-  background-color: rgba(183, 227, 253, 0.75);
+  background-color: rgba(183, 227, 253, 0.85);
   transition: all 0.3s ease;
   position: absolute;
   top: 31px;
@@ -349,7 +349,7 @@ nav {
 }
 
 .info_middle_div > p {
-  width: 160px;
+  width: 100%;
   padding: 7px 13px;
   height: 31px;
   line-height: 17px;

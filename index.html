@@ -11,6 +11,40 @@
   <script src="./libs/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/index.css" />
+  <style>
+    .news {
+      overflow: hidden;
+    }
+    span.buble {
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      animation: myMove 4s linear infinite;
+      transition: 2s;
+    }
+
+    @keyframes myMove {
+      0% {
+        transform: translateY(0%);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translate(10%, -1000%);
+      }
+
+      75% {
+        transform: translate(-20%, -1200%);
+      }
+      99% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-1800%) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -44,46 +78,53 @@
       <!-- 头部 -->
       <div class="header">
         <img src="./imgs/index/logo.png" alt="" class="logo" />
-        <span class="old_page">
+        <a class="old_page" href="http://www.qdwater.com.cn/index.aspx" target="_blank">
           访问青岛水务集团“
           <span style="color: #ec6941; font-weight: bold">旧版</span>
           ”官方网站！
-        </span>
+          <img src="./imgs/index/computer.png" alt="">
+        </a>
       </div>
       <!-- 导航 -->
       <div class="index_navigation">
-        <img src="./imgs/navLogo.png" alt="">
-        <ul class="nav">
-          <li class="navAct"><a href='#'><span>首页</span></a></li>
-          <li>
-            <span>集团概况</span>
-            <ul class="second_menu">
-              <li><a href="./html/aboutUs/about.html"><span></span>企业简介</a></li>
-              <li><a href="./html/aboutUs/institutionSetting.html"><span></span>机构设置</a></li>
-              <li><a href=""><span></span>企业文化</a></li>
-            </ul>
-          </li>
-          <li>
-            <span>新闻资讯</span>
-            <ul class="second_menu">
-              <li><a href="./html/news/waterNews.html"><span></span>水务新闻</a></li>
-              <li><a href="./html/news/imgNews.html"><span></span>图片新闻</a></li>
-              <li><a href="./html/news/mediaNews.html"><span></span>媒体新闻</a></li>
-            </ul>
-          </li>
-          <li><span>党建工作</span>
-            <ul class="second_menu">
-              <li><a href="./html/partyBuilding/partyNews.html"><span></span>党建新闻</a></li>
-              <li><a href="./html/partyBuilding/labourUnion.html"><span></span>工会动态</a></li>
-              <li><a href="./html/partyBuilding/breeze.html"><span></span>水务清风</a></li>
-              <li><a href="./html/partyBuilding/youth.html"><span></span>青春水务</a></li>
-            </ul>
-          </li>
-          <li><span>信息公开</span></li>
-          <li><span>网上服务厅</span></li>
-          <li><span>营商环境</span></li>
-          <li><span>水务科技</span></li>
-        </ul>
+        <div class="nav_parent">
+          <img src="./imgs/navLogo.png" alt="">
+          <ul class="nav">
+            <li class="navAct"><a href='#'><span>首页</span></a></li>
+            <li>
+              <span>集团概况</span>
+              <ul class="second_menu">
+                <li><a href="./html/aboutUs/about.html"><span></span>企业简介</a></li>
+                <li><a href="./html/aboutUs/institutionSetting.html"><span></span>机构设置</a></li>
+                <li><a href=""><span></span>企业文化</a></li>
+              </ul>
+            </li>
+            <li>
+              <span>新闻资讯</span>
+              <ul class="second_menu">
+                <li><a href="./html/news/waterNews.html"><span></span>水务新闻</a></li>
+                <li><a href="./html/news/imgNews.html"><span></span>图片新闻</a></li>
+                <li><a href="./html/news/mediaNews.html"><span></span>媒体新闻</a></li>
+              </ul>
+            </li>
+            <li><span>党建工作</span>
+              <ul class="second_menu">
+                <li><a href="./html/partyBuilding/partyNews.html"><span></span>党建新闻</a></li>
+                <li><a href="./html/partyBuilding/labourUnion.html"><span></span>工会动态</a></li>
+                <li><a href="./html/partyBuilding/breeze.html"><span></span>水务清风</a></li>
+                <li><a href="./html/partyBuilding/youth.html"><span></span>青春水务</a></li>
+              </ul>
+            </li>
+            <li><span>信息公开</span></li>
+            <li><span>网上服务厅</span></li>
+            <li><span>营商环境</span></li>
+            <li><span>水务科技</span></li>
+          </ul>
+          <div class="search_box">
+            <input type="text" class="search_input">
+            <img src="./imgs/index/search.png" alt="">
+          </div>
+        </div>
       </div>
       <!-- 手机导航 -->
       <ul id="phoneNav" style="display: none;">
@@ -107,9 +148,11 @@
         </video>
         <div class="video_str">
           <div class="arrows">
-            <img src="./imgs/index/leftjt.png" alt="" @click="arrowsLeftImg()">
+            <img :src="leftArrowVal==0 ?'./imgs/index/leftjt-an.png':'./imgs/index/leftjt.png'" alt=""
+              @click="arrowsLeftImg()" :style="{cursor: leftArrowVal==0 ?'no-drop':'pointer'}">
             <span></span>
-            <img src="./imgs/index/rightjt.png" alt="" @click="arrowsRightImg()">
+            <img :src="leftArrowVal==1200?'./imgs/index/rightjt-an.png' :'./imgs/index/rightjt.png'" alt=""
+              @click="arrowsRightImg()" :style="{cursor: leftArrowVal==1200 ?'no-drop':'pointer'}">
           </div>
           <div class="arrows_tit">水载民生，务泽万家</div>
           <div class="arrows_txt" ref="arrowsTxt">
@@ -219,11 +262,12 @@
       </div>
       <div class="serve_body">
         <div class="serve_body_left">
-          <a :href="item.path" class="serve_item" v-for="(item,index) in serveList" :key="index">
-            <img :src="item.url" alt="">
+          <div class="serve_item" v-for="(item,index) in serveList" :key="index">
+            <img class="serve_item_img" :src="item.url" alt="">
             <p></p>
-            <div>{{item.txt}}</div>
-          </a>
+            <div class="serve_item_txt">{{item.txt}}</div>
+            <a class="serve_item_link">查看详情</a>
+          </div>
         </div>
         <a class="serve_body_right">
           <div>
@@ -458,6 +502,27 @@
   </script>
   <script src="./js/common.js"></script>
   <script src="./js/index.js"></script>
+  <script>
+      const bubleCreate = () => {
+        const news = document.querySelector('.news');
+        const width = news.getBoundingClientRect().width
+        const buble = document.createElement("span");
+        buble.classList.add("buble");
+        let r = Math.floor(Math.random() * 6 + 18); //18-24
+        buble.style.width = r + "px";
+        buble.style.height = r + "px";
+        buble.style.border = 4 + "px solid #B0DBF3";
+        buble.style.left = Math.random() * width + "px";
+
+        news.append(buble);
+        setTimeout(() => {
+          buble.remove();
+        }, 4000);
+      };
+      setInterval(() => {
+        bubleCreate();
+      }, 200);
+    </script>
 </body>
 
 </html>

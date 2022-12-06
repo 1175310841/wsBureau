@@ -122,6 +122,8 @@
 }
 
 .old_page {
+  display: flex;
+  align-items: center;
   margin-top: 10px;
   height: 16px;
   line-height: 16px;
@@ -132,22 +134,22 @@
 .index_navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid #84c1e9;
   position: absolute;
   top: 131px;
 }
 
-.index_navigation img {
+.index_navigation img:first-child {
   display: none;
   width: 254px;
   height: 47px;
-  margin-right: 10%;
+  margin-right: 100px;
 }
 
 .nav {
+  width: 900px;
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: space-between;
 }
@@ -165,11 +167,16 @@
   box-sizing: border-box;
   box-shadow: 0 0 18px 0 rgb(0 0 0 / 20%);
   animation: dropDown 1s ease-in-out forwards;
-  justify-content: space-between;
-  padding: 0 5%;
 }
-
-.index_navigation.sticky img {
+.index_navigation.sticky .nav_parent {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+.index_navigation.sticky img:first-child {
   display: block;
 }
 
@@ -178,7 +185,9 @@
   height: 60px;
   padding-top: 10px;
 }
-
+.index_navigation.sticky .search_box {
+  top: auto;
+}
 @keyframes dropDown {
   from {
     transform: translateY(-100px);
@@ -188,7 +197,43 @@
     transform: translateY(0);
   }
 }
-
+.search_box {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -12px;
+  right: 0;
+  background: transparent;
+  height: 37px;
+  border-radius: 37px;
+  padding: 2px;
+  padding-right: 10px;
+  transition: 0.2s;
+}
+.search_input {
+  border: none;
+  background-color: #ddf5fc;
+  outline: none;
+  float: left;
+  font-size: 16px;
+  line-height: 37px;
+  border-radius: 41px;
+  transition: 0.2s;
+  width: 0;
+  padding: 0;
+  margin-right: 18px;
+}
+.search_box img {
+  cursor: pointer;
+}
+.search_box:hover {
+  background-color: #186daa;
+}
+.search_box:hover .search_input {
+  width: 246px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
 /* #phoneNav {
   display: none;
 } */
@@ -309,7 +354,6 @@
   padding-right: 50px;
   margin: 38px 0 33px;
 }
-
 .arrows span {
   display: inline-block;
   width: 1px;
@@ -366,14 +410,21 @@
   cursor: pointer;
   float: right;
   margin-right: 60px;
+  transition: 0.3s ease;
 }
-
+.video_more:hover {
+  background: #0a4976;
+}
+.video_more:hover .video_more_txt {
+  margin-right: 25px;
+}
 .video_more_txt {
   height: 43px;
   line-height: 43px;
   font-size: 15px;
   color: #28a6e2;
   margin-right: 14px;
+  transition: 0.3s ease;
 }
 
 .news {
@@ -413,10 +464,10 @@
 
 .news_nav li a {
   padding: 7px 11px;
-  height: 15px;
-  font-size: 15px;
+  height: 18px;
+  font-size: 18px;
   color: #186daa;
-  line-height: 15px;
+  line-height: 18px;
   transition: all 0.3s ease;
 }
 
@@ -623,32 +674,55 @@
   box-sizing: border-box;
   margin-right: 8px;
   margin-bottom: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   cursor: pointer;
+  overflow: hidden;
 }
-
+.serve_item:hover .serve_item_img {
+  height: 40px;
+}
+.serve_item:hover p {
+  margin: 16px auto 12px;
+}
+.serve_item:hover .serve_item_link {
+  opacity: 1;
+}
+.serve_item_img {
+  margin: 0 auto;
+  height: 61px;
+  transition: all 0.3s ease;
+}
 .serve_body_right div {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
-.serve_item img,
+.serve_item_link {
+  opacity: 0;
+  width: 100px;
+  margin: 36px auto 0;
+  color: #186daa;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+  border: 1px solid #186daa;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.serve_item_link:hover {
+  color: #ffffff;
+  background-color: #186daa;
+}
 .serve_body_right img {
   transform: scale(1);
   transition: all 0.3s ease;
 }
 
-.serve_item:hover img,
 .serve_body_right:hover img {
   transform: scale(1.2);
-}
-
-.serve_item:hover div {
-  font-size: 18px;
 }
 
 .serve_item:nth-child(1),
@@ -666,12 +740,15 @@
 }
 
 .serve_item p {
+  margin: 40px auto 32px;
   width: 40px;
   height: 1px;
   background-color: #186daa;
+  transition: all 0.3s ease;
 }
 
-.serve_item div {
+.serve_item .serve_item_txt {
+  text-align: center;
   font-size: 15px;
   color: #186daa;
   line-height: 15px;
@@ -995,7 +1072,7 @@
     padding-top: 25px;
   }
 
-  .serve_item img {
+  .serve_item_img {
     width: 40px;
   }
 
