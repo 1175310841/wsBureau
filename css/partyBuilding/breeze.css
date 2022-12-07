@@ -1,0 +1,10 @@
+.small_dot li.small_dot_active {
+  background: #ec9f67;
+}
+.new_hot {
+  color: #394e69;
+  background-color: #b1d8f2;
+}
+.new_hot span {
+  color: #ec6941;
+}

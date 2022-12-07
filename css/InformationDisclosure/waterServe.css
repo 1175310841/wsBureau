@@ -1,9 +1,10 @@
-.main {
-  padding-bottom: 100px;
-}
+.main > div:first-child,
 .main_content {
   width: 68%;
-  color: #394e69;
+}
+.main > div:first-child {
+  position: absolute;
+  top: 0;
 }
 .supply,
 .drain {
@@ -14,7 +15,7 @@
 }
 .supply {
   clear: both;
-  margin: 70px 0 50px;
+  margin-bottom: 50px;
 }
 .supply_title {
   font-size: 37px;

@@ -1,14 +1,14 @@
-.main {
-  padding-bottom: 100px;
-}
 .main > div:first-child,
 .main_list {
   width: 1200px;
 }
+.main > div:first-child {
+  position: absolute;
+  top: 0;
+}
 .main_list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 54px;
 }
 .list_item {
   width: 392px;
