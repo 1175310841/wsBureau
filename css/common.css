@@ -304,8 +304,14 @@ nav .search_box {
   font-size: 18px;
   line-height: 18px;
   padding: 8px 12px;
+  color: #394e69;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
-.main_nav_active {
+.main_nav li a:hover {
+  background-color: #bbd3df;
+}
+.main_nav li a.main_nav_active {
   background-color: #bbd3df;
 }
 

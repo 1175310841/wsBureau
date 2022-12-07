@@ -24,29 +24,66 @@
   border: 1px solid #c1d2e7;
   box-sizing: border-box;
 }
-.main_company_list {
+.inwater_list {
   width: 317px;
   height: 715px;
+}
+.outwater_list {
+  width: 220px;
+  height: 366px;
+}
+.inwater_list,
+.outwater_list {
   border-top: 1px solid #4c7dbb;
   box-sizing: border-box;
 }
-.main_company_list li {
+.inwater_list li,
+.outwater_list li {
   height: 35px;
   line-height: 35px;
   background-color: #ddf5fc;
   box-sizing: border-box;
+}
+.inwater_list li {
   border-bottom: 1px solid #c6d9f1;
   padding-left: 20px;
 }
-.main_company_list li:first-child {
-  background-color: #c6d9f1;
-  color: #467bb8;
+.outwater_list li {
+  text-align: center;
+}
+.outwater_list li:nth-child(even) {
+  background-color: #c1def0;
+}
+.inwater_list li:first-child,
+.outwater_list li:first-child {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
   height: 50px;
   line-height: 50px;
 }
-.main_company_list li:last-child {
+.inwater_list li:first-child {
+  color: #467bb8;
+  background-color: #c6d9f1;
+}
+.outwater_list li:first-child {
+  background-color: #8eb4e3;
   border-bottom: 1px solid #4c7dbb;
+  color: #dff7fd;
+}
+.inwater_list li:last-child,
+.outwater_list li:last-child {
+  border-bottom: 1px solid #4c7dbb;
+}
+
+.municipal_window {
+  width: 1200px;
+}
+.municipal_window div {
+  text-indent: 2em;
+  line-height: 29px;
+  margin-bottom: 50px;
+}
+.municipal_window img {
+  /* width: 100%; */
 }

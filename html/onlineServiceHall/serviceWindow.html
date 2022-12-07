@@ -17,6 +17,7 @@
       href="../../css/onlineServiceHall/serviceWindow.css"
     />
     <script src="../../libs/vue.global.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script> -->
     <script src="../../libs/scrollreveal.min.js"></script>
     <!-- <script src="https://api.map.baidu.com/api?type=webgl&v=1.0&ak=pSIvmDSbh5CdhmHcUx31nVk9UvbzzF7I"></script> -->
     <script src="https://api.map.baidu.com/api?v=3.0&ak=pSIvmDSbh5CdhmHcUx31nVk9UvbzzF7I"></script>
@@ -99,8 +100,17 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct"><span>信息公开</span></li>
-            <li><span>网上服务厅</span></li>
+            <li><span>信息公开</span></li>
+            <li class="navAct">
+              <span>网上服务厅</span>
+              <ul class="second_menu">
+                <li>
+                  <a href="../../html/onlineServiceHall/serviceWindow.html"
+                    ><span></span>服务窗口</a
+                  >
+                </li>
+              </ul>
+            </li>
             <li><span>营商环境</span></li>
             <li><span>水务科技</span></li>
           </ul>
@@ -137,7 +147,10 @@
             <p class="banner_title_en">Online service hall</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / 服务窗口查询 / 供水服务窗口
+            您当前的位置：首页 / 网上服务厅 / 服务窗口查询 /
+            <span v-if="componentValue == 0">供水服务窗口</span>
+            <span v-else-if="componentValue == 1">排水服务窗口</span>
+            <span v-else>市政公用共享服务窗口</span>
           </div>
         </div>
         <div class="company_profile_title">
@@ -148,21 +161,58 @@
       <div class="main flex_column_center">
         <div>
           <ul class="main_nav">
-            <li><a class="main_nav_active">供水服务窗口</a></li>
-            <li><a>排水服务窗口</a></li>
-            <li><a>收费服务窗口</a></li>
-            <li><a>市政公用共享服务窗口</a></li>
-          </ul>
-        </div>
-        <div class="main_title">供水公司常用服务电话一览表</div>
-        <div class="main_content">
-          <div id="map"></div>
-          <ul class="main_company_list">
-            <li><a>窗口名称</a></li>
-            <li v-for="(item,index) in pointInfo" ::key="index">
-              <a @click="handleOpenWindow(item)">{{item.name}}</a>
+            <li>
+              <a
+                :class="[componentValue == 0 ?'main_nav_active':'']"
+                @click="handoffNav(0)"
+                >供水服务窗口</a
+              >
+            </li>
+            <li>
+              <a
+                :class="[componentValue == 1 ?'main_nav_active':'']"
+                @click="handoffNav(1)"
+                >排水服务窗口</a
+              >
+            </li>
+            <li>
+              <a href="https://www.qingdaonengyuan.com/FuWu_qd.html">
+                收费服务窗口
+              </a>
+            </li>
+            <li>
+              <a
+                :class="[componentValue == 2 ?'main_nav_active':'']"
+                @click="handoffNav(2)"
+                >市政公用共享服务窗口</a
+              >
             </li>
           </ul>
+        </div>
+        <div class="main_title" v-if="componentValue == 0">
+          供水公司常用服务电话一览表
+        </div>
+        <div class="main_title" v-else-if="componentValue == 1">
+          排水各分公司服务电话及办公地点
+        </div>
+        <div class="main_title" v-else>“市政公用服务共享窗口”试行网点</div>
+        <in-water-window
+          class="main_content"
+          v-if="componentValue == 0"
+        ></in-water-window>
+        <out-water-window
+          class="main_content"
+          v-if="componentValue == 1"
+        ></out-water-window>
+        <!-- 市政公用服务共享窗口 -->
+        <div
+          class="municipal_window flex_column_center"
+          v-if="componentValue == 2"
+        >
+          <div>
+            为深入贯彻落实国家、省“放管服”改革决策部署，切实落实我市优化营商环境提升行动，依据国务院《关于加快推进政务服务标准化规范化便利化的指导意见》（国发〔2022〕5号）等有关要求，进一步提升市政公用服务水平，提高企业群众用水、用电、暖气、燃气、通信、有线电视、琴岛通卡等市政公用服务办理便捷度和满意度，在各区、市级政务服务大厅设立水电气暖信有线等“市政公用服务专区”，推行各专营单位窗口无差别受理水电气暖信有线等市政公用服务。
+          </div>
+          <img src="../../imgs/onlineServiceHall/municipal.png" alt="" />
         </div>
       </div>
 
@@ -316,195 +366,26 @@
         </footer>
       </div>
     </div>
-    <script>
-      const { createApp } = Vue;
+    <script type="module">
+      // 供水服务窗口
+      import InWaterWindow from "../../js/onlineServiceHall/InWaterWindow.js";
+      import OutWaterWindow from "../../js/onlineServiceHall/OutWaterWindow.js";
 
+      const { createApp } = Vue;
       createApp({
         data() {
           return {
             map: null,
-            pointInfo: [
-              {
-                lng: 120.349308,
-                lat: 36.079312,
-                name: "海润自来水集团南部分公司营管科",
-                address: "青岛市市北区广饶路129号甲",
-                phone: "82758218",
-              },
-              {
-                lng: 120.307432,
-                lat: 36.068329,
-                name: "海润自来水集团市南所",
-                address: "四川路74号",
-                phone: "82686559",
-              },
-              {
-                lng: 120.341705,
-                lat: 36.08242,
-                name: "海润自来水集团市北所",
-                address: "大连路22号-14",
-                phone: "82735118",
-              },
-              {
-                lng: 120.367506,
-                lat: 36.078941,
-                name: "海润自来水集团台东所",
-                address: "龙潭路2号",
-                phone: "83618979",
-              },
-              {
-                lng: 120.358165,
-                lat: 36.109786,
-                name: "海润自来水集团四方所",
-                address: "杭州路1号丁",
-                phone: "83718041",
-              },
-              {
-                lng: 120.403242,
-                lat: 36.100616,
-                name: "海润自来水集团四方新区所",
-                address: "永吉路57号7号楼",
-                phone: "85690121",
-              },
-              {
-                lng: 120.37108,
-                lat: 36.12717,
-                name: "海润自来水集团水清沟所",
-                address: "四流南路3号丙内70户",
-                phone: "84851771",
-              },
-              {
-                lng: 120.417532,
-                lat: 36.075582,
-                name: "海润自来水集团辛家庄所",
-                address: "金门路12号乙",
-                phone: "85872217",
-              },
-              {
-                lng: 120.416099,
-                lat: 36.179118,
-                name: "海润自来水集团东部分公司营管科",
-                address: "青岛市李沧区上苑路82号",
-                phone: "68076633",
-              },
-              {
-                lng: 120.471835,
-                lat: 36.174559,
-                name: "海润自来水集团李村所",
-                address: "李沧区武川路64中学对面",
-                phone: "87895226",
-              },
-              {
-                lng: 120.391365,
-                lat: 36.182672,
-                name: "海润自来水集团沧口所",
-                address: "四流中路117号",
-                phone: "84632227",
-              },
-              {
-                lng: 120.423883,
-                lat: 36.109498,
-                name: "海润自来水集团高新区所",
-                address: "浮山后四小区24号楼",
-                phone: "88753887",
-              },
-              {
-                lng: 120.444624,
-                lat: 36.256498,
-                name: "海润自来水集团夏庄所",
-                address: "青银高速夏庄出口东500米(华夏路)",
-                phone: "68950707",
-              },
-              {
-                lng: 120.39798,
-                lat: 36.250455,
-                name: "海润自来水集团流亭所",
-                address: "城阳区仙山西路7号仙家寨水厂",
-                phone: "66911651",
-              },
-              {
-                lng: 120.252585,
-                lat: 36.275546,
-                name: "高新海润客户服务大厅",
-                address: "青岛高新技术产业开发区河东路以北、岙东路以东",
-                phone: "68687070",
-              },
-              {
-                lng: 120.031836,
-                lat: 36.278781,
-                name: "胶州水司市南收费厅",
-                address: "福州南路98号",
-                phone: "82237716",
-              },
-              {
-                lng: 120.025168,
-                lat: 36.300895,
-                name: "胶州水司服务大厅",
-                address: "胶州东路197号",
-                phone: "87212780",
-              },
-              {
-                lng: 119.980967,
-                lat: 36.25511,
-                name: "胶州水司上合示范区营业所",
-                address: "明德街36号",
-                phone: "85262259",
-              },
-              {
-                lng: 120.164952,
-                lat: 36.36637,
-                name: "胶州水司李哥庄营业所",
-                address: "胶州市沽源路华庭雅居东北门门口",
-                phone: "",
-              },
-            ],
+            componentValue: 0,
           };
         },
-        mounted() {
-          this.initMap();
+        components: {
+          InWaterWindow,
+          OutWaterWindow,
         },
         methods: {
-          initMap() {
-            this.map = new BMap.Map("map");
-            let center = new BMap.Point(120.252585, 36.275546);
-            this.map.centerAndZoom(center, 11);
-            this.map.enableScrollWheelZoom(true);
-
-            this.pointInfo.forEach((i) => {
-              let point = new BMap.Point(i.lng, i.lat);
-              let marker = new BMap.Marker(point);
-              this.map.addOverlay(marker);
-              let opts = {
-                width: 250, // 信息窗口宽度
-                height: 130, // 信息窗口高度
-                title: `<div style='margin:10px 0;font-weight:bold;font-size:15px'>${i.name}</div>`, // 信息窗口标题
-                offset: new BMap.Size(0, -25),
-              };
-              let infoWindow = new BMap.InfoWindow(
-                `地址：${i.address} <br />电话：${i.phone}`,
-                opts
-              ); // 创建信息窗口对象
-              marker.addEventListener("click", () => {
-                this.openWindow(infoWindow, point);
-              });
-            });
-          },
-          openWindow(infoWindow, point) {
-            this.map.openInfoWindow(infoWindow, point); //开启信息窗口
-          },
-          handleOpenWindow(e) {
-            let point = new BMap.Point(e.lng, e.lat);
-            let opts = {
-              width: 250, // 信息窗口宽度
-              height: 130, // 信息窗口高度
-              title: `<div style='margin:10px 0;font-weight:bold;font-size:15px'>${e.name}</div>`, // 信息窗口标题
-              offset: new BMap.Size(0, -25),
-            };
-            let infoWindow = new BMap.InfoWindow(
-              `地址：${e.address} <br />电话：${e.phone}`,
-              opts
-            ); // 创建信息窗口对象
-            this.openWindow(infoWindow, point);
+          handoffNav(e) {
+            this.componentValue = e;
           },
         },
       }).mount("#app");
