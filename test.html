@@ -8,8 +8,8 @@
     <style>
       :root {
         --sh: 83px;
-        --bw: 640px;
-        --bh: 360px;
+        --bw: 1200px;
+        --bh: 680px;
       }
       body {
         margin: 0;
@@ -21,11 +21,15 @@
         background-color: #8ec5fc;
         background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
       }
+      .div-carousel {
+        position: relative;
+      }
       .div-small-img-list {
-        width: calc(var(--bw) + 50px);
-        height: var(--sh);
+        width: var(--bw);
+        /*height: var(--sh);*/
+        margin-top: 20px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: flex-end;
       }
       .div-small-img {
@@ -44,8 +48,8 @@
         width: var(--bw);
         height: var(--bh);
         margin: 0 auto;
-        background-image: url(./1.png);
-        background-size: cover;
+        background: url(./1.png) no-repeat;
+        background-size: 100% 100%;
         transition: 1s;
       }
     </style>
@@ -65,9 +69,6 @@
         </div>
         <div class="div-small-img">
           <img src="4.png" alt="" class="defaultSmallImg" />
-        </div>
-        <div class="div-small-img">
-          <img src="5.png" alt="" class="defaultSmallImg" />
         </div>
       </div>
     </div>
@@ -92,11 +93,11 @@
       function startToggle() {
         process = setInterval(function () {
           imgIndex = imgIndex + 1;
-          if (imgIndex == 5) {
+          if (imgIndex == 4) {
             imgIndex = 0;
           }
           showImg(imgIndex);
-        }, 2000);
+        }, 5000);
       }
 
       // 定义小图的点击响应事件

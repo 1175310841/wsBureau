@@ -144,8 +144,38 @@
           <img src="../../imgs//aboutUs/architecture.png" alt="" />
         </div>
         <div class="main_draw"></div>
-        <div class="hr_dept">
-          <img src="../../imgs/aboutUs/hairun.png" alt="" />
+        <div class="carousel_dept">
+          <div class="dept-big-img"></div>
+          <div class="dept-small-img-list">
+            <div class="dept-small-img moveSmallImg">
+              <img
+                src="../../imgs/aboutUs/1.png"
+                alt=""
+                class="defaultSmallImg"
+              />
+            </div>
+            <div class="dept-small-img">
+              <img
+                src="../../imgs/aboutUs/2.png"
+                alt=""
+                class="defaultSmallImg"
+              />
+            </div>
+            <div class="dept-small-img">
+              <img
+                src="../../imgs/aboutUs/3.png"
+                alt=""
+                class="defaultSmallImg"
+              />
+            </div>
+            <div class="dept-small-img">
+              <img
+                src="../../imgs/aboutUs/4.png"
+                alt=""
+                class="defaultSmallImg"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -299,6 +329,25 @@
         </footer>
       </div>
     </div>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            maskShow: false,
+          };
+        },
+        mounted() {},
+        methods: {
+          openMask() {
+            this.maskShow = true;
+          },
+          closeMask() {
+            this.maskShow = false;
+          },
+        },
+      }).mount("#app");
+    </script>
     <script src="../../js/aboutUs/institutionSetting.js"></script>
     <script src="../../js/common.js"></script>
   </body>
