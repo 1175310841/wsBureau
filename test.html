@@ -4,64 +4,120 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
-  </head>
-  <style>
-    body {
-      position: relative;
-      overflow-x: hidden;
-      height: 100vh;
-    }
-
-    span {
-      position: absolute;
-      bottom: 0;
-      border-radius: 50%;
-      animation: myMove 4s linear infinite;
-      transition: 2s;
-    }
-
-    @keyframes myMove {
-      0% {
-        transform: translateY(0%);
+    <title>Document</title>
+    <style>
+      :root {
+        --sh: 83px;
+        --bw: 640px;
+        --bh: 360px;
+      }
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #8ec5fc;
+        background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+      }
+      .div-small-img-list {
+        width: calc(var(--bw) + 50px);
+        height: var(--sh);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+      }
+      .div-small-img {
+        cursor: pointer;
+      }
+      .defaultSmallImg {
+        width: calc(var(--bw) / 5);
         opacity: 1;
+        transition: 1s;
       }
-
-      50% {
-        transform: translate(10%, -1000%);
-      }
-
-      75% {
-        transform: translate(-20%, -1200%);
-      }
-      99% {
-        opacity: 0.9;
-      }
-      100% {
-        transform: translateY(-1800%) scale(1.5);
+      .moveSmallImg {
         opacity: 0;
+        transform: translateY(-130px);
       }
-    }
-  </style>
+      .div-big-img {
+        width: var(--bw);
+        height: var(--bh);
+        margin: 0 auto;
+        background-image: url(./1.png);
+        background-size: cover;
+        transition: 1s;
+      }
+    </style>
+  </head>
   <body>
-    <img src="./imgs/index/wave-1.png" alt="" />
+    <div class="div-carousel">
+      <div class="div-big-img"></div>
+      <div class="div-small-img-list">
+        <div class="div-small-img">
+          <img src="1.png" alt="" class="defaultSmallImg moveSmallImg" />
+        </div>
+        <div class="div-small-img">
+          <img src="2.png" alt="" class="defaultSmallImg" />
+        </div>
+        <div class="div-small-img">
+          <img src="3.png" alt="" class="defaultSmallImg" />
+        </div>
+        <div class="div-small-img">
+          <img src="4.png" alt="" class="defaultSmallImg" />
+        </div>
+        <div class="div-small-img">
+          <img src="5.png" alt="" class="defaultSmallImg" />
+        </div>
+      </div>
+    </div>
+
     <script>
-      const bubleCreate = () => {
-        const body = document.body;
-        const buble = document.createElement("span");
-        let r = Math.floor(Math.random() * 6 + 18); //18-24
-        buble.style.width = r + "px";
-        buble.style.height = r + "px";
-        buble.style.border = 4 + "px solid #B0DBF3";
-        buble.style.left = Math.random() * innerWidth + "px";
-        body.append(buble);
-        setTimeout(() => {
-          buble.remove();
-        }, 4000);
+      let imgIndex = 0; //显示的图片索引
+      let process;
+      let img = document.querySelectorAll(".div-small-img img");
+      let bigImage = document.querySelector(".div-big-img");
+
+      function showImg(index) {
+        // 小图恢复默认状态
+        for (let i = 0; i < img.length; i++) {
+          img[i].className = "defaultSmallImg";
+        }
+        // 当前位移的小图片
+        img[index].className = "defaultSmallImg moveSmallImg";
+        // 大图片显示
+        bigImage.style.backgroundImage = `url('${index + 1}.png')`;
+      }
+      // 开始轮播
+      function startToggle() {
+        process = setInterval(function () {
+          imgIndex = imgIndex + 1;
+          if (imgIndex == 5) {
+            imgIndex = 0;
+          }
+          showImg(imgIndex);
+        }, 2000);
+      }
+
+      // 定义小图的点击响应事件
+      for (let i = 0; i < img.length; i++) {
+        img[i].onclick = function () {
+          clearInterval(process);
+          imgIndex = i;
+          showImg(i);
+          startToggle();
+        };
+      }
+
+      // 当鼠标放置在大图上面时，停止轮播
+      bigImage.onmouseover = function () {
+        clearInterval(process);
       };
-      setInterval(() => {
-        bubleCreate();
-      }, 200);
+      bigImage.onmouseout = function () {
+        startToggle();
+      };
+
+      startToggle();
     </script>
   </body>
 </html>
