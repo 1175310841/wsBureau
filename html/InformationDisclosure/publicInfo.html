@@ -108,9 +108,7 @@
               <span>信息公开</span>
               <ul class="sub_menu">
                 <li>
-                  <a href="../../html/partyBuilding/partyNews.html">
-                    <span></span>单位概况
-                  </a>
+                  <a> <span></span>单位概况 </a>
                   <ul class="sub_menu">
                     <li>
                       <a href="../../html/aboutUs/about.html">
@@ -199,7 +197,10 @@
         </div>
         <div>
           <div class="main_title">青岛水务集团有限公司企业信息公开指南</div>
-          <div class="main_content">
+          <div class="main_content" v-if="TabIndex == 0">
+            <img src="../../imgs/InformationDisclosure/directory.png" alt="" />
+          </div>
+          <div class="main_content" v-if="TabIndex == 1">
             <div>
               根据《中华人民共和国政府信息公开条例》，为更好地提供企业信息公开服务，本企业编制了《青岛市水务集团企业信息公开指南》（以下简称《指南》）。<br /><br />
               本《指南》每年更新一次。公民、法人或者其他组织可以在青岛政务网（http://www.qingdao.gov.cn）和本企业网站（http://www.qdwater.com.cn）上查阅本《指南》。<br /><br />
