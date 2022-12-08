@@ -10,20 +10,12 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
-    />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/news/index.css" />
-    <link rel="stylesheet" href="../../css/news/waterNews.css" />
-    <link rel="stylesheet" href="../../css/partyBuilding/labourUnion.css" />
-    <link rel="stylesheet" href="../../css/partyBuilding/breeze.css" />
+    <link rel="stylesheet" href="../../css/aboutUs/runwjDetail.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
+
   <body>
     <div id="app">
       <!-- 头部 -->
@@ -38,7 +30,7 @@
             <li>
               <a href="../../index.html"><span>首页</span></a>
             </li>
-            <li>
+            <li class="navAct">
               <span>集团概况</span>
               <ul class="second_menu">
                 <li>
@@ -78,7 +70,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct">
+            <li>
               <span>党建工作</span>
               <ul class="second_menu">
                 <li>
@@ -134,87 +126,48 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/partybuilding/bg.png" class="about_img" />
+        <img src="../../imgs/aboutUs/aboutBg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">党建工作</p>
-            <p class="banner_title_en">Party Building</p>
+            <p class="banner_title">集团概况</p>
+            <p class="banner_title_en">About us</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 党建工作 / 水务清风
+            您当前的位置：首页 / 集团概况 / 企业文化 / 润万家
           </div>
         </div>
         <div class="company_profile_title">
-          <span>水务清风</span>
+          <span>企业文化</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div class="main_top">
-          <div
-            class="main_carousel"
-            :style="{left:`-${leftVal}px`,transition:`0.8s`}"
-          >
-            <img
-              :class="[imgIndex==index?'imgAct':'']"
-              :src="item.url"
-              v-for="(item,index) in imgList"
-              :key="index"
-            />
-          </div>
-          <div class="main_mask">
-            <div class="main_mask_title">
-              海润自来水南部分公司开展健步行活动
-            </div>
-            <div class="main_mask_content">
-              初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
-            </div>
-          </div>
-          <ul class="small_dot">
-            <li
-              :class="[ imgIndex==index?'small_dot_active' :'']"
-              @click="onClick(index)"
-              v-for="(item,index) in 3"
-              :key="index"
-            ></li>
-          </ul>
+        <div class="main_content">
+          <div class="main_title">供水服务“不打烊”微信视频“来引导”</div>
+          <p>
+            <span style="font-weight: bold">半岛网12月9日讯</span>
+            “没想到这么管用，阀门关上了，不漏水了，太感谢了！”视频里传来用户满意的称赞。这是青岛水务海润自来水集团在疫情期间又一次微信视频“引导服务”，成功化解了用户的燃眉之急，真正做到了供水服务“不打烊”，疫情期间“不缺位”，这一暖心举措也赢得用户们的一致好评。据了解，“引导服务”推广以来，解决用户用水问题2420件，在节省时间的基础上，让用户获取了更多的用水知识。同时，供水工作人员也提高了工作效率，可以更好的服务用户。
+          </p>
+          <h2>“引导服务”推出后极大节省用户等待时间</h2>
+          <p>
+            据了解，最先使用“引导服务”的，是青岛水务海润自来水集团南部分公司四方新所。疫情爆发后，很多用户对于上门服务的工作人员有所顾忌，认为他们每天接触的人较多，担心出现感染。<br /><br />
+            如何在做好服务群众的同时守好疫情防御线，成为青岛水务海润自来水集团最迫切需要解决的难题。为此，四方新所积极探索新办法、新举措，集思广益研究出了解决方案：添加用户微信，通过视频、电话等方式，远程引导用户解决问题。<br /><br />
+            经过一段时间的实际应用，工作人员发现，该办法不但有效避免了人员过多接触，而且极大节省了用户的等待时间。用水设备出现问题后，供水工作人员可以在第一时间引导用户解决问题，防止造成财产损失，赢得用户一致好评。<br /><br />
+            顾女士家住市北区汤米公馆，今年3月份，家中洗手池水管突然爆开，看着大量涌出的水，让她不知所措。等回过神来，赶紧拨通了四方新所的电话，经过工作人员的视频指引，仅用了不到一分钟就找到并关闭了阀门，没有出现任何经济损失。“这个引导服务简直是太方便，太迅速了。”顾女士表示，以前家中遇到用水问题，还需要请假在家等待工作人员上门，现在几分钟就能解决，真正做到了方便用户。
+          </p>
+          <h2>“引导服务”获得集团大力推广</h2>
+          <p>
+            四方新所所长李罡告诉记者，仅四方新所辖区内，就有14万用户，而所内工作人员只有不到20人，人力、物力紧缺。使用视频指导的办法后，较以往能节省出至少一半的时间，可以腾出更多的精力去服务好用户。<br /><br />
+            “其实大家遇到的用水问题，大部分都很简单，只是没有经验，不知道该怎么解决。通过工作人员的视频引导，既及时解决了问题，也提高了用户的用水常识，再遇到问题不会慌，知道怎么解决了。”李罡介绍说。<br /><br />
+            通过在实践中不断总结摸索，青岛水务海润自来水集团正式创新推出“引导服务”新举措：在出现非必要上门服务时，首先通过电话或视频引导用户自行排查解决，如用户难以解决，再安排工作人员上门服务。<br /><br />
+            “引导服务”在各个管线所中得到广泛应用。为使该集团一线工作人员能够迅速熟练掌握“引导服务”的相关内容，该集团总结《“引导服务”明白纸》并下发到各个一线服务窗口党委，进一步细化工作流程，明确任务目标。
+          </p>
+          <h2>“引导服务”将以立体形式呈现在市民面前</h2>
+          <p>
+            据统计,使用“引导服务”一年时间以来，该集团共成功实施引导服务2420件,接下来将结合冬季设施防冻防冻工作实际，拍摄防冻提示小视频，通过抖音、快手、企业公众号、社区微信群、服务窗口等平台进行广泛宣传引导，使“引导服务”以立体的形式呈现在大家面前，助力市民第一时间自行处置解决用水小问题。<br /><br />
+            青岛水务海润自来水集团负责人表示，下一步，将基于用户需求和供水工作实际，继续为岛城疫情防控、经济发展和城市建设提供坚强供水保障。
+          </p>
         </div>
-        <div class="new_hot">
-          <div class="hot_main">
-            <span>最新热点：</span>
-            原水分公司党委、行政即时启动了《紧急疫情防控应急预案》。党有号召，工会有行动
-          </div>
-          <div class="hot_date">2022-10-31</div>
-        </div>
-        <ul class="list">
-          <li v-for="(item,index) in list" ::key="index">
-            <a>
-              <div class="date flex_column_center">
-                <div class="day">30</div>
-                <div class="line"></div>
-                <div class="year">2022/10</div>
-              </div>
-              <div class="specific">
-                <div class="news_title">{{item.name}}</div>
-                <div class="news_content">{{item.content}}</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <el-pagination
-          v-model:current-page="currentPage"
-          v-model:page-size="pageSize"
-          :pager-count="10"
-          :page-sizes="[10, 20, 30, 50]"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="200"
-          background
-          popper-class="page_selece_down"
-          prev-text="上一页"
-          next-text="下一页"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-        />
       </div>
 
       <!-- 底部 -->
@@ -369,67 +322,13 @@
     </div>
     <script>
       const { createApp } = Vue;
-
       createApp({
         data() {
-          return {
-            list: [
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-            ],
-            currentPage: 1,
-            pageSize: 10,
-            imgList: [
-              { url: "../../imgs/partybuilding/workbg.png" },
-              { url: "../../imgs/partybuilding/workbg.png" },
-              { url: "../../imgs/partybuilding/workbg.png" },
-            ],
-            imgWidth: 0,
-            imgIndex: 0,
-            leftVal: 0,
-          };
+          return {};
         },
-        mounted() {
-          this.imgWidth = document.querySelector(".main_top").clientWidth;
-        },
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-          onClick(e) {
-            this.imgIndex = e;
-            this.leftVal = this.imgIndex * this.imgWidth;
-          },
-        },
-      })
-        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
-        .mount("#app");
+        mounted() {},
+        methods: {},
+      }).mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>

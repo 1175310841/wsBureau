@@ -10,20 +10,12 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
-    />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/news/index.css" />
-    <link rel="stylesheet" href="../../css/news/waterNews.css" />
-    <link rel="stylesheet" href="../../css/partyBuilding/labourUnion.css" />
-    <link rel="stylesheet" href="../../css/partyBuilding/breeze.css" />
+    <link rel="stylesheet" href="../../css/aboutUs/runwj.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
+
   <body>
     <div id="app">
       <!-- 头部 -->
@@ -38,7 +30,7 @@
             <li>
               <a href="../../index.html"><span>首页</span></a>
             </li>
-            <li>
+            <li class="navAct">
               <span>集团概况</span>
               <ul class="second_menu">
                 <li>
@@ -78,7 +70,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct">
+            <li>
               <span>党建工作</span>
               <ul class="second_menu">
                 <li>
@@ -134,87 +126,40 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/partybuilding/bg.png" class="about_img" />
+        <img src="../../imgs/aboutUs/aboutBg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">党建工作</p>
-            <p class="banner_title_en">Party Building</p>
+            <p class="banner_title">集团概况</p>
+            <p class="banner_title_en">About us</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 党建工作 / 水务清风
+            您当前的位置：首页 / 集团概况 / 企业文化 / 润万家
           </div>
         </div>
         <div class="company_profile_title">
-          <span>水务清风</span>
+          <span>企业文化</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div class="main_top">
+        <div class="main_content">
           <div
-            class="main_carousel"
-            :style="{left:`-${leftVal}px`,transition:`0.8s`}"
+            class="main_content_item"
+            v-for="(item,index) in list"
+            ::key="index"
           >
-            <img
-              :class="[imgIndex==index?'imgAct':'']"
-              :src="item.url"
-              v-for="(item,index) in imgList"
-              :key="index"
-            />
-          </div>
-          <div class="main_mask">
-            <div class="main_mask_title">
-              海润自来水南部分公司开展健步行活动
+            <div class="main_item_img">
+              <img :src="item.url" alt="" />
             </div>
-            <div class="main_mask_content">
-              初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
+            <div class="main_item_right">
+              <div class="main_item_tit">{{item.title}}</div>
+              <div class="main_item_txt">{{item.content}}</div>
+              <a class="main_item_btn" href="./runwjDetail.html">
+                <span style="display: block">More +</span>
+              </a>
             </div>
           </div>
-          <ul class="small_dot">
-            <li
-              :class="[ imgIndex==index?'small_dot_active' :'']"
-              @click="onClick(index)"
-              v-for="(item,index) in 3"
-              :key="index"
-            ></li>
-          </ul>
         </div>
-        <div class="new_hot">
-          <div class="hot_main">
-            <span>最新热点：</span>
-            原水分公司党委、行政即时启动了《紧急疫情防控应急预案》。党有号召，工会有行动
-          </div>
-          <div class="hot_date">2022-10-31</div>
-        </div>
-        <ul class="list">
-          <li v-for="(item,index) in list" ::key="index">
-            <a>
-              <div class="date flex_column_center">
-                <div class="day">30</div>
-                <div class="line"></div>
-                <div class="year">2022/10</div>
-              </div>
-              <div class="specific">
-                <div class="news_title">{{item.name}}</div>
-                <div class="news_content">{{item.content}}</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <el-pagination
-          v-model:current-page="currentPage"
-          v-model:page-size="pageSize"
-          :pager-count="10"
-          :page-sizes="[10, 20, 30, 50]"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="200"
-          background
-          popper-class="page_selece_down"
-          prev-text="上一页"
-          next-text="下一页"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-        />
       </div>
 
       <!-- 底部 -->
@@ -369,67 +314,63 @@
     </div>
     <script>
       const { createApp } = Vue;
-
       createApp({
         data() {
           return {
             list: [
               {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                url: "../../imgs/aboutUs/runwj-1.png",
+                title: "供水服务“不打烊”微信视频“来引导”",
+                content: "积极践行“润万家”品牌价值观，解决市民急难愁盼问题",
               },
               {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/aboutUs/runwj-2.png",
+                title: "“洁万家”志愿服务队走进火车北站",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "文明出行为青岛加分，“洁万家”志愿服务队走进火车北站开展志愿服务活动",
               },
               {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/aboutUs/runwj-3.png",
+                title: "“洗水人”志愿服务队 参加青岛市争创全国文明典范城",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "环境公司张村河水务有限公司“洗水人”志愿服务队成立于2019年，成员40人，以90后和00后年轻职工为主……",
               },
               {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/aboutUs/runwj-4.png",
+                title: "海润企业",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "标识是由一汪清清流水的抽象艺术形象变形而来，潺潺的流水代表了青岛市海润自来水集团有限公司的主导产业。标识将英文“Water”水的首字母“W”变形为纯净的水...",
               },
               {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+                url: "../../imgs/aboutUs/runwj-5.png",
+                title: "海润党建",
                 content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+                  "以集团公司“润万家”标识为淡色衬底，左上方为飘扬的鲜艳党旗，右侧为党建品牌“海润先锋”行楷红字，意为海润自来水集团的各级党组织和全体共产党员永远凝聚...",
+              },
+              {
+                url: "../../imgs/aboutUs/runwj-6.png",
+                title: "海润廉政",
+                content:
+                  "标识上方为飘扬的鲜艳党旗，中间为海润自来水集团标识“润万家”；“润万家”标识两侧为企业主色调水纹彩带，下方为黑体蓝字“风正水清”",
+              },
+              {
+                url: "../../imgs/aboutUs/runwj-7.png",
+                title: "海润工会",
+                content:
+                  "以大红色飘带围成心形图案为主形，内含粉色心形图案，中心以大红色线体留白勾画出上下相扣的牵手图案，正上方叠印海润自来水集团“润万家”服务品牌标识，正下...",
+              },
+              {
+                url: "../../imgs/aboutUs/runwj-8.png",
+                title: "海润安全",
+                content:
+                  "标识以蓝色盾牌为主形图案，内嵌海润自来水集团“润万家”服务品牌标识和以醒目蓝色字体标注的品牌名称“平安海润”，下方衬托三条横线。",
               },
             ],
-            currentPage: 1,
-            pageSize: 10,
-            imgList: [
-              { url: "../../imgs/partybuilding/workbg.png" },
-              { url: "../../imgs/partybuilding/workbg.png" },
-              { url: "../../imgs/partybuilding/workbg.png" },
-            ],
-            imgWidth: 0,
-            imgIndex: 0,
-            leftVal: 0,
           };
         },
-        mounted() {
-          this.imgWidth = document.querySelector(".main_top").clientWidth;
-        },
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-          onClick(e) {
-            this.imgIndex = e;
-            this.leftVal = this.imgIndex * this.imgWidth;
-          },
-        },
-      })
-        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
-        .mount("#app");
+        mounted() {},
+        methods: {},
+      }).mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>
