@@ -92,7 +92,16 @@ img {
   padding: 30px 20px 0;
   box-sizing: border-box;
 }
+.main_content_item p {
+  font-size: 15px;
+}
 .main_content_item_title {
   font-size: 24px;
   line-height: 40px;
+}
+.core p:last-child {
+  line-height: 16px;
+}
+.quality {
+  line-height: 22px;
 }
