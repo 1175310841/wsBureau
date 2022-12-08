@@ -338,7 +338,16 @@
         </footer>
       </div>
     </div>
-    <script src="../../template.js"></script>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {};
+        },
+        mounted() {},
+        methods: {},
+      }).mount("#app");
+    </script>
     <script src="../../js/common.js"></script>
   </body>
 </html>
