@@ -182,7 +182,7 @@ nav .search_box {
   padding: 0 15px;
   box-sizing: border-box;
 }
-.second_menu {
+.sub_menu {
   visibility: hidden;
   opacity: 0;
   padding: 10px 30px;
@@ -191,7 +191,7 @@ nav .search_box {
   background-color: rgba(183, 227, 253, 0.8);
 }
 
-.second_menu > li > a {
+.sub_menu > li > a {
   width: 120px;
   padding: 20px 10px;
   border-bottom: 1px solid #cde6f7;
@@ -203,20 +203,20 @@ nav .search_box {
   align-items: center;
 }
 
-.second_menu > li > a:hover {
+.sub_menu > li > a:hover {
   padding-left: 15px;
   padding-right: 15px;
   transition: all 0.4s ease;
 }
 
-.second_menu > li > a > span {
+.sub_menu > li > a > span {
   display: inline-block;
   width: 4px;
   height: 16px;
   background-color: #186daa;
 }
 
-.navigation > li:hover .second_menu {
+.navigation > li:hover .sub_menu {
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease;
