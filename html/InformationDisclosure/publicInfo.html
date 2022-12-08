@@ -15,7 +15,10 @@
       href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
     />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/InformationDisclosure/laws.css" />
+    <link
+      rel="stylesheet"
+      href="../../css/InformationDisclosure/publicInfo.css"
+    />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
@@ -165,13 +168,13 @@
             <p class="banner_title_en">Information disclosure</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 信息公开 / 法规标准 /
-            <span v-if="TabIndex==0">政策标准</span>
-            <span v-if="TabIndex==1">规章制度</span>
+            您当前的位置：首页 / 信息公开 / 公开目录及指南 /
+            <span v-if="TabIndex==0">信息公开目录</span>
+            <span v-if="TabIndex==1">信息公开指南</span>
           </div>
         </div>
         <div class="company_profile_title">
-          <span>法规标准</span>
+          <span>公开目录及指南</span>
         </div>
       </div>
 
@@ -182,21 +185,121 @@
               <a
                 :class="[TabIndex == 0 ?'main_nav_active':'']"
                 @click="handoffNav(0)"
-                >政策标准</a
+                >信息公开目录</a
               >
             </li>
             <li>
               <a
                 :class="[TabIndex == 1 ?'main_nav_active':'']"
                 @click="handoffNav(1)"
-                >规章制度</a
+                >信息公开指南</a
               >
             </li>
           </ul>
         </div>
-        <div class="flex_column_center">
-          <policy v-if="TabIndex==0"></policy>
-          <system v-if="TabIndex==1"></system>
+        <div>
+          <div class="main_title">青岛水务集团有限公司企业信息公开指南</div>
+          <div class="main_content">
+            <div>
+              根据《中华人民共和国政府信息公开条例》，为更好地提供企业信息公开服务，本企业编制了《青岛市水务集团企业信息公开指南》（以下简称《指南》）。<br /><br />
+              本《指南》每年更新一次。公民、法人或者其他组织可以在青岛政务网（http://www.qingdao.gov.cn）和本企业网站（http://www.qdwater.com.cn）上查阅本《指南》。<br /><br />
+            </div>
+            <h3>一、信息分类和编排体系</h3>
+            <p class="txtid-3">
+              本企业在职责范围内，负责主动公开下列各类企业信息：
+            </p>
+            <br />
+            <p class="txtid-3">（一）企业概况方面。</p>
+            <p class="txtid-5">1.工商注册登记等企业基本信息;</p>
+            <p class="txtid-5">
+              2.公司治理及管理架构、重要人事变动、企业负责人薪酬水平情况;
+            </p>
+            <p class="txtid-5">
+              3.企业主要财务状况和经营成果、国有资本保值增值情况;
+            </p>
+            <p class="txtid-5">4.企业重大改制重组结果;</p>
+            <p class="txtid-5">5.通过产权市场转让企业产权和企业增资等信息;</p>
+            <p class="txtid-5">
+              6.有关部门依法要求公开的监督检查问题整改情况、重大突发事件事态发展和应急处置情况;
+            </p>
+            <p class="txtid-5">7.企业履行社会责任情况;</p>
+            <p class="txtid-5">8.其他依照法律法规规定应当主动公开的信息。</p>
+            <br />
+            <p class="txtid-3">（二）对外服务方面。</p>
+            <p class="txtid-5">
+              1.供水销售价格，维修及相关服务价格标准，有关收费依据;
+            </p>
+            <p class="txtid-5">2.供水申请报装工作程序;</p>
+            <p class="txtid-5">
+              3.供水服务范围，供水缴费、维修及相关服务办理程序、时限、网点设置、服务标准、服务承诺和便民措施;
+            </p>
+            <p class="txtid-5">4.计划类施工停水及恢复供水信息、抄表计划信息;</p>
+            <p class="txtid-5">5.供水厂出厂水和管网水水质信息;</p>
+            <p class="txtid-5">6.供水设施安全使用常识和安全提示;</p>
+            <p class="txtid-5">7.咨询服务电话、报修和监督投诉电话。</p>
+            <br />
+            <p class="txtid-3">（三）其他应当主动公开的信息。</p>
+            <p class="txtid-5">
+              为方便公民、法人或者其他组织查询本企业主动公开的信息，本企业编制了《青岛水务集团有限公司信息公开目录》（以下简称《目录》）。
+            </p>
+            <p class="txtid-5">
+              公民、法人或者其他组织可以在本企业网站（http://www.qdwater.com.cn）查阅该《目录》。
+            </p>
+            <br />
+            <h3>二、获取形式</h3>
+            <p class="txtid-3">本企业主动公开的企业信息范围，详见《目录》。</p>
+            <br />
+            <p class="txtid-3">（一）公开形式</p>
+            <p class="txtid-5">
+              1.青岛市人民政府网站（http://www.qingdao.gov.cn）；青岛水务集团有限公司网站（http://www.qdwater.com.cn）。
+            </p>
+            <p class="txtid-5">2.其他：报刊、广播、电视等。</p>
+            <br />
+            <p class="txtid-3">（二）公开时限</p>
+            <p class="txtid-5">
+              本企业主动公开的企业信息，自企业信息形成或者变更之日20个工作日内予以公开。法律、法规对政府信息公开的期限另有规定的，从其规定。
+            </p>
+            <br />
+            <h3>三、企业信息公开工作机构</h3>
+            <p class="txtid-3">
+              本企业信息公开工作机构为：青岛水务集团有限公司办公室
+            </p>
+            <p class="txtid-3">办公地址：青岛市宁德路20号一号办公楼</p>
+            <p class="txtid-3">邮政编码：266071</p>
+            <p class="txtid-3">办公时间：8:30-11:30 13:00-17:00（工作日）</p>
+            <p class="txtid-3">联系电话：0532-88617688 88617679</p>
+            <p class="txtid-3">传真电话：0532-82964180</p>
+            <p class="txtid-3">电子邮箱：qshw86017088@163.com</p>
+            <br />
+            <h3>四、监督保障</h3>
+            <p class="txtid-3">
+              公民、法人或者其他组织认为本企业未依法履行企业信息公开义务的，可以向本企业投诉举报。
+            </p>
+            <p class="txtid-3">投诉电话：0532-88617533，</p>
+            <p class="txtid-3">通讯地址：青岛市宁德路20号，</p>
+            <p class="txtid-3">邮政编码：266071。</p>
+            <p class="txtid-3">
+              公民、法人或者其他组织认为本企业在企业信息公开工作中的具体行政行为侵犯其合法权益的，可以向上一级行政机关或者政府信息公开工作主管部门投诉、举报，也可以依法申请行政复议或者提起行政诉讼。
+            </p>
+            <br />
+            <p class="txtid-3">
+              青岛水务集团有限公司信息公开主管部门为：青岛市水务管理局办公室
+            </p>
+            <p class="txtid-3">
+              办公地址：青岛市香港中路17号市级机关三号办公楼 邮政编码：266071
+            </p>
+            <p class="txtid-3">办公时间：9:00-12:00 13:30-17:30（工作日）</p>
+            <p class="txtid-3">
+              联系电话：0532-85916193、0532-85916109 传真电话：0532-85916195
+            </p>
+            <p class="txtid-3">电子邮箱：qdsljbgs@qd.shandong.cn</p>
+            <br />
+            <h3>五、其他</h3>
+            <p class="txtid-3">
+              公民、法人或者其他组织认为本企业提供的与其自身相关的企业信息记录不准确的，可以向本企业提出更正申请，并提供证据材料。
+            </p>
+            <p class="txtid-3">本企业将根据申请作出相应处理，并告知申请人。</p>
+          </div>
         </div>
       </div>
 
@@ -351,241 +454,12 @@
       </div>
     </div>
     <script>
-      // 政策标准
-      const policy = {
-        template: `
-          <ul class="main_list">
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-          </ul>
-          <el-pagination
-            v-model:current-page="currentPage"
-            v-model:page-size="pageSize"
-            :pager-count="10"
-            :page-sizes="[10, 20, 30, 50]"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="200"
-            background
-            popper-class="page_selece_down"
-            prev-text="上一页"
-            next-text="下一页"
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-          />`,
-        data() {
-          return {
-            currentPage: 1,
-            pageSize: 10,
-          };
-        },
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-        },
-      };
-      // 规章制度
-      const system = {
-        template: `
-          <ul class="main_list">
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-            <li class="list_item">
-              <div class="list_item_title">
-                <span></span>
-                <p>青岛市河道管理条例</p>
-              </div>
-              <div class="list_item_content flex_column_center">
-                <div class="list_item_content_details">
-                  （2010年6月25日青岛市第十四届人民代表大会常务委员会第十九次会议通过2010年7月30日山东省第十一届人民代表大会常务委员会第十八次会议批准
-                  2010年7月30日青岛市人民代表大会常务委员会公告公布自2010年10月1日起施行
-                </div>
-                <a class="list_item_btn">查看详细内容</a>
-              </div>
-            </li>
-          </ul>
-          <el-pagination
-            v-model:current-page="currentPage"
-            v-model:page-size="pageSize"
-            :pager-count="10"
-            :page-sizes="[10, 20, 30, 50]"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="200"
-            background
-            popper-class="page_selece_down"
-            prev-text="上一页"
-            next-text="下一页"
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-          />`,
-        data() {
-          return {
-            currentPage: 1,
-            pageSize: 10,
-          };
-        },
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-        },
-      };
-
       const { createApp } = Vue;
       createApp({
         data() {
           return {
             TabIndex: 0,
           };
-        },
-        components: {
-          policy,
-          system,
         },
         methods: {
           handoffNav(e) {

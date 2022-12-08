@@ -45,7 +45,12 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
-
+.txtid-3 {
+  text-indent: 3em;
+}
+.txtid-5 {
+  text-indent: 5em;
+}
 #app {
   background-color: #ddf5fc;
 }
