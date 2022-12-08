@@ -1,0 +1,98 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+.logotype {
+  width: 1200px;
+}
+.logotype {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logotype {
+  margin-bottom: 100px;
+}
+.logotype_img {
+  width: 512px;
+  height: 338px;
+  margin-right: 56px;
+}
+.logotype_content {
+  width: 582px;
+  height: 100%;
+  line-height: 30px;
+}
+.logotype_title {
+  font-size: 22px;
+  line-height: 51px;
+}
+.logotype_paragraph {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  line-height: 30px;
+}
+.logotype_paragraph div {
+  margin-right: 5px;
+}
+.main_content {
+  width: 100%;
+  height: 670px;
+  background: url("../../imgs/aboutUs/changwjBg.png") no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding-top: 90px;
+}
+.main_content_title {
+  height: 36px;
+  font-size: 37px;
+  color: #186daa;
+  line-height: 36px;
+  margin-bottom: 25px;
+}
+.main_content > p {
+  width: 142px;
+  height: 3px;
+  background-color: #ec9f67;
+  margin-bottom: 71px;
+}
+.main_content_list {
+  width: 1200px;
+  color: #ddf5fc;
+}
+.main_content_item {
+  width: 180px;
+  height: 160px;
+  line-height: 30px;
+  box-sizing: border-box;
+  background-color: #186daa;
+  border-bottom: 5px solid #dbb49b;
+  margin-left: 24px;
+  float: right;
+}
+.main_content_item.special {
+  height: 340px;
+  line-height: 50px;
+}
+.main_content_item:nth-child(6),
+.main_content_item:nth-child(11) {
+  margin-left: 0;
+}
+.main_content_item:nth-child(2),
+.main_content_item:nth-child(3),
+.main_content_item:nth-child(4),
+.main_content_item:nth-child(5),
+.main_content_item:nth-child(6) {
+  margin-bottom: 20px;
+}
+.main_content_item a {
+  height: 100%;
+  border: 3px solid #ddf5fc;
+  padding: 30px 20px 0;
+  box-sizing: border-box;
+}
+.main_content_item_title {
+  font-size: 24px;
+  line-height: 40px;
+}
