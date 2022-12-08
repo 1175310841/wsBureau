@@ -182,15 +182,25 @@ nav .search_box {
   padding: 0 15px;
   box-sizing: border-box;
 }
+
 .sub_menu {
   visibility: hidden;
   opacity: 0;
-  padding: 10px 30px;
+  padding: 10px 0;
   position: absolute;
   top: 42px;
   background-color: rgba(183, 227, 253, 0.8);
+  border: 1px solid #fff;
+  box-sizing: border-box;
 }
-
+.sub_menu li {
+  padding: 0 30px;
+  position: relative;
+}
+.sub_menu li .sub_menu {
+  top: 0;
+  left: 100%;
+}
 .sub_menu > li > a {
   width: 120px;
   padding: 20px 10px;
@@ -216,7 +226,7 @@ nav .search_box {
   background-color: #186daa;
 }
 
-.navigation > li:hover .sub_menu {
+.navigation li:hover > .sub_menu {
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease;

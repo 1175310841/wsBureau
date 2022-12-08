@@ -20,6 +20,8 @@
   margin: 0 auto;
   background: url("../../imgs/aboutUs/1.png") no-repeat;
   transition: 1s;
+  border: 1px solid #186daa;
+  box-sizing: border-box;
 }
 .dept-small-img-list {
   width: 100%;

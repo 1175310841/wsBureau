@@ -37,6 +37,12 @@
 .course {
   margin-bottom: 100px;
 }
+#leadership {
+  position: absolute;
+  width: 100%;
+  height: 135px;
+  top: 1558px;
+}
 .iceberg {
   width: 100%;
   box-sizing: border-box;

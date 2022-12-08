@@ -253,7 +253,7 @@
 .sub_menu {
   visibility: hidden;
   opacity: 0;
-  padding: 10px 30px;
+  padding: 10px 0;
   position: absolute;
   top: 32px;
   background-color: rgba(183, 227, 253, 0.75);
@@ -285,7 +285,7 @@
   background-color: #186daa;
 }
 
-.nav > li:hover .sub_menu {
+.nav li:hover > .sub_menu {
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease;
