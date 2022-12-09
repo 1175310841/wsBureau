@@ -3,7 +3,7 @@
   position: absolute;
   top: 0;
 }
-.main_content {
+.water_quality {
   width: 1300px;
 }
 .other_main {
@@ -52,13 +52,13 @@
   display: inline-block;
   width: 1em;
 }
-.main_content .ml-0 {
+.water_quality .ml-0 {
   margin-left: 0;
 }
-.main_content .other_main_title.ml-0 {
+.water_quality .other_main_title.ml-0 {
   margin-bottom: 30px;
 }
-.main_content .other_main_content.ml-0 {
+.water_quality .other_main_content.ml-0 {
   margin-bottom: 50px;
 }
 .contact {
@@ -84,4 +84,71 @@
   line-height: 29px;
   font-size: 29px;
   color: #28a6e2;
+}
+.service_info {
+  width: 1200px;
+  color: #186daa;
+}
+.service_info_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.service_info_item {
+  width: 560px;
+  margin-right: 80px;
+  padding: 52px 0 40px 0;
+  border-bottom: 1px solid #bbd3df;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.service_info_item:hover {
+  padding-left: 20px;
+}
+.service_info_item:nth-child(even) {
+  margin-right: 0;
+}
+.service_info_date {
+  width: 88px;
+  height: 86px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding-top: 17px;
+  margin-right: 20px;
+}
+.service_info_date p {
+  height: 28px;
+  line-height: 28px;
+  font-size: 36px;
+  color: #186daa;
+  margin-bottom: 13px;
+}
+.service_info_date div {
+  height: 16px;
+  line-height: 16px;
+}
+.service_info_paragraph {
+  flex: 1;
+}
+.service_info_title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 22px;
+  line-height: 22px;
+  font-size: 22px;
+  color: #394e69;
+  margin-bottom: 25px;
+}
+.service_info_content {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 20px;
 }
