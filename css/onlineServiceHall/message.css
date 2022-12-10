@@ -5,7 +5,54 @@
 }
 .main_content {
   width: 1200px;
+  line-height: 26px;
 }
+.main_list {
+  width: 100%;
+}
+.main_item {
+  margin-bottom: 50px;
+}
+.item_message,
+.item_reply {
+  padding: 25px 90px 25px 18px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.item_message {
+  background-color: #b1d8f2;
+  margin-bottom: 22px;
+}
+.item_reply {
+  border: 1px solid #b1d8f2;
+  margin-bottom: 16px;
+}
+.item_img {
+  width: 44px;
+  height: 36px;
+  margin-right: 25px;
+}
+.item_img img {
+  width: 100%;
+  height: 100%;
+}
+.submit_div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  color: #bdd3e3;
+}
+.sub_num {
+  margin-left: 50px;
+}
+
+/* 
+在线留言
+*/
 .main_title {
   height: 37px;
   font-size: 37px;
@@ -15,55 +62,22 @@
 }
 .main_form {
   width: 1200px;
-  padding-bottom: 80px;
+  padding: 70px 100px 80px;
+  box-sizing: border-box;
   background: #ffffff;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
-.steps {
+.prompt {
+  color: #e60012;
+  line-height: 33px;
+  margin-bottom: 30px;
+}
+.prompt div {
   display: flex;
   align-items: center;
-  margin: 80px auto 84px;
 }
-.steps span {
-  display: inline-block;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  background: #ffffff;
-  border: 1px solid #dcdcdc;
-  box-sizing: border-box;
-  border-radius: 50%;
-}
-.steps span i {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: #dddddd;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.steps_line {
-  width: 200px;
-  height: 1px;
-  background: #dddddd;
-}
-.steps .finish_steps {
-  border: 1px solid #007cd2;
-}
-.steps .finish_steps i {
-  background: #007cd2;
-}
-.steps_txt {
-  white-space: nowrap;
-  height: 16px;
-  line-height: 16px;
-  position: absolute;
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
+.prompt .requied {
+  margin-right: 20px;
 }
 form {
   width: 1000px;
@@ -71,12 +85,10 @@ form {
 }
 .form_item {
   width: 100%;
-  height: 100px;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   border-bottom: 1px solid #dddddd;
-  padding: 0 5px;
+  padding: 30px 5px 30px;
 }
 form > .form_item:first-child {
   border-top: 1px solid #dddddd;
@@ -93,55 +105,23 @@ form > .form_item:first-child {
 .form_label {
   width: 150px;
 }
-.choose_one_of_three {
+.juxtaposition {
   width: 100%;
   display: flex;
   align-items: center;
-}
-.choose_one_of_three_left {
-  width: 760px;
-  box-sizing: border-box;
-  padding-right: 20px;
-}
-.choose_one_of_three_right {
-  width: 240px;
-  height: 250px;
-  box-sizing: border-box;
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
-  border-left: 1px solid #dddddd;
-}
-.annex {
-  height: auto;
-  padding: 30px 0;
-}
-.annex_top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-.annex div p {
-  line-height: 20px;
 }
 .promise {
   height: auto;
   padding: 30px;
   border-bottom: 1px solid #dddddd;
 }
-.promise > p {
-  line-height: 22px;
-  margin-bottom: 30px;
-}
-.promise div {
-  display: flex;
-  align-items: center;
-}
-.promise .requied {
-  margin: 0 5px;
-}
 .form_btn {
   margin-top: 60px;
+}
+.public p {
+  color: #e60012;
+  line-height: 29px;
+  margin-top: 10px;
 }
 /* 
 element css
@@ -173,4 +153,12 @@ element css
   font-size: 22px;
   color: #ffffff;
 }
+.el-textarea {
+  flex: 1;
+}
+.el-textarea__inner {
+  box-shadow: none;
+  background-color: #eeeeee;
+}
+/* **************** */
 /* *********************** */

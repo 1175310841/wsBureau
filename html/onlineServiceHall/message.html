@@ -16,7 +16,7 @@
       href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
     />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/onlineServiceHall/business.css" />
+    <link rel="stylesheet" href="../../css/onlineServiceHall/message.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
@@ -173,13 +173,13 @@
             <p class="banner_title_en">Online service hall</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / 业务办理 /
-            <span v-if="TabIndex == 0">全市通办</span>
-            <span v-if="TabIndex == 1">便民五项</span>
+            您当前的位置：首页 / 网上服务厅 / 网上留言及回复 /
+            <span v-if="TabIndex == 0">96111回复</span>
+            <span v-if="TabIndex == 1">在线留言</span>
           </div>
         </div>
         <div class="company_profile_title">
-          <span>业务办理</span>
+          <span>网上留言及回复</span>
         </div>
       </div>
 
@@ -191,7 +191,7 @@
                 :class="[TabIndex == 0 ?'main_nav_active':'']"
                 @click="handoffNav(0)"
               >
-                全市通办
+                96111回复
               </a>
             </li>
             <li>
@@ -199,134 +199,145 @@
                 :class="[TabIndex == 1 ?'main_nav_active':'']"
                 @click="handoffNav(1)"
               >
-                便民五项
+                在线留言
               </a>
             </li>
           </ul>
         </div>
-        <div class="main_img flex_column_center" v-if="TabIndex==0">
-          <img src="../../imgs/onlineServiceHall/waterprice.png" alt="" />
+        <div class="main_content flex_column_center" v-if="TabIndex==0">
+          <div class="main_list">
+            <div class="main_item" v-for="(item,index) in list" ::key="index">
+              <div class="item_message">
+                <div class="item_img">
+                  <img src="../../imgs/onlineServiceHall/message.png" alt="" />
+                </div>
+                <p>
+                  我是青岛市市北区一商铺业主，原通过佰通卡缴纳水费，现被告知对方不再受理缴纳业务，现水费如何缴纳？盼解答！谢谢
+                </p>
+              </div>
+              <div class="item_reply">
+                <div class="item_img">
+                  <img src="../../imgs/onlineServiceHall/reply.png" alt="" />
+                </div>
+                <p>
+                  我公司工作人员11月11日9时联系用户，用户称已解决，对来电表示感谢。
+                </p>
+              </div>
+              <div class="submit_div">
+                <div class="sub_date">提交时间：2022-11-09</div>
+                <div class="sub_num">点击量：735次</div>
+              </div>
+            </div>
+          </div>
+          <el-pagination
+            v-model:current-page="currentPage"
+            v-model:page-size="pageSize"
+            :pager-count="10"
+            :page-sizes="[10, 20, 30, 50]"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="200"
+            background
+            popper-class="page_selece_down"
+            prev-text="上一页"
+            next-text="下一页"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+          />
         </div>
         <div class="main_content" v-if="TabIndex==1">
           <div class="main_title">供水业务申请表</div>
-          <div class="main_form flex_column_center">
-            <div class="steps">
-              <span class="finish_steps">
-                <i></i>
-                <div class="steps_txt">信息填写</div>
-              </span>
-              <div class="steps_line"></div>
-              <span>
-                <i></i>
-                <div class="steps_txt">确认</div>
-              </span>
-              <div class="steps_line"></div>
-              <span>
-                <i></i>
-                <div class="steps_txt">提交</div>
-              </span>
+          <div class="main_form">
+            <div class="prompt">
+              <div>
+                <p class="requied">*</p>
+                以下信息全部为必填项，请认真填写，以方便我们联系您。
+              </div>
+              <div>
+                <p class="requied">*</p>
+                如需电话联系,请拨打96111热线联系客服人员。
+              </div>
+              <div>
+                <p class="requied">*</p>
+                如需要即时互动交流，请下载QQ登录后，点击页面右侧QQ在线咨询，与客服互动交流。
+              </div>
             </div>
             <form action="">
               <div class="form_item">
                 <p class="requied">*</p>
-                <div class="form_label">申请业务种类：</div>
+                <div class="form_label">情 况:</div>
                 <el-checkbox-group v-model="checkList" size="large">
-                  <el-checkbox label="更名过户">更名过户</el-checkbox>
-                  <el-checkbox label="变更用水性质">变更用水性质</el-checkbox>
-                  <el-checkbox label="终止供水">终止供水</el-checkbox>
-                  <el-checkbox label="水表校验">水表校验</el-checkbox>
-                  <el-checkbox label="人口基数变更">人口基数变更</el-checkbox>
+                  <el-checkbox label="供水">供水</el-checkbox>
+                  <el-checkbox label="排水">排水</el-checkbox>
+                  <el-checkbox label="举报">举报</el-checkbox>
                 </el-checkbox-group>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
-                <div class="form_label">申请人名称或<br />单位名称：</div>
+                <div class="form_label">个人/单位：</div>
+                <el-checkbox-group v-model="checkList" size="large">
+                  <el-checkbox label="个人">个人</el-checkbox>
+                  <el-checkbox label="单位">单位</el-checkbox>
+                </el-checkbox-group>
+              </div>
+              <div class="form_item">
+                <p class="requied">*</p>
+                <div class="form_label">标 题：</div>
                 <el-input
                   v-model="name"
-                  placeholder="请输入您的姓名或单位名称"
+                  placeholder="请输入您的标题"
                 ></el-input>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
-                <div class="form_label">用水地址：</div>
+                <div class="form_label">内 容：</div>
                 <el-input
-                  v-model="name"
-                  placeholder="请输入您的用水地址"
-                ></el-input>
+                  v-model="textarea"
+                  :rows="5"
+                  type="textarea"
+                  placeholder="请输入您的内容"
+                />
               </div>
-              <div class="choose_one_of_three">
-                <div class="choose_one_of_three_left">
-                  <div class="form_item">
-                    <p class="requied"></p>
-                    <div class="form_label">给水号：</div>
-                    <el-input
-                      v-model="name"
-                      placeholder="请输入您的给水号"
-                    ></el-input>
-                  </div>
-                  <div class="form_item">
-                    <p class="requied"></p>
-                    <div class="form_label">卡号：</div>
-                    <el-input
-                      v-model="name"
-                      placeholder="请输入您的卡号"
-                    ></el-input>
-                  </div>
-                  <div class="form_item">
-                    <p class="requied"></p>
-                    <div class="form_label">ID号：</div>
-                    <el-input
-                      v-model="name"
-                      placeholder="请输入您的ID号"
-                    ></el-input>
-                  </div>
-                </div>
-                <div class="choose_one_of_three_right">
+              <div class="juxtaposition">
+                <div class="form_item">
                   <p class="requied">*</p>
-                  <div>此三项选择其中一项填写</div>
+                  <div class="form_label">姓 名：</div>
+                  <el-input
+                    v-model="name"
+                    placeholder="请输入您的姓名"
+                  ></el-input>
+                </div>
+                <div class="form_item">
+                  <p class="requied">*</p>
+                  <div class="form_label">联系电话：</div>
+                  <el-input
+                    v-model="name"
+                    placeholder="请输入您的联系电话"
+                  ></el-input>
                 </div>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
-                <div class="form_label">经办人姓名：</div>
+                <div class="form_label">地 址：</div>
                 <el-input
                   v-model="name"
-                  placeholder="请输入经办人姓名"
+                  placeholder="请输入您的联系地址"
                 ></el-input>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
-                <div class="form_label">联系电话：</div>
-                <el-input
-                  v-model="name"
-                  placeholder="请输入经办人的联系电话"
-                ></el-input>
+                <div class="form_label">验证码：</div>
               </div>
-              <div class="form_item annex">
+              <div class="form_item">
                 <p class="requied">*</p>
-                <div class="form_label">附件：</div>
-                <div>
-                  <div class="annex_top">
-                    <input type="file" />
-                    <a>点击查看附件明细</a>
-                  </div>
+                <div class="form_label">是否公开：</div>
+                <div class="public">
+                  <el-checkbox-group v-model="checkList" size="large">
+                    <el-checkbox label="公开">公开</el-checkbox>
+                    <el-checkbox label="隐藏">隐藏</el-checkbox>
+                  </el-checkbox-group>
                   <p>
-                    可上传文件格式为：.rar，.zip，.png，.jpg，.gif，.bmp。文件大小20MB之内。<br />
-                    您可以选择多个文件（按下Ctrl键不放，选中多个文件），或者合并成一个压缩包上传。
+                    选择留言公开，将在留言回复栏目中公开显示标题、内容以及回复信息;<br />选择隐藏，将有相关业务人员查看。
                   </p>
-                </div>
-              </div>
-              <div class="promise flex_column_center">
-                <p>
-                  本单位（本人）承诺如下：<br />
-                  1.在水务集团网站上上传的资料全部真实有效。<br />
-                  2.业务申请前无水费欠费、违章用水和产权争议等任何纠纷。<br />
-                  本单位（本人）违反上述承诺引发的法律纠纷，由本单位（本人）独立承担全部责任，青岛水务集团有限公司可按规定解除供水合同。
-                </p>
-                <div>
-                  <el-checkbox v-model="checked"></el-checkbox>
-                  <p class="requied">*</p>
-                  <div class="form_label">同意并遵守承诺</div>
                 </div>
               </div>
               <div class="form_btn flex_column_center">
@@ -492,15 +503,19 @@
       createApp({
         data() {
           return {
-            TabIndex: 1,
-            checkList: [],
-            name: "",
-            checked: false,
+            TabIndex: 0,
+            list: [{}, {}, {}, {}, {}, {}],
           };
         },
         methods: {
           handoffNav(e) {
             this.TabIndex = e;
+          },
+          handleSizeChange(val) {
+            console.log(`每页 ${val} 条`);
+          },
+          handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
           },
         },
       })
