@@ -1,0 +1,81 @@
+.main > div:first-child {
+  width: 1200px;
+  position: absolute;
+  top: 0;
+}
+.main_threeOne,
+.paid_services {
+  width: 1200px;
+}
+.threeOne_title,
+.paid_services_title {
+  height: 36px;
+  line-height: 36px;
+  font-size: 37px;
+}
+.threeOne_title {
+  margin-bottom: 60px;
+}
+.threeOne_content {
+  line-height: 37px;
+  margin-bottom: 80px;
+}
+.threeOne_div {
+  width: 100%;
+  height: 300px;
+  background-color: #b1d8f2;
+  box-sizing: border-box;
+  position: relative;
+}
+.threeOne_txt {
+  height: 116px;
+  justify-content: space-between;
+  position: absolute;
+  top: 92px;
+  left: 107px;
+}
+.threeOne_txt p {
+  height: 29px;
+  line-height: 28px;
+  font-size: 29px;
+  -webkit-text-stroke: 0.5px #ddf5fb;
+  text-stroke: 0.5px #ddf5fb;
+}
+.threeOne_txt span {
+  display: block;
+  height: 50px;
+  line-height: 46px;
+  font-size: 50px;
+  -webkit-text-stroke: 1px #ddf5fb;
+  text-stroke: 1px #ddf5fb;
+}
+.threeOne_img {
+  width: 420px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+}
+.threeOne_img img {
+  width: 100%;
+  height: 100%;
+}
+.paid_services_table,
+.paid_services_content {
+  width: 100%;
+}
+.paid_services_table {
+  padding: 65px 0;
+  background-color: #fff;
+  margin-bottom: 24px;
+}
+.paid_services_title {
+  margin-bottom: 22px;
+}
+.paid_services_content h2 {
+  font-size: 22px;
+  line-height: 45px;
+  font-weight: bold;
+}
+.paid_services_content p {
+  line-height: 22px;
+}

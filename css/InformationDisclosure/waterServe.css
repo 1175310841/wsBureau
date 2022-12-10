@@ -20,6 +20,7 @@
 .supply_title {
   font-size: 37px;
   text-align: center;
+  margin-bottom: 20px;
 }
 .supply_content span {
   display: inline-block;
