@@ -1,0 +1,57 @@
+.main > div:first-child {
+  width: 1200px;
+  position: absolute;
+  top: 0;
+}
+.main_content {
+  width: 1200px;
+}
+.main_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main_item {
+  width: 360px;
+  height: 350px;
+  background: url("../../imgs/environment/policy.png");
+  background-size: auto;
+  margin-right: 60px;
+  margin-bottom: 57px;
+  position: relative;
+  top: 0;
+  padding: 67px 50px 34px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.main_item:nth-child(3n) {
+  margin-right: 0;
+}
+.main_item:hover {
+  top: -20px;
+}
+.main_item_title {
+  height: 48px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.main_item_content {
+  font-size: 13px;
+  line-height: 18px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}
+.main_item_img {
+  position: absolute;
+  bottom: 34px;
+  right: 50px;
+}
+.identification {
+  width: 1306px;
+}

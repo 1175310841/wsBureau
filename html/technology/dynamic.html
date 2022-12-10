@@ -11,13 +11,16 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../../css/common.css" />
     <link
       rel="stylesheet"
-      href="../../css/onlineServiceHall/characteristic.css"
+      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
     />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/technology/achievement.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
 
   <body>
@@ -163,83 +166,45 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
+        <img src="../../imgs/technology/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">网上服务厅</p>
-            <p class="banner_title_en">Online service hall</p>
+            <p class="banner_title">水务科技</p>
+            <p class="banner_title_en">Water technology</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / “青水管＋”特色服务 /
-            <span v-if="TabIndex == 0">一免、一查、一服务</span>
-            <span v-if="TabIndex == 1">有偿服务收费标准</span>
+            您当前的位置：首页 / 水务科技 / 科技动态
           </div>
         </div>
         <div class="company_profile_title">
-          <span>“青水管＋”特色服务</span>
+          <span>科技动态</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div>
-          <ul class="main_nav">
-            <li>
-              <a
-                :class="[TabIndex == 0 ?'main_nav_active':'']"
-                @click="handoffNav(0)"
-              >
-                一免、一查、一服务
-              </a>
-            </li>
-            <li>
-              <a
-                :class="[TabIndex == 1 ?'main_nav_active':'']"
-                @click="handoffNav(1)"
-              >
-                有偿服务收费标准
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main_threeOne flex_column_center" v-if="TabIndex==0">
-          <div class="threeOne_title">“青水管＋”便民服务</div>
-          <div class="threeOne_content">
-            青岛水务集团坚持以拓展企业服务领域、提升行业服务品质为目标，<br />
-            以“有解思维”“无拒绝服务”理念，开创“事要解决”新格局，<br />
-            进一步突破边界壁垒，面向市内三区市民推出“青水管＋”“三个一”自来水便民服务。<br />
-            如需办理相关业务，欢迎拨打水务集团<br />
+        <div class="main_content flex_column_center">
+          <div class="main_list">
+            <a class="main_item" v-for="(item,index) in list" ::key="index">
+              <div class="main_item_year">2022</div>
+              <div class="main_item_date">09 / 15</div>
+              <div class="main_item_title">{{item.title}}</div>
+              <div class="main_item_content" v-html="item.content"></div>
+            </a>
           </div>
-          <div class="threeOne_div">
-            <div class="threeOne_txt flex_column_center">
-              <p>以“有解思维”“无拒绝服务”理念</p>
-              <span>开创“事要解决”新格局</span>
-            </div>
-            <div class="threeOne_img">
-              <img src="../../imgs/onlineServiceHall/charact-icon.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="paid_services" v-if="TabIndex==1">
-          <div class="paid_services_table flex_column_center">
-            <div class="paid_services_title">延伸服务收费价格清单</div>
-            <img src="../../imgs/onlineServiceHall/paid.png" alt="" />
-          </div>
-          <div class="paid_services_content">
-            <h2>测算依据：</h2>
-            <p>
-              1.
-              拆除项目内容人工消耗量参照2020版《山东省修缮工程消耗量定额》，人工工日参照青岛市统计局《2020年青岛市单位就业人员年平均工资统计公告》2020年全市单位就业人员年平均工资为81231元，按照360天测算，225.64元/工日。<br /><br />
-              2.
-              新安装项目内容人工消耗量参照2016版《山东省安装工程消耗量定额》，人工工日参照青岛市统计局《2020年青岛市单位就业人员年平均工资统计公告》2020年全市单位就业人员年平均工资为81231元，按照360天测算，225.64元/工日。<br /><br />
-              3.
-              材料价格参照青岛市海润自来水集团有限公司2020年一户一表改造工程招标价格。铜阀门为沪航，衬塑钢管为金州，PPR管为日丰，PPR管件为日丰，水龙头为瑞格。<br /><br />
-              4.
-              清单中材料单价和工时费根据青岛市海润自来水集团有限公司相关材料招标价格及青岛市单位就业人员年平均工资进行动态管理，每两年修订一次，以修订当年招标价格及平均工资为准。<br /><br />
-              5. 税金参照简易计税模式，税金为3%，材料不计税。<br /><br />
-              6.
-              延伸服务范围：居民用户产权dn32及以下管材、管件、阀门等明敷设施的维修。
-            </p>
-          </div>
+          <el-pagination
+            v-model:current-page="currentPage"
+            v-model:page-size="pageSize"
+            :pager-count="10"
+            :page-sizes="[10, 20, 30, 50]"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="200"
+            background
+            popper-class="page_selece_down"
+            prev-text="上一页"
+            next-text="下一页"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+          />
         </div>
       </div>
 
@@ -393,20 +358,59 @@
         </footer>
       </div>
     </div>
+
     <script>
       const { createApp } = Vue;
       createApp({
         data() {
           return {
-            TabIndex: 0,
+            list: [
+              {
+                title: "排水公司组织加强知识产权学习，促进企业发展革新",
+                content:
+                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
+              },
+              {
+                title: "排水公司组织加强知识产权学习，促进企业发展革新",
+                content:
+                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
+              },
+              {
+                title: "排水公司组织加强知识产权学习，促进企业发展革新",
+                content:
+                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
+              },
+              {
+                title: "排水公司组织加强知识产权学习，促进企业发展革新",
+                content:
+                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
+              },
+              {
+                title: "排水公司组织加强知识产权学习，促进企业发展革新",
+                content:
+                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
+              },
+              {
+                title: "排水公司组织加强知识产权学习，促进企业发展革新",
+                content:
+                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
+              },
+            ],
+            currentPage: 1,
+            pageSize: 10,
           };
         },
         methods: {
-          handoffNav(e) {
-            this.TabIndex = e;
+          handleSizeChange(val) {
+            console.log(`每页 ${val} 条`);
+          },
+          handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
           },
         },
-      }).mount("#app");
+      })
+        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+        .mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>

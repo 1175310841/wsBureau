@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>青岛水务集团有限公司</title>
     <link
@@ -12,10 +11,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link
-      rel="stylesheet"
-      href="../../css/onlineServiceHall/characteristic.css"
-    />
+    <link rel="stylesheet" href="../../css/environment/promise.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
   </head>
@@ -124,17 +120,8 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct">
-              <span>网上服务厅</span>
-              <ul class="sub_menu">
-                <li>
-                  <a href="../../html/onlineServiceHall/serviceWindow.html"
-                    ><span></span>服务窗口</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li><span>营商环境</span></li>
+            <li><span>网上服务厅</span></li>
+            <li class="navAct"><span>营商环境</span></li>
             <li><span>水务科技</span></li>
           </ul>
           <div class="search_box">
@@ -151,95 +138,128 @@
 
       <!-- 手机导航 -->
       <ul id="phoneNav" style="display: none">
-        <li class="navAct">首页</li>
+        <li>首页</li>
         <li>集团概况</li>
         <li>新闻资讯</li>
         <li>党建工作</li>
         <li>信息公开</li>
         <li>网上服务厅</li>
-        <li>营商环境</li>
+        <li class="navAct">营商环境</li>
         <li>水务科技</li>
       </ul>
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
+        <img src="../../imgs/environment/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">网上服务厅</p>
-            <p class="banner_title_en">Online service hall</p>
+            <p class="banner_title">营商环境</p>
+            <p class="banner_title_en">Business environment</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / “青水管＋”特色服务 /
-            <span v-if="TabIndex == 0">一免、一查、一服务</span>
-            <span v-if="TabIndex == 1">有偿服务收费标准</span>
+            您当前的位置：首页 / 营商环境 / 服务承诺
           </div>
         </div>
         <div class="company_profile_title">
-          <span>“青水管＋”特色服务</span>
+          <span>服务承诺</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div>
-          <ul class="main_nav">
-            <li>
-              <a
-                :class="[TabIndex == 0 ?'main_nav_active':'']"
-                @click="handoffNav(0)"
-              >
-                一免、一查、一服务
-              </a>
-            </li>
-            <li>
-              <a
-                :class="[TabIndex == 1 ?'main_nav_active':'']"
-                @click="handoffNav(1)"
-              >
-                有偿服务收费标准
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main_threeOne flex_column_center" v-if="TabIndex==0">
-          <div class="threeOne_title">“青水管＋”便民服务</div>
-          <div class="threeOne_content">
-            青岛水务集团坚持以拓展企业服务领域、提升行业服务品质为目标，<br />
-            以“有解思维”“无拒绝服务”理念，开创“事要解决”新格局，<br />
-            进一步突破边界壁垒，面向市内三区市民推出“青水管＋”“三个一”自来水便民服务。<br />
-            如需办理相关业务，欢迎拨打水务集团<br />
+        <div class="main_content">
+          <div class="main_title">青岛水务集团对外服务承诺</div>
+          <div>
+            为更好地服务客户，服务社会，接受社会各界的监督，为岛城发展和市民需求提供更加优质、快捷、高效水务服务，提高社会满意度和群众获得感，特制定服务承诺:
           </div>
-          <div class="threeOne_div">
-            <div class="threeOne_txt flex_column_center">
-              <p>以“有解思维”“无拒绝服务”理念</p>
-              <span>开创“事要解决”新格局</span>
-            </div>
-            <div class="threeOne_img">
-              <img src="../../imgs/onlineServiceHall/charact-icon.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="paid_services" v-if="TabIndex==1">
-          <div class="paid_services_table flex_column_center">
-            <div class="paid_services_title">延伸服务收费价格清单</div>
-            <img src="../../imgs/onlineServiceHall/paid.png" alt="" />
-          </div>
-          <div class="paid_services_content">
-            <h2>测算依据：</h2>
-            <p>
-              1.
-              拆除项目内容人工消耗量参照2020版《山东省修缮工程消耗量定额》，人工工日参照青岛市统计局《2020年青岛市单位就业人员年平均工资统计公告》2020年全市单位就业人员年平均工资为81231元，按照360天测算，225.64元/工日。<br /><br />
-              2.
-              新安装项目内容人工消耗量参照2016版《山东省安装工程消耗量定额》，人工工日参照青岛市统计局《2020年青岛市单位就业人员年平均工资统计公告》2020年全市单位就业人员年平均工资为81231元，按照360天测算，225.64元/工日。<br /><br />
-              3.
-              材料价格参照青岛市海润自来水集团有限公司2020年一户一表改造工程招标价格。铜阀门为沪航，衬塑钢管为金州，PPR管为日丰，PPR管件为日丰，水龙头为瑞格。<br /><br />
-              4.
-              清单中材料单价和工时费根据青岛市海润自来水集团有限公司相关材料招标价格及青岛市单位就业人员年平均工资进行动态管理，每两年修订一次，以修订当年招标价格及平均工资为准。<br /><br />
-              5. 税金参照简易计税模式，税金为3%，材料不计税。<br /><br />
-              6.
-              延伸服务范围：居民用户产权dn32及以下管材、管件、阀门等明敷设施的维修。
-            </p>
-          </div>
+          <br />
+          <h3>一、水质达标，水压合格</h3>
+          <p class="txtid-3">（一）水质</p>
+          <p class="txtid-5">
+            1. 供水水质标准执行国家“生活饮用水卫生标准”（GB5749－2006）。
+          </p>
+          <p class="txtid-5">
+            2. 供水水质检测执行国家“生活饮用水标准检测法”（GB5750－2006）。
+          </p>
+          <p class="txtid-5">3. 供水水质综合合格率达到98％。</p>
+          <p class="txtid-5">
+            4.
+            污水处理厂出水水质达到国家《城镇污水处理厂污染物排放标准》（GB18918-2002）。
+          </p>
+          <br />
+          <p class="txtid-3">（二）水压</p>
+          <p class="txtid-5">
+            供水管网压力符合《青岛市城市供水服务规范》（DB 3702/ FW
+            SZGY001—2013） 的要求。
+          </p>
+          <br />
+          <h3>二、热线服务，方便客户</h3>
+          <p class="txtid-3">1. 水务服务热线：96111，24小时为客户服务。</p>
+          <p class="txtid-3">2. 客户来电处结率、反馈及时率100%。</p>
+          <br />
+          <h3>三、快速响应，高效服务</h3>
+          <p class="txtid-3">
+            1. 接到报漏后，抢修人员第一时间联系客户到达现场，开始止水维修。
+          </p>
+          <p class="txtid-3">
+            2. 无特殊情况，小型管道不超过12小时修复，大型管道不超过24小时修复。
+          </p>
+          <p class="txtid-3">
+            3.
+            接到公共排水设施堵塞或冒溢信息，第一时间到达现场，24小时内疏通完毕。
+          </p>
+          <p class="txtid-3">
+            4.
+            接到公共供排水设施检查井井盖、雨水斗箅子发生丢失缺损信息，应立即做好警示防护并在2小时内恢复。
+          </p>
+          <p class="txtid-3">5. 冬季维修抢修要做好现场的除冰防滑工作。</p>
+          <br />
+          <h3>四、抄表准确，计量收费</h3>
+          <p class="txtid-3">1. 定期、准确抄表，抄表及时率100%，准确率100%。</p>
+          <p class="txtid-3">
+            2.
+            使用符合国家计量规范要求的水表，发现问题及时校准更换，达标率100%。
+          </p>
+          <p class="txtid-3">3. 公开水价，按照市物价部门确认的价格收取水费。</p>
+          <br />
+          <h3>五、环保节能，社会责任</h3>
+          <p class="txtid-3">
+            1.
+            服务人员应持证上岗，仪表整洁，语言文明，服务规范，严守职业道德和服务纪律，严禁吃、拿、卡、要、刁难用户。
+          </p>
+          <p class="txtid-3">
+            2. 承诺保护环境，将向客户宣传有关水务的相关条例和知识。
+          </p>
+          <p class="txtid-3">
+            3.
+            对涉及饮用水的突发事件，将采用电话、短信微信、新闻媒体等方式及时通知客户，并承诺发送警戒状态转入正常状态的通知。
+          </p>
+          <p class="txtid-3">
+            4.
+            因供水工程施工、设备检修等原因需停止供水的，在停止供水48小时前，通知报纸、广播、网络等媒体或者在单元门口张贴告示等方式公告停水的原因、时间和范围。另，因突发事故而降压或者停水的，及时通知用户并抢修。
+          </p>
+          <br />
+          <h3>六、“一次办好”，便民惠民</h3>
+
+          <p class="txtid-3">
+            1.
+            各服务窗口实行“一窗通办”，即客户到水务集团所属的服务窗口均能办理相关业务。
+          </p>
+          <p class="txtid-3">
+            2.
+            更名过户、变更用水性质、人口基数变更资料齐全的即来即办；终止供水承诺时限1个工作日，水表检验（不包括计量检测机构检测时间）承诺时限2个工作日。
+          </p>
+          <p class="txtid-3">
+            3.
+            新建、改建、扩建工程建设项目通过青岛市工程建设项目审批系统信息推送、并联办理的，用水报装业务实施“四零”服务，即“零申请”“零材料”“零跑腿”“零收费”，办理环节压缩为开栓通水1个，办理时限压缩为1小时。其他办理的项目受理申请及确定方案0.5个工作日、开栓通水0.5个工作日（以上时间不包括合同签订、设计与施工、办理相关行政审批等时间）。
+          </p>
+          <br />
+          <h3>七、投诉监督</h3>
+          <p class="txtid-3">
+            1.
+            接客户投诉之日起，1个工作日内与客户联系沟通，2个工作日内处理并回复客户。
+          </p>
+          <p class="txtid-3">2. 投诉监督电话：96111（24小时）。</p>
+          <br />
         </div>
       </div>
 
@@ -397,15 +417,9 @@
       const { createApp } = Vue;
       createApp({
         data() {
-          return {
-            TabIndex: 0,
-          };
+          return {};
         },
-        methods: {
-          handoffNav(e) {
-            this.TabIndex = e;
-          },
-        },
+        methods: {},
       }).mount("#app");
     </script>
     <script src="../../js/common.js"></script>
