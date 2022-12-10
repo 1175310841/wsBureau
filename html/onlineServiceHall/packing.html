@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>青岛水务集团有限公司</title>
     <link
@@ -15,10 +16,7 @@
       href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
     />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link
-      rel="stylesheet"
-      href="../../css/InformationDisclosure/otherServe.css"
-    />
+    <link rel="stylesheet" href="../../css/onlineServiceHall/packing.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
@@ -104,7 +102,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct">
+            <li>
               <span>信息公开</span>
               <ul class="sub_menu">
                 <li>
@@ -129,7 +127,16 @@
                 </li>
               </ul>
             </li>
-            <li><span>网上服务厅</span></li>
+            <li class="navAct">
+              <span>网上服务厅</span>
+              <ul class="sub_menu">
+                <li>
+                  <a href="../../html/onlineServiceHall/serviceWindow.html"
+                    ><span></span>服务窗口</a
+                  >
+                </li>
+              </ul>
+            </li>
             <li><span>营商环境</span></li>
             <li><span>水务科技</span></li>
           </ul>
@@ -159,111 +166,30 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/InformationDisclosure/bg.png" class="about_img" />
+        <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">信息公开</p>
-            <p class="banner_title_en">Information disclosure</p>
+            <p class="banner_title">网上服务厅</p>
+            <p class="banner_title_en">Online service hall</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 信息公开 / 其他公开服务 /
-            <span v-if="TabIndex==0">水质监测</span>
-            <span v-if="TabIndex==1">其他服务信息</span>
+            您当前的位置：首页 / 网上服务厅 / 用水报装（智慧报装）
           </div>
         </div>
         <div class="company_profile_title">
-          <span>其他公开服务</span>
+          <span>用水报装（智慧报装）</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div>
-          <ul class="main_nav">
-            <li>
-              <a
-                href="http://www.qdwater.com.cn:8010/bid2/front"
-                target="_blank"
-                >招标公告</a
-              >
-            </li>
-            <li>
-              <a
-                :class="[TabIndex == 0 ?'main_nav_active':'']"
-                @click="handoffNav(0)"
-                >水质监测</a
-              >
-            </li>
-            <li>
-              <a
-                :class="[TabIndex == 1 ?'main_nav_active':'']"
-                @click="handoffNav(1)"
-                >其他服务信息</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="water_quality" v-if="TabIndex==0">
-          <div class="other_main">
-            <div class="other_main_txt_area">
-              <div class="other_main_title">一、供水水质监测中心</div>
-              <div class="other_main_content">
-                国家城市供水水质监测网青岛监测站隶属于国家建设部，挂靠青岛市海润自来水集团有限公司，是一个具有相对独立性质的监测站。监测站位于青岛市市北区哈尔滨路61号，拥有新建的水质监测大楼，2012年投入使用。新大楼总建筑面积5000余平方米，共有地上七层和地下一层，检测实验区域面积达到2100多平方米，采用国际先进的工艺设计流程，具有满足检测项目开展需要的良好环境条件。监测站专职从事城市供水水质监测和相关项目监测，检测能力包括生活饮用水、二次供水、地表水、地下水、海水、再生水、涉水产品等检测领域共200多个参数。监测站建有完善的质量管理体系，能独立、公正地对委托样品实施检测，并出具检测结果和报告。
+        <div class="main_content flex_column_center">
+          <div class="main_list">
+            <div class="main_item" v-for="(item,index) in list" ::key="index">
+              <div class="main_item_img">
+                <img src="../../imgs/onlineServiceHall/pack-icon.png" alt="" />
               </div>
-              <div class="other_main_blue">
-                监测站于2000年3月通过国家计量认证，2003年4月通过国家计量认证复查，2005年10月通过计量认证五年换证评审，2008年按照《实验室资质认定评审准则》的要求进行了管理体系改版，通过了资质认定监督检查/扩项评审，2009年通过了资质认定复查评审，2011年通过了资质认定监督检查。
-              </div>
+              <a class="main_item_paragraph">排水报装办事指南</a>
             </div>
-            <img src="../../imgs/InformationDisclosure/other.png" alt="" />
-          </div>
-          <div class="other_main other_two">
-            <img src="../../imgs/InformationDisclosure/other.png" alt="" />
-            <div class="other_main_txt_area">
-              <div class="other_main_title">二、排水水质监测中心</div>
-              <div class="other_main_content">
-                排水水质监测中心对青岛市五市七区十七座污水处理厂及垃圾处理厂的水质、泥质、气质监督检查，承担市内四区排水许可证发放工作中的水质监查，重点排污企业排水调查以及奥帆赛场排水区域及前海暗渠排水水质监督监测以及李村河、海泊河、娄山河河流断面水质监控等工作。并在2000年6月和2005年7月、2009年11月、2012年10月份分别通过了国家质量技术监督局及建设部专家组和山东省质量技术监督局的计量认证复评换证工作。经过复评后的青岛市城市排水监测站可监测城市污水、工业废水、污泥、有毒有害气体、地表水、城市杂用水及农田灌溉水、纯净水、生活饮用水、园林绿化用泥质、混合填埋泥质等十三大类的416项的分析项目。
-              </div>
-              <div class="other_main_blue">
-                监督检查 <span></span> / <span></span> 水质监督监测
-                <span></span> / <span></span> 企业调查 <br />
-                水质监查<span></span> / <span></span>水质监控
-              </div>
-            </div>
-          </div>
-          <div class="other_main_title ml-0">三、供水水质监测站</div>
-          <div class="other_main_content ml-0">
-            主要负责三大水源、三座水厂的出厂水及市区90个监测点的管网水进行水质检测和跟踪，并承担着全国水质督察和全市供水水质公示的水质检测任务。每日跟踪检测管网水7项、出厂水9项，每月对原水、出厂水和管网水进行水质标准常规42项检测分析，每半年进行出厂水和管网水的106项水质全分析，为供水行业水质提升和全市供水安全提供保障。目前通过国家资质认定可对10类涉水产品进行201项参数的检测。
-          </div>
-          <div class="other_main_title ml-0">四、城市排水监测站</div>
-          <div class="other_main_content ml-0">
-            主要负责对青岛市六区四市17座污水处理厂的水质、泥质、气质监督检查及两座垃圾处理厂渗沥液污水水质监测。承担市内四区排水许可证发放工作中水质委托检测，排入市政管网的重点排污企业排水调查，以及奥帆中心排水区域排水水质监督监测等工作。目前已具备13类检测产品122项检测参数的检测能力。
-          </div>
-          <div class="contact">
-            <p>
-              <img src="../../imgs/InformationDisclosure/phone.png" alt="" />
-              联系方式:
-            </p>
-            <p>青岛市供水水质监测站：0532-<i>82730196</i></p>
-            <p>青岛市城市排水监测站：0532-<i>82677592</i></p>
-          </div>
-        </div>
-        <div class="service_info flex_column_center" v-if="TabIndex==1">
-          <div class="service_info_list">
-            <a
-              class="service_info_item"
-              v-for="(item,index) in list"
-              ::key="index"
-            >
-              <div class="service_info_date">
-                <p>9</p>
-                <div>2022/12</div>
-              </div>
-              <div class="service_info_paragraph">
-                <div class="service_info_title">关于公开供水成本的公告</div>
-                <div class="service_info_content">
-                  根据《价格法》《政府制定价格成本监审办法》《城镇供水定价成本监审办法》等规定和市发展改革委的要求，现将青岛市海润自来水集团有限公司（以下简称“本公司”）供水成本公开事宜公告如下
-                </div>
-              </div>
-            </a>
           </div>
           <el-pagination
             v-model:current-page="currentPage"
@@ -438,17 +364,12 @@
       createApp({
         data() {
           return {
-            TabIndex: 0,
             list: [{}, {}, {}, {}, {}, {}, {}, {}],
             currentPage: 1,
             pageSize: 10,
           };
         },
-        mounted() {},
         methods: {
-          handoffNav(e) {
-            this.TabIndex = e;
-          },
           handleSizeChange(val) {
             console.log(`每页 ${val} 条`);
           },

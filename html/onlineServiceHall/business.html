@@ -12,6 +12,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/onlineServiceHall/business.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
   </head>
@@ -184,29 +185,26 @@
               <a
                 :class="[TabIndex == 0 ?'main_nav_active':'']"
                 @click="handoffNav(0)"
-                >供水服务窗口</a
               >
+                全市通办
+              </a>
             </li>
             <li>
               <a
                 :class="[TabIndex == 1 ?'main_nav_active':'']"
                 @click="handoffNav(1)"
-                >排水服务窗口</a
               >
-            </li>
-            <li>
-              <a href="https://www.qingdaonengyuan.com/FuWu_qd.html">
-                收费服务窗口
+                便民五项
               </a>
             </li>
-            <li>
-              <a
-                :class="[TabIndex == 2 ?'main_nav_active':'']"
-                @click="handoffNav(2)"
-                >市政公用共享服务窗口</a
-              >
-            </li>
           </ul>
+        </div>
+        <div class="main_img flex_column_center" v-if="TabIndex==0">
+          <img src="../../imgs/onlineServiceHall/waterprice.png" alt="" />
+        </div>
+        <div class="main_content" v-if="TabIndex==1">
+          <div class="main_title">供水业务申请表</div>
+          <div></div>
         </div>
       </div>
 

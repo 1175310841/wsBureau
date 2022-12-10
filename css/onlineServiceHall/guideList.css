@@ -1,0 +1,28 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+.main_item {
+  padding-top: 64px;
+  padding-bottom: 51px;
+}
+.main_item:first-child {
+  padding-top: 0;
+}
+.main_item_img {
+  width: 77px;
+  height: 67px;
+  margin-right: 55px;
+}
+.main_item_title {
+  height: 22px;
+  line-height: 22px;
+  font-size: 22px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #394e69;
+  margin-bottom: 22px;
+}
+.main_item_content {
+  line-height: 30px;
+}

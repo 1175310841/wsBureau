@@ -1,0 +1,5 @@
+.main > div:first-child {
+  width: 1200px;
+  position: absolute;
+  top: 0;
+}
