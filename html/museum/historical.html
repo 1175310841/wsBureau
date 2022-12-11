@@ -11,10 +11,16 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
+    />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/onlineServiceHall/waterPrice.css" />
+    <link rel="stylesheet" href="../../css/museum/historical.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
 
   <body>
@@ -37,7 +43,7 @@
                 <li><a href="../../html/aboutUs/culture.html"><span></span>企业文化</a></li>
               </ul>
             </li>
-            <li >
+            <li>
               <span>新闻资讯</span>
               <ul class="sub_menu">
                 <li><a href="../../html/news/waterNews.html"><span></span>水务新闻</a></li>
@@ -83,7 +89,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct"><span>网上服务厅</span>
+            <li><span>网上服务厅</span>
               <ul class="sub_menu">
                 <li><a href="../../html/onlineServiceHall/waterPrice.html"><span></span>供水价格</span></a></li>
                 <li><a href="../../html/onlineServiceHall/serviceWindow.html"><span></span>服务窗口<br/>查询</a></li>
@@ -114,7 +120,7 @@
                 <li><a href="../../html/technology/dynamic.html"><span></span>科技动态</a></li>
               </ul>
             </li>
-            <li><span>网上博物馆</span>
+            <li class="navAct"><span>网上博物馆</span>
               <ul class="sub_menu">
                 <li><a href="../../html/museum/brief.html"><span></span>博物馆简<br>介</span></a></li>
                 <li><a href="http://www.qdwater.com.cn/exhibition/?scene_id=80142705"><span></span>网上博物<br>馆</a></li>
@@ -149,58 +155,80 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
+        <img src="../../imgs/museum/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">网上服务厅</p>
-            <p class="banner_title_en">Online service hall</p>
+            <p class="banner_title">网上博物馆</p>
+            <p class="banner_title_en">Online museum</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / 供水价格
+            您当前的位置：首页 / 网上博物馆 / 供排水史记
           </div>
         </div>
         <div class="company_profile_title">
-          <span>供水价格</span>
+          <span>供排水史记</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div class="main_content">
-          <p>
-            自来水水价根据青价格（2015）36号、青价格（2015）37号文件要求执行。
-          </p>
-          <p>污水处理费根据青价费（2016）59号文件要求执行</p>
-          <div class="price_area flex_column_center">
-            <div class="price_title">青岛市城市供水价格一览表</div>
-            <div class="price_table">
-              <img
-                src="../../imgs/onlineServiceHall/waterprice.png"
-                class="price_table_img"
-              />
+        <div class="main_content flex_column_center">
+          <div class="history_area">
+            <div class="history_item">
+              <div class="history_img">
+                <img src="../../imgs/museum/history.png" alt="" />
+              </div>
+              <div class="history_title">水源春秋连载之八崂山水库供水工程</div>
+              <div class="history_date">2019-08-15</div>
+            </div>
+            <div class="history_item">
+              <div class="history_img">
+                <img src="../../imgs/museum/history.png" alt="" />
+              </div>
+              <div class="history_title">水源春秋连载之八崂山水库供水工程</div>
+              <div class="history_date">2019-08-15</div>
+            </div>
+            <div class="history_item">
+              <div class="history_img">
+                <img src="../../imgs/museum/history.png" alt="" />
+              </div>
+              <div class="history_title">水源春秋连载之八崂山水库供水工程</div>
+              <div class="history_date">2019-08-15</div>
             </div>
           </div>
-          <p class="microphone">
-            <img src="../../imgs/onlineServiceHall/microphone.png" alt="" />
-            <span>价格听证：</span>
-          </p>
-          <br />
-          <p>
-            青岛市物价局关于市内三区居民用水价格调整和建立居民阶梯水价制度听证会参加人主要意见采纳情况的说明：
-          </p>
-          <a
-            href="http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629957/150827150813481801.html"
-          >
-            http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629957/150827150813481801.html
-          </a>
-          <br />
-          <p>
-            青岛市物价局关于市内三区居民用水价格调整和建立居民用水阶梯价格制度听证会相关事项的通告：
-          </p>
-          <a
-            href="http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629943/15052810531756"
-          >
-            http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629943/15052810531756
-          </a>
+          <div class="main_list">
+            <div class="main_item" v-for="(item,index) in list" ::key="index">
+              <div class="main_item_date">
+                <p>09-17</p>
+                <div>2019</div>
+              </div>
+              <div class="main_item_paragraph">
+                <div class="main_item_title">
+                  包水源春秋连载之七纪念中国共产党成立九十四周年
+                </div>
+                <div class="main_item_content">
+                  在青岛的历史档案和资料中，有两张照片和一所旧址成为研究青岛自来水厂建党初期水厂红色工运和党建的珍贵资料。第一张照片是民国十四年六月二十五日，胶澳商埠水道局工人俱乐部成立时的黑白历史照……
+                </div>
+              </div>
+              <a class="more flex_column_center">
+                <span>MORE</span>
+                <img src="../../imgs/museum/jt.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <el-pagination
+            v-model:current-page="currentPage"
+            v-model:page-size="pageSize"
+            :pager-count="10"
+            :page-sizes="[10, 20, 30, 50]"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="200"
+            background
+            popper-class="page_selece_down"
+            prev-text="上一页"
+            next-text="下一页"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+          />
         </div>
       </div>
 
@@ -354,14 +382,28 @@
         </footer>
       </div>
     </div>
+
     <script>
       const { createApp } = Vue;
       createApp({
         data() {
-          return {};
+          return {
+            list: [{}, {}, {}, {}, {}, {}, {}, {}],
+            currentPage: 1,
+            pageSize: 10,
+          };
         },
-        methods: {},
-      }).mount("#app");
+        methods: {
+          handleSizeChange(val) {
+            console.log(`每页 ${val} 条`);
+          },
+          handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
+          },
+        },
+      })
+        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+        .mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>

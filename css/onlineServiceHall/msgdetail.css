@@ -1,0 +1,87 @@
+.main_content {
+  width: 1200px;
+}
+.main_crumbs {
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  color: #186daa;
+  margin-bottom: 60px;
+}
+.main_date {
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #28a6e2;
+  text-align: end;
+}
+.main_item {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 0 50px;
+  border-bottom: 1px solid #b1d8f2;
+}
+.main_img {
+  width: 42px;
+  height: 36px;
+  margin-right: 14px;
+}
+.main_img img {
+  width: 100%;
+  height: 100%;
+}
+.main_essay {
+  width: 1068px;
+}
+.main_title {
+  height: 22px;
+  font-size: 22px;
+  color: #394e69;
+  line-height: 22px;
+  margin-bottom: 50px;
+}
+.main_essay p {
+  line-height: 29px;
+}
+.message {
+  color: #394e69;
+}
+.reply {
+  color: #186daa;
+}
+.main_btn {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.tab_btn {
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #b9ddf4;
+  display: flex;
+  align-items: center;
+}
+.tab_btn span {
+  display: inline-block;
+  width: 45px;
+  height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 28px;
+}
+.tab_btn i {
+  font-style: normal;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+.previous span {
+  border-right: 1px solid #b9ddf4;
+}
+.next span {
+  border-left: 1px solid #b9ddf4;
+}
+.back {
+  color: #186daa;
+}

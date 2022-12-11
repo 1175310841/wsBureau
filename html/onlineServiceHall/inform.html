@@ -11,10 +11,16 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
+    />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/onlineServiceHall/waterPrice.css" />
+    <link rel="stylesheet" href="../../css/onlineServiceHall/message.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
 
   <body>
@@ -156,53 +162,15 @@
             <p class="banner_title_en">Online service hall</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / 供水价格
+            您当前的位置：首页 / 网上服务厅 / 网上举报
           </div>
         </div>
         <div class="company_profile_title">
-          <span>供水价格</span>
+          <span>网上举报</span>
         </div>
       </div>
 
-      <div class="main flex_column_center">
-        <div class="main_content">
-          <p>
-            自来水水价根据青价格（2015）36号、青价格（2015）37号文件要求执行。
-          </p>
-          <p>污水处理费根据青价费（2016）59号文件要求执行</p>
-          <div class="price_area flex_column_center">
-            <div class="price_title">青岛市城市供水价格一览表</div>
-            <div class="price_table">
-              <img
-                src="../../imgs/onlineServiceHall/waterprice.png"
-                class="price_table_img"
-              />
-            </div>
-          </div>
-          <p class="microphone">
-            <img src="../../imgs/onlineServiceHall/microphone.png" alt="" />
-            <span>价格听证：</span>
-          </p>
-          <br />
-          <p>
-            青岛市物价局关于市内三区居民用水价格调整和建立居民阶梯水价制度听证会参加人主要意见采纳情况的说明：
-          </p>
-          <a
-            href="http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629957/150827150813481801.html"
-          >
-            http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629957/150827150813481801.html
-          </a>
-          <br />
-          <p>
-            青岛市物价局关于市内三区居民用水价格调整和建立居民用水阶梯价格制度听证会相关事项的通告：
-          </p>
-          <a
-            href="http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629943/15052810531756"
-          >
-            http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629943/15052810531756
-          </a>
-        </div>
-      </div>
+      <div class="main flex_column_center"></div>
 
       <!-- 底部 -->
       <div class="info flex_column_center">
@@ -361,7 +329,9 @@
           return {};
         },
         methods: {},
-      }).mount("#app");
+      })
+        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+        .mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>

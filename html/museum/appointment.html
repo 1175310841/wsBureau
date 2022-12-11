@@ -12,7 +12,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/onlineServiceHall/waterPrice.css" />
+    <link rel="stylesheet" href="../../css/museum/historical.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
   </head>
@@ -37,7 +37,7 @@
                 <li><a href="../../html/aboutUs/culture.html"><span></span>企业文化</a></li>
               </ul>
             </li>
-            <li >
+            <li>
               <span>新闻资讯</span>
               <ul class="sub_menu">
                 <li><a href="../../html/news/waterNews.html"><span></span>水务新闻</a></li>
@@ -83,7 +83,7 @@
                 </li>
               </ul>
             </li>
-            <li class="navAct"><span>网上服务厅</span>
+            <li><span>网上服务厅</span>
               <ul class="sub_menu">
                 <li><a href="../../html/onlineServiceHall/waterPrice.html"><span></span>供水价格</span></a></li>
                 <li><a href="../../html/onlineServiceHall/serviceWindow.html"><span></span>服务窗口<br/>查询</a></li>
@@ -114,7 +114,7 @@
                 <li><a href="../../html/technology/dynamic.html"><span></span>科技动态</a></li>
               </ul>
             </li>
-            <li><span>网上博物馆</span>
+            <li class="navAct"><span>网上博物馆</span>
               <ul class="sub_menu">
                 <li><a href="../../html/museum/brief.html"><span></span>博物馆简<br>介</span></a></li>
                 <li><a href="http://www.qdwater.com.cn/exhibition/?scene_id=80142705"><span></span>网上博物<br>馆</a></li>
@@ -149,59 +149,23 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
+        <img src="../../imgs/museum/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">网上服务厅</p>
-            <p class="banner_title_en">Online service hall</p>
+            <p class="banner_title">网上博物馆</p>
+            <p class="banner_title_en">Online museum</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 网上服务厅 / 供水价格
+            您当前的位置：首页 / 网上博物馆 / 参观预约
           </div>
         </div>
         <div class="company_profile_title">
-          <span>供水价格</span>
+          <span>参观预约</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
-        <div class="main_content">
-          <p>
-            自来水水价根据青价格（2015）36号、青价格（2015）37号文件要求执行。
-          </p>
-          <p>污水处理费根据青价费（2016）59号文件要求执行</p>
-          <div class="price_area flex_column_center">
-            <div class="price_title">青岛市城市供水价格一览表</div>
-            <div class="price_table">
-              <img
-                src="../../imgs/onlineServiceHall/waterprice.png"
-                class="price_table_img"
-              />
-            </div>
-          </div>
-          <p class="microphone">
-            <img src="../../imgs/onlineServiceHall/microphone.png" alt="" />
-            <span>价格听证：</span>
-          </p>
-          <br />
-          <p>
-            青岛市物价局关于市内三区居民用水价格调整和建立居民阶梯水价制度听证会参加人主要意见采纳情况的说明：
-          </p>
-          <a
-            href="http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629957/150827150813481801.html"
-          >
-            http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629957/150827150813481801.html
-          </a>
-          <br />
-          <p>
-            青岛市物价局关于市内三区居民用水价格调整和建立居民用水阶梯价格制度听证会相关事项的通告：
-          </p>
-          <a
-            href="http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629943/15052810531756"
-          >
-            http://www.qingdao.gov.cn/n172/n24624151/n24629915/n24629929/n24629943/15052810531756
-          </a>
-        </div>
+        <div class="main_content flex_column_center"></div>
       </div>
 
       <!-- 底部 -->
@@ -354,6 +318,7 @@
         </footer>
       </div>
     </div>
+
     <script>
       const { createApp } = Vue;
       createApp({

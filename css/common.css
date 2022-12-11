@@ -92,12 +92,12 @@ nav {
   position: relative;
 }
 .navigation {
-  width: 750px;
+  width: 830px;
   /* display: flex;
   align-items: center;
   justify-content: space-between; */
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(9, 1fr);
 }
 .navigation a {
   color: #ddf5fc;
