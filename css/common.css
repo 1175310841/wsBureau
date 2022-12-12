@@ -28,6 +28,18 @@ img {
   display: block;
 }
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 4px;
+  background-color: #6b8cc5;
+}
+::-webkit-scrollbar-track-piece {
+  width: 8px;
+  height: 4px;
+  background-color: #d9dadd;
+}
+
 a {
   text-decoration: none;
   outline: none;
