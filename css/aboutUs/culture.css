@@ -1,7 +1,3 @@
-img {
-  width: 100%;
-  height: 100%;
-}
 .logotype,
 .main_content {
   width: 1200px;
@@ -19,6 +15,10 @@ img {
 .logotype_img {
   width: 357px;
   height: 390px;
+}
+.logotype_img img {
+  width: 100%;
+  height: 100%;
 }
 .logotype_content {
   width: 716px;
@@ -68,12 +68,9 @@ img {
   background-color: #186daa;
   margin-bottom: 20px;
 }
-.item_btn a {
+.item_btn > div {
   display: flex;
   align-items: center;
-}
-.item_btn a:hover span {
-  margin-right: 20px;
 }
 .item_btn span {
   height: 16px;
@@ -89,4 +86,11 @@ img {
 .item_right {
   width: 582px;
   height: 261px;
+}
+.item_right img {
+  width: 100%;
+  height: 100%;
+}
+.main_content_item:hover span {
+  margin-right: 20px;
 }

@@ -1,7 +1,3 @@
-img {
-  width: 100%;
-  height: 100%;
-}
 .logotype {
   width: 1200px;
 }
@@ -18,14 +14,20 @@ img {
   height: 338px;
   margin-right: 56px;
 }
+.logotype_img img {
+  width: 100%;
+  height: 100%;
+}
 .logotype_content {
   width: 582px;
   height: 100%;
   line-height: 30px;
+  font-size: 18px;
 }
 .logotype_title {
   font-size: 22px;
-  line-height: 51px;
+  line-height: 22px;
+  margin-bottom: 30px;
 }
 .logotype_paragraph {
   width: 100%;
@@ -70,6 +72,12 @@ img {
   border-bottom: 5px solid #dbb49b;
   margin-left: 24px;
   float: right;
+  position: relative;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.main_content_item:hover {
+  top: -15px;
 }
 .main_content_item.special {
   height: 340px;

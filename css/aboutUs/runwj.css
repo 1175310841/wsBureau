@@ -2,17 +2,17 @@
   color: #186daa;
 }
 .main_content {
-  width: 68%;
+  width: 1200px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 .main_content_item {
-  width: 630px;
+  width: 590px;
   height: 190px;
   box-sizing: border-box;
   background-color: #ffffff;
-  margin-right: 34px;
+  margin-right: 20px;
   margin-bottom: 34px;
 }
 .main_content_item:nth-child(even) {

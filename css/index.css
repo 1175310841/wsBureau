@@ -164,7 +164,7 @@
   margin-right: 100px;
 }
 .placeholder {
-  width: 100px;
+  width: 50px;
 }
 .nav_parent {
   width: 100%;
@@ -212,10 +212,9 @@
 .index_navigation.sticky .nav {
   flex: 1;
   height: 60px;
-  padding-top: 10px;
 }
 .index_navigation.sticky .search_box {
-  top: auto;
+  position: absolute;
 }
 @keyframes dropDown {
   from {
@@ -228,7 +227,6 @@
 }
 .search_box {
   right: 0;
-  top: -4px;
 }
 /* #phoneNav {
   display: none;
@@ -239,7 +237,7 @@
   line-height: 19px;
   font-size: 18px;
   color: #186daa;
-  padding-bottom: 10px;
+  padding: 10px 20px 11px;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -275,13 +273,9 @@
   right: 0;
 }
 
-.nav > li:hover > span {
+/* .nav > li:hover > span {
   text-shadow: 2px 2px #ffffff;
-}
-
-.sub_menu {
-  top: 32px;
-}
+} */
 
 /* .sub_menu > li > a {
   font-size: 18px;
@@ -291,7 +285,10 @@
 .sub_menu > li > a > span {
   height: 18px;
 } */
-
+.nav > li:hover {
+  background-color: #28a6e2;
+  color: #ffffff;
+}
 .nav li:hover > .sub_menu {
   visibility: visible;
   opacity: 1;
