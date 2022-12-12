@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>青岛水务集团有限公司</title>
   <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
-  <script src="./libs/vue.global.js"></script>
-  <script src="./libs/scrollreveal.min.js"></script>
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/index.css" />
+  <script src="./libs/vue.global.js"></script>
+  <script src="./libs/scrollreveal.min.js"></script>
 </head>
 
 <body>
@@ -46,15 +46,16 @@
         <img src="./imgs/index/logo.png" alt="" class="logo" />
         <a class="old_page" href="http://www.qdwater.com.cn/index.aspx" target="_blank">
           访问青岛水务集团“
-          <span style="color: #ec6941; font-weight: bold">旧版</span>
+          <span>旧版</span>
           ”官方网站！
-          <img src="./imgs/index/computer.png" alt="">
+          <div class="computer"></div>
         </a>
       </div>
       <!-- 导航 -->
       <div class="index_navigation">
         <div class="nav_parent">
           <img src="./imgs/navLogo.png" alt="">
+          <div class="placeholder"></div>
           <ul class="nav">
             <li class="navAct"><a href='#'><span>首页</span></a></li>
             <li>
@@ -142,14 +143,14 @@
                 <li><a href="./html/technology/dynamic.html"><span></span>科技动态</a></li>
               </ul>
             </li>
-            <li><span>网上博物馆</span>
+            <!-- <li><span>网上博物馆</span>
               <ul class="sub_menu">
-                <li><a href="./html/museum/brief.html"><span></span>博物馆简<br>介</span></a></li>
+                <li><a href="./html/museum/brief.html"><span></span>博物馆简介</span></a></li>
                 <li><a href="http://www.qdwater.com.cn/exhibition/?scene_id=80142705"><span></span>网上博物<br>馆</a></li>
                 <li><a href="./html/museum/appointment.html"><span></span>参观预约</a></li>
-                <li><a href="./html/museum/historical.html"><span></span>供排水史<br>记</a></li>
+                <li><a href="./html/museum/historical.html"><span></span>供排水史记</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
           <div class="search_box">
             <input type="text" class="search_input">
@@ -299,7 +300,7 @@
             <img class="serve_item_img" :src="item.url" alt="">
             <p></p>
             <div class="serve_item_txt">{{item.txt}}</div>
-            <a class="serve_item_link">查看详情</a>
+            <a :href="item.path" class="serve_item_link">查看详情</a>
           </div>
         </div>
         <a class="serve_body_right">
@@ -426,14 +427,14 @@
           ition: 0.8, // 设置轮播图过度时间
           imgShow: 0, // 表示当前显示的图片索引
           serveList: [
-            { path: '#', url: './imgs/index/counter.png', txt: '供水价格' },
-            { path: '#', url: './imgs/index/serce.png', txt: '服务窗口查询' },
-            { path: '#', url: './imgs/index/transact.png', txt: '业务办理' },
-            { path: '#', url: './imgs/index/horn.png', txt: '停水公告' },
-            { path: '#', url: './imgs/index/mic.png', txt: '水质水压公告' },
-            { path: '#', url: './imgs/index/note.png', txt: '用水抄表计划' },
-            { path: '#', url: './imgs/index/guide.png', txt: '办事指南' },
-            { path: '#', url: './imgs/index/museum.png', txt: '网上博物馆' },
+            { path: './html/onlineServiceHall/waterPrice.html', url: './imgs/index/counter.png', txt: '供水价格' },
+            { path: './html/onlineServiceHall/serviceWindow.html', url: './imgs/index/serce.png', txt: '服务窗口查询' },
+            { path: './html/onlineServiceHall/business.html', url: './imgs/index/transact.png', txt: '业务办理' },
+            { path: './html/onlineServiceHall/cutWater.html', url: './imgs/index/horn.png', txt: '停水公告' },
+            { path: './html/onlineServiceHall/waterQuality.html', url: './imgs/index/mic.png', txt: '水质水压公告' },
+            { path: './html/onlineServiceHall/meterReading.html', url: './imgs/index/note.png', txt: '用水抄表计划' },
+            { path: './html/onlineServiceHall/guidelines.html', url: './imgs/index/guide.png', txt: '办事指南' },
+            { path: './html/museum/brief.html', url: './imgs/index/museum.png', txt: '网上博物馆' },
           ],
           arrowsTxtWidth: 0,
           leftArrowVal: 0,
