@@ -475,13 +475,13 @@ nav .search_box {
 }
 
 .info_middle > p {
-  height: 17px;
   font-size: 16px;
   color: #394e69;
-  line-height: 17px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+}
+.info_middle p span:first-child {
+  margin-right: 50px;
 }
 
 .info_right {
