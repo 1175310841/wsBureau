@@ -16,7 +16,7 @@
       href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
     />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/onlineServiceHall/message.css" />
+    <link rel="stylesheet" href="../../css/onlineServiceHall/inform.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
     <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
@@ -72,7 +72,7 @@
                 <li><a href="../../html/InformationDisclosure/publicInfo.html"><span></span>公开目录及指南</a></li>
                 <li><a><span></span>城市供水服务</a>
                   <ul class="two_menu">
-                    <li><a href="#">价格收费</a></li>
+                    <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
                     <li><a href="../../html/onlineServiceHall/waterPrice.html">办事服务</a></li>
                     <li class="two_menu_li"><a>便民公告</a>
                       <ul class="three_menu">
@@ -215,7 +215,139 @@
         </div>
       </div>
 
-      <div class="main flex_column_center"></div>
+      <div class="main flex_column_center">
+        <div class="main_content">
+          <div class="bg_img">
+            <img src="../../imgs/onlineServiceHall/infoNav.png" alt="">
+          </div>
+          <div class="main_form">
+            <div class="main_title">网上举报偷盗水</div>
+            <div class="form_line"></div>
+            <div class="prompt">
+              一、通过网上举报系统提交的问题应具备以下条件，否则将不被受理：<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、有具体投诉对象；<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、有明确的事发地点；<br>
+              二、提倡实名举报，举报人应认真填写联系电话和联系地址。<br>
+              三、"单位名称"一栏应填写企业名称，并力求准确。<br>
+              四、"事发地点"一栏时要准确详细，应尽可能准确到乡镇、街道。<br>
+              五、填写"举报内容描述"一栏应力求详尽，对偷用水行为的描述要客观、准确、详细。<br>
+              六、为了提高网上举报的运行效率，请您不要重复提交相同的举报事项，如需举报其他问题，可以另行提交。<br>
+              七、网上举报的办理结果可以通过拨打82868418电话进行查询。<br>
+              八、对第一举报人举报的情况经取证确认后，按回收的水费标准给予一定奖励。<br>
+              九、我集团公司为提供线索和举报者保密。<br>
+            </div>
+            <div class="main_title">举报人信息</div>
+            <form action="">
+              <div class="form_item">
+                <p class="requied">*</p>
+                <div class="form_label">标题：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入您的标题"
+                ></el-input>
+              </div>
+              <div class="juxtaposition">
+                <div class="form_item">
+                  <p class="requied">*</p>
+                  <div class="form_label">您的姓名：</div>
+                  <el-input
+                    v-model="name"
+                    placeholder="请输入您的姓名"
+                  ></el-input>
+                </div>
+                <div class="form_item">
+                  <p class="requied">*</p>
+                  <div class="form_label">您的电话：</div>
+                  <el-input
+                    v-model="name"
+                    placeholder="请输入您的联系电话"
+                  ></el-input>
+                </div>
+              </div>
+              <div class="form_item">
+                <p class="requied"></p>
+                <div class="form_label">电子邮件：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入电子邮件"
+                ></el-input>
+              </div>
+              <div class="form_item">
+                <p class="requied"></p>
+                <div class="form_label">您的地址：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入您的地址"
+                ></el-input>
+              </div>
+              <div class="main_title violators">违章人信息</div>
+              <div class="form_item">
+                <p class="requied">*</p>
+                <div class="form_label">违章人姓名：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入违章人姓名"
+                ></el-input>
+              </div>
+              <div class="form_item">
+                <p class="requied"></p>
+                <div class="form_label">违章人单位：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入违章人单位"
+                ></el-input>
+              </div>
+              <div class="form_item">
+                <p class="requied"></p>
+                <div class="form_label">违章人电话：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入违章人电话"
+                ></el-input>
+              </div>
+              <div class="form_item">
+                <p class="requied">*</p>
+                <div class="form_label">违章人地址：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="请输入违章人地址"
+                ></el-input>
+              </div>
+              <div class="form_item">
+                <p class="requied"></p>
+                <div class="form_label">举报类别：</div>
+                <el-input
+                  v-model="name"
+                  placeholder="擅自在城市公共供水管道及附属设施上私接管道盗水的"
+                ></el-input>
+              </div>
+              <div class="form_item">
+                <p class="requied">*</p>
+                <div class="form_label">举报内容：</div>
+                <el-input
+                  v-model="textarea"
+                  :rows="5"
+                  type="textarea"
+                  placeholder="请输入您的内容"
+                />
+              </div>
+              <div class="form_item annex">
+                <p class="requied">*</p>
+                <div class="form_label">附件：</div>
+                <div>
+                  <div class="annex_top">
+                    <input type="file" />
+                    <a>格式为：.rar，.zip，.png，.jpg，.gif，.bmp。文件2M之内</a>
+                  </div>
+                </div>
+              </div>
+              <div class="form_btn flex_column_center">
+                <el-button>提交申请</el-button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
       <!-- 底部 -->
       <div class="info flex_column_center">

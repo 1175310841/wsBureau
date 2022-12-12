@@ -11,10 +11,16 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
+    />
     <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/museum/historical.css" />
+    <link rel="stylesheet" href="../../css/museum/appointment.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
 
   <body>
@@ -66,7 +72,7 @@
                 <li><a href="../../html/InformationDisclosure/publicInfo.html"><span></span>公开目录及指南</a></li>
                 <li><a><span></span>城市供水服务</a>
                   <ul class="two_menu">
-                    <li><a href="#">价格收费</a></li>
+                    <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
                     <li><a href="../../html/onlineServiceHall/waterPrice.html">办事服务</a></li>
                     <li class="two_menu_li"><a>便民公告</a>
                       <ul class="three_menu">
@@ -210,7 +216,86 @@
       </div>
 
       <div class="main flex_column_center">
-        <div class="main_content flex_column_center"></div>
+        <div class="main_content flex_column_center">
+          <div class="main_title">青岛水务博物馆社会团体参观须知</div>
+          <div class="main_txt">
+            为保障参观人员及展品安全，营造文明参观环境，请预约参观人员阅读以下须知：<br><br>
+            1. 博物馆开馆时间：周一至周五9:00—15:30(国家法定工作日)，14:30后停止入馆。因各馆场地限制，本馆仅接受团体（10人以上）预约，上、下午各接待1个团队参观，每场讲解参观最多接待30人，提供免费讲解。如人数过多，博物馆将酌情分批安排游览路线。<br><br>
+            2. 为保证水源地及崂山水库厂区安全，团体参观请持单位介绍信及领队身份证进行预约并参观。<br><br>
+            3. 参观请提前3天预约，届时博物馆工作人员将与于您联系确定参观时间。<br><br>
+            4. 遵守博物馆内《参观安全须知》，听从工作人员安排，不得进入非参观区域，在参观景观池、生产场所、大坝等区域时，请保持安全距离，遵守秩序，服从管理，避免发生危险。
+          </div>
+          <div class="main_title">青岛水务博物馆社会<span style="color: #28a6e2;">团体参观</span>预约登记表</div>
+        </div>
+        <form action="">
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">团队名称：</div>
+            <el-input
+              v-model="name"
+              placeholder="请输入您的团队名称"
+            ></el-input>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">人  数：</div>
+            <el-input
+              v-model="name" 
+            ></el-input>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">经办人姓名：</div>
+            <el-input
+              v-model="name"
+              placeholder="请输入经办人姓名"
+            ></el-input>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">负责人姓名：（领队）</div>
+            <el-input
+              v-model="name"
+              placeholder="请输入您的姓名"
+            ></el-input>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">身份证号码：</div>
+            <el-input
+              v-model="name"
+              placeholder="请输入您的身份证号码"
+            ></el-input>
+          </div>
+          <div class="form_item annex">
+            <p class="requied">*</p>
+            <div class="form_label">附件：</div>
+            <div>
+              <div class="annex_top">
+                <input type="file" />
+              </div>
+            </div>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">联系电话：</div>
+            <el-input
+              v-model="name"
+              placeholder="请输入您的联系电话"
+            ></el-input>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">预约日期：</div>
+          </div>
+          <div class="form_item">
+            <p class="requied">*</p>
+            <div class="form_label">验证码：</div>
+          </div>
+          <div class="form_btn flex_column_center">
+            <el-button>提交申请</el-button>
+          </div>
+        </form>
       </div>
 
       <!-- 底部 -->
@@ -371,7 +456,9 @@
           return {};
         },
         methods: {},
-      }).mount("#app");
+      })
+      .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+      .mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>

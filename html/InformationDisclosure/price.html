@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>青岛水务集团有限公司</title>
     <link
@@ -11,16 +10,13 @@
       href="../../imgs/favicon.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../../css/common.css" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
+      href="../../css/InformationDisclosure/price.css"
     />
-    <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/technology/achievement.css" />
     <script src="../../libs/vue.global.js"></script>
     <script src="../../libs/scrollreveal.min.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
   </head>
 
   <body>
@@ -59,7 +55,7 @@
                 <li><a href="../../html/partyBuilding/youth.html"><span></span>青春水务</a></li>
               </ul>
             </li>
-            <li class="nav_special_li"><span>信息公开</span>
+            <li class="nav_special_li navAct"><span>信息公开</span>
               <ul class="sub_menu">
                 <li><a><span></span>单位概况</a>
                   <ul class="two_menu">
@@ -159,7 +155,7 @@
                 <li><a href=""><span></span>信息公示</a></li>
               </ul>
             </li>
-            <li class="navAct"><span>水务科技</span>
+            <li><span>水务科技</span>
               <ul class="sub_menu">
                 <li><a href="../../html/technology/achievement.html"><span></span>成果展示</span></a></li>
                 <li><a href="../../html/technology/dynamic.html"><span></span>科技动态</a></li>
@@ -200,45 +196,24 @@
       <div class="empty"></div>
 
       <div class="banner flex_column_center">
-        <img src="../../imgs/technology/bg.png" class="about_img" />
+        <img src="../../imgs/InformationDisclosure/bg.png" class="about_img" />
         <div class="banner_content">
           <div class="banner_slogan">
-            <p class="banner_title">水务科技</p>
-            <p class="banner_title_en">Water technology</p>
+            <p class="banner_title">信息公开</p>
+            <p class="banner_title_en">Information disclosure</p>
           </div>
           <div class="banner_crumbs">
-            您当前的位置：首页 / 水务科技 / 科技动态
+            您当前的位置：首页 / 信息公开 / 城市供水服务 / 价格收费
           </div>
         </div>
         <div class="company_profile_title">
-          <span>科技动态</span>
+          <span>城市供水服务</span>
         </div>
       </div>
 
       <div class="main flex_column_center">
         <div class="main_content flex_column_center">
-          <div class="main_list">
-            <a class="main_item" v-for="(item,index) in list" ::key="index">
-              <div class="main_item_year">2022</div>
-              <div class="main_item_date">09 / 15</div>
-              <div class="main_item_title">{{item.title}}</div>
-              <div class="main_item_content" v-html="item.content"></div>
-            </a>
-          </div>
-          <el-pagination
-            v-model:current-page="currentPage"
-            v-model:page-size="pageSize"
-            :pager-count="10"
-            :page-sizes="[10, 20, 30, 50]"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="200"
-            background
-            popper-class="page_selece_down"
-            prev-text="上一页"
-            next-text="下一页"
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-          />
+          <img src="../../imgs/InformationDisclosure/price.png" alt="">
         </div>
       </div>
 
@@ -392,59 +367,15 @@
         </footer>
       </div>
     </div>
-
     <script>
       const { createApp } = Vue;
       createApp({
         data() {
-          return {
-            list: [
-              {
-                title: "排水公司组织加强知识产权学习，促进企业发展革新",
-                content:
-                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
-              },
-              {
-                title: "排水公司组织加强知识产权学习，促进企业发展革新",
-                content:
-                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
-              },
-              {
-                title: "排水公司组织加强知识产权学习，促进企业发展革新",
-                content:
-                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
-              },
-              {
-                title: "排水公司组织加强知识产权学习，促进企业发展革新",
-                content:
-                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
-              },
-              {
-                title: "排水公司组织加强知识产权学习，促进企业发展革新",
-                content:
-                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
-              },
-              {
-                title: "排水公司组织加强知识产权学习，促进企业发展革新",
-                content:
-                  "创新是引领发展的第一动力。2021年排水公司职工在党委的组织带领下，对青岛市专利代办处的党建阵地、各功能区进行参观，了解代办处知识产权服务资源。同时组织职工充分利用好知识产权……",
-              },
-            ],
-            currentPage: 1,
-            pageSize: 10,
-          };
+          return {};
         },
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-        },
-      })
-        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
-        .mount("#app");
+        mounted() {},
+        methods: {},
+      }).mount("#app");
     </script>
     <script src="../../js/common.js"></script>
   </body>
