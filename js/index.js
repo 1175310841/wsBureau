@@ -30,8 +30,8 @@ ScrollReveal().reveal(".serve_body_right", { ...staggeringOption });
 ScrollReveal().reveal(".info_area", { ...staggeringOption });
 // ScrollReveal().reveal(".burger", { ...staggeringOption });
 
-const bubleCreate = () => {
-  const news = document.querySelector(".news");
+const bubleCreate = (e) => {
+  const news = document.querySelector(e);
   const width = news.getBoundingClientRect().width;
   const buble = document.createElement("span");
   buble.classList.add("buble");
@@ -47,5 +47,6 @@ const bubleCreate = () => {
   }, 4000);
 };
 setInterval(() => {
-  bubleCreate();
-}, 200);
+  bubleCreate(".left_bubble");
+  bubleCreate(".right_bubble");
+}, 400);
