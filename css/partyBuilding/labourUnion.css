@@ -33,6 +33,11 @@
   padding-left: 21px;
   padding-right: 35px;
   box-sizing: border-box;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.main_top:hover .main_mask {
+  opacity: 1;
 }
 .main_mask_title {
   font-size: 24px;
