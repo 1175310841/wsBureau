@@ -54,34 +54,17 @@ form > .form_item:first-child {
 .form_btn {
   margin-top: 60px;
 }
-/* 
-element css
-*/
-.el-checkbox__input .el-checkbox__inner {
-  background-color: #eeeeee;
-  border: 0;
+
+.people_num .el-input {
+  width: 143px;
+  flex: none;
 }
-.el-checkbox__inner::after {
-  height: 8px;
-  left: 5px;
+.people_num > span {
+  margin-left: 50px;
 }
-.el-checkbox.el-checkbox--large .el-checkbox__label {
-  font-size: 16px;
-}
-.el-input {
+.el-date-editor.el-input {
   height: 48px;
-  font-size: 16px;
-  flex: 1;
+  flex: none;
+  width: 420px;
+  margin-right: 56px;
 }
-.el-input__wrapper {
-  box-shadow: none;
-  background-color: #eeeeee;
-}
-.el-button {
-  width: 285px;
-  height: 49px;
-  background-color: #186daa;
-  font-size: 22px;
-  color: #ffffff;
-}
-/* *********************** */

@@ -316,10 +316,9 @@
               <div class="form_item">
                 <p class="requied"></p>
                 <div class="form_label">举报类别：</div>
-                <el-input
-                  v-model="name"
-                  placeholder="擅自在城市公共供水管道及附属设施上私接管道盗水的"
-                ></el-input>
+                <el-select v-model="value" style="flex:1">
+                  <el-option label="擅自在城市公共供水管道及附属设施上私接管道盗水的" value="1"/>
+                </el-select>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
@@ -503,7 +502,9 @@
       const { createApp } = Vue;
       createApp({
         data() {
-          return {};
+          return {
+            value:''
+          };
         },
         methods: {},
       })
