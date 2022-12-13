@@ -226,8 +226,8 @@
             <img :src="leftArrowVal==0 ?'./imgs/index/leftjt-an.png':'./imgs/index/leftjt.png'" alt=""
               @click="arrowsLeftImg()" :style="{cursor: leftArrowVal==0 ?'no-drop':'pointer'}">
             <span></span>
-            <img :src="leftArrowVal==1200?'./imgs/index/rightjt-an.png' :'./imgs/index/rightjt.png'" alt=""
-              @click="arrowsRightImg()" :style="{cursor: leftArrowVal==1200 ?'no-drop':'pointer'}">
+            <img :src="leftArrowVal==arrowsTxtWidth*3?'./imgs/index/rightjt-an.png' :'./imgs/index/rightjt.png'" alt=""
+              @click="arrowsRightImg()" :style="{cursor: leftArrowVal==arrowsTxtWidth*3 ?'no-drop':'pointer'}">
           </div>
           <div class="arrows_tit">水载民生，务泽万家</div>
           <div class="arrows_txt" ref="arrowsTxt">
@@ -642,7 +642,8 @@
           this.leftArrowVal = this.leftArrowVal - this.arrowsTxtWidth
         },
         arrowsRightImg() {
-          if (this.leftArrowVal == 1200) return
+          console.log(this.leftArrowVal == this.arrowsTxtWidth*4);
+          if (this.leftArrowVal == this.arrowsTxtWidth*3) return
           this.leftArrowVal = this.leftArrowVal + this.arrowsTxtWidth
         },
         handoffNav(e) {
