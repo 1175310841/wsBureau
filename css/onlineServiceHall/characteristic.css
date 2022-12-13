@@ -20,40 +20,9 @@
   line-height: 37px;
   margin-bottom: 80px;
 }
-.threeOne_div {
-  width: 100%;
-  height: 300px;
-  background-color: #b1d8f2;
-  box-sizing: border-box;
-  position: relative;
-}
-.threeOne_txt {
-  height: 116px;
-  justify-content: space-between;
-  position: absolute;
-  top: 92px;
-  left: 107px;
-}
-.threeOne_txt p {
-  height: 29px;
-  line-height: 28px;
-  font-size: 29px;
-  -webkit-text-stroke: 0.5px #ddf5fb;
-  text-stroke: 0.5px #ddf5fb;
-}
-.threeOne_txt span {
-  display: block;
-  height: 50px;
-  line-height: 46px;
-  font-size: 50px;
-  -webkit-text-stroke: 1px #ddf5fb;
-  text-stroke: 1px #ddf5fb;
-}
 .threeOne_img {
-  width: 420px;
+  width: 1200px;
   height: 300px;
-  position: absolute;
-  right: 0;
 }
 .threeOne_img img {
   width: 100%;

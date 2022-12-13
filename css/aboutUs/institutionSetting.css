@@ -35,11 +35,12 @@
   width: 24%;
   padding: 10px;
   box-sizing: border-box;
-  background-color: #186daa;
+  background-color: transparent;
   opacity: 1;
   transition: 1s;
 }
 .moveSmallImg {
-  opacity: 0;
-  transform: translateY(-130px);
+  /* opacity: 0;
+  transform: translateY(-130px); */
+  background-color: #186daa;
 }

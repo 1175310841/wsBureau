@@ -161,9 +161,6 @@ nav {
 .navigation > li:hover span {
   font-size: 18px;
 }
-nav .search_box {
-  /* right: 80px; */
-}
 .search_box {
   display: flex;
   align-items: center;
@@ -197,7 +194,7 @@ nav .search_box {
   background-color: #186daa;
 }
 .search_box:hover .search_input {
-  width: 150px;
+  width: 200px;
   padding: 0 15px;
   box-sizing: border-box;
 }
@@ -288,7 +285,8 @@ nav .search_box {
   align-items: center;
   position: absolute;
   bottom: 0;
-  left: -50%;
+  left: 32px;
+  transform: translateX(-50%);
   border-top: 2px solid #28a6e2;
   padding-top: 8px;
 }

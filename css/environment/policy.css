@@ -23,6 +23,9 @@
   padding: 67px 50px 34px;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  border-right: 1px solid #bcd4df;
+  border-bottom: 1px solid #bcd4df;
 }
 .main_item:nth-child(3n) {
   margin-right: 0;

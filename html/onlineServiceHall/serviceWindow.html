@@ -441,6 +441,9 @@
           InWaterWindow,
           OutWaterWindow,
         },
+        created(e) {
+          console.log(e);
+        },
         methods: {
           handoffNav(e) {
             this.componentValue = e;
