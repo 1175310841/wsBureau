@@ -1,6 +1,6 @@
 const InWaterWindow = {
   template: `<div>
-          <div id="map"></div>
+          <div id="outMap"></div>
           <ul class="outwater_list">
             <li><a>客户服务热线</a></li>
             <li v-for="(item,index) in pointInfo" ::key="index">
@@ -62,7 +62,7 @@ const InWaterWindow = {
   },
   methods: {
     initMap() {
-      this.map = new BMap.Map("map");
+      this.map = new BMap.Map("outMap");
       let center = new BMap.Point(120.397913, 36.110173);
       this.map.centerAndZoom(center, 13);
       this.map.enableScrollWheelZoom(true);

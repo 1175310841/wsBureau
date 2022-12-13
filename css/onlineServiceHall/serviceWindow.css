@@ -18,8 +18,14 @@
   line-height: 37px;
   margin-bottom: 46px;
 }
+#outMap {
+  width: 950px;
+}
 #map {
   width: 845px;
+}
+#map,
+#outMap {
   height: 715px;
   border: 1px solid #c1d2e7;
   box-sizing: border-box;
