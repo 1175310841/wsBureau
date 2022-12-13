@@ -1,0 +1,28 @@
+.main > div:first-child {
+  width: 1314px;
+  position: absolute;
+  top: 0;
+}
+.main_content {
+  width: 1314px;
+  border: 1px solid #bbd3df;
+  background-color: #e7f8fd;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.main_title {
+  height: 37px;
+  font-size: 37px;
+  line-height: 37px;
+  margin-bottom: 46px;
+}
+.municipal_window {
+  width: 1200px;
+}
+.municipal_window div {
+  text-indent: 2em;
+  line-height: 29px;
+  margin-bottom: 50px;
+}

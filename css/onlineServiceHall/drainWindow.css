@@ -1,0 +1,61 @@
+.main > div:first-child {
+  width: 1314px;
+  position: absolute;
+  top: 0;
+}
+.main_content {
+  width: 1314px;
+  border: 1px solid #bbd3df;
+  background-color: #e7f8fd;
+  padding: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.main_title {
+  height: 37px;
+  font-size: 37px;
+  line-height: 37px;
+  margin-bottom: 46px;
+}
+#map {
+  width: 950px;
+  height: 715px;
+  border: 1px solid #c1d2e7;
+  box-sizing: border-box;
+}
+.outwater_list {
+  width: 220px;
+  height: 366px;
+}
+.outwater_list {
+  border-top: 1px solid #4c7dbb;
+  box-sizing: border-box;
+}
+.outwater_list li {
+  height: 35px;
+  line-height: 35px;
+  background-color: #ddf5fc;
+  box-sizing: border-box;
+}
+.outwater_list li {
+  text-align: center;
+}
+.outwater_list li:nth-child(even) {
+  background-color: #c1def0;
+}
+.outwater_list li:first-child {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+.outwater_list li:first-child {
+  background-color: #8eb4e3;
+  border-bottom: 1px solid #4c7dbb;
+  color: #dff7fd;
+}
+.outwater_list li:last-child {
+  border-bottom: 1px solid #4c7dbb;
+}

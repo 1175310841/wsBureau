@@ -287,12 +287,10 @@
 .nav > li:hover {
   background-color: #28a6e2;
 }
-.nav > li:hover > span {
-  color: #ffffff;
-  text-shadow: none;
-}
+.nav > li:hover > span,
 .nav > li.navAct:hover a {
   color: #ffffff;
+  text-shadow: none;
 }
 .nav li:hover > .sub_menu {
   visibility: visible;

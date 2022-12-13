@@ -18,14 +18,8 @@
   line-height: 37px;
   margin-bottom: 46px;
 }
-#outMap {
-  width: 950px;
-}
 #map {
   width: 845px;
-}
-#map,
-#outMap {
   height: 715px;
   border: 1px solid #c1d2e7;
   box-sizing: border-box;
@@ -34,17 +28,11 @@
   width: 317px;
   height: 715px;
 }
-.outwater_list {
-  width: 220px;
-  height: 366px;
-}
-.inwater_list,
-.outwater_list {
+.inwater_list {
   border-top: 1px solid #4c7dbb;
   box-sizing: border-box;
 }
-.inwater_list li,
-.outwater_list li {
+.inwater_list li {
   height: 35px;
   line-height: 35px;
   background-color: #ddf5fc;
@@ -54,14 +42,7 @@
   border-bottom: 1px solid #c6d9f1;
   padding-left: 20px;
 }
-.outwater_list li {
-  text-align: center;
-}
-.outwater_list li:nth-child(even) {
-  background-color: #c1def0;
-}
-.inwater_list li:first-child,
-.outwater_list li:first-child {
+.inwater_list li:first-child {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -72,24 +53,6 @@
   color: #467bb8;
   background-color: #c6d9f1;
 }
-.outwater_list li:first-child {
-  background-color: #8eb4e3;
+.inwater_list li:last-child {
   border-bottom: 1px solid #4c7dbb;
-  color: #dff7fd;
-}
-.inwater_list li:last-child,
-.outwater_list li:last-child {
-  border-bottom: 1px solid #4c7dbb;
-}
-
-.municipal_window {
-  width: 1200px;
-}
-.municipal_window div {
-  text-indent: 2em;
-  line-height: 29px;
-  margin-bottom: 50px;
-}
-.municipal_window img {
-  /* width: 100%; */
 }
