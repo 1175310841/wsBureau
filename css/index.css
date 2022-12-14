@@ -960,7 +960,7 @@ span.buble {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   ul.sticky,
   .header,
   .index_navigation,
