@@ -242,8 +242,7 @@
   align-items: center;
 }
 
-.nav > li:after,
-.phoneNav > li:after {
+.nav > li:after {
   content: "";
   position: absolute;
   border-bottom: 4px solid #f19149;
@@ -266,8 +265,7 @@
   right: 0;
 }
 
-.nav > li:hover:after,
-.phoneNav > li:hover:after {
+.nav > li:hover:after {
   left: 0;
   right: 0;
 }
@@ -981,7 +979,7 @@ span.buble {
   .carousel {
     height: auto;
     position: relative;
-    padding: 0 30px 30px;
+    padding: 0 15px 30px;
     box-sizing: border-box;
   }
 
@@ -1029,7 +1027,7 @@ span.buble {
   }
 
   .video {
-    width: 310px;
+    width: 330px;
     height: 190px;
     position: relative;
     top: -10px;
@@ -1199,38 +1197,15 @@ span.buble {
   .serve_item:nth-child(7) {
     background-color: #add4ef;
   }
-
-  #app ul.phoneNav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding-top: 10px;
-    padding-right: 30px;
-    box-sizing: border-box;
-    background-color: #fff;
-    z-index: 50;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    border-bottom: 0;
-    box-shadow: 0 0 18px 0 rgb(0 0 0 / 20%);
-    animation: slideDown 1s ease-out forwards;
-  }
-
-  @keyframes slideDown {
-    from {
-      transform: translateY(-352px);
-    }
-
-    to {
-      transform: translateY(40px);
-    }
-  }
-
   .phoneNav > li {
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    height: auto;
+  }
+  .back_top {
+    width: 25px;
+    height: 25px;
+    right: 15px;
+    bottom: 100px;
   }
 }

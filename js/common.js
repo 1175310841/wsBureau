@@ -1,9 +1,3 @@
-// 刷新页面自动回到顶部
-window.onbeforeunload = function () {
-  document.documentElement.scrollTop = 0; //ie下
-  document.body.scrollTop = 0; //非ie
-};
-
 // 手机右上角图标点击事件
 const menuEl = document.querySelector(".menu");
 const phoneNavEl = document.getElementById("phoneNav");
@@ -16,3 +10,9 @@ menuEl.addEventListener("click", () => {
     phoneNavEl.style.display = "none";
   }
 });
+
+// 刷新页面自动回到顶部
+window.onbeforeunload = function () {
+  document.documentElement.scrollTop = 0; //ie下
+  document.body.scrollTop = 0; //非ie
+};
