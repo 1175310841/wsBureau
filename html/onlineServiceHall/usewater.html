@@ -8,10 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>青岛水务集团有限公司</title>
   <link rel="shortcut icon" href="../../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.26/dist/index.css" />
   <link rel="stylesheet" href="../../css/common.css" />
-  <link rel="stylesheet" href="../../css/onlineServiceHall/business.css" />
+  <link rel="stylesheet" href="../../css/onlineServiceHall/securitySense.css" />
   <script src="../../libs/vue.global.js"></script>
   <script src="../../libs/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
 </head>
 
 <body>
@@ -208,11 +211,11 @@
           <p class="banner_title_en">Online service hall</p>
         </div>
         <div class="banner_crumbs">
-          您当前的位置：首页 / 网上服务厅 / 业务办理 / 全市通办
+          您当前的位置：首页 / 网上服务厅 / 安全警示常识 / 用水常识
         </div>
       </div>
       <div class="company_profile_title">
-        <span>业务办理</span>
+        <span>安全警示常识</span>
       </div>
     </div>
 
@@ -220,19 +223,32 @@
       <div>
         <ul class="main_nav">
           <li>
-            <a class="main_nav_active" href="./connect.html">
-              全市通办
-            </a>
+            <a class="main_nav_active" href="./usewater.html">用水常识</a>
           </li>
           <li>
-            <a href="./convenience.html">
-              便民五项
-            </a>
+            <a href="./drainwater.html">排水常识</a>
+          </li>
+          <li>
+            <a href="./identification.html">设施辨识</a>
           </li>
         </ul>
       </div>
-      <div class="main_img flex_column_center">
-        <img src="../../imgs/onlineServiceHall/waterprice.png" alt="" />
+      <div class="main_content flex_column_center">
+        <div class="main_list">
+          <a class="main_item" v-for="(item,index) in list" ::key="index">
+            <i>
+              <img src="../../imgs/onlineServiceHall/tap.png" />
+            </i>
+            <div class="main_item_title">{{item.title}}</div>
+            <div class="main_item_content" v-html="item.content"></div>
+            <div class="main_item_date">{{item.date}}</div>
+            <img src="../../imgs/onlineServiceHall/meter_jt.png" class="main_item_img" />
+          </a>
+        </div>
+        <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :pager-count="10"
+          :page-sizes="[10, 20, 30, 50]" layout="total, sizes, prev, pager, next, jumper" :total="200" background
+          popper-class="page_selece_down" prev-text="上一页" next-text="下一页" @size-change="handleSizeChange"
+          @current-change="handleCurrentChange" />
       </div>
     </div>
 
@@ -331,14 +347,83 @@
       </footer>
     </div>
   </div>
+
   <script>
     const { createApp } = Vue;
     createApp({
       data() {
-        return {};
+        return {
+          list: [
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+            {
+              title: "冬季个别供水设施受冻原因及防冻解冻小常识",
+              content:
+                "冬季个别供水设施受冻主要原因有两种：一是部分水表和管道供水设施设置在户外；二是部分住宅室内保温措施不到位，在极端低温天气下易受冻。室外水管、水龙头的防冻可以用棉布，麻绳或草绳等进行包扎。住宅室内保温措施较差的供水设施，天气比较冷时，可以在临睡前关闭室内水表的表前阀门，打开水龙头，把管道内的空水放出来，预防供水设施受冻。对已经冻住的水龙头、水表、水管，可先用热毛巾将水龙头包住，然后用温水沿水龙头慢慢地向管子方向浇洒，使水管解冻。如浇洒至水表处，仍不见水流出，刚说明水表也被冻住了，此时用热毛巾将水表包住，用温水浇洒，使水表解冻。但切忌用火烘烤。……",
+              date: "2022 / 09 / 15",
+            },
+          ],
+          currentPage: 1,
+          pageSize: 10,
+        };
       },
-      methods: {},
-    }).mount("#app");
+      methods: {
+        handleSizeChange(val) {
+          console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+          console.log(`当前页: ${val}`);
+        },
+      },
+    })
+      .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+      .mount("#app");
   </script>
   <script src="../../js/common.js"></script>
 </body>
