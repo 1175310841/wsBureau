@@ -24,7 +24,6 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 100%;
   display: flex;
   justify-content: flex-start;
 }
@@ -89,7 +88,7 @@
   width: 14px;
   height: 14px;
   background: #ddf5fc;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   border-radius: 50%;
   margin-right: 14px;
 }
@@ -1001,7 +1000,7 @@ span.buble {
 
   .carousel_btn {
     z-index: 200;
-    top: 158px;
+    top: 125px;
   }
   .carousel_btn_item {
     width: 4px;
@@ -1031,7 +1030,7 @@ span.buble {
     background-color: #186daa;
     flex-direction: column;
     align-items: center;
-    margin-top: 180px;
+    margin-top: 155px;
     box-shadow: none;
     position: initial;
     width: 100%;
