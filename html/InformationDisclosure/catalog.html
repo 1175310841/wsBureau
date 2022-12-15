@@ -4,15 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>青岛水务集团有限公司</title>
   <link rel="shortcut icon" href="../../imgs/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../../css/common.css" />
-  <link rel="stylesheet" href="../../css/onlineServiceHall/shareWindow.css" />
+  <link rel="stylesheet" href="../../css/InformationDisclosure/publicInfo.css" />
   <script src="../../libs/vue.global.js"></script>
   <script src="../../libs/scrollreveal.min.js"></script>
-  <script src="https://api.map.baidu.com/api?v=3.0&ak=pSIvmDSbh5CdhmHcUx31nVk9UvbzzF7I"></script>
 </head>
 
 <body>
@@ -51,7 +49,7 @@
               <li><a href="../../html/partyBuilding/youth.html"><span></span>青春水务</a></li>
             </ul>
           </li>
-          <li class="nav_special_li"><span>信息公开</span>
+          <li class="nav_special_li navAct"><span>信息公开</span>
             <ul class="sub_menu">
               <li><a><span></span>单位概况</a>
                 <ul class="two_menu">
@@ -61,11 +59,11 @@
                 </ul>
               </li>
               <li><a><span></span>法规标准</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/policy.html">政策标准</a></li>
-                    <li><a href="../../html/InformationDisclosure/rules.html">规章制度</a></li>
-                  </ul>
-                </li>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/policy.html">政策标准</a></li>
+                  <li><a href="../../html/InformationDisclosure/rules.html">规章制度</a></li>
+                </ul>
+              </li>
               <li><a><span></span>公开目录及指南</a>
                   <ul class="two_menu">
                     <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
@@ -96,7 +94,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav_special_li navAct"><span>网上服务厅</span>
+          <li class="nav_special_li"><span>网上服务厅</span>
             <ul class="sub_menu">
               <li><a href="../../html/onlineServiceHall/waterPrice.html"><span></span>供水价格</span></a></li>
               <li><a><span></span>服务窗口查询</a>
@@ -202,18 +200,18 @@
     <div class="empty"></div>
 
     <div class="banner flex_column_center">
-      <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
+      <img src="../../imgs/InformationDisclosure/bg.png" class="about_img" />
       <div class="banner_content">
         <div class="banner_slogan">
-          <p class="banner_title">网上服务厅</p>
-          <p class="banner_title_en">Online service hall</p>
+          <p class="banner_title">信息公开</p>
+          <p class="banner_title_en">Information disclosure</p>
         </div>
         <div class="banner_crumbs">
-          您当前的位置：首页 / 网上服务厅 / 服务窗口查询 / 市政公用共享服务窗口
+          您当前的位置：首页 / 信息公开 / 公开目录及指南 / 信息公开目录
         </div>
       </div>
       <div class="company_profile_title">
-        <span>服务窗口查询</span>
+        <span>公开目录及指南</span>
       </div>
     </div>
 
@@ -221,26 +219,17 @@
       <div>
         <ul class="main_nav">
           <li>
-            <a href="./waterWindow.html">供水服务窗口</a>
+            <a class="main_nav_active" href="./catalog.html">信息公开目录</a>
           </li>
           <li>
-            <a href="./drainWindow.html">排水服务窗口</a>
-          </li>
-          <li>
-            <a href="https://www.qingdaonengyuan.com" target="_blank"> 收费服务窗口 </a>
-          </li>
-          <li>
-            <a class="main_nav_active" href="./shareWindow.html">市政公用共享服务窗口</a>
+            <a href="./guide.html">信息公开指南</a>
           </li>
         </ul>
       </div>
-      <div class="main_title">“市政公用服务共享窗口”试行网点</div>
-      <!-- 市政公用服务共享窗口 -->
-      <div class="municipal_window flex_column_center">
-        <div>
-          为深入贯彻落实国家、省“放管服”改革决策部署，切实落实我市优化营商环境提升行动，依据国务院《关于加快推进政务服务标准化规范化便利化的指导意见》（国发〔2022〕5号）等有关要求，进一步提升市政公用服务水平，提高企业群众用水、用电、暖气、燃气、通信、有线电视、琴岛通卡等市政公用服务办理便捷度和满意度，在各区、市级政务服务大厅设立水电气暖信有线等“市政公用服务专区”，推行各专营单位窗口无差别受理水电气暖信有线等市政公用服务。
+      <div>
+        <div class="main_content">
+          <img src="../../imgs/InformationDisclosure/directory.png" alt="" />
         </div>
-        <img src="../../imgs/onlineServiceHall/municipal.png" alt="" />
       </div>
     </div>
 
@@ -345,8 +334,7 @@
       data() {
         return {};
       },
-      methods: {
-      },
+      methods: {},
     }).mount("#app");
   </script>
   <script src="../../js/common.js"></script>
