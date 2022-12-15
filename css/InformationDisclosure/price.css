@@ -2,3 +2,6 @@
   width: 1200px;
   background-color: #fff;
 }
+.main_content img {
+  width: 100%;
+}
