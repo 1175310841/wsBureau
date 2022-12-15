@@ -8,10 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>青岛水务集团有限公司</title>
   <link rel="shortcut icon" href="../../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.26/dist/index.css" />
   <link rel="stylesheet" href="../../css/common.css" />
-  <link rel="stylesheet" href="../../css/onlineServiceHall/characteristic.css" />
+  <link rel="stylesheet" href="../../css/onlineServiceHall/message.css" />
   <script src="../../libs/vue.global.js"></script>
   <script src="../../libs/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
 </head>
 
 <body>
@@ -73,7 +76,7 @@
               </li>
               <li><a><span></span>城市供水服务</a>
                 <ul class="two_menu">
-                  <li><a href="../.../../html/InformationDisclosure/price.html">价格收费</a></li>
+                  <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
                   <li><a href="../../html/onlineServiceHall/waterPrice.html">办事服务</a></li>
                   <li class="two_menu_li"><a>便民公告</a>
                     <ul class="three_menu">
@@ -208,11 +211,11 @@
           <p class="banner_title_en">Online service hall</p>
         </div>
         <div class="banner_crumbs">
-          您当前的位置：首页 / 网上服务厅 / “青水管＋”特色服务 / 一免、一查、一服务
+          您当前的位置：首页 / 网上服务厅 / 网上留言及回复 / 96111回复
         </div>
       </div>
       <div class="company_profile_title">
-        <span>“青水管＋”特色服务</span>
+        <span>网上留言及回复</span>
       </div>
     </div>
 
@@ -220,28 +223,46 @@
       <div>
         <ul class="main_nav">
           <li>
-            <a class="main_nav_active" href="./threeone.html">
-              一免、一查、一服务
+            <a class="main_nav_active" href="./reply.html">
+              96111回复
             </a>
           </li>
           <li>
-            <a href="./paidserve.html">
-              有偿服务收费标准
+            <a href="./message.html">
+              在线留言
             </a>
           </li>
         </ul>
       </div>
-      <div class="main_threeOne flex_column_center">
-        <div class="threeOne_title">“青水管＋”便民服务</div>
-        <div class="threeOne_content">
-          青岛水务集团坚持以拓展企业服务领域、提升行业服务品质为目标，<br />
-          以“有解思维”“无拒绝服务”理念，开创“事要解决”新格局，<br />
-          进一步突破边界壁垒，面向市内三区市民推出“青水管＋”“三个一”自来水便民服务。<br />
-          如需办理相关业务，欢迎拨打水务集团<br />
+      <div class="main_content flex_column_center">
+        <div class="main_list">
+          <a class="main_item" href="./msgdetail.html" target="_blank" v-for="(item,index) in list" :key="index">
+            <div class="item_message">
+              <div class="item_img">
+                <img src="../../imgs/onlineServiceHall/message.png" alt="" />
+              </div>
+              <p>
+                我是青岛市市北区一商铺业主，原通过佰通卡缴纳水费，现被告知对方不再受理缴纳业务，现水费如何缴纳？盼解答！谢谢
+              </p>
+            </div>
+            <div class="item_reply">
+              <div class="item_img">
+                <img src="../../imgs/onlineServiceHall/reply.png" alt="" />
+              </div>
+              <p>
+                我公司工作人员11月11日9时联系用户，用户称已解决，对来电表示感谢。
+              </p>
+            </div>
+            <div class="submit_div">
+              <div class="sub_date">提交时间：2022-11-09</div>
+              <div class="sub_num">点击量：735次</div>
+            </div>
+          </a>
         </div>
-        <div class="threeOne_img">
-          <img src="../../imgs/onlineServiceHall/charact-icon.png" alt="" />
-        </div>
+        <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :pager-count="10"
+          :page-sizes="[10, 20, 30, 50]" layout="total, sizes, prev, pager, next, jumper" :total="200" background
+          popper-class="page_selece_down" prev-text="上一页" next-text="下一页" @size-change="handleSizeChange"
+          @current-change="handleCurrentChange" />
       </div>
     </div>
 
@@ -344,10 +365,23 @@
     const { createApp } = Vue;
     createApp({
       data() {
-        return {};
+        return {
+          list: [{}, {}, {}, {}, {}, {}],
+          currentPage: 1,
+          pageSize: 10,
+        };
       },
-      methods: {},
-    }).mount("#app");
+      methods: {
+        handleSizeChange(val) {
+          console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+          console.log(`当前页: ${val}`);
+        },
+      },
+    })
+      .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+      .mount("#app");
   </script>
   <script src="../../js/common.js"></script>
 </body>
