@@ -4,13 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>青岛水务集团有限公司</title>
   <link rel="shortcut icon" href="../../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.26/dist/index.css" />
   <link rel="stylesheet" href="../../css/common.css" />
-  <link rel="stylesheet" href="../../css/InformationDisclosure/publicInfo.css" />
+  <link rel="stylesheet" href="../../css/onlineServiceHall/business.css" />
   <script src="../../libs/vue.global.js"></script>
   <script src="../../libs/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
 </head>
 
 <body>
@@ -49,7 +53,7 @@
               <li><a href="../../html/partyBuilding/youth.html"><span></span>青春水务</a></li>
             </ul>
           </li>
-          <li class="nav_special_li navAct"><span>信息公开</span>
+          <li class="nav_special_li"><span>信息公开</span>
             <ul class="sub_menu">
               <li><a><span></span>单位概况</a>
                 <ul class="two_menu">
@@ -65,11 +69,11 @@
                 </ul>
               </li>
               <li><a><span></span>公开目录及指南</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
-                    <li><a href="../../html/InformationDisclosure/guide.html">信息公开指南</a></li>
-                  </ul>
-                </li>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
+                  <li><a href="../../html/InformationDisclosure/guide.html">信息公开指南</a></li>
+                </ul>
+              </li>
               <li><a><span></span>城市供水服务</a>
                 <ul class="two_menu">
                   <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
@@ -94,7 +98,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav_special_li"><span>网上服务厅</span>
+          <li class="nav_special_li navAct"><span>网上服务厅</span>
             <ul class="sub_menu">
               <li><a href="../../html/onlineServiceHall/waterPrice.html"><span></span>供水价格</span></a></li>
               <li><a><span></span>服务窗口查询</a>
@@ -200,18 +204,18 @@
     <div class="empty"></div>
 
     <div class="banner flex_column_center">
-      <img src="../../imgs/InformationDisclosure/bg.png" class="about_img" />
+      <img src="../../imgs/onlineServiceHall/bg.png" class="about_img" />
       <div class="banner_content">
         <div class="banner_slogan">
-          <p class="banner_title">信息公开</p>
-          <p class="banner_title_en">Information disclosure</p>
+          <p class="banner_title">网上服务厅</p>
+          <p class="banner_title_en">Online service hall</p>
         </div>
         <div class="banner_crumbs">
-          您当前的位置：首页 / 信息公开 / 公开目录及指南 / 信息公开目录
+          您当前的位置：首页 / 网上服务厅 / 业务办理 / 便民五项
         </div>
       </div>
       <div class="company_profile_title">
-        <span>公开目录及指南</span>
+        <span>业务办理</span>
       </div>
     </div>
 
@@ -219,16 +223,122 @@
       <div>
         <ul class="main_nav">
           <li>
-            <a class="main_nav_active" href="./catalog.html">信息公开目录</a>
+            <a href="./connect.html">
+              全市通办
+            </a>
           </li>
           <li>
-            <a href="./guide.html">信息公开指南</a>
+            <a class="main_nav_active" href="./convenience.html">
+              便民五项
+            </a>
           </li>
         </ul>
       </div>
-      <div>
-        <div class="main_content">
-          <img src="../../imgs/InformationDisclosure/directory.png" alt="" />
+      <div class="main_content">
+        <div class="main_title">供水业务申请表</div>
+        <div class="main_form flex_column_center">
+          <div class="steps">
+            <span class="finish_steps">
+              <i></i>
+              <div class="steps_txt">信息填写</div>
+            </span>
+            <div class="steps_line"></div>
+            <span>
+              <i></i>
+              <div class="steps_txt">确认</div>
+            </span>
+            <div class="steps_line"></div>
+            <span>
+              <i></i>
+              <div class="steps_txt">提交</div>
+            </span>
+          </div>
+          <form action="">
+            <div class="form_item">
+              <p class="requied">*</p>
+              <div class="form_label">申请业务种类：</div>
+              <el-checkbox-group v-model="checkList" size="large">
+                <el-checkbox label="更名过户">更名过户</el-checkbox>
+                <el-checkbox label="变更用水性质">变更用水性质</el-checkbox>
+                <el-checkbox label="终止供水">终止供水</el-checkbox>
+                <el-checkbox label="水表校验">水表校验</el-checkbox>
+                <el-checkbox label="人口基数变更">人口基数变更</el-checkbox>
+              </el-checkbox-group>
+            </div>
+            <div class="form_item">
+              <p class="requied">*</p>
+              <div class="form_label">申请人名称或<br />单位名称：</div>
+              <el-input v-model="name" placeholder="请输入您的姓名或单位名称"></el-input>
+            </div>
+            <div class="form_item">
+              <p class="requied">*</p>
+              <div class="form_label">用水地址：</div>
+              <el-input v-model="name" placeholder="请输入您的用水地址"></el-input>
+            </div>
+            <div class="choose_one_of_three">
+              <div class="choose_one_of_three_left">
+                <div class="form_item">
+                  <p class="requied"></p>
+                  <div class="form_label">给水号：</div>
+                  <el-input v-model="name" placeholder="请输入您的给水号"></el-input>
+                </div>
+                <div class="form_item">
+                  <p class="requied"></p>
+                  <div class="form_label">卡号：</div>
+                  <el-input v-model="name" placeholder="请输入您的卡号"></el-input>
+                </div>
+                <div class="form_item">
+                  <p class="requied"></p>
+                  <div class="form_label">ID号：</div>
+                  <el-input v-model="name" placeholder="请输入您的ID号"></el-input>
+                </div>
+              </div>
+              <div class="choose_one_of_three_right">
+                <p class="requied">*</p>
+                <div>此三项选择其中一项填写</div>
+              </div>
+            </div>
+            <div class="form_item">
+              <p class="requied">*</p>
+              <div class="form_label">经办人姓名：</div>
+              <el-input v-model="name" placeholder="请输入经办人姓名"></el-input>
+            </div>
+            <div class="form_item">
+              <p class="requied">*</p>
+              <div class="form_label">联系电话：</div>
+              <el-input v-model="name" placeholder="请输入经办人的联系电话"></el-input>
+            </div>
+            <div class="form_item annex">
+              <p class="requied">*</p>
+              <div class="form_label">附件：</div>
+              <div>
+                <div class="annex_top">
+                  <input type="file" />
+                  <a>点击查看附件明细</a>
+                </div>
+                <p>
+                  可上传文件格式为：.rar，.zip，.png，.jpg，.gif，.bmp。文件大小20MB之内。<br />
+                  您可以选择多个文件（按下Ctrl键不放，选中多个文件），或者合并成一个压缩包上传。
+                </p>
+              </div>
+            </div>
+            <div class="promise flex_column_center">
+              <p>
+                本单位（本人）承诺如下：<br />
+                1.在水务集团网站上上传的资料全部真实有效。<br />
+                2.业务申请前无水费欠费、违章用水和产权争议等任何纠纷。<br />
+                本单位（本人）违反上述承诺引发的法律纠纷，由本单位（本人）独立承担全部责任，青岛水务集团有限公司可按规定解除供水合同。
+              </p>
+              <div>
+                <el-checkbox v-model="checked"></el-checkbox>
+                <p class="requied">*</p>
+                <div class="form_label">同意并遵守承诺</div>
+              </div>
+            </div>
+            <div class="form_btn flex_column_center">
+              <el-button>提交申请</el-button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -332,10 +442,16 @@
     const { createApp } = Vue;
     createApp({
       data() {
-        return {};
+        return {
+          checkList: [],
+          name: "",
+          checked: false,
+        };
       },
       methods: {},
-    }).mount("#app");
+    })
+      .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+      .mount("#app");
   </script>
   <script src="../../js/common.js"></script>
 </body>
