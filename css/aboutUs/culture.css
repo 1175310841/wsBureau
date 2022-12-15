@@ -39,6 +39,10 @@
   width: 295px;
   height: 100%;
 }
+.brand img {
+  width: 100%;
+  height: 100%;
+}
 .main_content_right {
   height: 540px;
   justify-content: space-between;
@@ -48,18 +52,22 @@
   height: 261px;
   background-color: #b1d8f2;
   box-sizing: border-box;
-  padding-top: 50px;
   position: relative;
   margin-right: 15px;
 }
 .runwj {
   width: 232px;
-  height: 104px;
   margin: 0 auto;
+  margin-top: 50px;
+}
+.changwj {
+  width: 228px;
+  margin: 0 auto;
+  margin-top: 82px;
 }
 .item_btn {
   position: absolute;
-  left: 176px;
+  right: 23px;
   bottom: 25px;
 }
 .item_btn p {
@@ -93,4 +101,45 @@
 }
 .main_content_item:hover span {
   margin-right: 20px;
+}
+@media (max-width: 1200px) {
+  .logotype,
+  .main_content {
+    width: 800px;
+  }
+  .logotype_img {
+    margin-right: 30px;
+  }
+  .logotype_content {
+    flex: 1;
+  }
+  .main_content,
+  .main_content_right {
+    height: 360px;
+  }
+  .brand,
+  .item_left {
+    width: 195px;
+  }
+  .item_left,
+  .item_right {
+    height: 175px;
+  }
+  .item_left {
+    margin-right: 10px;
+  }
+  .item_right {
+    width: 390px;
+  }
+  .runwj {
+    width: 155px;
+    margin-top: 30px;
+  }
+  .changwj {
+    width: 160px;
+    margin-top: 55px;
+  }
+  .item_btn {
+    bottom: 15px;
+  }
 }

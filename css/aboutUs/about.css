@@ -256,4 +256,20 @@
     display: flex;
     flex-direction: column-reverse;
   }
+  .mask_layer {
+    padding: 99px 15px 30px;
+  }
+  .mask_img {
+    width: 30px;
+    right: 30px;
+  }
+  .mask_title {
+    font-size: 22px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+  .mask_main {
+    width: 100%;
+    line-height: 22px;
+  }
 }
