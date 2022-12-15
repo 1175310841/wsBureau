@@ -82,7 +82,7 @@
                 <li><a href="./html/partyBuilding/youth.html"><span></span>青春水务</a></li>
               </ul>
             </li>
-            <li class="nav_special_li" ><span>信息公开</span>
+            <li class="nav_special_li"><span>信息公开</span>
               <ul class="sub_menu">
                 <li><a><span></span>单位概况</a>
                   <ul class="two_menu">
@@ -91,11 +91,16 @@
                     <li><a href="./html/aboutUs/institutionSetting.html">机构设置</a></li>
                   </ul>
                 </li>
-                <li><a href="./html/InformationDisclosure/laws.html"><span></span>法规标准</a></li>
+                <li><a><span></span>法规标准</a>
+                  <ul class="two_menu">
+                    <li><a href="./html/InformationDisclosure/policy.html">政策标准</a></li>
+                    <li><a href="./html/InformationDisclosure/rules.html">规章制度</a></li>
+                  </ul>
+                </li>
                 <li><a href="./html/InformationDisclosure/publicInfo.html"><span></span>公开目录及指南</a></li>
                 <li><a><span></span>城市供水服务</a>
                   <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
+                    <li><a href="./html/InformationDisclosure/price.html">价格收费</a></li>
                     <li><a href="./html/onlineServiceHall/waterPrice.html">办事服务</a></li>
                     <li class="two_menu_li"><a>便民公告</a>
                       <ul class="three_menu">
@@ -179,7 +184,7 @@
                 <li><a href="./html/onlineServiceHall/packing.html"><span></span>用水报装</a></li>
                 <li><a href="./html/onlineServiceHall/guidelines.html"><span></span>办事指南</a></li>
                 <li><a href="./html/environment/promise.html"><span></span>服务承诺</a></li>
-                <li><a href="./html/InformationDisclosure/laws.html"><span></span>信息公示</a></li>
+                <li><a href="./html/InformationDisclosure/policy.html"><span></span>信息公示</a></li>
               </ul>
             </li>
             <li><span>水务科技</span>
@@ -205,7 +210,7 @@
       </div>
       <!-- 手机导航 -->
       <ul id="phoneNav" style="display: none;">
-        <li class="navAct"><a class="phone_nav_title" href="./index.html" >首页</a></li>
+        <li class="navAct"><a class="phone_nav_title" href="./index.html">首页</a></li>
         <li>
           <div class="phone_nav_title">集团概况</div>
           <div class="phone_nav_menu phone_nav_overview">
@@ -328,10 +333,10 @@
         <!-- 图片新闻 -->
         <div class="news_body" v-if="TabIndex==0">
           <div class="imgnews_left">
-            <div class="img" >
+            <div class="img">
               <img src="./imgs/index/carouselBg1.png" alt="">
             </div>
-            <div class="news_arrows" >
+            <div class="news_arrows">
               <div class="news_arrows_date">
                 <span>06</span>
                 <span>2022-09</span>
@@ -339,13 +344,14 @@
               <div style="flex: 1;">
                 <div class="news_arrows_title">青岛水务集团举办“智水观澜”论坛</div>
                 <div class="news_arrows_draw"></div>
-                <div class="news_arrows_txt">加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
+                <div class="news_arrows_txt">
+                  加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
                 </div>
               </div>
             </div>
           </div>
           <div class="imgnews_list">
-            <a class="news_item_active" >
+            <a class="news_item_active">
               <div style="width: 75%;">
                 <p class="news_item_title">水务集团召开第一届第九次职工代表大会</p>
                 <p class="news_item_txt">
@@ -699,8 +705,8 @@
           this.leftArrowVal = this.leftArrowVal - this.arrowsTxtWidth
         },
         arrowsRightImg() {
-          console.log(this.leftArrowVal == this.arrowsTxtWidth*4);
-          if (this.leftArrowVal == this.arrowsTxtWidth*3) return
+          console.log(this.leftArrowVal == this.arrowsTxtWidth * 4);
+          if (this.leftArrowVal == this.arrowsTxtWidth * 3) return
           this.leftArrowVal = this.leftArrowVal + this.arrowsTxtWidth
         },
         handoffNav(e) {
