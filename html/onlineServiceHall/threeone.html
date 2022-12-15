@@ -9,10 +9,9 @@
   <title>青岛水务集团有限公司</title>
   <link rel="shortcut icon" href="../../imgs/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../../css/common.css" />
-  <link rel="stylesheet" href="../../css/onlineServiceHall/drainWindow.css" />
+  <link rel="stylesheet" href="../../css/onlineServiceHall/characteristic.css" />
   <script src="../../libs/vue.global.js"></script>
   <script src="../../libs/scrollreveal.min.js"></script>
-  <script src="https://api.map.baidu.com/api?v=3.0&ak=pSIvmDSbh5CdhmHcUx31nVk9UvbzzF7I"></script>
 </head>
 
 <body>
@@ -61,20 +60,20 @@
                 </ul>
               </li>
               <li><a><span></span>法规标准</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/policy.html">政策标准</a></li>
-                    <li><a href="../../html/InformationDisclosure/rules.html">规章制度</a></li>
-                  </ul>
-                </li>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/policy.html">政策标准</a></li>
+                  <li><a href="../../html/InformationDisclosure/rules.html">规章制度</a></li>
+                </ul>
+              </li>
               <li><a><span></span>公开目录及指南</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
-                    <li><a href="../../html/InformationDisclosure/guide.html">信息公开指南</a></li>
-                  </ul>
-                </li>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
+                  <li><a href="../../html/InformationDisclosure/guide.html">信息公开指南</a></li>
+                </ul>
+              </li>
               <li><a><span></span>城市供水服务</a>
                 <ul class="two_menu">
-                  <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
+                  <li><a href="../.../../html/InformationDisclosure/price.html">价格收费</a></li>
                   <li><a href="../../html/onlineServiceHall/waterPrice.html">办事服务</a></li>
                   <li class="two_menu_li"><a>便民公告</a>
                     <ul class="three_menu">
@@ -209,11 +208,11 @@
           <p class="banner_title_en">Online service hall</p>
         </div>
         <div class="banner_crumbs">
-          您当前的位置：首页 / 网上服务厅 / 服务窗口查询 / 排水服务窗口
+          您当前的位置：首页 / 网上服务厅 / “青水管＋”特色服务 / 一免、一查、一服务
         </div>
       </div>
       <div class="company_profile_title">
-        <span>服务窗口查询</span>
+        <span>“青水管＋”特色服务</span>
       </div>
     </div>
 
@@ -221,31 +220,29 @@
       <div>
         <ul class="main_nav">
           <li>
-            <a href="./waterWindow.html">供水服务窗口</a>
+            <a class="main_nav_active" href="./threeone.html">
+              一免、一查、一服务
+            </a>
           </li>
           <li>
-            <a class="main_nav_active" href="./drainWindow.html">排水服务窗口</a>
-          </li>
-          <li>
-            <a href="https://www.qingdaonengyuan.com" target="_blank"> 收费服务窗口 </a>
-          </li>
-          <li>
-            <a href="./shareWindow.html">市政公用共享服务窗口</a>
+            <a href="./paidserve.html">
+              有偿服务收费标准
+            </a>
           </li>
         </ul>
       </div>
-      <div class="main_title">
-        排水各分公司服务电话及办公地点
-      </div>
-      <div class="main_content">
-        <div id="map"></div>
-        <ul class="outwater_list">
-          <li><a>客户服务热线</a></li>
-          <li v-for="(item,index) in pointInfo" ::key="index">
-            <a @click="handleOpenWindow(item)">{{item.name}}</a>
-          </li>
-        </ul>
+      <div class="main_threeOne flex_column_center">
+        <div class="threeOne_title">“青水管＋”便民服务</div>
+        <div class="threeOne_content">
+          青岛水务集团坚持以拓展企业服务领域、提升行业服务品质为目标，<br />
+          以“有解思维”“无拒绝服务”理念，开创“事要解决”新格局，<br />
+          进一步突破边界壁垒，面向市内三区市民推出“青水管＋”“三个一”自来水便民服务。<br />
+          如需办理相关业务，欢迎拨打水务集团<br />
         </div>
+        <div class="threeOne_img">
+          <img src="../../imgs/onlineServiceHall/charact-icon.png" alt="" />
+        </div>
+      </div>
     </div>
 
     <!-- 底部 -->
@@ -347,100 +344,9 @@
     const { createApp } = Vue;
     createApp({
       data() {
-        return {
-          map: null,
-          pointInfo: [
-            {
-              lng: 120.382133,
-              lat: 36.071994,
-              name: "排水公司监管中心",
-              address: "盐城路7号北海宾馆2号楼",
-              phone: "85710000",
-            },
-            {
-              lng: 120.317103,
-              lat: 36.074594,
-              name: "第一排水公司",
-              address: "广州路5号",
-              phone: "82627780",
-            },
-            {
-              lng: 120.397913,
-              lat: 36.110173,
-              name: "第二排水公司",
-              address: "伊春路98号",
-              phone: "85633342",
-            },
-            {
-              lng: 120.381518,
-              lat: 36.153965,
-              name: "第三排水公司",
-              address: "唐河路15号",
-              phone: "84968372",
-            },
-            {
-              lng: 120.433571,
-              lat: 36.066221,
-              name: "第四排水公司",
-              address: "东海东路6号",
-              phone: "85889238",
-            },
-            {
-              lng: 120.440203,
-              lat: 36.178184,
-              name: "第五排水公司",
-              address: "北崂路991号",
-              phone: "87666588",
-            },
-          ],
-        };
+        return {};
       },
-      mounted() {
-        this.initMap();
-      },
-      methods: {
-        initMap() {
-          this.map = new BMap.Map("map");
-          let center = new BMap.Point(120.397913, 36.110173);
-          this.map.centerAndZoom(center, 13);
-          this.map.enableScrollWheelZoom(true);
-          this.pointInfo.forEach((i) => {
-            let point = new BMap.Point(i.lng, i.lat);
-            let marker = new BMap.Marker(point);
-            this.map.addOverlay(marker);
-            let opts = {
-              width: 150, // 信息窗口宽度
-              height: 100, // 信息窗口高度
-              title: `<div style='margin:10px 0;font-weight:bold;font-size:15px'>${i.name}</div>`, // 信息窗口标题
-              offset: new BMap.Size(0, -25),
-            };
-            let infoWindow = new BMap.InfoWindow(
-              `地址：${i.address} <br />电话：${i.phone}`,
-              opts
-            ); // 创建信息窗口对象
-            marker.addEventListener("click", () => {
-              this.openWindow(infoWindow, point);
-            });
-          });
-        },
-        openWindow(infoWindow, point) {
-          this.map.openInfoWindow(infoWindow, point); //开启信息窗口
-        },
-        handleOpenWindow(e) {
-          let point = new BMap.Point(e.lng, e.lat);
-          let opts = {
-            width: 250, // 信息窗口宽度
-            height: 130, // 信息窗口高度
-            title: `<div style='margin:10px 0;font-weight:bold;font-size:15px'>${e.name}</div>`, // 信息窗口标题
-            offset: new BMap.Size(0, -25),
-          };
-          let infoWindow = new BMap.InfoWindow(
-            `地址：${e.address} <br />电话：${e.phone}`,
-            opts
-          ); // 创建信息窗口对象
-          this.openWindow(infoWindow, point);
-        },
-      },
+      methods: {},
     }).mount("#app");
   </script>
   <script src="../../js/common.js"></script>
