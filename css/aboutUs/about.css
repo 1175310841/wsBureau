@@ -253,11 +253,10 @@
     line-height: 22px;
     margin: 0;
     padding: 10px 0 10px 80px;
-    text-indent: 2em;
   }
   .important_people li:last-child {
     padding-left: 0;
-    text-align: 2em;
+    text-indent: 2em;
   }
   .people_name {
     line-height: 18px;

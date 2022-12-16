@@ -855,23 +855,23 @@ footer {
     position: relative;
   }
   .phone_nav_menu a {
-    line-height: 25px;
+    line-height: 30px;
     color: #394e69;
   }
   .phoneNav li.navAct .phone_nav_two {
-    height: 50px;
+    height: 60px;
   }
   .phoneNav li.navAct .phone_nav_three {
-    height: 75px;
+    height: 90px;
   }
   .phoneNav li.navAct .phone_nav_four {
-    height: 100px;
+    height: 120px;
   }
   .phoneNav li.navAct .phone_nav_five {
-    height: 125px;
+    height: 150px;
   }
   .phoneNav li.navAct .phone_nav_twelve {
-    height: 300px;
+    height: 360px;
   }
   .phone_two_menu {
     padding-left: 8px;

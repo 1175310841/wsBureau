@@ -24,3 +24,19 @@
   line-height: 15px;
   font-size: 16px;
 }
+@media (max-width: 800px) {
+  .list li a {
+    padding-left: 15px;
+  }
+  .date {
+    margin-right: 20px;
+  }
+  .day {
+    height: 30px;
+    line-height: 30px;
+    font-size: 35px;
+  }
+  .line {
+    width: 70px;
+  }
+}
