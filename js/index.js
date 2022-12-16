@@ -90,29 +90,3 @@ window.onload = function () {
     }, 30);
   };
 };
-
-// 移动导航手风琴效果
-let phoneItems = document.querySelectorAll(".phone_nav_title");
-phoneItems.forEach((item) => {
-  item.onclick = function () {
-    // this.parentNode.childNodes[1].classList.remove("autoheight");
-    // let twoActive = this.parentNode.children[1].childNodes;
-    // twoActive.forEach((item) => {
-    //   item.classList.remove("phone_two_active");
-    // });
-    phoneItems.forEach((item) => {
-      item.parentNode.classList.remove("navAct");
-    });
-    this.parentNode.classList.add("navAct");
-  };
-});
-let twoItems = document.querySelectorAll(".phone_two_title");
-twoItems.forEach((item) => {
-  item.onclick = function () {
-    twoItems.forEach((item) => {
-      item.parentNode.classList.remove("phone_two_active");
-    });
-    this.parentNode.parentNode.classList.add("autoheight");
-    this.parentNode.classList.add("phone_two_active");
-  };
-});
