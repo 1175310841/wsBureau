@@ -356,9 +356,7 @@ nav {
 .company_profile_title span {
   display: inline-block;
   padding: 0 20px;
-  border-bottom: 1px solid #ddf5fc;
-  position: relative;
-  top: -1px;
+  background-color: #ddf5fc;
 }
 /*****************************/
 .main {
@@ -690,7 +688,7 @@ footer {
   }
   .company_profile_title span {
     font-size: 30px;
-    line-height: 30px;
+    line-height: 32px;
   }
 }
 @media (max-width: 800px) {
@@ -879,27 +877,35 @@ footer {
   .phoneNav li.navAct .phone_nav_menu.autoheight {
     height: auto;
   }
+  .banner_content {
+    top: 45%;
+  }
   .banner_slogan {
-    padding: 15px 15px 10px 10px;
+    padding: 10px 20px 5px 10px;
   }
   .banner_title {
-    height: 20px;
-    font-size: 20px;
-    line-height: 20px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .banner_title_en {
+    font-size: 12px;
+    margin-top: 5px;
   }
   .banner_crumbs {
     display: none;
   }
   .company_profile_title {
-    padding-left: 0;
-    text-align: end;
+    padding-left: 20px;
   }
   .company_profile_title span {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 10px;
   }
   .main {
     padding: 30px 0 50px;
+    line-height: 22px;
   }
 }
 

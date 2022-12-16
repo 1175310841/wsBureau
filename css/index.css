@@ -1049,6 +1049,7 @@ span.buble {
     width: 100%;
     margin-bottom: 20px;
     box-sizing: border-box;
+    padding: 0 10px;
   }
 
   .arrows {

@@ -47,10 +47,16 @@
   width: 100%;
   box-sizing: border-box;
   position: relative;
-  background: url("../../imgs/aboutUs/iceberg.png") no-repeat;
-  background-size: auto;
+  /* background: url("../../imgs/aboutUs/iceberg.png") no-repeat; */
+  /* background-size: auto; */
+  background: linear-gradient(0deg, #ddf5fc, #b1d8f2);
   padding-top: 98px;
   padding-bottom: 196px;
+}
+.ice_mountain {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .important_people {
   width: 62%;
@@ -170,6 +176,9 @@
   width: 1200px;
   line-height: 26px;
 }
+.develop_holder {
+  display: none;
+}
 
 @media (max-width: 1800px) {
   .develop div {
@@ -188,16 +197,34 @@
 }
 @media (max-width: 800px) {
   .main {
-    line-height: 20px;
+    line-height: 22px;
   }
   .develop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .intro_img {
+    position: absolute;
     width: 95%;
-    height: 470px;
+    margin-bottom: 0;
   }
   .develop div {
-    top: 120px;
-    left: 32%;
-    width: 64%;
+    width: 85%;
+    position: relative;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    margin-top: 115px;
+  }
+  .develop_holder {
+    display: block;
+    width: 100px;
+    height: 70px;
+    float: left;
+    clear: both;
   }
   .information,
   .course {
@@ -205,6 +232,9 @@
   }
   .information p:last-child {
     margin-bottom: 30px;
+  }
+  .information p span {
+    font-size: 15px;
   }
   .course {
     margin-bottom: 40px;
@@ -218,13 +248,17 @@
   }
   .important_people li {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 22px;
     margin: 0;
     padding: 10px 0 10px 80px;
   }
+  .important_people li:last-child {
+    padding-left: 0;
+    text-align: 2em;
+  }
   .people_name {
-    line-height: 20px;
-    font-size: 20px;
+    line-height: 18px;
+    font-size: 18px;
     left: 0%;
   }
   .company {
