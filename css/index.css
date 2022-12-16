@@ -1219,9 +1219,12 @@ span.buble {
     background-color: #add4ef;
   }
   .phoneNav > li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 0;
     height: auto;
+    font-size: 20px;
+    line-height: 20px;
+    align-items: flex-end;
   }
   .back_top {
     width: 25px;
