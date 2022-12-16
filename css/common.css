@@ -686,9 +686,10 @@ footer {
     line-height: 10px;
     font-size: 14px;
   }
-  .company_profile_title span {
+  .company_profile_title {
     font-size: 30px;
     line-height: 32px;
+    height: 32px;
   }
 }
 @media (max-width: 800px) {
@@ -907,11 +908,12 @@ footer {
     display: none;
   }
   .company_profile_title {
+    font-size: 14px;
+    line-height: 16px;
+    height: 16px;
     padding-left: 20px;
   }
   .company_profile_title span {
-    font-size: 14px;
-    line-height: 18px;
     padding: 0 10px;
   }
   .main {
