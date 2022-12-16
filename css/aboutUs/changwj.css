@@ -1,12 +1,8 @@
 .logotype {
   width: 1200px;
-}
-.logotype {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.logotype {
   margin-bottom: 100px;
 }
 .logotype_img {
@@ -112,4 +108,44 @@
 }
 .quality {
   line-height: 22px;
+}
+@media (max-width: 800px) {
+  .logotype {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .logotype_img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .logotype_content {
+    width: 100%;
+    height: auto;
+  }
+  .logotype_paragraph {
+    line-height: 22px;
+  }
+  .main_content {
+    padding-top: 30px;
+    height: auto;
+  }
+  .main_content_list {
+    width: 100%;
+  }
+  .main_content_item,
+  .main_content_item:nth-child(6) {
+    width: 49%;
+    margin-left: 2%;
+    margin-bottom: 20px;
+  }
+  .main_content_item:nth-child(2),
+  .main_content_item:nth-child(3),
+  .main_content_item:nth-child(5),
+  .main_content_item:nth-child(7),
+  .main_content_item:nth-child(9) {
+    margin-left: 0;
+  }
 }

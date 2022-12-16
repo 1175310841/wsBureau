@@ -143,3 +143,37 @@
     bottom: 15px;
   }
 }
+@media (max-width: 800px) {
+  .logotype,
+  .main_content {
+    width: 100%;
+  }
+  .logotype {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .logotype_img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .logotype_content {
+    width: 100%;
+  }
+  .logotype_img {
+    margin-right: 0;
+  }
+  .brand {
+    width: calc(25% - 5px);
+  }
+  .main_content_right {
+    width: calc(75% - 5px);
+  }
+  .item_left {
+    width: calc((100% - 10px) / 3);
+  }
+  .item_right {
+    width: calc((100% - 10px) / 3 * 2);
+  }
+}

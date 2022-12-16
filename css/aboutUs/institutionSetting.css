@@ -55,10 +55,6 @@
   }
 }
 @media (max-width: 800px) {
-  .main {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .architecture,
   .carousel_dept,
   .main_draw {

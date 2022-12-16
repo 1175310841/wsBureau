@@ -198,6 +198,8 @@
 @media (max-width: 800px) {
   .main {
     line-height: 22px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .develop {
     width: 100%;

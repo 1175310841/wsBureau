@@ -15,3 +15,22 @@
   font-size: 22px;
   line-height: 100px;
 }
+@media (max-width: 800px) {
+  .main_content {
+    width: 100%;
+  }
+  .main_title {
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  .main_content h2 {
+    font-size: 18px;
+    line-height: 60px;
+  }
+  .main_content p {
+    text-indent: 2em;
+  }
+}
