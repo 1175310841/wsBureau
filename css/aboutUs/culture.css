@@ -2,9 +2,7 @@
 .main_content {
   width: 1200px;
 }
-.logotype,
-.main_content,
-.main_content_item {
+.logotype {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,28 +30,38 @@
 .logotype_paragraph {
   text-indent: 2em;
 }
-.main_content {
-  height: 540px;
-}
 .brand {
   width: 295px;
-  height: 100%;
+  height: 540px;
+  margin-right: 10px;
+  float: left;
 }
 .brand img {
   width: 100%;
   height: 100%;
 }
-.main_content_right {
-  height: 540px;
-  justify-content: space-between;
-}
 .item_left {
   width: 294px;
-  height: 261px;
+  height: 265px;
   background-color: #b1d8f2;
   box-sizing: border-box;
   position: relative;
-  margin-right: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+.pc_right {
+  display: block;
+}
+.phone_right {
+  display: none;
+}
+.item_left:nth-child(4),
+.item_right:nth-child(2) {
+  margin-bottom: 0;
+}
+.item_left:hover .item_btn span {
+  margin-right: 20px;
 }
 .runwj {
   width: 232px;
@@ -93,14 +101,13 @@
 }
 .item_right {
   width: 582px;
-  height: 261px;
+  height: 265px;
+  float: left;
+  margin-bottom: 10px;
 }
 .item_right img {
   width: 100%;
   height: 100%;
-}
-.main_content_item:hover span {
-  margin-right: 20px;
 }
 @media (max-width: 1200px) {
   .logotype,
@@ -113,13 +120,12 @@
   .logotype_content {
     flex: 1;
   }
-  .main_content,
-  .main_content_right {
-    height: 360px;
-  }
   .brand,
   .item_left {
     width: 195px;
+  }
+  .brand {
+    height: 360px;
   }
   .item_left,
   .item_right {
@@ -164,16 +170,24 @@
   .logotype_img {
     margin-right: 0;
   }
-  .brand {
-    width: calc(25% - 5px);
-  }
-  .main_content_right {
-    width: calc(75% - 5px);
+  .brand,
+  .item_left {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
   }
   .item_left {
-    width: calc((100% - 10px) / 3);
+    margin-right: 0;
   }
   .item_right {
-    width: calc((100% - 10px) / 3 * 2);
+    width: 100%;
+    float: none;
+    clear: both;
+    margin-top: 10px;
+  }
+  .pc_right {
+    display: none;
+  }
+  .phone_right {
+    display: block;
   }
 }
