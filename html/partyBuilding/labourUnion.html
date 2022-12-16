@@ -1,181 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>青岛水务集团有限公司</title>
-    <link
-      rel="shortcut icon"
-      href="../../imgs/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/element-plus@2.2.26/dist/index.css"
-    />
-    <link rel="stylesheet" href="../../css/common.css" />
-    <link rel="stylesheet" href="../../css/news/index.css" />
-    <link rel="stylesheet" href="../../css/news/waterNews.css" />
-    <link rel="stylesheet" href="../../css/partyBuilding/labourUnion.css" />
-    <script src="../../libs/vue.global.js"></script>
-    <script src="../../libs/scrollreveal.min.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
-    <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <!-- 头部 -->
-      <div class="head flex_column_center">
-        <header>
-          <a href=""><img src="../../imgs/commonLogo.png" alt="" /></a>
-          <div><img src="../../imgs/Servicehotline.png" alt="" /></div>
-        </header>
-        <div style="width: 100%; height: 1px; background-color: #359ccd"></div>
-        <nav>
-         <ul class="navigation">
-            <li><a href='../../index.html'><span>首页</span></a></li>
-            <li>
-              <span>集团概况</span>
-              <ul class="sub_menu">
-                <li><a href="../../html/aboutUs/about.html"><span></span>企业简介</a></li>
-                <li><a href="../../html/aboutUs/institutionSetting.html"><span></span>机构设置</a></li>
-                <li><a href="../../html/aboutUs/culture.html"><span></span>企业文化</a></li>
-              </ul>
-            </li>
-            <li>
-              <span>新闻资讯</span>
-              <ul class="sub_menu">
-                <li><a href="../../html/news/waterNews.html"><span></span>水务新闻</a></li>
-                <li><a href="../../html/news/imgNews.html"><span></span>图片新闻</a></li>
-                <li><a href="../../html/news/mediaNews.html"><span></span>媒体新闻</a></li>
-              </ul>
-            </li>
-            <li class="navAct"><span>党建工作</span>
-              <ul class="sub_menu">
-                <li><a href="../../html/partyBuilding/partyNews.html"><span></span>党建新闻</a></li>
-                <li><a href="../../html/partyBuilding/labourUnion.html"><span></span>工会动态</a></li>
-                <li><a href="../../html/partyBuilding/breeze.html"><span></span>水务清风</a></li>
-                <li><a href="../../html/partyBuilding/youth.html"><span></span>青春水务</a></li>
-              </ul>
-            </li>
-            <li class="nav_special_li"><span>信息公开</span>
-              <ul class="sub_menu">
-                <li><a><span></span>单位概况</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/aboutUs/about.html">基本简介</a></li>
-                    <li><a href="../../html/aboutUs/about.html#leadership">领导信息</a></li>
-                    <li><a href="../../html/aboutUs/institutionSetting.html">机构设置</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>法规标准</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/policy.html">政策标准</a></li>
-                    <li><a href="../../html/InformationDisclosure/rules.html">规章制度</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>公开目录及指南</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
-                    <li><a href="../../html/InformationDisclosure/guide.html">信息公开指南</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>城市供水服务</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
-                    <li><a href="../../html/onlineServiceHall/waterPrice.html">办事服务</a></li>
-                    <li class="two_menu_li"><a>便民公告</a>
-                      <ul class="three_menu">
-                        <li><a href="../../html/onlineServiceHall/meterReading.html">供水抄表计划</a></li>
-                        <li><a href="../../html/onlineServiceHall/cutWater.html">停水公告</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="../../html/onlineServiceHall/waterQuality.html">水质水压公告</a></li>
-                    <li><a href="../../html/onlineServiceHall/usewater.html">安全警示</a></li>
-                    <li><a href="../../html/onlineServiceHall/reply.html">咨询投诉</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>其他公开服务</a>
-                  <ul class="two_menu">
-                    <li><a href="http://www.qdwater.com.cn:8010/bid2/front" target="_blank">招标公告</a></li>
-                    <li><a href="../../html/InformationDisclosure/monitor.html">水质监测</a></li>
-                    <li><a href="../../html/InformationDisclosure/otherServe.html">其他服务信息</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="nav_special_li"><span>网上服务厅</span>
-              <ul class="sub_menu">
-                <li><a href="../../html/onlineServiceHall/waterPrice.html"><span></span>供水价格</span></a></li>
-                <li><a><span></span>服务窗口查询</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/onlineServiceHall/waterWindow.html">供水服务窗口</a></li>
-                    <li><a href="../../html/onlineServiceHall/drainWindow.html">排水服务窗口</a></li>
-                    <li><a href="https://www.qingdaonengyuan.com/FuWu_qd.html" target="_blank">收费服务窗口</a></li>
-                    <li><a href="../../html/onlineServiceHall/shareWindow.html">市政公用共享服务窗口</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>业务办理</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/onlineServiceHall/connect.html">全市通办</a></li>
-                    <li><a href="../../html/onlineServiceHall/convenience.html">便民五项</a></li>
-                  </ul>
-                </li>
-                <li><a href="../../html/onlineServiceHall/cutWater.html"><span></span>停水公告</a></li>
-                <li><a href="../../html/onlineServiceHall/waterQuality.html"><span></span>水质水压公告</a></li>
-                <li><a href="../../html/onlineServiceHall/meterReading.html"><span></span>用水抄表计划</a></li>
-                <li><a><span></span>办事指南</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/onlineServiceHall/guidelines.html">海润自来水集团</a></li>
-                    <li><a href="../../html/onlineServiceHall/guidelines.html">胶州自来水公司</a></li>
-                    <li><a href="../../html/onlineServiceHall/guidelines.html">高新海润水务</a></li>
-                  </ul>
-                </li>
-                <li><a href="../../html/onlineServiceHall/packing.html"><span></span>用水报装智慧报装</a></li>
-                <li><a><span></span>"青水管＋"特色服务</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/onlineServiceHall/threeone.html">"一免、一查、一服务"</a></li>
-                    <li><a href="../../html/onlineServiceHall/paidserve.html">有偿服务收费标准</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>安全警示常识</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/onlineServiceHall/usewater.html">用水常识</a></li>
-                    <li><a href="../../html/onlineServiceHall/drainwater.html">排水常识</a></li>
-                    <li><a href="../../html/onlineServiceHall/identification.html">设施辨识</a></li>
-                  </ul>
-                </li>
-                <li><a><span></span>网上留言及回复</a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/onlineServiceHall/reply.html">96111回复</a></li>
-                    <li><a href="../../html/onlineServiceHall/message.html">在线留言</a></li>
-                  </ul>
-                </li>
-                <li><a href="../../html/onlineServiceHall/inform.html"><span></span>网上举报</a></li>
-              </ul>
-            </li>
-            <li class="nav_special_li"><span>营商环境</span>
-              <ul class="sub_menu">
-                <li><a><span></span>相关政策</span></a>
-                  <ul class="two_menu">
-                    <li><a href="../../html/environment/nation.html">国家政策</a></li>
-                    <li><a href="../../html/environment/shandongProvince.html">山东省政策</a></li>
-                    <li><a href="../../html/environment/qingdaoCity.html">青岛市政策</a></li>
-                  </ul>
-                </li>
-                <li><a href="../../html/onlineServiceHall/packing.html"><span></span>用水报装</a></li>
-                <li><a href="../../html/onlineServiceHall/guidelines.html"><span></span>办事指南</a></li>
-                <li><a href="../../html/environment/promise.html"><span></span>服务承诺</a></li>
-                <li><a href="../../html/InformationDisclosure/policy.html"><span></span>信息公示</a></li>
-              </ul>
-            </li>
-            <li><span>水务科技</span>
-              <ul class="sub_menu">
-                <li><a href="../../html/technology/achievement.html"><span></span>成果展示</span></a></li>
-                <li><a href="../../html/technology/dynamic.html"><span></span>科技动态</a></li>
-              </ul>
-            </li>
-            <!-- <li><span>网上博物馆</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青岛水务集团有限公司</title>
+  <link rel="shortcut icon" href="../../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.2.26/dist/index.css" />
+  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/news/index.css" />
+  <link rel="stylesheet" href="../../css/news/waterNews.css" />
+  <link rel="stylesheet" href="../../css/partyBuilding/labourUnion.css" />
+  <script src="../../libs/vue.global.js"></script>
+  <script src="../../libs/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
+  <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 头部 -->
+    <div class="head flex_column_center">
+      <header>
+        <a href=""><img src="../../imgs/commonLogo.png" alt="" /></a>
+        <div><img src="../../imgs/Servicehotline.png" alt="" /></div>
+      </header>
+      <div style="width: 100%; height: 1px; background-color: #359ccd"></div>
+      <nav>
+        <ul class="navigation">
+          <li><a href='../../index.html'><span>首页</span></a></li>
+          <li>
+            <span>集团概况</span>
+            <ul class="sub_menu">
+              <li><a href="../../html/aboutUs/about.html"><span></span>企业简介</a></li>
+              <li><a href="../../html/aboutUs/institutionSetting.html"><span></span>机构设置</a></li>
+              <li><a href="../../html/aboutUs/culture.html"><span></span>企业文化</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>新闻资讯</span>
+            <ul class="sub_menu">
+              <li><a href="../../html/news/waterNews.html"><span></span>水务新闻</a></li>
+              <li><a href="../../html/news/imgNews.html"><span></span>图片新闻</a></li>
+              <li><a href="../../html/news/mediaNews.html"><span></span>媒体新闻</a></li>
+            </ul>
+          </li>
+          <li class="navAct"><span>党建工作</span>
+            <ul class="sub_menu">
+              <li><a href="../../html/partyBuilding/partyNews.html"><span></span>党建新闻</a></li>
+              <li><a href="../../html/partyBuilding/labourUnion.html"><span></span>工会动态</a></li>
+              <li><a href="../../html/partyBuilding/breeze.html"><span></span>水务清风</a></li>
+              <li><a href="../../html/partyBuilding/youth.html"><span></span>青春水务</a></li>
+            </ul>
+          </li>
+          <li class="nav_special_li"><span>信息公开</span>
+            <ul class="sub_menu">
+              <li><a><span></span>单位概况</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/aboutUs/about.html">基本简介</a></li>
+                  <li><a href="../../html/aboutUs/about.html#leadership">领导信息</a></li>
+                  <li><a href="../../html/aboutUs/institutionSetting.html">机构设置</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>法规标准</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/policy.html">政策标准</a></li>
+                  <li><a href="../../html/InformationDisclosure/rules.html">规章制度</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>公开目录及指南</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/catalog.html">信息公开目录</a></li>
+                  <li><a href="../../html/InformationDisclosure/guide.html">信息公开指南</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>城市供水服务</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/InformationDisclosure/price.html">价格收费</a></li>
+                  <li><a href="../../html/onlineServiceHall/waterPrice.html">办事服务</a></li>
+                  <li class="two_menu_li"><a>便民公告</a>
+                    <ul class="three_menu">
+                      <li><a href="../../html/onlineServiceHall/meterReading.html">供水抄表计划</a></li>
+                      <li><a href="../../html/onlineServiceHall/cutWater.html">停水公告</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../../html/onlineServiceHall/waterQuality.html">水质水压公告</a></li>
+                  <li><a href="../../html/onlineServiceHall/usewater.html">安全警示</a></li>
+                  <li><a href="../../html/onlineServiceHall/reply.html">咨询投诉</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>其他公开服务</a>
+                <ul class="two_menu">
+                  <li><a href="http://www.qdwater.com.cn:8010/bid2/front" target="_blank">招标公告</a></li>
+                  <li><a href="../../html/InformationDisclosure/monitor.html">水质监测</a></li>
+                  <li><a href="../../html/InformationDisclosure/otherServe.html">其他服务信息</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav_special_li"><span>网上服务厅</span>
+            <ul class="sub_menu">
+              <li><a href="../../html/onlineServiceHall/waterPrice.html"><span></span>供水价格</span></a></li>
+              <li><a><span></span>服务窗口查询</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/onlineServiceHall/waterWindow.html">供水服务窗口</a></li>
+                  <li><a href="../../html/onlineServiceHall/drainWindow.html">排水服务窗口</a></li>
+                  <li><a href="https://www.qingdaonengyuan.com/FuWu_qd.html" target="_blank">收费服务窗口</a></li>
+                  <li><a href="../../html/onlineServiceHall/shareWindow.html">市政公用共享服务窗口</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>业务办理</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/onlineServiceHall/connect.html">全市通办</a></li>
+                  <li><a href="../../html/onlineServiceHall/convenience.html">便民五项</a></li>
+                </ul>
+              </li>
+              <li><a href="../../html/onlineServiceHall/cutWater.html"><span></span>停水公告</a></li>
+              <li><a href="../../html/onlineServiceHall/waterQuality.html"><span></span>水质水压公告</a></li>
+              <li><a href="../../html/onlineServiceHall/meterReading.html"><span></span>用水抄表计划</a></li>
+              <li><a><span></span>办事指南</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/onlineServiceHall/guidelines.html">海润自来水集团</a></li>
+                  <li><a href="../../html/onlineServiceHall/guidelines.html">胶州自来水公司</a></li>
+                  <li><a href="../../html/onlineServiceHall/guidelines.html">高新海润水务</a></li>
+                </ul>
+              </li>
+              <li><a href="../../html/onlineServiceHall/packing.html"><span></span>用水报装智慧报装</a></li>
+              <li><a><span></span>"青水管＋"特色服务</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/onlineServiceHall/threeone.html">"一免、一查、一服务"</a></li>
+                  <li><a href="../../html/onlineServiceHall/paidserve.html">有偿服务收费标准</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>安全警示常识</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/onlineServiceHall/usewater.html">用水常识</a></li>
+                  <li><a href="../../html/onlineServiceHall/drainwater.html">排水常识</a></li>
+                  <li><a href="../../html/onlineServiceHall/identification.html">设施辨识</a></li>
+                </ul>
+              </li>
+              <li><a><span></span>网上留言及回复</a>
+                <ul class="two_menu">
+                  <li><a href="../../html/onlineServiceHall/reply.html">96111回复</a></li>
+                  <li><a href="../../html/onlineServiceHall/message.html">在线留言</a></li>
+                </ul>
+              </li>
+              <li><a href="../../html/onlineServiceHall/inform.html"><span></span>网上举报</a></li>
+            </ul>
+          </li>
+          <li class="nav_special_li"><span>营商环境</span>
+            <ul class="sub_menu">
+              <li><a><span></span>相关政策</span></a>
+                <ul class="two_menu">
+                  <li><a href="../../html/environment/nation.html">国家政策</a></li>
+                  <li><a href="../../html/environment/shandongProvince.html">山东省政策</a></li>
+                  <li><a href="../../html/environment/qingdaoCity.html">青岛市政策</a></li>
+                </ul>
+              </li>
+              <li><a href="../../html/onlineServiceHall/packing.html"><span></span>用水报装</a></li>
+              <li><a href="../../html/onlineServiceHall/guidelines.html"><span></span>办事指南</a></li>
+              <li><a href="../../html/environment/promise.html"><span></span>服务承诺</a></li>
+              <li><a href="../../html/InformationDisclosure/policy.html"><span></span>信息公示</a></li>
+            </ul>
+          </li>
+          <li><span>水务科技</span>
+            <ul class="sub_menu">
+              <li><a href="../../html/technology/achievement.html"><span></span>成果展示</span></a></li>
+              <li><a href="../../html/technology/dynamic.html"><span></span>科技动态</a></li>
+            </ul>
+          </li>
+          <!-- <li><span>网上博物馆</span>
               <ul class="sub_menu">
                 <li><a href="../../html/museum/brief.html"><span></span>博物馆简介</span></a></li>
                 <li><a href="http://www.qdwater.com.cn/exhibition/?scene_id=80142705"><span></span>网上博物馆</a></li>
@@ -183,330 +178,333 @@
                 <li><a href="../../html/museum/historical.html"><span></span>供排水史记</a></li>
               </ul>
             </li> -->
-          </ul>
-          <div class="search_box">
-            <input type="text" class="search_input" />
-            <img src="../../imgs/magnifying.png" alt="" />
-          </div>
-        </nav>
-      </div>
-      <!-- 手机头部 -->
-      <div class="burger">
-        <img src="../../imgs/index/logo.png" alt="" />
-        <div class="menu"></div>
-      </div>
-
-      <!-- 手机导航 -->
-      <ul id="phoneNav" style="display: none">
-        <li class="navAct">首页</li>
-        <li>集团概况</li>
-        <li>新闻资讯</li>
-        <li>党建工作</li>
-        <li>信息公开</li>
-        <li>网上服务厅</li>
-        <li>营商环境</li>
-        <li>水务科技</li>
-      </ul>
-      <div class="empty"></div>
-
-      <div class="banner flex_column_center">
-        <img src="../../imgs/partybuilding/bg.png" class="about_img" />
-        <div class="banner_content">
-          <div class="banner_slogan">
-            <p class="banner_title">党建工作</p>
-            <p class="banner_title_en">Party Building</p>
-          </div>
-          <div class="banner_crumbs">
-            您当前的位置：首页 / 党建工作 / 工会动态
-          </div>
-        </div>
-        <div class="company_profile_title">
-          <span>工会动态</span>
-        </div>
-      </div>
-
-      <div class="main flex_column_center">
-        <div class="main_top">
-          <div
-            class="main_carousel"
-            :style="{left:`-${leftVal}px`,transition:`0.8s`}"
-          >
-            <img
-              :class="[imgIndex==index?'imgAct':'']"
-              :src="item.url"
-              v-for="(item,index) in imgList"
-              :key="index"
-            />
-          </div>
-          <div class="main_mask">
-            <div class="main_mask_title">
-              海润自来水南部分公司开展健步行活动
-            </div>
-            <div class="main_mask_content">
-              初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
-            </div>
-          </div>
-          <ul class="small_dot">
-            <li
-              :class="[ imgIndex==index?'small_dot_active' :'']"
-              @click="onClick(index)"
-              v-for="(item,index) in 3"
-              :key="index"
-            ></li>
-          </ul>
-        </div>
-        <div class="new_hot">
-          <div class="hot_main">
-            <span>最新热点：</span>
-            原水分公司党委、行政即时启动了《紧急疫情防控应急预案》。党有号召，工会有行动
-          </div>
-          <div class="hot_date">2022-10-31</div>
-        </div>
-        <ul class="list">
-          <li v-for="(item,index) in list" ::key="index">
-            <a>
-              <div class="date flex_column_center">
-                <div class="day">30</div>
-                <div class="line"></div>
-                <div class="year">2022/10</div>
-              </div>
-              <div class="specific">
-                <div class="news_title">{{item.name}}</div>
-                <div class="news_content">{{item.content}}</div>
-              </div>
-            </a>
-          </li>
         </ul>
-        <el-pagination
-          v-model:current-page="currentPage"
-          v-model:page-size="pageSize"
-          :pager-count="10"
-          :page-sizes="[10, 20, 30, 50]"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="200"
-          background
-          popper-class="page_selece_down"
-          prev-text="上一页"
-          next-text="下一页"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-        />
-      </div>
-
-      <!-- 底部 -->
-      <div class="info flex_column_center">
-        <div class="info_area">
-          <img
-            class="logo_bottom"
-            src="../../imgs/index/logo-bottom.png"
-            alt=""
-          />
-          <div class="info_middle">
-            <div class="info_middle_select">
-              <div class="info_middle_div">
-                <p>
-                  <span>水行业相关网站</span>
-                  <span>▼</span>
-                </p>
-                <div class="website">
-                  <a href="http://www.mwr.gov.cn/" target="_blank"
-                    >中华人民共和国水利部</a
-                  >
-                  <a href="https://www.h2o-china.com/" target="_blank"
-                    >中国水网</a
-                  >
-                  <a href="https://www.cuwa.org.cn/" target="_blank"
-                    >中国城镇供水协会</a
-                  >
-                  <a href="http://www.watergasheat.com/" target="_blank"
-                    >中国给水排水</a
-                  >
-                  <a href="http://www.water.hc360.com/" target="_blank"
-                    >慧聪水工业网</a
-                  >
-                  <a href="https://www.shanghaiwater.com/" target="_blank"
-                    >中国水务网
-                  </a>
-                  <a href="https://www.shanghaiwater.com/" target="_blank"
-                    >上海城投</a
-                  >
-                  <a href="https://www.sz-water.com.cn/" target="_blank"
-                    >深圳环境水务集团</a
-                  >
-                </div>
-              </div>
-              <div class="info_middle_div">
-                <p>
-                  <span>供排水企业网站</span>
-                  <span>▼</span>
-                </p>
-                <div class="website">
-                  <a href="https://www.bdc.cn/" target="_blank"
-                    >北京城市排水集团有限责任公司</a
-                  >
-                  <a href="http://www.tjwatergroup.com/" target="_blank"
-                    >天津水务集团</a
-                  >
-                  <a href="http://www.jlwater.com/" target="_blank"
-                    >南京水务集团有限公司</a
-                  >
-                  <a href="https://www.cncqsw.com/" target="_blank"
-                    >重庆水务集团股份有限公司</a
-                  >
-                  <a href="http://www.hzwgc.com/" target="_blank"
-                    >杭州市水务集团有限公司</a
-                  >
-                  <a href="http://www.ningbowater.com/" target="_blank"
-                    >宁波市水务环境集团有限公司
-                  </a>
-                  <a href="https://www.cdenvironment.com/" target="_blank"
-                    >成都环境集团</a
-                  >
-                  <a href="http://www.changchunwater.com/" target="_blank"
-                    >吉林省长春水务集团有限责任公司</a
-                  >
-                  <a href="http://www.hrbgongshui.com/" target="_blank"
-                    >哈尔滨供水集团有限责任公司</a
-                  >
-                  <a href="http://www.syswgw.com/" target="_blank"
-                    >沈阳水务集团</a
-                  >
-                  <a href="https://www.xashuiwu.com/" target="_blank"
-                    >西安水务（集团）有限责任公司</a
-                  >
-                </div>
-              </div>
-              <div class="info_middle_div">
-                <p>
-                  <span>其他行业网站</span>
-                  <span>▼</span>
-                </p>
-                <div class="website">
-                  <a href="http://www.projectbidding.cn/" target="_blank"
-                    >工程信息与招标网</a
-                  >
-                  <a href="http://www.pv365.com/" target="_blank"
-                    >中国泵阀信息网</a
-                  >
-                  <a href="http://www.1718cn.com/" target="_blank"
-                    >中国中国仪器仪表大市场</a
-                  >
-                </div>
-              </div>
-            </div>
-            <p>
-              <span>青岛水务集团有限公司版权所有Copyright © 2022</span>
-              <span>鲁ICP备05053132号</span>
-            </p>
-          </div>
-          <div class="info_right">
-            <p style="margin-right: 23px">
-              <img src="../../imgs/index/swgzh.png" alt="" />
-              <span>青岛水务集团</span>
-              <span>公众微信号</span>
-            </p>
-            <p>
-              <img src="../../imgs/index/xfgzh.png" alt="" />
-              <span>青岛水务先锋</span>
-              <span>公众微信号</span>
-            </p>
-          </div>
+        <div class="search_box">
+          <input type="text" class="search_input" />
+          <img src="../../imgs/magnifying.png" alt="" />
         </div>
-        <div class="info_wave">
-          <svg
-            class="waves"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28"
-            preserveAspectRatio="none"
-            shape-rendering="auto"
-          >
-            <defs>
-              <path
-                id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-              />
-            </defs>
-            <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="#D6ECF5" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="#9BD1ED" />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="#6FB9E9" />
-            </g>
-          </svg>
+      </nav>
+    </div>
+    <!-- 手机头部 -->
+    <div class="burger">
+      <img src="../../imgs/index/logo.png" alt="" />
+      <div class="menu"></div>
+    </div>
+
+    <!-- 手机导航 -->
+    <ul id="phoneNav" style="display: none;">
+      <li><a class="phone_nav_title" href="../../index.html">首页</a></li>
+      <li>
+        <div class="phone_nav_title">集团概况</div>
+        <div class="phone_nav_menu phone_nav_three">
+          <div><a href="../../html/aboutUs/about.html">企业简介</a></div>
+          <div><a href="../../html/aboutUs/institutionSetting.html">机构设置</a></div>
+          <div><a href="../../html/aboutUs/culture.html">企业文化</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="phone_nav_title">新闻资讯</div>
+        <div class="phone_nav_menu phone_nav_three">
+          <div><a href="../../html/news/waterNews.html">水务新闻</a></div>
+          <div><a href="../../html/news/imgNews.html">图片新闻</a></div>
+          <div><a href="../../html/news/mediaNews.html">媒体新闻</a></div>
+        </div>
+      </li>
+      <li class="navAct">
+        <div class="phone_nav_title">党建工作</div>
+        <div class="phone_nav_menu phone_nav_four">
+          <div><a href="../../html/partyBuilding/partyNews.html">党建新闻</a></div>
+          <div><a href="../../html/partyBuilding/labourUnion.html">工会动态</a></div>
+          <div><a href="../../html/partyBuilding/breeze.html">水务清风</a></div>
+          <div><a href="../../html/partyBuilding/youth.html">青春水务</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="phone_nav_title">信息公开</div>
+        <div class="phone_nav_menu phone_nav_five">
+          <div><a href="../../html/aboutUs/about.html">单位概况</a></div>
+          <div><a href="../../html/InformationDisclosure/policy.html">法规标准</a></div>
+          <div><a href="../../html/InformationDisclosure/catalog.html">公开目录及指南</a></div>
+          <div><a href="../../html/InformationDisclosure/price.html">城市供水服务</a></div>
+          <div><a href="../../html/InformationDisclosure/monitor.html">其他公开服务</a></div>
+          <!-- <div>
+                                    <a class="phone_two_title">单位概况</a>
+                                    <div class="phone_two_menu">
+                                      <a href="../../html/aboutUs/about.html">基本简介</a>
+                                      <a href="../../html/aboutUs/about.html#leadership">领导信息</a>
+                                      <a href="../../html/aboutUs/institutionSetting.html">机构设置</a>
+                                    </div>
+                                  </div> -->
+        </div>
+      </li>
+      <li>
+        <div class="phone_nav_title">网上服务厅</div>
+        <div class="phone_nav_menu phone_nav_twelve">
+          <div><a href="../../html/InformationDisclosure/price.html">供水价格</a></div>
+          <div><a href="../../html/onlineServiceHall/waterWindow.html">服务窗口查询</a></div>
+          <div><a href="../../html/onlineServiceHall/connect.html">业务办理</a></div>
+          <div><a href="../../html/onlineServiceHall/cutWater.html">停水公告</a></div>
+          <div><a href="../../html/onlineServiceHall/waterQuality.html">水质水压公告</a></div>
+          <div><a href="../../html/onlineServiceHall/meterReading.html">用水抄表计划</a></div>
+          <div><a href="../../html/onlineServiceHall/guidelines.html">办事指南</a></div>
+          <div><a href="../../html/onlineServiceHall/packing.html">用水报装智慧报装</a></a></div>
+          <div><a href="../../html/onlineServiceHall/threeone.html">"青水管+"特色服务</a></div>
+          <div><a href="../../html/onlineServiceHall/usewater.html">安全警示常识</a></div>
+          <div><a href="../../html/onlineServiceHall/message.html">网上留言及回复</a></div>
+          <div><a href="../../html/onlineServiceHall/inform.html">网上举报</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="phone_nav_title">营商环境</div>
+        <div class="phone_nav_menu phone_nav_five">
+          <div><a href="../../html/environment/nation.html">相关政策</a></div>
+          <div><a href="../../html/onlineServiceHall/packing.html">用水报装</a></div>
+          <div><a href="../../html/onlineServiceHall/guidelines.html">办事指南</a></div>
+          <div><a href="../../html/environment/promise.html">服务承诺</a></div>
+          <div><a href="../../html/InformationDisclosure/policy.html">信息公示</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="phone_nav_title">水务科技</div>
+        <div class="phone_nav_menu phone_nav_two">
+          <div><a href="../../html/technology/achievement.html">成果展示</a></div>
+          <div><a href="../../html/technology/dynamic.html">科技动态</a></div>
+        </div>
+      </li>
+      <li>
+        <div class="phone_nav_title">网上博物馆</div>
+        <div class="phone_nav_menu phone_nav_four">
+          <div><a href="../../html/museum/brief.html">博物馆简介</a></div>
+          <div><a href="http://www.qdwater.com.cn/exhibition/?scene_id=80142705">网上博物馆</a></div>
+          <div><a href="../../html/museum/appointment.html">参观预约</a></div>
+          <div><a href="../../html/museum/historical.html">供排水史记</a></div>
+        </div>
+      </li>
+    </ul>
+    <div class="empty"></div>
+
+    <div class="banner flex_column_center">
+      <img src="../../imgs/partybuilding/bg.png" class="about_img" />
+      <div class="banner_content">
+        <div class="banner_slogan">
+          <p class="banner_title">党建工作</p>
+          <p class="banner_title_en">Party Building</p>
+        </div>
+        <div class="banner_crumbs">
+          您当前的位置：首页 / 党建工作 / 工会动态
         </div>
       </div>
-
-      <div class="footer flex_column_center">
-        <footer>
-          <span>http://www.qdwater.com.cn</span>
-          <span>青岛亚讯图航网络科技有限公司 技术支持</span>
-        </footer>
+      <div class="company_profile_title">
+        <span>工会动态</span>
       </div>
     </div>
-    <script>
-      const { createApp } = Vue;
 
-      createApp({
-        data() {
-          return {
-            list: [
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-              {
-                name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
-                content:
-                  "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
-              },
-            ],
-            currentPage: 1,
-            pageSize: 10,
-            imgList: [
-              { url: "../../imgs/partybuilding/workbg.png" },
-              { url: "../../imgs/partybuilding/workbg.png" },
-              { url: "../../imgs/partybuilding/workbg.png" },
-            ],
-            imgWidth: 0,
-            imgIndex: 0,
-            leftVal: 0,
-          };
+    <div class="main flex_column_center">
+      <div class="main_top">
+        <div class="main_carousel" :style="{left:`-${leftVal}px`,transition:`0.8s`}">
+          <img :class="[imgIndex==index?'imgAct':'']" :src="item.url" v-for="(item,index) in imgList" :key="index" />
+        </div>
+        <div class="main_mask">
+          <div class="main_mask_title">
+            海润自来水南部分公司开展健步行活动
+          </div>
+          <div class="main_mask_content">
+            初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
+          </div>
+        </div>
+        <ul class="small_dot">
+          <li :class="[ imgIndex==index?'small_dot_active' :'']" @click="onClick(index)" v-for="(item,index) in 3"
+            :key="index"></li>
+        </ul>
+      </div>
+      <div class="new_hot">
+        <div class="hot_main">
+          <span>最新热点：</span>
+          原水分公司党委、行政即时启动了《紧急疫情防控应急预案》。党有号召，工会有行动
+        </div>
+        <div class="hot_date">2022-10-31</div>
+      </div>
+      <ul class="list">
+        <li v-for="(item,index) in list" ::key="index">
+          <a>
+            <div class="date flex_column_center">
+              <div class="day">30</div>
+              <div class="line"></div>
+              <div class="year">2022/10</div>
+            </div>
+            <div class="specific">
+              <div class="news_title">{{item.name}}</div>
+              <div class="news_content">{{item.content}}</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :pager-count="10"
+        :page-sizes="[10, 20, 30, 50]" layout="total, sizes, prev, pager, next, jumper" :total="200" background
+        popper-class="page_selece_down" prev-text="上一页" next-text="下一页" @size-change="handleSizeChange"
+        @current-change="handleCurrentChange" />
+    </div>
+
+    <!-- 底部 -->
+    <div class="info flex_column_center">
+      <div class="info_area">
+        <img class="logo_bottom" src="../../imgs/index/logo-bottom.png" alt="" />
+        <div class="info_middle">
+          <div class="info_middle_select">
+            <div class="info_middle_div">
+              <p>
+                <span>水行业相关网站</span>
+                <span>▼</span>
+              </p>
+              <div class="website">
+                <a href="http://www.mwr.gov.cn/" target="_blank">中华人民共和国水利部</a>
+                <a href="https://www.h2o-china.com/" target="_blank">中国水网</a>
+                <a href="https://www.cuwa.org.cn/" target="_blank">中国城镇供水协会</a>
+                <a href="http://www.watergasheat.com/" target="_blank">中国给水排水</a>
+                <a href="http://www.water.hc360.com/" target="_blank">慧聪水工业网</a>
+                <a href="https://www.shanghaiwater.com/" target="_blank">中国水务网
+                </a>
+                <a href="https://www.shanghaiwater.com/" target="_blank">上海城投</a>
+                <a href="https://www.sz-water.com.cn/" target="_blank">深圳环境水务集团</a>
+              </div>
+            </div>
+            <div class="info_middle_div">
+              <p>
+                <span>供排水企业网站</span>
+                <span>▼</span>
+              </p>
+              <div class="website">
+                <a href="https://www.bdc.cn/" target="_blank">北京城市排水集团有限责任公司</a>
+                <a href="http://www.tjwatergroup.com/" target="_blank">天津水务集团</a>
+                <a href="http://www.jlwater.com/" target="_blank">南京水务集团有限公司</a>
+                <a href="https://www.cncqsw.com/" target="_blank">重庆水务集团股份有限公司</a>
+                <a href="http://www.hzwgc.com/" target="_blank">杭州市水务集团有限公司</a>
+                <a href="http://www.ningbowater.com/" target="_blank">宁波市水务环境集团有限公司
+                </a>
+                <a href="https://www.cdenvironment.com/" target="_blank">成都环境集团</a>
+                <a href="http://www.changchunwater.com/" target="_blank">吉林省长春水务集团有限责任公司</a>
+                <a href="http://www.hrbgongshui.com/" target="_blank">哈尔滨供水集团有限责任公司</a>
+                <a href="http://www.syswgw.com/" target="_blank">沈阳水务集团</a>
+                <a href="https://www.xashuiwu.com/" target="_blank">西安水务（集团）有限责任公司</a>
+              </div>
+            </div>
+            <div class="info_middle_div">
+              <p>
+                <span>其他行业网站</span>
+                <span>▼</span>
+              </p>
+              <div class="website">
+                <a href="http://www.projectbidding.cn/" target="_blank">工程信息与招标网</a>
+                <a href="http://www.pv365.com/" target="_blank">中国泵阀信息网</a>
+                <a href="http://www.1718cn.com/" target="_blank">中国中国仪器仪表大市场</a>
+              </div>
+            </div>
+          </div>
+          <p>
+            <span>青岛水务集团有限公司版权所有Copyright © 2022</span>
+            <span>鲁ICP备05053132号</span>
+          </p>
+        </div>
+        <div class="info_right">
+          <p style="margin-right: 23px">
+            <img src="../../imgs/index/swgzh.png" alt="" />
+            <span>青岛水务集团</span>
+            <span>公众微信号</span>
+          </p>
+          <p>
+            <img src="../../imgs/index/xfgzh.png" alt="" />
+            <span>青岛水务先锋</span>
+            <span>公众微信号</span>
+          </p>
+        </div>
+      </div>
+      <div class="info_wave">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="#D6ECF5" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="#9BD1ED" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#6FB9E9" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="footer flex_column_center">
+      <footer>
+        <span>http://www.qdwater.com.cn</span>
+        <span>青岛亚讯图航网络科技有限公司 技术支持</span>
+      </footer>
+    </div>
+  </div>
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          list: [
+            {
+              name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+              content:
+                "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+            },
+            {
+              name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+              content:
+                "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+            },
+            {
+              name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+              content:
+                "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+            },
+            {
+              name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+              content:
+                "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+            },
+            {
+              name: "青岛百发海水淡化厂二期扩建工程进入竣工验收准备阶段",
+              content:
+                "由益水公司牵头承建的青岛百发海水淡化厂二期扩建工程已进入竣工验收准备阶段，益水公司进一步提高思想认识，狠抓工作落实，全力推进百发海水淡化厂扩建工程竣工验收工作……",
+            },
+          ],
+          currentPage: 1,
+          pageSize: 10,
+          imgList: [
+            { url: "../../imgs/partybuilding/workbg.png" },
+            { url: "../../imgs/partybuilding/workbg.png" },
+            { url: "../../imgs/partybuilding/workbg.png" },
+          ],
+          imgWidth: 0,
+          imgIndex: 0,
+          leftVal: 0,
+        };
+      },
+      mounted() {
+        this.imgWidth = document.querySelector(".main_top").clientWidth;
+      },
+      methods: {
+        handleSizeChange(val) {
+          console.log(`每页 ${val} 条`);
         },
-        mounted() {
-          this.imgWidth = document.querySelector(".main_top").clientWidth;
+        handleCurrentChange(val) {
+          console.log(`当前页: ${val}`);
         },
-        methods: {
-          handleSizeChange(val) {
-            console.log(`每页 ${val} 条`);
-          },
-          handleCurrentChange(val) {
-            console.log(`当前页: ${val}`);
-          },
-          onClick(e) {
-            this.imgIndex = e;
-            this.leftVal = this.imgIndex * this.imgWidth;
-          },
+        onClick(e) {
+          this.imgIndex = e;
+          this.leftVal = this.imgIndex * this.imgWidth;
         },
-      })
-        .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
-        .mount("#app");
-    </script>
-    <script src="../../js/common.js"></script>
-  </body>
+      },
+    })
+      .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
+      .mount("#app");
+  </script>
+  <script src="../../js/common.js"></script>
+</body>
+
 </html>
