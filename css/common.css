@@ -921,6 +921,15 @@ footer {
     padding: 30px 15px 50px;
     line-height: 22px;
   }
+
+  .el-pagination .el-pagination__total,
+  .el-pagination .el-pagination__sizes {
+    display: none;
+  }
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .btn-next {
+    margin: 0;
+  }
 }
 
 /* 

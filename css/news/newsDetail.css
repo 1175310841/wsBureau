@@ -65,3 +65,53 @@
 .operate_menu span {
   color: #186daa;
 }
+@media (max-width: 1200px) {
+  .main_content {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main_content {
+    width: 100%;
+    padding-top: 50px;
+  }
+  .crumbs {
+    display: none;
+  }
+  .details_title {
+    font-size: 20px;
+    line-height: 25px;
+    height: auto;
+  }
+  .release_time {
+    margin-bottom: 30px;
+  }
+  .details_essay img {
+    width: 100%;
+  }
+  .line {
+    margin: 30px 0;
+  }
+  .operate_menu {
+    line-height: 20px;
+  }
+  .operate_menu p {
+    margin-bottom: 20px;
+  }
+  .operate_menu p:last-child {
+    margin-bottom: 0;
+  }
+  .operate_menu a {
+    white-space: nowrap;
+  }
+  .operate_menu span {
+    flex: 1;
+    white-space: normal;
+    line-height: 20px;
+    margin-right: 10px;
+  }
+  .operate_menu p i,
+  .operate_menu p:first-child i {
+    margin-left: 10px;
+  }
+}
