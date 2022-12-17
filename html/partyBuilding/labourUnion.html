@@ -339,10 +339,10 @@
           </a>
         </li>
       </ul>
-      <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :pager-count="10"
-        :page-sizes="[10, 20, 30, 50]" layout="total, sizes, prev, pager, next, jumper" :total="200" background
-        popper-class="page_selece_down" prev-text="上一页" next-text="下一页" @size-change="handleSizeChange"
-        @current-change="handleCurrentChange" />
+      <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :pager-count="pageconut"
+        :page-sizes="[10, 20, 30, 50]" layout="total, sizes, prev, pager, next, jumper" :total="200" :small='small'
+        background popper-class="page_selece_down" :prev-text="prevtext" :next-text="nexttext"
+        @size-change="handleSizeChange" @current-change="handleCurrentChange" />
     </div>
 
     <!-- 底部 -->
@@ -483,10 +483,26 @@
           imgWidth: 0,
           imgIndex: 0,
           leftVal: 0,
+          pageconut: 10,
+          small: false,
+          prevtext: '',
+          nexttext: ''
         };
       },
       mounted() {
         this.imgWidth = document.querySelector(".main_top").clientWidth;
+        let width = document.body.clientWidth
+        if (width < 800) {
+          this.pageconut = 5
+          this.small = true
+          this.prevtext = false
+          this.nexttext = false
+        } else {
+          this.pageconut = 10
+          this.small = false
+          this.prevtext = '上一页'
+          this.nexttext = '下一页'
+        }
       },
       methods: {
         handleSizeChange(val) {

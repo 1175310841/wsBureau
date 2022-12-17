@@ -3,26 +3,23 @@
 }
 .main_top {
   width: 1200px;
-  height: 360px;
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
 }
 .main_carousel {
-  position: absolute;
+  position: relative;
   display: flex;
-  height: 100%;
 }
 .main_carousel img {
   width: 1200px;
-  height: 100%;
 }
 .main_carousel img.imgAct {
   animation: imgEffect 5s forwards 0.8s;
 }
 .main_mask {
   width: 400px;
-  height: 360px;
+  height: 100%;
   background: rgba(205, 230, 247, 0.8);
   position: absolute;
   top: 0;
@@ -53,7 +50,7 @@
   align-items: center;
   position: absolute;
   top: 300px;
-  left: 970px;
+  right: 164px;
   z-index: 50;
 }
 .small_dot li {
@@ -92,4 +89,31 @@
 }
 .new_hot span {
   color: #fff100;
+}
+@media (max-width: 1200px) {
+  .main_top,
+  .main_carousel img,
+  .new_hot,
+  .list {
+    width: 800px;
+  }
+  .main_mask {
+    padding: 30px 20px 0 15px;
+  }
+  .main_mask_title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  .small_dot {
+    top: 200px;
+  }
+  .hot_main {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hot_date {
+    white-space: nowrap;
+  }
 }
