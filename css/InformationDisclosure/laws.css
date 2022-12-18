@@ -66,3 +66,37 @@
   background-color: #186daa;
   color: #ffffff;
 }
+@media (max-width: 1200px) {
+  .main > div:first-child,
+  .main_list {
+    width: 800px;
+  }
+  .list_item,
+  .list_item:nth-child(3n) {
+    margin-right: 16px;
+  }
+  .list_item:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 800px) {
+  .main > div:first-child,
+  .main_list,
+  .list_item {
+    width: 100%;
+  }
+  .list_item {
+    margin-bottom: 30px;
+    height: 320px;
+  }
+  .list_item:hover {
+    top: 0;
+  }
+  .list_item,
+  .list_item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .list_item_content_details {
+    margin-bottom: 20px;
+  }
+}
