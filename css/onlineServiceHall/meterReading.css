@@ -10,7 +10,7 @@
   width: 360px;
   height: 430px;
   background: url("../../imgs/onlineServiceHall/meter_item_bg.png");
-  background-size: auto;
+  background-size: 100% 100%;
   margin-right: 60px;
   margin-bottom: 57px;
   position: relative;
@@ -60,4 +60,44 @@
   position: absolute;
   bottom: 25px;
   right: 50px;
+}
+@media (max-width: 1200px) {
+  .main_content {
+    width: 800px;
+  }
+  .main_item {
+    width: 385px;
+  }
+  .main_item,
+  .main_item:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .main_item:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 800px) {
+  .main_content {
+    width: 100%;
+  }
+  .main_item {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 45px 40px 20px;
+  }
+  .main_item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .main_item_title {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .main_item_date {
+    margin-bottom: 50px;
+  }
+  .main_item:hover {
+    top: 0;
+  }
 }

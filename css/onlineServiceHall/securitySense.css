@@ -15,7 +15,7 @@
   width: 360px;
   height: 430px;
   background: url("../../imgs/onlineServiceHall/sense-bg.png");
-  background-size: auto;
+  background-size: 100% 100%;
   margin-right: 60px;
   margin-bottom: 57px;
   position: relative;
@@ -96,6 +96,7 @@
 .small_title {
   font-weight: bold;
   font-size: 22px;
+  margin-bottom: 0;
 }
 .small_title i {
   display: inline-block;
@@ -104,4 +105,61 @@
 .drain_content p span {
   display: inline-block;
   width: 2em;
+}
+@media (max-width: 1200px) {
+  .main > div:first-child,
+  .main_content {
+    width: 800px;
+  }
+  .main_item {
+    width: 385px;
+  }
+  .main_item,
+  .main_item:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .main_item:nth-child(even) {
+    margin-right: 0;
+  }
+  .identification {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main > div:first-child,
+  .main_content,
+  .identification {
+    width: 100%;
+  }
+  .main_item {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 50px 40px 20px;
+  }
+  .main_item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .main_item_title {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .main_item_content {
+    margin-bottom: 45px;
+  }
+  .main_item:hover {
+    top: 0;
+  }
+  .supply,
+  .drain {
+    padding: 30px 20px 40px;
+    line-height: 25px;
+  }
+  .supply_title {
+    font-size: 25px;
+  }
+  .small_title {
+    margin-bottom: 10px;
+  }
 }

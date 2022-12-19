@@ -119,5 +119,6 @@
   }
   .main_nav {
     float: none;
+    margin-right: 0;
   }
 }

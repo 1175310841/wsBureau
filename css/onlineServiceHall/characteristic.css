@@ -22,7 +22,6 @@
 }
 .threeOne_img {
   width: 1200px;
-  height: 300px;
 }
 .threeOne_img img {
   width: 100%;
@@ -37,6 +36,9 @@
   background-color: #fff;
   margin-bottom: 24px;
 }
+.paid_services_table > img {
+  width: 100%;
+}
 .paid_services_title {
   margin-bottom: 22px;
 }
@@ -47,4 +49,34 @@
 }
 .paid_services_content p {
   line-height: 22px;
+}
+@media (max-width: 1200px) {
+  .main > div:first-child,
+  .main_threeOne,
+  .paid_services,
+  .threeOne_img {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main > div:first-child,
+  .main_threeOne,
+  .paid_services,
+  .threeOne_img {
+    width: 100%;
+  }
+  .paid_services_table {
+    padding-top: 35px;
+  }
+  .threeOne_title,
+  .paid_services_title {
+    margin-bottom: 20px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 25px;
+  }
+  .threeOne_content {
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
 }

@@ -34,3 +34,22 @@
   padding-left: 20px;
   background-color: #bee4fd;
 }
+@media (max-width: 1200px) {
+  .main_content {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main_content {
+    width: 100%;
+  }
+  .main_list {
+    margin-bottom: 20px;
+  }
+  .main_item_img {
+    margin-right: 25px;
+  }
+  .main_item_paragraph:hover {
+    padding-left: 0px;
+  }
+}

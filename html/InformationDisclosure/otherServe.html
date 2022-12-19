@@ -437,10 +437,10 @@
           list: [{}, {}, {}, {}, {}, {}, {}, {}],
           currentPage: 1,
           pageSize: 10,
-          pageconut: 10,
+          pageconut: 9,
           small: false,
-          prevtext: '',
-          nexttext: ''
+          prevtext: '上一页',
+          nexttext: '下一页'
         };
       },
       mounted() {
@@ -448,10 +448,10 @@
         if (width < 800) {
           this.pageconut = 5
           this.small = true
-          this.prevtext = false
-          this.nexttext = false
+          this.prevtext = null
+          this.nexttext = null
         } else {
-          this.pageconut = 10
+          this.pageconut = 9
           this.small = false
           this.prevtext = '上一页'
           this.nexttext = '下一页'
