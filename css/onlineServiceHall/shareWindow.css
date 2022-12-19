@@ -26,3 +26,32 @@
   line-height: 29px;
   margin-bottom: 50px;
 }
+@media (max-width: 1200px) {
+  .main > div:first-child,
+  .municipal_window,
+  .municipal_window img {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main > div:first-child,
+  .municipal_window,
+  .municipal_window img {
+    width: 100%;
+  }
+  .main > div:first-child {
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+  .main_title {
+    font-size: 18px;
+    line-height: 18px;
+    height: auto;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .municipal_window div {
+    margin-bottom: 20px;
+  }
+}

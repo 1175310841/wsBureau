@@ -152,3 +152,107 @@
   -webkit-box-orient: vertical;
   line-height: 20px;
 }
+@media (max-width: 1200px) {
+  .main > div:first-child,
+  .water_quality {
+    width: 800px;
+  }
+  .other_main_title,
+  .other_main_content {
+    margin: 0 24px 15px;
+  }
+  .other_main_blue {
+    height: auto;
+    position: relative;
+    padding: 20px 24px;
+  }
+  .other_main > img {
+    width: 300px;
+  }
+  .other_two .other_main_blue {
+    font-size: 20px;
+  }
+  .service_info {
+    width: 800px;
+  }
+  .service_info_item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 800px) {
+  .main > div:first-child,
+  .water_quality {
+    width: 100%;
+  }
+  .other_main_title {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .other_main_content,
+  .water_quality .other_main_content.ml-0 {
+    margin: 0 10px 15px;
+  }
+  .other_main_title {
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+  }
+  .other_main_blue {
+    padding: 10px;
+  }
+  .other_main > img {
+    display: none;
+  }
+  .other_main {
+    margin-bottom: 30px;
+  }
+  .other_two .other_main_title {
+    text-align: start;
+  }
+  .other_two .other_main_blue {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .other_two .other_main_blue span {
+    width: 0;
+  }
+  .water_quality .other_main_title.ml-0 {
+    margin-bottom: 15px;
+  }
+  .contact {
+    padding-left: 40px;
+  }
+  .contact p {
+    margin-bottom: 20px;
+  }
+  .contact i {
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  .service_info {
+    width: 100%;
+  }
+  .service_info_item {
+    padding: 25px 0 20px 0;
+  }
+  .service_info_item:first-child {
+    padding-top: 0;
+  }
+  .service_info_date p {
+    height: 20px;
+    line-height: 25px;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .service_info_title {
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .service_info_content {
+    -webkit-line-clamp: 3;
+  }
+}
