@@ -13,3 +13,26 @@
   font-size: 22px;
   margin-bottom: 10px;
 }
+@media (max-width: 1200px) {
+  .main_content {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main_content {
+    width: 100%;
+    line-height: 22px;
+  }
+  .main_title {
+    height: 25px;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 25px;
+  }
+  .txtid-3 {
+    text-indent: 1em;
+  }
+  .txtid-5 {
+    text-indent: 3em;
+  }
+}

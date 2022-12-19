@@ -88,17 +88,15 @@
 }
 .history_img {
   width: 100%;
-  height: 233px;
 }
 .history_img img {
   width: 100%;
-  height: 100%;
 }
 .history_title {
   height: 18px;
   line-height: 18px;
   font-size: 18px;
-  margin: 18px auto 40px;
+  margin: 18px auto 22px;
   padding-left: 20px;
 }
 .history_date {

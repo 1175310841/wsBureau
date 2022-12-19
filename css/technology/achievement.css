@@ -51,3 +51,18 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+@media (max-width: 1200px) {
+  .main_content {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main_content,
+  .main_item {
+    width: 100%;
+  }
+  .main_item {
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+}
