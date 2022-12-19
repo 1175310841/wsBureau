@@ -249,7 +249,7 @@
           <div><a href="../../html/onlineServiceHall/packing.html">用水报装智慧报装</a></a></div>
           <div><a href="../../html/onlineServiceHall/threeone.html">"青水管+"特色服务</a></div>
           <div><a href="../../html/onlineServiceHall/usewater.html">安全警示常识</a></div>
-          <div><a href="../../html/onlineServiceHall/message.html">网上留言及回复</a></div>
+          <div><a href="../../html/onlineServiceHall/reply.html">网上留言及回复</a></div>
           <div><a href="../../html/onlineServiceHall/inform.html">网上举报</a></div>
         </div>
       </li>
@@ -364,7 +364,7 @@
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">预约日期：</div>
-          <el-date-picker v-model="value1" type="date" placeholder="选择日期"></el-date-picker>
+          <el-date-picker v-model="value" type="date" placeholder="选择日期"></el-date-picker>
           <el-checkbox-group v-model="checkList">
             <el-checkbox label="上午9:00-11:00">上午9:00-11:00</el-checkbox>
             <el-checkbox label="下午13:00-15:00">下午13:00-15:00</el-checkbox>
@@ -481,7 +481,8 @@
     createApp({
       data() {
         return {
-          checkList: []
+          checkList: [],
+          value: ''
         };
       },
       methods: {},
