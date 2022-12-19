@@ -117,4 +117,7 @@
     width: 100%;
     border-right: 0;
   }
+  .main_nav {
+    float: none;
+  }
 }

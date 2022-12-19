@@ -54,4 +54,7 @@
   .municipal_window div {
     margin-bottom: 20px;
   }
+  .main_nav {
+    float: none;
+  }
 }

@@ -124,4 +124,7 @@
   .outwater_list li:first-child {
     background-color: #8eb4e3;
   }
+  .main_nav {
+    float: none;
+  }
 }
