@@ -31,12 +31,8 @@
 }
 .item_img {
   width: 44px;
-  height: 36px;
+  /* height: 36px; */
   margin-right: 25px;
-}
-.item_img img {
-  width: 100%;
-  height: 100%;
 }
 .submit_div {
   display: flex;
@@ -151,5 +147,13 @@ form > .form_item:first-child {
   }
   .juxtaposition {
     display: block;
+  }
+  .item_message,
+  .item_reply {
+    padding: 15px;
+  }
+  .item_img {
+    width: 30px;
+    margin-right: 15px;
   }
 }
