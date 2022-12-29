@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      vertical-align: bottom;
+    }
+
+    input {
+      padding: 0;
+      width: 120px;
+      height: 30px;
+      vertical-align: bottom;
+      border: 1px solid #000;
+    }
+  </style>
+
+
+  <input type="text" name="textContent" placeholder="输入">
+  <canvas id="can" width="120" height="30"></canvas>
+  <button>提交</button>
+
+
+  <script>
+
+
+    /*1、背景颜色时随机的
+   * 2、其中的内容是随机的
+   * 3、内容的颜色 随机的
+   * 4、每个字的旋转度数随机的
+   * 5、文本的大小随机的
+   * 6、干扰线的位置随机的
+   * 7、干扰线的颜色随机的
+   * 8、干扰点
+   * */
+
+    var btn = document.querySelector("button");
+    var can = document.querySelector("canvas");
+    var ctx = can.getContext("2d");
+    var str = []
+
+    var text = "0123456789abcdefghijklmnopqrstuvwsyzABCDEFGHIGKLMNOPQRSTUVWSYZ";
+
+    function initData() {
+      //设置4个内容 将canvas 平分成4分 然后让内容在1/4的空间旋转缩放
+      //原理 ：每次都是位移旋转之后再回复原位
+      str = []
+      for (var i = 0; i < 4; i++) {
+        var txt = text[randNum(0, text.length - 1)];
+
+        ctx.fillStyle = getRandColor(80, 150);
+        ctx.font = randNum(16, 25) + "px '宋体'";
+        ctx.textBaseline = "top";
+        var x = randNum(0, 10);
+
+        var deg = randNum(-30, 30);
+
+        ctx.translate(x + 30 * i, 0);
+        ctx.rotate(Math.PI / 180 * deg);
+        ctx.fillText(txt, 0, 0);
+        ctx.rotate(Math.PI / 180 * -deg);
+        ctx.translate(-(x + 30 * i), 0);
+        str.push(txt)
+      }
+      console.log(str.join(''));
+
+      /*干扰点*/
+      for (var i = 0; i < 30; i++) {
+        ctx.beginPath();
+        ctx.arc(randNum(0, 120), randNum(0, 30), 1, 0, Math.PI * 2);
+        ctx.fillStyle = getRandColor(150, 180);
+        ctx.fill();
+      }
+      /*干扰线*/
+      for (var i = 0; i < 4; i++) {
+        ctx.beginPath();
+        ctx.moveTo(randNum(0, 120), randNum(0, 30));
+        ctx.lineTo(randNum(0, 120), randNum(0, 30));
+        ctx.strokeStyle = getRandColor(150, 180);
+        ctx.lineWidth = randNum(1, 2);
+        ctx.stroke();
+      }
+    }
+    initData()
+
+    can.onclick = () => {
+      can.width = can.width // 清空画布
+      initData()
+    }
+
+
+    /* 获取随机色值*/
+    //  a 先获取一个随机数
+    // console.log(Math.random()); //产生一个0~1之间的随机小数
+    var num = Math.random() * (100 - 30 + 1) + 30; //产生一个随机数30~100 之间的数
+    // console.log(num);
+
+    //  b 获取一个区间段的随机数(整数)
+    function randNum(min, max) {
+      return parseInt(Math.random() * (max - min + 1) + min);
+    }
+
+    //   c获取随机颜色值
+    function getRandColor(min, max) {
+      var R = randNum(min, max);
+      var G = randNum(min, max);
+      var B = randNum(min, max);
+      return 'rgb(' + R + ',' + G + ',' + B + ')';
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
