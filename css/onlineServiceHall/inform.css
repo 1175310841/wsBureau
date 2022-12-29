@@ -43,15 +43,18 @@
   margin-bottom: 57px;
   border-bottom: 1px solid #dddddd;
 }
-.prompt div {
-  display: flex;
-  align-items: center;
+.prompt p {
+  padding-left: 2em;
+  position: relative;
+}
+.prompt p span {
+  position: absolute;
+  left: 0;
 }
 form {
   line-height: 16px;
 }
 .form_item {
-  width: 100%;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #dddddd;
@@ -132,7 +135,7 @@ form > .form_item:first-child {
   }
   .annex_top a {
     margin-top: 10px;
-    word-break: break-word;
+    word-break: break-all;
   }
   .main_form {
     top: 0;
@@ -149,16 +152,23 @@ form > .form_item:first-child {
   }
   .prompt {
     padding: 20px 0 30px;
-    line-height: 22px;
+    line-height: 25px;
     margin-bottom: 30px;
-  }
-  .form_label {
-    width: 100px;
   }
   .violators {
     margin-top: 30px;
   }
   form .form_item:nth-child(6) {
     padding-top: 0;
+  }
+  .el-select-dropdown__item {
+    width: 300px;
+  }
+  .form_label {
+    display: none;
+  }
+  .annex .form_label {
+    display: block;
+    width: 60px;
   }
 }
