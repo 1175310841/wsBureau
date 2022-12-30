@@ -414,7 +414,12 @@
                 <div class="form_label">同意并遵守承诺</div>
               </div>
             </div>
-            <div class="form_btn flex_column_center">
+            <div class="form_btn">
+              <div class="form_captcha">
+                <span>验证码：</span>
+                <el-input v-model="name"></el-input>
+                <canvas ref="can" width="100" height="30" @click="flushed()" class="captcha"></canvas>
+              </div>
               <el-button>提交申请</el-button>
             </div>
           </form>
@@ -525,9 +530,70 @@
           checkList: [],
           name: "",
           checked: false,
+          text: '0123456789',
+          can: null
         };
       },
-      methods: {},
+      mounted() {
+        this.can = this.$refs.can;
+        this.initData()
+      },
+      methods: {
+        initData() {
+          let ctx = this.can.getContext("2d");
+          let str = []
+
+          for (var i = 0; i < 4; i++) {
+            var txt = this.text[this.randNum(0, this.text.length - 1)];
+
+            ctx.fillStyle = this.getRandColor(80, 150);
+            ctx.font = this.randNum(20, 25) + "px '宋体'";
+            ctx.textBaseline = "top";
+            var x = this.randNum(0, 10);
+
+            var deg = this.randNum(-30, 30);
+
+            ctx.translate(x + 25 * i, 0);
+            ctx.rotate(Math.PI / 180 * deg);
+            ctx.fillText(txt, 0, 0);
+            ctx.rotate(Math.PI / 180 * -deg);
+            ctx.translate(-(x + 25 * i), 0);
+            str.push(txt)
+          }
+          console.log(str.join(''));
+
+          /*干扰点*/
+          for (var i = 0; i < 30; i++) {
+            ctx.beginPath();
+            ctx.arc(this.randNum(0, 120), this.randNum(0, 30), 1, 0, Math.PI * 2);
+            ctx.fillStyle = this.getRandColor(150, 180);
+            ctx.fill();
+          }
+          /*干扰线*/
+          // for (var i = 0; i < 4; i++) {
+          //   ctx.beginPath();
+          //   ctx.moveTo(this.randNum(0, 120), this.randNum(0, 30));
+          //   ctx.lineTo(this.randNum(0, 120), this.randNum(0, 30));
+          //   ctx.strokeStyle = this.getRandColor(150, 180);
+          //   ctx.lineWidth = this.randNum(1, 2);
+          //   ctx.stroke();
+          // }
+        },
+        randNum(min, max) {
+          return parseInt(Math.random() * (max - min + 1) + min);
+        },
+        getRandColor(min, max) {
+          var R = this.randNum(min, max);
+          var G = this.randNum(min, max);
+          var B = this.randNum(min, max);
+          return 'rgb(' + R + ',' + G + ',' + B + ')';
+        },
+        // 刷新验证码
+        flushed() {
+          this.can.width = this.can.width // 清空画布
+          this.initData()
+        }
+      },
     })
       .use(ElementPlus, { locale: ElementPlusLocaleZhCn })
       .mount("#app");

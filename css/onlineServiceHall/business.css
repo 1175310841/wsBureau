@@ -123,6 +123,7 @@ form > .form_item:first-child {
 }
 .annex div p {
   line-height: 20px;
+  word-break: break-all;
 }
 .promise {
   height: auto;
@@ -142,6 +143,12 @@ form > .form_item:first-child {
 }
 .form_btn {
   margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_captcha {
+  margin-right: 20px;
 }
 @media (max-width: 1200px) {
   .main > div:first-child,
@@ -160,7 +167,39 @@ form > .form_item:first-child {
   form {
     width: 100%;
   }
+  .main_title {
+    height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
   .steps_line {
     width: 80px;
+  }
+  .form_label {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .choose_one_of_three .form_label {
+    width: 65px;
+    margin-right: 0;
+  }
+  .choose_one_of_three_right {
+    padding-left: 10px;
+  }
+  .el-checkbox.el-checkbox--large {
+    height: 30px;
+    margin-right: 15px;
+  }
+  .form_btn {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .form_captcha {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .promise .form_label {
+    width: auto;
   }
 }

@@ -104,6 +104,12 @@ form > .form_item:first-child {
   display: flex;
   align-items: center;
 }
+.annex_top a {
+  word-break: break-all;
+}
+.form_captcha {
+  margin: 0 auto;
+}
 @media (max-width: 1200px) {
   .main_content,
   .main_form {
@@ -135,7 +141,6 @@ form > .form_item:first-child {
   }
   .annex_top a {
     margin-top: 10px;
-    word-break: break-all;
   }
   .main_form {
     top: 0;
