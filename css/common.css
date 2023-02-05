@@ -628,7 +628,19 @@ footer {
   line-height: 15px;
   opacity: 0.6;
 }
-
+.back_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 200px;
+  opacity: 0;
+  transition: all 3s ease;
+}
+.back_top img {
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 1420px) {
   .banner_title {
     height: 35px;
@@ -964,6 +976,12 @@ footer {
   .el-pagination.is-background .btn-prev,
   .el-pagination.is-background .btn-next {
     margin: 0;
+  }
+  .back_top {
+    width: 25px;
+    height: 25px;
+    right: 15px;
+    bottom: 100px;
   }
 }
 
