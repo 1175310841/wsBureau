@@ -13,7 +13,7 @@
 }
 .price_table {
   width: 1050px;
-  height: 490px;
+  /* height: 490px; */
 }
 .price_table_img {
   width: 100%;
@@ -30,7 +30,39 @@
 }
 .main_content a {
   color: #394e69;
+  overflow: hidden;
 }
 .main_content a:hover {
   text-decoration: underline;
+}
+@media (max-width: 1200px) {
+  .main_content,
+  .price_table {
+    width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .main_content,
+  .price_table {
+    width: 100%;
+  }
+  .main_content {
+    line-height: 22px;
+  }
+  .main_content > p:first-child {
+    margin-bottom: 10px;
+  }
+  .price_area {
+    margin: 30px 0;
+  }
+  .price_title {
+    height: 25px;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 25px;
+  }
+  .microphone img {
+    width: 25px;
+    margin-right: 10px;
+  }
 }

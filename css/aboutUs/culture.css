@@ -9,10 +9,12 @@
 }
 .logotype {
   margin-bottom: 100px;
+  box-sizing: border-box;
+  padding: 0 30px;
 }
 .logotype_img {
-  width: 357px;
-  height: 390px;
+  width: 300px;
+  /* height: 390px; */
 }
 .logotype_img img {
   width: 100%;
