@@ -36,9 +36,6 @@
   background-color: #fff;
   margin-bottom: 24px;
 }
-.paid_services_table > img {
-  width: 100%;
-}
 .paid_services_title {
   margin-bottom: 22px;
 }
@@ -78,5 +75,8 @@
   .threeOne_content {
     line-height: 22px;
     margin-bottom: 30px;
+  }
+  .paid_services_table > img {
+    width: 100%;
   }
 }
