@@ -111,9 +111,12 @@
   color: #394e69;
 }
 .company_name p a {
-  text-indent: 2em;
+  text-indent: 2.5em;
   line-height: 25px;
   color: #5086c2;
+}
+.company_name p a:hover {
+  text-decoration: underline;
 }
 .company_name_one {
   top: 20%;
