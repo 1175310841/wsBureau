@@ -313,7 +313,7 @@
       <div class="paid_services">
         <div class="paid_services_table flex_column_center">
           <div class="paid_services_title">延伸服务收费价格清单</div>
-          <img src="../../imgs/onlineServiceHall/paid.jpg" alt="" />
+          <img ref="paid_services_img" src="../../imgs/onlineServiceHall/paid.png" alt="" />
         </div>
         <div class="paid_services_content">
           <h2>测算依据：</h2>
@@ -439,6 +439,15 @@
     createApp({
       data() {
         return {};
+      },
+      mounted() {
+        let ele = this.$refs.paid_services_img
+        let imgUrl = '../../imgs/onlineServiceHall/paid.jpg'
+        let imgObject = new Image();
+        imgObject.src = imgUrl;
+        imgObject.onload = function(){
+          ele.src = imgUrl
+        }
       },
       methods: {},
     }).mount("#app");
