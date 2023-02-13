@@ -18,8 +18,7 @@
   top: 64%;
   left: 34%;
 }
-.information,
-.course {
+.information {
   width: 62%;
 }
 .information p {
@@ -35,7 +34,63 @@
   margin-bottom: 90px;
 }
 .course {
+  width: 1181px;
   margin-bottom: 100px;
+  position: relative;
+}
+.course_img {
+  width: 100%;
+}
+.course_area {
+  position: absolute;
+  color: #fefeff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 20px;
+  width: 248px;
+  height: 95px;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+.course_area_top {
+  margin-bottom: 10px;
+}
+.course_area_bottom span {
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
+}
+.course_area_one {
+  top: 7px;
+  left: 12px;
+}
+.course_area_two {
+  top: 7px;
+  left: 305px;
+}
+.course_area_three {
+  top: 7px;
+  left: 596px;
+}
+.course_area_four {
+  top: 7px;
+  left: 888px;
+}
+.course_area_five {
+  top: 140px;
+  left: 55px;
+}
+.course_area_six {
+  top: 140px;
+  left: 346px;
+}
+.course_area_seven {
+  top: 140px;
+  left: 635px;
+}
+.course_area_eight {
+  top: 140px;
+  left: 926px;
 }
 #leadership {
   position: absolute;
