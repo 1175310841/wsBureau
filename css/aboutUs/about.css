@@ -45,12 +45,13 @@
   position: absolute;
   color: #fefeff;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   width: 248px;
   height: 95px;
   box-sizing: border-box;
   padding-top: 20px;
+  text-shadow: 2px 2px 4px black;
 }
 .course_area_top {
   margin-bottom: 10px;
