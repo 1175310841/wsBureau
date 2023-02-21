@@ -54,6 +54,7 @@
   .list li a {
     display: block;
     padding: 0;
+    padding-bottom: 15px;
   }
   .list a:hover {
     padding-left: 0;
