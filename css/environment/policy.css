@@ -58,7 +58,7 @@
 .identification {
   width: 1306px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .main > div:first-child,
   .main_content {
     width: 800px;
@@ -74,7 +74,7 @@
     margin-right: 0;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .main > div:first-child,
   .main_content {
     width: 100%;
@@ -87,9 +87,13 @@
     padding: 50px 40px 30px;
   }
   .main_item_title {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
   .main_item:hover {
     top: 0;
+  }
+  .main_item_content {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

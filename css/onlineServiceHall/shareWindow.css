@@ -31,14 +31,14 @@
   border-spacing: 2px;
 }
 .municipal_table th,
-.tfoot {
+.municipal_table td.tfoot {
   background-color: #186daa;
 }
 .municipal_table td {
   background-color: #86b9dc;
 }
 .left_th {
-  width: 400px;
+  width: 33%;
 }
 .municipal_table td.td_bg_deep {
   background-color: #c1e3f6;
@@ -51,9 +51,9 @@
   color: #394e69;
 }
 .tfoot {
-  height: 5px;
+  height: 4px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .main > div:first-child,
   .municipal_window,
   .municipal_window img {

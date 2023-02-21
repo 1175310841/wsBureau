@@ -152,7 +152,7 @@
   -webkit-box-orient: vertical;
   line-height: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
   .main > div:first-child,
   .water_quality {
     width: 800px;
@@ -202,10 +202,14 @@
     padding: 10px;
   }
   .other_main > img {
-    display: none;
+    width: 100%;
   }
   .other_main {
     margin-bottom: 30px;
+    flex-direction: column;
+  }
+  .other_two {
+    flex-direction: column-reverse;
   }
   .other_two .other_main_title {
     text-align: start;

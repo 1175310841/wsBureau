@@ -53,7 +53,7 @@
   margin-bottom: 88px;
 }
 .main_item_content {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
 }
 .main_item_img {
@@ -103,5 +103,9 @@
   }
   .main_item:hover {
     top: 0;
+  }
+  .main_item_content {
+    font-size: 16px;
+    line-height: 22px;
   }
 }

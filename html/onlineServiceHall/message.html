@@ -325,16 +325,16 @@
               <p class="requied">*</p>
               如需电话联系,请拨打96111热线联系客服人员。
             </div>
-            <div>
+            <!-- <div>
               <p class="requied">*</p>
               如需要即时互动交流，请下载QQ登录后，点击页面右侧QQ在线咨询，与客服互动交流。
-            </div>
+            </div> -->
           </div>
           <form action="">
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">情 况:</div>
-              <el-checkbox-group v-model="checkList" size="large">
+              <el-checkbox-group v-model="circumstance" size="large">
                 <el-checkbox label="供水">供水</el-checkbox>
                 <el-checkbox label="排水">排水</el-checkbox>
                 <el-checkbox label="举报">举报</el-checkbox>
@@ -343,7 +343,7 @@
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">个人/单位：</div>
-              <el-checkbox-group v-model="checkList" size="large">
+              <el-checkbox-group v-model="unit" size="large">
                 <el-checkbox label="个人">个人</el-checkbox>
                 <el-checkbox label="单位">单位</el-checkbox>
               </el-checkbox-group>
@@ -351,12 +351,12 @@
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">标 题：</div>
-              <el-input v-model="name" placeholder="请输入您的标题"></el-input>
+              <el-input v-model="title" placeholder="请输入您的标题"></el-input>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">内 容：</div>
-              <el-input v-model="textarea" :rows="5" type="textarea" placeholder="请输入您的内容" />
+              <el-input v-model="textarea" :rows="8" type="textarea" placeholder="请输入您的内容" />
             </div>
             <div class="juxtaposition">
               <div class="form_item">
@@ -367,19 +367,19 @@
               <div class="form_item">
                 <p class="requied">*</p>
                 <div class="form_label">联系电话：</div>
-                <el-input v-model="name" placeholder="请输入您的联系电话"></el-input>
+                <el-input v-model="phone" placeholder="请输入您的联系电话"></el-input>
               </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">地 址：</div>
-              <el-input v-model="name" placeholder="请输入您的联系地址"></el-input>
+              <el-input v-model="address" placeholder="请输入您的联系地址"></el-input>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">验证码：</div>
               <div class="form_captcha">
-                <el-input v-model="name"></el-input>
+                <el-input v-model="captcha"></el-input>
                 <canvas ref="can" width="100" height="30" @click="flushed()" class="captcha"></canvas>
               </div>
             </div>
@@ -387,7 +387,7 @@
               <p class="requied">*</p>
               <div class="form_label">是否公开：</div>
               <div class="public">
-                <el-checkbox-group v-model="checkList" size="large">
+                <el-checkbox-group v-model="public" size="large">
                   <el-checkbox label="公开">公开</el-checkbox>
                   <el-checkbox label="隐藏">隐藏</el-checkbox>
                 </el-checkbox-group>
@@ -510,7 +510,16 @@
       data() {
         return {
           text: '0123456789',
-          can: null
+          can: null,
+          circumstance: null,
+          unit: null,
+          title: null,
+          textarea: null,
+          name: null,
+          phone: null,
+          address: null,
+          captcha: null,
+          public: null,
         };
       },
       mounted() {
@@ -539,7 +548,7 @@
             ctx.translate(-(x + 25 * i), 0);
             str.push(txt)
           }
-          console.log(str.join(''));
+          // console.log(str.join(''));
 
           /*干扰点*/
           for (var i = 0; i < 30; i++) {

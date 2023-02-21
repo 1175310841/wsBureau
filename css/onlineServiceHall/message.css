@@ -156,4 +156,10 @@ form > .form_item:first-child {
     width: 30px;
     margin-right: 15px;
   }
+  .form_item {
+    padding: 15px 5px;
+  }
+  .public {
+    flex: 1;
+  }
 }
