@@ -21,10 +21,37 @@
 .municipal_window {
   width: 1200px;
 }
-.municipal_window div {
+.municipal_window .municipal_txt {
   text-indent: 2em;
   line-height: 29px;
   margin-bottom: 50px;
+}
+.municipal_table {
+  width: 100%;
+  border-spacing: 2px;
+}
+.municipal_table th,
+.tfoot {
+  background-color: #186daa;
+}
+.municipal_table td {
+  background-color: #86b9dc;
+}
+.left_th {
+  width: 400px;
+}
+.municipal_table td.td_bg_deep {
+  background-color: #c1e3f6;
+}
+.municipal_table td.td_bg_shallow {
+  background-color: #e5f7fd;
+}
+.municipal_table td.td_bg_deep,
+.municipal_table td.td_bg_shallow {
+  color: #394e69;
+}
+.tfoot {
+  height: 5px;
 }
 @media (max-width: 1200px) {
   .main > div:first-child,
@@ -51,7 +78,7 @@
     margin-bottom: 15px;
     font-weight: bold;
   }
-  .municipal_window div {
+  .municipal_window .municipal_txt {
     margin-bottom: 20px;
   }
   .main_nav {

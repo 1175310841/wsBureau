@@ -9,7 +9,9 @@ h6,
 ul,
 ol,
 li,
-p {
+p,
+th,
+td {
   padding: 0;
   margin: 0;
 }
@@ -19,6 +21,19 @@ ol {
   list-style: none;
 }
 
+th,
+td {
+  text-align: center;
+  height: 45px;
+}
+th {
+  font-size: 22px;
+  color: #96cae5;
+}
+td {
+  font-size: 20px;
+  color: #e5f7fd;
+}
 a,
 i,
 em,
