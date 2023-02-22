@@ -19,6 +19,7 @@ window.onbeforeunload = function () {
 
 // 移动导航手风琴效果
 let phoneItems = document.querySelectorAll(".phone_nav_title");
+let twoItems = document.querySelectorAll(".phone_two_title");
 phoneItems.forEach((item) => {
   item.onclick = function () {
     // this.parentNode.childNodes[1].classList.remove("autoheight");
@@ -26,13 +27,16 @@ phoneItems.forEach((item) => {
     // twoActive.forEach((item) => {
     //   item.classList.remove("phone_two_active");
     // });
+    if (item.parentNode.classList.length == 1) return;
     phoneItems.forEach((item) => {
       item.parentNode.classList.remove("navAct");
     });
-    this.parentNode.classList.add("navAct");
+    twoItems.forEach((item) => {
+      item.parentNode.classList.remove("phone_two_active");
+    });
+    item.parentNode.classList.add("navAct");
   };
 });
-let twoItems = document.querySelectorAll(".phone_two_title");
 twoItems.forEach((item) => {
   item.onclick = function () {
     twoItems.forEach((item) => {

@@ -926,22 +926,24 @@ footer {
     height: 120px;
   }
   .phoneNav li.navAct .phone_nav_five {
-    height: 180px;
+    height: 150px;
   }
   .phoneNav li.navAct .phone_nav_twelve {
     height: 360px;
   }
   .phone_two_menu {
+    display: none;
     opacity: 0;
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.3s ease-in;
+    top: 50%;
+    left: -180px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in;
   }
   .phone_two_menu a {
     line-height: 30px;
-    color: #6f8baf;
+    text-align: start;
+    /* color: #6f8baf; */
   }
   .phone_two_active .phone_two_menu {
     display: block;
