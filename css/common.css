@@ -904,7 +904,11 @@ footer {
     height: 0;
     margin-top: 5px;
     transition: height 0.3s ease-in;
-    overflow: hidden;
+    /* overflow: hidden; */
+    opacity: 0;
+    position: relative;
+  }
+  .phone_nav_menu > div {
     position: relative;
   }
   .phone_nav_menu a {
@@ -921,26 +925,33 @@ footer {
     height: 120px;
   }
   .phoneNav li.navAct .phone_nav_five {
-    height: 150px;
+    height: 180px;
   }
   .phoneNav li.navAct .phone_nav_twelve {
     height: 360px;
   }
   .phone_two_menu {
-    padding-left: 8px;
-    height: 0;
-    transition: height 0.3s ease-in;
-    overflow: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease-in;
   }
   .phone_two_menu a {
-    line-height: 18px;
+    line-height: 30px;
     color: #6f8baf;
   }
   .phone_two_active .phone_two_menu {
-    height: 54px;
+    display: block;
+    opacity: 1;
   }
-  .phoneNav li.navAct .phone_nav_menu.autoheight {
+  /* .phoneNav li.navAct .phone_nav_menu.autoheight {
     height: auto;
+  } */
+  .phoneNav li.navAct .phone_nav_menu {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.3s;
   }
   .banner_content {
     top: 45%;
