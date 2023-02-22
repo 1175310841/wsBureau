@@ -247,7 +247,7 @@ createApp({
       this.maskShow = true;
       this.index = e;
       this.maskTop = -this.app.getBoundingClientRect().top;
-      // this.body.style.overflow = "hidden";
+      this.body.style.overflow = "hidden";
     },
     closeMask() {
       this.maskShow = false;
