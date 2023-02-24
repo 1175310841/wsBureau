@@ -448,6 +448,9 @@
   .company {
     padding-top: 30px;
   }
+  .company_content {
+    height: auto;
+  }
   .company_content > div {
     position: initial;
   }
