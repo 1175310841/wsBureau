@@ -254,6 +254,142 @@
     line-height: 25px;
   }
 }
+@media (max-width: 1220px) {
+  .develop {
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .intro_img {
+    position: absolute;
+  }
+  .develop div {
+    width: 750px;
+    position: relative;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    margin-top: 280px;
+  }
+  .develop_holder {
+    display: block;
+    width: 240px;
+    height: 165px;
+    float: left;
+    clear: both;
+  }
+  .information {
+    width: 750px;
+  }
+  .course {
+    width: 800px;
+  }
+  .course_area {
+    width: 170px;
+    height: 65px;
+    font-size: 14px;
+    line-height: 10px;
+    padding-top: 16px;
+  }
+  .course_area_bottom span {
+    font-size: 16px;
+  }
+  .course_area_one {
+    top: 5px;
+    left: 7px;
+  }
+  .course_area_two {
+    top: 5px;
+    left: 205px;
+  }
+  .course_area_three {
+    top: 5px;
+    left: 403px;
+  }
+  .course_area_four {
+    top: 5px;
+    left: 600px;
+  }
+  .course_area_five {
+    top: 94px;
+    left: 36px;
+  }
+  .course_area_six {
+    top: 94px;
+    left: 234px;
+  }
+  .course_area_seven {
+    top: 94px;
+    left: 429px;
+  }
+  .course_area_eight {
+    top: 94px;
+    left: 627px;
+  }
+  .important_people {
+    width: 750px;
+  }
+  .company_content {
+    width: 800px;
+    height: 550px;
+  }
+  .company_content img {
+    width: 640px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .company_name div > a {
+    line-height: 30px;
+  }
+  .company_name_one {
+    top: 148px;
+    left: 512px;
+  }
+  .company_name_two {
+    top: 240px;
+    left: 535px;
+  }
+  .company_name_three {
+    top: 300px;
+    left: 520px;
+  }
+  .company_name_four {
+    top: 382px;
+    left: 72px;
+  }
+  .company_name_five {
+    top: 312px;
+    left: 50px;
+  }
+  .company_name_six {
+    top: 225px;
+    left: 8px;
+  }
+  .company_name_seven {
+    top: 122px;
+    left: 26px;
+  }
+  .company_name_eight {
+    top: 10px;
+    left: 370px;
+  }
+  .mask_main {
+    width: 90%;
+  }
+  .mask_img {
+    width: 50px;
+  }
+  .mask_title {
+    font-size: 30px;
+    line-height: 30px;
+    height: 35px;
+    margin-bottom: 35px;
+  }
+}
 @media (max-width: 800px) {
   .main {
     line-height: 24px;
@@ -262,30 +398,18 @@
   }
   .develop {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
   }
   .intro_img {
-    position: absolute;
     width: 95%;
     margin-bottom: 0;
   }
   .develop div {
     width: 85%;
-    position: relative;
-    z-index: 100;
-    top: 0;
-    left: 0;
     margin-top: 130px;
   }
   .develop_holder {
-    display: block;
     width: 100px;
     height: 60px;
-    float: left;
-    clear: both;
   }
   .information,
   .important_people,
