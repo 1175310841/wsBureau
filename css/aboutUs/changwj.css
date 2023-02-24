@@ -73,7 +73,7 @@
   transition: all 0.3s ease;
 }
 .main_content_item:hover {
-  top: -15px;
+  top: -12px;
 }
 .main_content_item.special {
   height: 340px;
@@ -108,6 +108,26 @@
 }
 .quality {
   line-height: 22px;
+}
+@media (max-width: 1220px) {
+  .logotype,
+  .main_content_list {
+    width: 800px;
+  }
+  .main_content_item:nth-child(4),
+  .main_content_item:nth-child(7) {
+    margin-left: 0;
+  }
+  .main_content_item:nth-child(6) {
+    margin-left: 24px;
+  }
+  .main_content {
+    height: 700px;
+    padding-top: 50px;
+  }
+  .main_content > p {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 800px) {
   .logotype {

@@ -101,6 +101,40 @@
   height: 100%;
   top: 0;
 }
+@media (max-width: 1220px) {
+  .main_content {
+    width: 800px;
+  }
+  .main_content_item {
+    width: 390px;
+    height: 165px;
+    margin-bottom: 25px;
+  }
+  .main_item_img {
+    width: 110px;
+  }
+  .main_item_img img {
+    width: 80px;
+  }
+  .main_item_right {
+    padding-top: 33px;
+    padding-right: 20px;
+  }
+  .main_item_tit {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .main_item_txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .main_item_btn {
+    bottom: 10px;
+  }
+}
 @media (max-width: 800px) {
   .main_content {
     width: 100%;
