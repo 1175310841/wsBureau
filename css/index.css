@@ -281,15 +281,18 @@
 .sub_menu > li > a > span {
   height: 18px;
 } */
-.nav > li:hover {
+.nav > li:hover,
+.nav > li.navActPad {
   background-color: #28a6e2;
 }
 .nav > li:hover > span,
-.nav > li.navAct:hover a {
+.nav > li.navAct:hover a,
+.nav > li.navActPad a {
   color: #ffffff;
   text-shadow: none;
 }
-.nav li:hover > .sub_menu {
+.nav li:hover > .sub_menu,
+.nav li.navActPad > .sub_menu {
   visibility: visible;
   opacity: 1;
   transition: all 0.7s ease;

@@ -9,6 +9,16 @@ window.addEventListener("scroll", () => {
     navEl.classList.remove("sticky");
   }
 });
+// pad端触摸事件
+const navPadLis = document.querySelectorAll("#navPad > li");
+navPadLis.forEach((item) => {
+  document.addEventListener("touchstart", () => {
+    navPadLis.forEach((item) => {
+      item.classList.remove("navActPad");
+    });
+    this.classList.add("navActPad");
+  });
+});
 
 // 滚动动画效果
 const staggeringOption = {

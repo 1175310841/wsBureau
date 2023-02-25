@@ -102,7 +102,7 @@ footer,
   width: 100%;
   position: fixed;
   background: linear-gradient(-90deg, #42a4f0, #186daa);
-  z-index: 100;
+  z-index: 900;
 }
 
 header {
