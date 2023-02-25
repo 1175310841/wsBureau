@@ -73,18 +73,19 @@ window.onload = function () {
 
   btn.onclick = function () {
     //设置定时器
-    timer = setInterval(function () {
-      //获取滚动条距离顶部高度
-      var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-      var ispeed = Math.floor(-osTop / 7);
-      document.documentElement.scrollTop = document.body.scrollTop =
-        osTop + ispeed;
-      //到达顶部，清除定时器
-      if (osTop == 0) {
-        clearInterval(timer);
-      }
-      isTop = true;
-    }, 30);
+    // timer = setInterval(function () {
+    //   //获取滚动条距离顶部高度
+    //   var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+    //   var ispeed = Math.floor(-osTop / 7);
+    //   document.documentElement.scrollTop = document.body.scrollTop =
+    //     osTop + ispeed;
+    //   //到达顶部，清除定时器
+    //   if (osTop == 0) {
+    //     clearInterval(timer);
+    //   }
+    //   isTop = true;
+    // }, 30);
+    animate(window, 0);
   };
 };
 
@@ -98,3 +99,19 @@ navPadLis.forEach((item) => {
     this.classList.add("navActPad");
   });
 });
+
+function animate(obj, target, callback) {
+  clearInterval(obj.timer);
+  obj.timer = setInterval(fn, 13);
+  function fn() {
+    var step = (target - window.pageYOffset) / 5;
+    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+    if (window.pageYOffset == target) {
+      clearInterval(obj.timer);
+      if (callback) {
+        callback();
+      }
+    }
+    window.scroll(0, window.pageYOffset + step);
+  }
+}
