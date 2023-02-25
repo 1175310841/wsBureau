@@ -87,3 +87,14 @@ window.onload = function () {
     }, 30);
   };
 };
+
+// pad端触摸事件
+const navPadLis = document.querySelectorAll("#navPad > li");
+navPadLis.forEach((item) => {
+  document.addEventListener("touchstart", () => {
+    navPadLis.forEach((item) => {
+      item.classList.remove("navActPad");
+    });
+    this.classList.add("navActPad");
+  });
+});
