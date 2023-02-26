@@ -253,5 +253,8 @@ createApp({
       this.maskShow = false;
       this.body.style.overflow = "auto";
     },
+    reload() {
+      location.reload();
+    },
   },
 }).mount("#app");

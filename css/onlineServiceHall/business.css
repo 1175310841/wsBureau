@@ -149,7 +149,7 @@ form > .form_item:first-child {
 .form_captcha {
   margin-right: 20px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .main > div:first-child,
   .main_img img,
   .main_content {
@@ -159,7 +159,7 @@ form > .form_item:first-child {
     width: 700px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main > div:first-child,
   .main_img img,
   .main_content,

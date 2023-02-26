@@ -10,6 +10,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .main_item {
   width: 360px;

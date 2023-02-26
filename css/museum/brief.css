@@ -136,7 +136,7 @@
     font-size: 9px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main > div:first-child,
   .main_content,
   .main_paragraph {

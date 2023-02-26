@@ -22,7 +22,7 @@
 .main_item_content {
   line-height: 30px;
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main_item {
     padding-top: 35px;
     padding-bottom: 25px;

@@ -66,12 +66,12 @@
 .operate_menu span {
   color: #186daa;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .main_content {
     width: 800px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main_content {
     width: 100%;
     padding-top: 50px;

@@ -35,13 +35,13 @@
 .main_content a:hover {
   text-decoration: underline;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .main_content,
   .price_table {
     width: 800px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main_content,
   .price_table {
     width: 100%;

@@ -45,7 +45,7 @@
   transform: translateY(-130px); */
   background-color: #186daa;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .architecture,
   .carousel_dept {
     width: 800px;
@@ -54,7 +54,7 @@
     height: 534px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .architecture,
   .carousel_dept,
   .main_draw {

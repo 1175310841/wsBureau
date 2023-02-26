@@ -47,7 +47,7 @@
 .paid_services_content p {
   line-height: 22px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .main > div:first-child,
   .main_threeOne,
   .paid_services,
@@ -55,7 +55,7 @@
     width: 800px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main > div:first-child,
   .main_threeOne,
   .paid_services,

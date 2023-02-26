@@ -110,15 +110,21 @@ form > .form_item:first-child {
 .form_captcha {
   margin: 0 auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .main_content,
   .main_form {
-    width: 800px;
+    width: 714px;
+  }
+  .main_form {
+    padding: 80px 74px 105px;
+  }
+  .form_label {
+    width: 100px;
   }
   .bg_img {
-    top: -29px;
-    left: -49px;
-    width: 896px;
+    top: -35px;
+    left: -44px;
+    width: 800px;
   }
   .annex_top {
     display: block;
@@ -127,7 +133,7 @@ form > .form_item:first-child {
     margin-top: 10px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main_content,
   .main_form {
     width: 100%;

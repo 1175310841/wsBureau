@@ -121,14 +121,14 @@ form > .form_item:first-child {
   line-height: 29px;
   margin-top: 10px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1220px) {
   .main > div:first-child,
   .main_content,
   .main_form {
     width: 800px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .main > div:first-child,
   .main_content,
   .main_form {
