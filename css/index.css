@@ -590,10 +590,10 @@
 }
 
 .news_item p span:last-child {
-  font-size: 12px;
+  font-size: 14px;
   color: #28a6e2;
-  height: 13px;
-  line-height: 13px;
+  height: 14px;
+  line-height: 14px;
 }
 
 .news_item_active {
