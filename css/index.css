@@ -892,6 +892,10 @@ span.buble {
     width: 800px;
   }
 
+  .old_page {
+    display: none;
+  }
+  
   .carousel {
     height: 800px;
   }
