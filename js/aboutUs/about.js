@@ -254,7 +254,13 @@ createApp({
       this.body.style.overflow = "auto";
     },
     reload() {
-      location.reload();
+      let url = location.href
+      url =
+        url.indexOf("#leadership") > 0
+          ? url
+          : url + "#leadership";
+      location.href = url;
+      location.reload(true);
     },
   },
 }).mount("#app");
