@@ -897,7 +897,7 @@ span.buble {
   }
   
   .carousel {
-    height: 800px;
+    height: 760px;
   }
 
   .logo {
@@ -977,7 +977,6 @@ span.buble {
   }
 
   .arrows_txt {
-    color: #fff;
     margin-right: 0;
     margin-top: 30px;
   }
@@ -1080,7 +1079,7 @@ span.buble {
   } */
 }
 
-@media (max-width: 820px) {
+@media (max-width: 819px) {
   ul.sticky,
   .header,
   .index_navigation,
@@ -1340,7 +1339,7 @@ span.buble {
   }
 }
 
-@media (min-width: 820px) and (max-width: 1220px) {
+@media (min-width: 819px) and (max-width: 1220px) {
   .serve_body_right {
     width: 192px;
     height: 296px;
@@ -1358,5 +1357,32 @@ span.buble {
   .serve_body_right img:nth-child(3) {
     width: 180px;
     margin-left: 5px;
+  }
+  .video_area {
+    height: 300px;
+  }
+  .arrows_tit {
+    height: 24px;
+    line-height: 22px;
+    font-size: 26px;
+  }
+  .arrows_txt {
+    margin-top: 15px;
+    line-height: 20px;
+  }
+  .arrows_border {
+    margin-top: 18px;
+  }
+}
+
+@media (min-width: 819px) and (max-width: 1050px) {
+  .carousel {
+    height: 660px;
+  }
+  .carousel_btn {
+    top: 240px;
+  }
+  .video_area {
+    top: 300px;
   }
 }
