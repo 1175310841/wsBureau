@@ -102,8 +102,8 @@
 .header,
 .index_navigation,
 .video_area,
-.news_head,
-.news_body,
+.news_center,
+.serve_head,
 .serve_body {
   width: 1200px;
 }
@@ -363,6 +363,8 @@
 
 .arrows_txt_carousel > div {
   height: 100%;
+  box-sizing: border-box;
+  text-align: justify;
 }
 
 .arrows_border {
@@ -435,7 +437,6 @@
   overflow: hidden;
 }
 .news_nav {
-  width: 70%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -888,26 +889,30 @@ span.buble {
   }
 }
 @media (max-width: 1220px) {
-  .header {
-    width: 800px;
+  html {
+    font-size: 16px;
   }
 
   .old_page {
     display: none;
   }
-  
+
   .carousel {
     height: 760px;
   }
 
   .logo {
-    width: 300px;
+    width: 40%;
   }
 
+  .header,
   .index_navigation,
   .video_area,
-  .news_head,
-  .news_body,
+  .news_center,
+  .serve_head {
+    width: 80%;
+  }
+
   .serve_body {
     width: 800px;
   }
@@ -924,18 +929,20 @@ span.buble {
     flex: none;
   }
   .nav {
-    width: 750px;
+    width: 100%;
+    margin-right: 50px;
   }
   .nav > li {
-    font-size: 16px;
-    padding: 10px 10px 11px;
+    font-size: 1rem;
     position: relative;
+    -webkit-tap-highlight-color: transparent;
   }
   .search_box {
     position: absolute;
   }
   .index_navigation.sticky .nav {
     width: 100%;
+    margin-right: 0;
   }
   .carousel_btn {
     top: 320px;
@@ -943,7 +950,7 @@ span.buble {
 
   .video_str {
     /* margin-bottom: 30px; */
-    width: 290px;
+    width: 48%;
   }
 
   .video_area {
@@ -964,7 +971,7 @@ span.buble {
   }
 
   .video {
-    width: 450px;
+    width: 52%;
     top: -20px;
     left: 15px;
     margin-right: 40px;
@@ -982,13 +989,14 @@ span.buble {
   }
 
   .video_str .arrows,
-  .video_str .arrows_txt {
-    padding-right: 0;
+  .video_str .arrows_txt,
+  .arrows_txt_carousel > div {
+    padding-right: 15px;
   }
 
   .arrows_border,
   .video_more {
-    margin-right: 0;
+    margin-right: 15px;
   }
 
   .video_more {
@@ -1079,7 +1087,7 @@ span.buble {
   } */
 }
 
-@media (max-width: 819px) {
+@media (max-width: 650px) {
   ul.sticky,
   .header,
   .index_navigation,
@@ -1087,8 +1095,8 @@ span.buble {
     display: none;
   }
 
-  .news_head,
-  .news_body,
+  .news_center,
+  .serve_head,
   .serve_body {
     width: 100%;
     padding: 0 15px;
@@ -1339,7 +1347,7 @@ span.buble {
   }
 }
 
-@media (min-width: 819px) and (max-width: 1220px) {
+@media (min-width: 650px) and (max-width: 1220px) {
   .serve_body_right {
     width: 192px;
     height: 296px;
@@ -1359,7 +1367,7 @@ span.buble {
     margin-left: 5px;
   }
   .video_area {
-    height: 300px;
+    height: 40%;
   }
   .arrows_tit {
     height: 24px;
@@ -1375,14 +1383,103 @@ span.buble {
   }
 }
 
-@media (min-width: 819px) and (max-width: 1050px) {
+@media (min-width: 650px) and (max-width: 1020px) {
+  .nav > li {
+    padding: 0.6rem 3px;
+  }
   .carousel {
-    height: 660px;
+    height: 620px;
   }
   .carousel_btn {
     top: 240px;
   }
+  .index_navigation {
+    top: 85px;
+  }
+  .video {
+    margin-right: 30px;
+  }
   .video_area {
     top: 300px;
+  }
+  .arrows_txt {
+    height: 80px;
+    box-sizing: border-box;
+  }
+  .video_str .arrows {
+    margin-top: 12px;
+    margin-bottom: 15px;
+  }
+  .video_more {
+    margin-top: 18px;
+  }
+  .news_nav li {
+    margin-left: 20px;
+  }
+  .serve_body {
+    width: 600px;
+  }
+  .serve_body_left {
+    width: 460px;
+  }
+  .serve_item {
+    width: 109px;
+    height: 109px;
+    padding-top: 15px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+  }
+  .serve_body_right {
+    width: 140px;
+    height: 224px;
+  }
+  .serve_item_img {
+    height: 30px;
+  }
+  .serve_item:hover .serve_item_img {
+    height: 25px;
+  }
+  .serve_item p {
+    margin: 18px auto 15px;
+  }
+  .serve_item:hover p {
+    margin: 13px auto 9px;
+  }
+  .serve_item_link {
+    width: 64px;
+    line-height: 18px;
+    margin: 5px auto 0;
+  }
+  .serve_body_right img:nth-child(1) {
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+  .serve_body_right img:nth-child(2) {
+    width: 100px;
+    margin-left: 25px;
+    margin-top: 28px;
+  }
+  .serve_body_right img:nth-child(3) {
+    width: 130px;
+  }
+  .serve_body_right:hover img:nth-child(2) {
+    animation: beatings 2s forwards;
+  }
+  @keyframes beatings {
+    /*创建动画*/
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-20px);
+    }
+    60% {
+      -webkit-transform: translateY(-10px);
+    }
   }
 }
