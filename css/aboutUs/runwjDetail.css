@@ -15,6 +15,15 @@
   font-size: 22px;
   line-height: 100px;
 }
+.main_content img {
+  margin: 14px auto;
+}
+.rwj3-img1,.rwj3-img2 {
+  width: 600px;
+}
+.rwj8-img2 {
+  width: 415px;
+}
 @media (max-width: 819px) {
   .main_content {
     width: 100%;
@@ -32,5 +41,10 @@
   }
   .main_content p {
     text-indent: 2em;
+  }
+}
+@media (max-width: 600px) {
+  .rwj3-img1,.rwj3-img2,.rwj4-img2,.rwj6-img2,.rwj7-img2,.rwj8-img2 {
+    width: 100%;
   }
 }

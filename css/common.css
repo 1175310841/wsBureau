@@ -77,6 +77,12 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+.txtid-1 {
+  text-indent: 1em;
+}
+.txtid-2 {
+  text-indent: 2em;
+}
 .txtid-3 {
   text-indent: 3em;
 }
