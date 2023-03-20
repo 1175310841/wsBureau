@@ -1,0 +1,80 @@
+.light-login {
+  min-height: 100vh;
+  background: url("./login-bg.png") no-repeat;
+  background-size: 100%;
+  background-color: #eeeeee;
+}
+.login-container {
+  width: 100%;
+}
+.login-logo {
+  margin-top: 40px;
+}
+.center h1{
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 59px;
+  font-weight: bold;
+  color: #eeeeee;
+  height: 72px;
+  line-height: 72px;
+}
+.center h1 span {
+  color: #f39800;
+}
+.management {
+  font-size: 36px;
+  color: #eeeeee;
+  height: 72px;
+  line-height: 72px;
+}
+.light-login .widget-box.login-box{
+  width: 509px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0px 3px 8px 0px rgba(30,72,111,0.35);
+  border-radius: 10px;
+}
+.widget-body,.login-layout .widget-box .widget-main {
+  background-color: transparent;
+}
+.login-layout .widget-box .widget-main {
+  padding: 47px 61px 46px;
+}
+.space {
+  margin: 23px 0 0 0;
+}
+.official-website {
+  width: 509px;
+  margin: 33px auto 0;
+  padding-right: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 15px;
+  color: #186DAA !important;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-decoration: none !important;
+}
+.official-website span {
+  color: #F39800;
+}
+.official-website i {
+  display: inline-block;
+  background: url("./computer.png") no-repeat;
+  width: 20px;
+  height: 18px;
+  background-size: 100% 100%;
+}
+.official-website:hover i {
+  background: url("./computer1.png") no-repeat;
+}
+.copyright {
+  height: 44px;
+  font-size: 14px;
+  color: #428BCA;
+  line-height: 30px;
+  margin-top: 141px;
+  text-align: center;
+}
