@@ -15,6 +15,26 @@
   <script src="../../libs/scrollreveal.min.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
+  <style>
+    .juxtaposition .form_item {
+      width: 50%;
+    }
+    .select {
+      width: 100%;
+    }
+    .select select {
+      width: 100%;
+      padding: 1px 11px;
+      border: 0;
+      background-color: #eee;
+      border-radius: 4px;
+    }
+    @media (max-width: 819px) {
+      .juxtaposition .form_item{
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -404,62 +424,104 @@
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">标题：</div>
-              <el-input v-model="name" placeholder="请输入标题"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input type="text" class="el-input__inner" placeholder="请输入标题"></input>
+                </div>
+              </div>
             </div>
             <div class="juxtaposition">
               <div class="form_item">
                 <p class="requied">*</p>
                 <div class="form_label">您的姓名：</div>
-                <el-input v-model="name" placeholder="请输入姓名"></el-input>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" type="text" placeholder="请输入姓名"></input>
+                  </div>
+                </div>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
                 <div class="form_label">您的电话：</div>
-                <el-input v-model="name" placeholder="请输入联系电话"></el-input>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" type="number" placeholder="请输入联系电话"></input>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="form_item">
               <p class="requied"></p>
               <div class="form_label">电子邮件：</div>
-              <el-input v-model="name" placeholder="请输入电子邮件"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入电子邮件"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied"></p>
               <div class="form_label">您的地址：</div>
-              <el-input v-model="name" placeholder="请输入地址"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入地址"></input>
+                </div>
+              </div>
             </div>
             <div class="main_title violators">违章人信息</div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">违章人姓名：</div>
-              <el-input v-model="name" placeholder="请输入违章人姓名"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入违章人姓名"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied"></p>
               <div class="form_label">违章人单位：</div>
-              <el-input v-model="name" placeholder="请输入违章人单位"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入违章人单位"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied"></p>
               <div class="form_label">违章人电话：</div>
-              <el-input v-model="name" placeholder="请输入违章人电话"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入违章人电话"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">违章人地址：</div>
-              <el-input v-model="name" placeholder="请输入违章人地址"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入违章人地址"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied"></p>
               <div class="form_label">举报类别：</div>
-              <el-select v-model="value" style="flex:1" placeholder="请选择举报类别">
-                <el-option label="擅自在城市公共供水管道及附属设施上私接管道盗水的" value="1" />
-              </el-select>
+              <div class="el-input select">
+                <select>
+                  <option>擅自在城市公共供水管道及附属设施上私接管道盗水的</option>
+                </select>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">举报内容：</div>
-              <el-input v-model="textarea" :rows="5" type="textarea" placeholder="请输入举报内容" />
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input class="el-input__inner" type="text" placeholder="请输入举报内容"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item annex">
               <p class="requied"></p>
@@ -474,7 +536,11 @@
             <div class="form_item">
               <div class="form_captcha">
                 <span>验证码：</span>
-                <el-input v-model="name"></el-input>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" type="text"></input>
+                  </div>
+                </div>
                 <canvas ref="can" width="100" height="30" @click="flushed()" class="captcha"></canvas>
               </div>
             </div>
@@ -591,9 +657,8 @@
     createApp({
       data() {
         return {
-          value: '',
           text: '0123456789',
-          can: null
+          can: null,
         };
       },
       mounted() {
