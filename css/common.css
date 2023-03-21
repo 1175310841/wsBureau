@@ -73,6 +73,17 @@ a {
 .fontstyle_date_en {
   font-family: Arial;
 }
+input[type="radio" i] {
+  margin: 0;
+}
+input[type="date"] {
+  border: 0;
+  height: 48px;
+  font-size: 16px;
+  background-color: #eeeeee;
+  padding: 0 11px;
+  border-radius: 4px;
+}
 body {
   font-family: Microsoft YaHei;
   font-weight: 400;

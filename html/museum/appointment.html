@@ -15,6 +15,46 @@
   <script src="../../libs/scrollreveal.min.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
+  <style>
+    .date_radio span {
+      padding-left: 8px;
+      font-size: 14px;
+      color: #606266;
+    }
+    .date_radio .span {
+      margin-right: 30px;
+    }
+    input[type="date"] {
+      width: 420px;
+      margin-right: 50px;
+    }
+    @media (max-width: 1220px) {
+      input[type="date"] {
+        width: 220px;
+        margin-right: 30px;
+      }
+    }
+    @media (max-width: 819px) {
+      .people_num > span {
+        margin-left: 10px;
+      }
+      .annex_top {
+        width: 130px;
+      }
+      input[type="date"] {
+        width: auto;
+        margin-right: 0;
+        flex: 1;
+      }
+      .date_radio {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -378,29 +418,49 @@
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">团队名称：</div>
-          <el-input v-model="name" placeholder="请输入您的团队名称"></el-input>
+          <div class="el-input">
+            <div class="el-input__wrapper">
+              <input type="text" class="el-input__inner" placeholder="请输入您的团队名称"></input>
+            </div>
+          </div>
         </div>
         <div class="form_item people_num">
           <p class="requied">*</p>
           <div class="form_label">人 数：</div>
-          <el-input v-model="name"></el-input>
+          <div class="el-input">
+            <div class="el-input__wrapper">
+              <input type="text" class="el-input__inner"></input>
+            </div>
+          </div>
           人
           <span>10人以上</span>
         </div>
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">经办人姓名：</div>
-          <el-input v-model="name" placeholder="请输入经办人姓名"></el-input>
+          <div class="el-input">
+            <div class="el-input__wrapper">
+              <input type="text" class="el-input__inner" placeholder="请输入经办人姓名"></input>
+            </div>
+          </div>
         </div>
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">负责人姓名：（领队）</div>
-          <el-input v-model="name" placeholder="请输入您的姓名"></el-input>
+          <div class="el-input">
+            <div class="el-input__wrapper">
+              <input type="text" class="el-input__inner" placeholder="请输入您的姓名"></input>
+            </div>
+          </div>
         </div>
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">身份证号码：</div>
-          <el-input v-model="name" placeholder="请输入您的身份证号码"></el-input>
+          <div class="el-input">
+            <div class="el-input__wrapper">
+              <input type="text" class="el-input__inner" placeholder="请输入您的身份证号码"></input>
+            </div>
+          </div>
         </div>
         <div class="form_item">
           <p class="requied">*</p>
@@ -414,22 +474,30 @@
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">联系电话：</div>
-          <el-input v-model="name" placeholder="请输入您的联系电话"></el-input>
+          <div class="el-input">
+            <div class="el-input__wrapper">
+              <input type="text" class="el-input__inner" placeholder="请输入您的联系电话"></input>
+            </div>
+          </div>
         </div>
         <div class="form_item booking">
           <p class="requied">*</p>
           <div class="form_label">预约日期：</div>
-          <el-date-picker v-model="value" type="date" placeholder="选择日期"></el-date-picker>
-          <el-checkbox-group v-model="checkList">
-            <el-checkbox label="上午9:00-11:00">上午9:00-11:00</el-checkbox>
-            <el-checkbox label="下午13:00-15:00">下午13:00-15:00</el-checkbox>
-          </el-checkbox-group>
+          <input type="date" value="2020-05-09" placeholder="选择日期"/>
+          <div class="flex date_radio">
+            <input type="radio" name="date" value="上午9:00-11:00"><span class="span">上午9:00-11:00</span>
+            <input type="radio" name="date" value="下午13:00-15:00"><span>下午13:00-15:00</span>
+          </div>
         </div>
         <div class="form_item">
           <p class="requied">*</p>
           <div class="form_label">验证码：</div>
           <div class="form_captcha">
-            <el-input v-model="name"></el-input>
+            <div class="el-input">
+              <div class="el-input__wrapper">
+                <input type="text" class="el-input__inner"></input>
+              </div>
+            </div>
             <canvas ref="can" width="100" height="30" @click="flushed()" class="captcha"></canvas>
           </div>
         </div>

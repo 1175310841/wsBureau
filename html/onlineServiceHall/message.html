@@ -15,6 +15,13 @@
   <script src="../../libs/scrollreveal.min.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.26/dist/index.full.js"></script>
   <script src="https://unpkg.com/element-plus@2.2.26/dist/locale/zh-cn.js"></script>
+  <style>
+    .circumstance_radio span,.unit_radio span,.public_radio span {
+      padding-left: 8px;
+      margin-right: 30px;
+      color: #606266;
+    }
+  </style>
 </head>
 
 <body>
@@ -388,52 +395,74 @@
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">情 况:</div>
-              <el-checkbox-group v-model="circumstance" size="large">
-                <el-checkbox label="供水">供水</el-checkbox>
-                <el-checkbox label="排水">排水</el-checkbox>
-                <el-checkbox label="举报">举报</el-checkbox>
-              </el-checkbox-group>
+              <div class="flex circumstance_radio">
+                <input type="radio" name="circumstance" value="供水"><span>供水</span>
+                <input type="radio" name="circumstance" value="排水"><span>排水</span>
+                <input type="radio" name="circumstance" value="举报"><span>举报</span>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">个人/单位：</div>
-              <el-checkbox-group v-model="unit" size="large">
-                <el-checkbox label="个人">个人</el-checkbox>
-                <el-checkbox label="单位">单位</el-checkbox>
-              </el-checkbox-group>
+              <div class="flex unit_radio">
+                <input type="radio" name="unit" value="个人"><span>个人</span>
+                <input type="radio" name="unit" value="单位"><span>单位</span>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">标 题：</div>
-              <el-input v-model="title" placeholder="请输入您的标题"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input type="text" class="el-input__inner" placeholder="请输入您的标题"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">内 容：</div>
-              <el-input v-model="textarea" :rows="8" type="textarea" placeholder="请输入您的内容" />
+              <div class="el-textarea">
+                <textarea class="el-textarea__inner" rows="8" placeholder="请输入您的内容" style="min-height: 31px;"></textarea>
+              </div>
             </div>
             <div class="juxtaposition">
               <div class="form_item">
                 <p class="requied">*</p>
                 <div class="form_label">姓 名：</div>
-                <el-input v-model="name" placeholder="请输入您的姓名"></el-input>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input type="text" class="el-input__inner" placeholder="请输入您的姓名"></input>
+                  </div>
+                </div>
               </div>
               <div class="form_item">
                 <p class="requied">*</p>
                 <div class="form_label">联系电话：</div>
-                <el-input v-model="phone" placeholder="请输入您的联系电话"></el-input>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input type="text" class="el-input__inner" placeholder="请输入您的联系电话"></input>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">地 址：</div>
-              <el-input v-model="address" placeholder="请输入您的联系地址"></el-input>
+              <div class="el-input">
+                <div class="el-input__wrapper">
+                  <input type="text" class="el-input__inner" placeholder="请输入您的联系地址"></input>
+                </div>
+              </div>
             </div>
             <div class="form_item">
               <p class="requied">*</p>
               <div class="form_label">验证码：</div>
               <div class="form_captcha">
-                <el-input v-model="captcha"></el-input>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" type="text"></input>
+                  </div>
+                </div>
                 <canvas ref="can" width="100" height="30" @click="flushed()" class="captcha"></canvas>
               </div>
             </div>
@@ -441,10 +470,10 @@
               <p class="requied">*</p>
               <div class="form_label">是否公开：</div>
               <div class="public">
-                <el-checkbox-group v-model="public" size="large">
-                  <el-checkbox label="公开">公开</el-checkbox>
-                  <el-checkbox label="隐藏">隐藏</el-checkbox>
-                </el-checkbox-group>
+                <div class="flex public_radio">
+                  <input type="radio" name="public" value="公开"><span>公开</span>
+                  <input type="radio" name="public" value="隐藏"><span>隐藏</span>
+                </div>
                 <p>
                   选择留言公开，将在留言回复栏目中公开显示标题、内容以及回复信息;<br />选择隐藏，将有相关业务人员查看。
                 </p>
