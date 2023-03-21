@@ -343,6 +343,9 @@
   font-size: 37px;
   font-weight: bold;
   color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 60px;
 }
 
 .arrows_txt {
@@ -534,6 +537,7 @@
   line-height: 19px;
   font-size: 18px;
   color: #e7f6fb;
+  overflow: hidden;
 }
 
 .news_arrows_draw {
@@ -588,6 +592,8 @@
   color: #186daa;
   line-height: 19px;
   transition: all 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .news_item p span:last-child {
@@ -608,6 +614,11 @@
   color: #535353;
   line-height: 19px;
   margin: 20px 0 70px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .news_item_active_date {
@@ -981,6 +992,7 @@ span.buble {
     height: 28px;
     line-height: 28px;
     font-size: 28px;
+    margin-right: 0;
   }
 
   .arrows_txt {

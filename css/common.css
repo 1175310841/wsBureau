@@ -55,10 +55,11 @@ img {
   background-color: #d9dadd;
 }
 
-a {
+a, a:link, a:visited, a:focus, a:hover, a:active {
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  color: #394e69;
 }
 
 .flex_column_center {
@@ -337,11 +338,11 @@ nav {
 }
 .banner_slogan {
   color: #e7f8fd;
-  width: 29%;
-  height: 100%;
+  width: 380px;
+  height: 175px;
   box-sizing: border-box;
-  padding-top: 4%;
-  padding-left: 2%;
+  padding-top: 58px;
+  padding-left: 43px;
   background-color: #186daa;
   /* position: absolute;
   top: 50%;
@@ -667,6 +668,12 @@ footer {
   height: 100%;
 }
 @media (max-width: 1420px) {
+  .banner_slogan {
+    width: 310px;
+    height: 150px;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
   .banner_title {
     height: 35px;
     font-size: 35px;
@@ -1065,7 +1072,7 @@ element plus
 .el-pagination .el-input__inner,
 .el-pagination__sizes .el-select .el-input .el-select__caret,
 .el-pagination button,
-.el-pager li,
+.el-pager a,
 .el-pagination__jump,
 .page_selece_down .el-select-dropdown__item.selected {
   color: #186daa;
@@ -1073,7 +1080,7 @@ element plus
 .el-pagination__sizes .el-select .el-input__wrapper,
 .el-pagination.is-background .btn-prev,
 .el-pagination.is-background .btn-next,
-.el-pagination.is-background .el-pager li,
+.el-pagination.is-background .el-pager a,
 .el-pagination__jump .el-input__wrapper,
 .el-pagination__sizes .el-select .el-input.is-focus .el-input__wrapper,
 .el-pagination.is-background .btn-prev:disabled,
@@ -1098,7 +1105,7 @@ element plus
 .page_selece_down .el-select-dropdown__item {
   padding-right: 20px;
 }
-.el-pagination.is-background .el-pager li.is-active {
+.el-pagination.is-background .el-pager a.is-active {
   background-color: #186daa;
   color: #fff;
 }

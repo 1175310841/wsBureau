@@ -18,9 +18,12 @@
   font-weight: 400;
   color: #394e69;
   margin-bottom: 22px;
+  overflow: hidden;
 }
 .main_item_content {
   line-height: 30px;
+  height: 60px;
+  overflow: hidden;
 }
 @media (max-width: 819px) {
   .main_item {
@@ -35,5 +38,6 @@
   }
   .main_item_content {
     line-height: 22px;
+    height: 66px;
   }
 }

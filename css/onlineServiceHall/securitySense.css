@@ -48,10 +48,13 @@
   width: 250px;
   font-weight: bold;
   margin-bottom: 39px;
+  overflow: hidden;
+  text-align: justify;
 }
 .main_item_content {
   font-size: 15px;
   line-height: 18px;
+  height: 126px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -149,6 +152,7 @@
     margin-bottom: 45px;
     font-size: 16px;
     line-height: 22px;
+    height: 154px;
   }
   .main_item:hover {
     top: 0;

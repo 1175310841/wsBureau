@@ -41,15 +41,18 @@
   line-height: 20px;
   font-weight: bold;
   margin-bottom: 26px;
+  overflow: hidden;
 }
 .main_item_content {
   font-size: 13px;
+  height: 72px;
   line-height: 18px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  text-align: justify;
 }
 @media (max-width: 1220px) {
   .main_content {
@@ -75,5 +78,6 @@
   .main_item_content {
     font-size: 16px;
     line-height: 22px;
+    height: 88px;
   }
 }

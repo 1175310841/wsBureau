@@ -32,11 +32,13 @@
   line-height: 33px;
   font-size: 33px;
   margin-bottom: 23px;
+  overflow: hidden;
 }
 .main_content {
   height: 16px;
   line-height: 16px;
   color: #28a6e2;
+  overflow: hidden;
 }
 @media (max-width: 1220px) {
   .main_list {

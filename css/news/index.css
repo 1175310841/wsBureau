@@ -25,10 +25,17 @@
   line-height: 22px;
   font-size: 22px;
   margin-bottom: 22px;
+  overflow: hidden;
 }
 .news_content {
   font-size: 17px;
   line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-align: justify;
 }
 @media (max-width: 819px) {
   .list {
@@ -39,7 +46,6 @@
   }
   .news_title {
     font-size: 20px;
-    height: auto;
     line-height: 25px;
     margin-bottom: 10px;
     font-weight: bold;
