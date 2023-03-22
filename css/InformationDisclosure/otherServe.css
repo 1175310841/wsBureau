@@ -135,7 +135,6 @@
   flex: 1;
 }
 .service_info_title {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 22px;

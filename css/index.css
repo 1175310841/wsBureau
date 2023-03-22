@@ -579,6 +579,10 @@
   padding-right: 10px;
 }
 
+.news_item_title {
+  white-space: nowrap;
+}
+
 .news_item p,
 .news_item_title {
   border-bottom: 1px solid #9cc9e8;
@@ -593,7 +597,6 @@
   line-height: 19px;
   transition: all 0.3s ease;
   overflow: hidden;
-  white-space: nowrap;
 }
 
 .news_item p span:last-child {
@@ -601,6 +604,8 @@
   color: #28a6e2;
   height: 14px;
   line-height: 14px;
+  white-space: nowrap;
+  margin-left: 50px;
 }
 
 .news_item_active {
@@ -671,6 +676,8 @@
   line-height: 26px;
   color: #186daa;
   margin-left: 31px;
+  height: 52px;
+  overflow: hidden;
 }
 .waternews_left_content {
   height: 249px;
@@ -1162,7 +1169,7 @@ span.buble {
     margin-top: 155px;
     box-shadow: none;
     position: initial;
-    width: 100%;
+    width: auto;
     padding: 0 10px;
   }
 
@@ -1302,6 +1309,9 @@ span.buble {
 
   .news_item p span:first-child {
     width: 75%;
+  }
+  .news_item p span:last-child {
+    margin-left: 30px;
   }
 
   .serve_body {
