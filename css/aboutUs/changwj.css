@@ -57,7 +57,6 @@
 }
 .main_content_list {
   width: 1200px;
-  color: #ddf5fc;
 }
 .main_content_item {
   width: 180px;
@@ -95,6 +94,7 @@
   border: 3px solid #ddf5fc;
   padding: 30px 20px 0;
   box-sizing: border-box;
+  color: #ddf5fc;
 }
 .main_content_item p {
   font-size: 15px;
