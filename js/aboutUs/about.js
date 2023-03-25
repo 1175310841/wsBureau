@@ -253,14 +253,21 @@ createApp({
       this.maskShow = false;
       this.body.style.overflow = "auto";
     },
-    reload() {
-      let url = location.href
-      url =
-        url.indexOf("#leadership") > 0
-          ? url
-          : url + "#leadership";
-      location.href = url;
-      location.reload(true);
-    },
   },
 }).mount("#app");
+
+const pcLeader = document.getElementById("pcLeader");
+const phoneLeader = document.getElementById("phoneLeader");
+let url = location.href
+// pc点击领导信息刷新页面
+pcUrl = url.indexOf("#leadership") > 0 ? url : url + "#leadership";
+pcLeader.addEventListener("click", () => {
+  location.href = pcUrl;
+  location.reload(true);
+});
+phoneUrl = url.indexOf("#iceberg") > 0 ? url : url + "#iceberg";
+// 手机点击领导信息刷新页面
+phoneLeader.addEventListener("click", () => {
+  location.href = phoneUrl;
+  location.reload(true);
+});

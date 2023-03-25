@@ -149,6 +149,9 @@ form > .form_item:first-child {
 .form_captcha {
   margin-right: 20px;
 }
+.type_radio div {
+  float: left;
+}
 @media (max-width: 1220px) {
   .main > div:first-child,
   .main_img img,
@@ -158,13 +161,16 @@ form > .form_item:first-child {
   form {
     width: 700px;
   }
+  .type_radio div {
+    margin: 5px 0;
+  }
 }
 @media (max-width: 819px) {
   .main > div:first-child,
   .main_img img,
   .main_content,
   form {
-    width: 100%;
+    width: 80%;
   }
   .main_title {
     height: 30px;
@@ -200,5 +206,13 @@ form > .form_item:first-child {
   }
   .promise .form_label {
     width: auto;
+  }
+}
+@media (max-width: 650px) {
+  .main > div:first-child,
+  .main_img img,
+  .main_content,
+  form {
+    width: 100%;
   }
 }

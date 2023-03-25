@@ -77,27 +77,28 @@
 .history_item {
   width: 378px;
   height: 350px;
-  background-color: #fff;
-  border: 1px solid #bbd3df;
+  border: 5px solid transparent;
   transition: all 0.3s ease;
   box-sizing: border-box;
   margin-bottom: 100px;
 }
 .history_item:hover {
-  border-width: 5px;
+  border-color: #bbd3df;
 }
 .history_img {
   width: 100%;
+  height: 264px;
 }
 .history_img img {
   width: 100%;
+  height: 100%;
 }
 .history_title {
   height: 18px;
   line-height: 18px;
   font-size: 18px;
-  margin: 18px auto 22px;
-  padding-left: 20px;
+  padding:18px 10px 22px 20px;
+  background-color: #fff;
 }
 .history_date {
   height: 14px;
@@ -105,6 +106,7 @@
   font-size: 14px;
   color: #999999;
   padding-left: 20px;
+  background-color: #fff;
 }
 .more {
   position: absolute;
@@ -126,11 +128,15 @@
   }
   .history_item {
     width: 230px;
-    height: auto;
+    height: 255px;
     margin-bottom: 70px;
+  }
+  .history_img {
+    height: 160px;
   }
   .history_title {
     height: auto;
+    font-size: 16px;
     padding: 0 10px;
     margin-bottom: 15px;
   }

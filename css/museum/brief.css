@@ -26,6 +26,7 @@
 .imgthree,
 .txt_area {
   float: left;
+  overflow: hidden;
 }
 .imgone {
   width: 408px;
@@ -42,6 +43,7 @@
 .imgthree img {
   width: 100%;
   height: 100%;
+  transition: all 0.3s ease;
 }
 .txt_area {
   background-color: #eeeeee;
@@ -85,6 +87,13 @@
   background-color: #136098;
   color: #ffffff;
   text-align: center;
+  transition: all 0.3s;
+}
+.txt_area a:hover {
+  background-color: #28a6e2;
+}
+.imgone:hover img, .imgtwo:hover img, .imgthree:hover img{
+  transform: scale(1.2);
 }
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .main > div:first-child,

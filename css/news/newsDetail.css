@@ -28,6 +28,9 @@
 .details_essay p {
   text-indent: 2em;
 }
+.MsoNormalTable td {
+  color: #394e69;
+}
 .line {
   width: 100%;
   height: 1px;
@@ -54,7 +57,7 @@
   height: 20px;
   margin-left: 21px;
 }
-.operate_menu p:first-child i {
+.operate_menu p i.back-list {
   width: 18px;
   height: 20px;
   margin-left: 25px;
