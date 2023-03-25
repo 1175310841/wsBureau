@@ -1121,7 +1121,9 @@ span.buble {
     padding: 0 15px;
     box-sizing: border-box;
   }
-
+  .arrows_txt_carousel > div {
+    padding-right: 0;
+  }
   .carousel {
     height: auto;
     position: relative;

@@ -57,31 +57,31 @@
   .main > div:first-child,
   .municipal_window,
   .municipal_window img {
-    width: 800px;
+    width: 800px !important;
   }
 }
 @media (max-width: 819px) {
   .main > div:first-child,
   .municipal_window,
   .municipal_window img {
-    width: 100%;
+    width: 100% !important;
   }
   .main > div:first-child {
     white-space: nowrap;
     box-sizing: border-box;
-    padding: 0 15px;
+    padding: 0 15px !important;
   }
   .main_title {
-    font-size: 18px;
-    line-height: 18px;
-    height: auto;
-    margin-bottom: 15px;
-    font-weight: bold;
+    font-size: 18px !important;
+    line-height: 18px !important;
+    height: auto !important;
+    margin-bottom: 15px !important;
+    font-weight: bold !important;
   }
   .municipal_window .municipal_txt {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
   .main_nav {
-    float: none;
+    float: none !important;
   }
 }

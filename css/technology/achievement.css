@@ -7,7 +7,7 @@
   flex-wrap: wrap;
 }
 .main_item {
-  width: 400px;
+  width: 390px;
   margin-bottom: 60px;
   border: 1px solid #bcd4df;
   background-color: #e7f8fd;
@@ -16,7 +16,11 @@
   padding: 150px 55px 48px;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  margin-right: 15px;
 }
+.main_item:nth-child(3n) {
+  margin-right: 0;
+} 
 .main_item:hover {
   top: -20px;
 }
@@ -61,6 +65,12 @@
   .main_item {
     padding-top: 100px;
   }
+  .main_item,.main_item:nth-child(3n) {
+    margin-right: 20px;
+  }
+  .main_item:nth-child(2n) {
+    margin-right: 0;
+  }
   .main_item_content {
     font-size: 16px;
     line-height: 20px;
@@ -74,6 +84,10 @@
   .main_item {
     padding-top: 70px;
     margin-bottom: 30px;
+    margin-right: 0;
+  }
+  .main_item:nth-child(3n) {
+    margin-right: 0;
   }
   .main_item_content {
     font-size: 16px;

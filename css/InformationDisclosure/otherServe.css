@@ -7,7 +7,7 @@
   width: 1300px;
 }
 .other_main {
-  width: 100%;
+  width: 100% !important;
   display: flex;
   margin-bottom: 100px;
 }
@@ -30,7 +30,7 @@
   margin-right: 45px;
 }
 .other_main_blue {
-  width: 100%;
+  width: 100% !important;
   height: 192px;
   color: #ffffff;
   background-color: #28a6e2;
@@ -154,108 +154,108 @@
 @media (max-width: 1350px) {
   .main > div:first-child,
   .water_quality {
-    width: 800px;
+    width: 800px !important;
   }
   .other_main_title,
   .other_main_content {
-    margin: 0 24px 15px;
+    margin: 0 24px 15px !important;
   }
   .other_main_blue {
-    height: auto;
-    position: relative;
-    padding: 20px 24px;
+    height: auto !important;
+    position: relative !important;
+    padding: 20px 24px !important;
   }
   .other_main > img {
-    width: 300px;
+    width: 300px !important;
   }
   .other_two .other_main_blue {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .service_info {
-    width: 800px;
+    width: 800px !important;
   }
   .service_info_item {
-    width: 100%;
-    margin-right: 0;
+    width: 100% !important;
+    margin-right: 0 !important;
   }
 }
 @media (max-width: 819px) {
   .main > div:first-child,
   .water_quality {
-    width: 100%;
+    width: 100% !important;
   }
   .other_main_title {
-    margin: 0;
-    margin-bottom: 15px;
+    margin: 0 !important;
+    margin-bottom: 15px !important;
   }
   .other_main_content,
   .water_quality .other_main_content.ml-0 {
-    margin: 0 10px 15px;
+    margin: 0 10px 15px !important;
   }
   .other_main_title {
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: 20px !important;
+    line-height: 20px !important;
+    height: 20px !important;
   }
   .other_main_blue {
-    padding: 10px;
+    padding: 10px !important;
   }
   .other_main > img {
-    width: 100%;
+    width: 100% !important;
   }
   .other_main {
-    margin-bottom: 30px;
-    flex-direction: column;
+    margin-bottom: 30px !important;
+    flex-direction: column !important;
   }
   .other_two {
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
   }
   .other_two .other_main_title {
-    text-align: start;
+    text-align: start !important;
   }
   .other_two .other_main_blue {
-    font-size: 18px;
-    line-height: 40px;
+    font-size: 18px !important;
+    line-height: 40px !important;
   }
   .other_two .other_main_blue span {
-    width: 0;
+    width: 0 !important;
   }
   .water_quality .other_main_title.ml-0 {
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
   .contact {
-    padding-left: 40px;
+    padding-left: 40px !important;
   }
   .contact p {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
   .contact i {
-    height: 18px;
-    line-height: 18px;
-    font-size: 18px;
+    height: 18px !important;
+    line-height: 18px !important;
+    font-size: 18px !important;
   }
   .service_info {
-    width: 100%;
+    width: 100% !important;
   }
   .service_info_item {
-    padding: 25px 0 20px 0;
+    padding: 25px 0 20px 0 !important;
   }
   .service_info_item:first-child {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
   .service_info_date p {
-    height: 20px;
-    line-height: 25px;
-    font-size: 30px;
-    margin-bottom: 15px;
+    height: 20px !important;
+    line-height: 25px !important;
+    font-size: 30px !important;
+    margin-bottom: 15px !important;
   }
   .service_info_title {
-    height: 20px;
-    line-height: 20px;
-    font-size: 20px;
-    margin-bottom: 15px;
+    height: 20px !important;
+    line-height: 20px !important;
+    font-size: 20px !important;
+    margin-bottom: 15px !important;
   }
   .service_info_content {
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 3 !important;
   }
 }
