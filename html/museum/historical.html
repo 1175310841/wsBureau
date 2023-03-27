@@ -386,7 +386,7 @@
           </div>
         </div>
         <div class="main_list">
-          <div class="main_item" v-for="(item,index) in list" ::key="index">
+          <a class="main_item" v-for="(item,index) in list" ::key="index">
             <div class="main_item_date fontstyle_date_en">
               <p>09-17</p>
               <div>2019</div>
@@ -399,11 +399,11 @@
                 在青岛的历史档案和资料中，有两张照片和一所旧址成为研究青岛自来水厂建党初期水厂红色工运和党建的珍贵资料。第一张照片是民国十四年六月二十五日，胶澳商埠水道局工人俱乐部成立时的黑白历史照……
               </div>
             </div>
-            <a class="more flex_column_center">
+            <div class="more flex_column_center">
               <span class="fontstyle_date_en">MORE</span>
               <img src="../../imgs/museum/jt.png" alt="" />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <el-pagination v-model:current-page="currentPage" v-model:page-size="pageSize" :pager-count="pageconut"
           :page-sizes="[10, 20, 30, 50]" layout="total, sizes, prev, pager, next, jumper" :total="200" :small='small'
