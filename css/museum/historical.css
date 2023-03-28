@@ -70,9 +70,6 @@
 }
 .history_area {
   width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .history_item {
   width: 378px;
@@ -121,6 +118,13 @@
   color: #555555;
   margin-bottom: 9px;
 }
+@media (min-width: 1200px) {
+  .history_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .main > div:first-child,
   .main_content,
@@ -156,10 +160,14 @@
 }
 @media (max-width: 819px) {
   .main > div:first-child,
-  .main_content {
+  .main_content, 
+  .history_area,
+  .history_item {
     width: 100%;
   }
-  .history_area,
+  .history_item {
+    margin-bottom: 30px;
+  }
   .more {
     display: none;
   }
