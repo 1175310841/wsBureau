@@ -11,8 +11,11 @@
   position: relative;
   display: flex;
 }
+.main-wrapper {
+  position: relative;
+}
 .main_carousel img {
-  width: 1200px;
+  height: 360px;
 }
 .main_carousel img.imgAct {
   animation: imgEffect 5s forwards 0.8s;
@@ -92,10 +95,12 @@
 }
 @media (max-width: 1220px) {
   .main_top,
-  .main_carousel img,
   .new_hot,
   .list {
     width: 800px;
+  }
+  .main_carousel img {
+    height: 240px;
   }
   .new_hot {
     height: auto;
@@ -124,12 +129,14 @@
     white-space: nowrap;
   }
 }
-@media (max-width: 819px) {
+@media (max-width: 650px) {
   .main_top,
-  .main_carousel img,
   .new_hot,
   .list {
     width: 100%;
+  }
+  .main_carousel img {
+    height: 120px;
   }
   .main_mask {
     width: 100%;

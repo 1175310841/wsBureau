@@ -355,16 +355,18 @@
     </div>
 
     <div class="main flex_column_center">
-      <div class="main_top">
+      <div class="main_top" ref="mainTop">
         <div class="main_carousel" :style="{left:`-${leftVal}px`,transition:`0.8s`}">
-          <img :class="[imgIndex==index?'imgAct':'']" :src="item.url" v-for="(item,index) in imgList" :key="index" />
-        </div>
-        <div class="main_mask">
-          <div class="main_mask_title">
-            海润自来水南部分公司开展健步行活动
-          </div>
-          <div class="main_mask_content">
-            初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
+          <div class="main-wrapper" v-for="(item,index) in imgList" ::key="index">
+            <img :style="{width: `${imgWidth}px`}" :class="[imgIndex==index?'imgAct':'']" :src="item.url"/>
+            <div class="main_mask">
+              <div class="main_mask_title">
+                海润自来水南部分公司开展健步行活动
+              </div>
+              <div class="main_mask_content">
+                初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
+              </div>
+            </div>
           </div>
         </div>
         <ul class="small_dot">
@@ -563,8 +565,16 @@
           this.prevtext = '上一页'
           this.nexttext = '下一页'
         }
+        window.onresize = () => {  //监听屏幕的改变
+          setTimeout(() => {
+            this.refresh();
+          }, 10)
+        };
       },
       methods: {
+        refresh() {
+          this.imgWidth = document.querySelector(".main_top").clientWidth;
+        },
         handleSizeChange(val) {
           console.log(`每页 ${val} 条`);
         },
