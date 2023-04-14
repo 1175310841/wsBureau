@@ -231,9 +231,9 @@
 .phoneNav > li {
   height: 19px;
   line-height: 19px;
-  font-size: 18px;
+  font-size: 20px;
   color: #186daa;
-  padding: 10px 20px 11px;
+  padding: 10px 18px 11px;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -930,7 +930,7 @@ span.buble {
   .serve_head {
     width: 80%;
   }
-
+  
   .serve_body {
     width: 800px;
   }
