@@ -412,6 +412,8 @@
   height: 738px;
   box-sizing: border-box;
   background-color: #c6e3f5;
+  background: url('../imgs/index/carouselBg1.png') no-repeat;
+  background-size: 100% 100%;
   padding-top: 81px;
   overflow: hidden;
   display: flex;

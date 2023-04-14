@@ -144,3 +144,15 @@ if (os.isPc) {
     }
   });
 }
+
+$(function () {
+  try {
+    $(".news").ripples({
+      resolution: 512,
+      dropRadius: 12, //px
+      perturbance: 0.04,
+    });
+  } catch (e) {
+    console.log(e);
+  }
+})
