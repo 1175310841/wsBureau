@@ -29,9 +29,14 @@
           @mouseleave="MouseFun('移出')">
           <!-- 图片 -->
           <div class="imgBox" :style="{left:`-${leftVal}px`,transition:`${ition}s`}">
-            <img :style="{width: `${imgWidth}px`}" :src="item.imgUrl" v-for="(item,index) in imgList" :key="index" />
+            <!-- <img :style="{width: `${imgWidth}px`}" :src="item.imgUrl" v-for="(item,index) in imgList" :key="index" /> -->
             <!-- 复制第一张放到最后,以实现无缝无线循环滚动效果 -->
-            <img :style="{width: `${imgWidth}px`}" :src="imgList[0].imgUrl" alt="" />
+            <!-- <img :style="{width: `${imgWidth}px`}" :src="imgList[0].imgUrl" alt="" /> -->
+            <div class="ripples"
+              v-for="(item,index) in imgList" :key="index"
+              style="height: 100%; background-repeat: no-repeat;"
+              :style="{width: imgWidth+'px', backgroundImage: 'url('+item.imgUrl+')'}"
+            ></div>
           </div>
           <!-- 左箭头按钮 -->
           <!-- <div class="leftBtn" @click="throttle(PrevFun)">&larr;</div> -->

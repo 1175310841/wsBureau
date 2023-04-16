@@ -147,7 +147,7 @@ if (os.isPc) {
 
 $(function () {
   try {
-    $(".news").ripples({
+    $(".ripples").ripples({
       resolution: 512,
       dropRadius: 12, //px
       perturbance: 0.04,
