@@ -160,7 +160,7 @@
   display: none;
   width: 254px;
   height: 47px;
-  margin-right: 100px;
+  /* margin-right: 100px; */
 }
 .placeholder {
   flex: 1;
@@ -884,7 +884,7 @@ span.buble {
     width: 85%;
   }
   .index_navigation.sticky img:first-child {
-    margin-right: 50px;
+    /* margin-right: 50px; */
   }
 }
 @media (max-width: 1495px) {
@@ -892,7 +892,7 @@ span.buble {
     width: 90%;
   }
   .index_navigation.sticky img:first-child {
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
   .search_box {
     margin-left: 0;
