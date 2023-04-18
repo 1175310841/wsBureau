@@ -791,15 +791,17 @@
           leftArrowVal: 0,
           height: 0,
           TabIndex: 0,
+          timer: null,
         };
       },
       mounted() {
         this.timing();
         this.imgWidth = document.body.clientWidth
         window.onresize = () => {  //监听屏幕的改变
-          setTimeout(() => {
+          clearTimeout(this.timer)
+          this.timer = setTimeout(() => {
             this.refresh();
-          }, 10)
+          }, 500)
         };
         this.arrowsTxtWidth = this.$refs.arrowsTxt.offsetWidth
       },
@@ -808,6 +810,7 @@
           let width = document.body.clientWidth;
           this.imgWidth = width
           this.arrowsTxtWidth = this.$refs.arrowsTxt.offsetWidth
+          this.leftVal = 0
         },
         MouseFun(type) {
           type == "移入" ? clearTimeout(this.start) : this.timing();
