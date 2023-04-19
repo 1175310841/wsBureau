@@ -26,7 +26,6 @@
   left: 0px;
   display: flex;
   justify-content: flex-start;
-  height: 100%;
 }
 
 /* 图片默认样式 */
@@ -161,7 +160,7 @@
   display: none;
   width: 254px;
   height: 47px;
-  /* margin-right: 50px; */
+  /* margin-right: 100px; */
 }
 .placeholder {
   flex: 1;
@@ -413,8 +412,6 @@
   height: 738px;
   box-sizing: border-box;
   background-color: #c6e3f5;
-  /* background: url('../imgs/index/carouselBg1.png') no-repeat; */
-  /* background-size: 100% 100%; */
   padding-top: 81px;
   overflow: hidden;
   display: flex;
@@ -744,6 +741,7 @@ span.buble {
 }
 
 .serve_body {
+  height: 422px;
   margin-top: 53px;
   display: flex;
 }
@@ -834,6 +832,7 @@ span.buble {
   cursor: pointer;
   width: 304px;
   height: 440px;
+  transition: all 0.3s ease;
   box-shadow: none;
   background-color: #186daa;
 }
@@ -1506,33 +1505,5 @@ span.buble {
     60% {
       -webkit-transform: translateY(-10px);
     }
-  }
-}
-@media (min-width: 1220px) {
-  body {
-    height: 100vh !important;
-    overflow: hidden;
-  }
-  #app {
-    position: relative;
-    top: 0px;
-  }
-  .carousel,.news,.serve {
-    height: 100vh;
-  }
-  .carousel_btn {
-    top: 43%;
-  }
-  .video_area {
-    top: 50%;
-  }
-  .news,.serve {
-    padding-top: 0;
-  }
-  .news {
-    align-items: center;
-  }
-  .serve {
-    justify-content: center;
   }
 }
