@@ -357,20 +357,16 @@
     <div class="main flex_column_center">
       <div class="main_top" ref="mainTop">
         <div class="main_carousel" :style="{left:`-${leftVal}px`,transition:`0.8s`}">
-          <div class="main-wrapper" v-for="(item,index) in imgList" ::key="index">
+          <div class="main-wrapper" v-for="(item,index) in imgList" :key="index">
             <img :style="{width: `${imgWidth}px`}" :class="[imgIndex==index?'imgAct':'']" :src="item.url"/>
             <div class="main_mask">
-              <div class="main_mask_title">
-                海润自来水南部分公司开展健步行活动
-              </div>
-              <div class="main_mask_content">
-                初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动
-              </div>
+              <div class="main_mask_title">{{item.title}}</div>
+              <div class="main_mask_content">{{item.content}}</div>
             </div>
           </div>
         </div>
         <ul class="small_dot">
-          <li :class="[ imgIndex==index?'small_dot_active' :'']" @click="onClick(index)" v-for="(item,index) in 3"
+          <li :class="[ imgIndex==index?'small_dot_active' :'']" @click="onClick(index)" v-for="(item,index) in imgList.length"
             :key="index"></li>
         </ul>
       </div>
@@ -538,9 +534,10 @@
           currentPage: 1,
           pageSize: 10,
           imgList: [
-            { url: "../../imgs/partybuilding/breezebg.png" },
-            { url: "../../imgs/partybuilding/breezebg.png" },
-            { url: "../../imgs/partybuilding/breezebg.png" },
+            { url: "../../imgs/partybuilding/breezebg.png", title: '海润自来水南部分公司开展健步行活动', content: '初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动' },
+            { url: "../../imgs/partybuilding/breezebg.png", title: '海润自来水南部分公司开展步行活动', content: '初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动' },
+            { url: "../../imgs/partybuilding/breezebg.png", title: '海润自来水南部分公司开展健步活动', content: '初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动' },
+            { url: "../../imgs/partybuilding/breezebg.png", title: '海润自来水南部分公司开展健步活动', content: '初秋时节，金风送爽。为庆祝祖国73周岁华诞，喜迎二十大胜利召开，丰富职工文化生活，提高职工身体素质，9月29日，海润自来水南部分公司工会组织开展“庆国庆喜迎二十大”健步走活动' },
           ],
           imgWidth: 0,
           imgIndex: 0,
