@@ -103,9 +103,9 @@
   width: 100%;
   box-sizing: border-box;
   position: relative;
-  /* background: url("../../imgs/aboutUs/iceberg.png") no-repeat; */
-  /* background-size: auto; */
-  background: linear-gradient(0deg, #ddf5fc, #b1d8f2);
+  background: url("../../imgs/aboutUs/iceberg1.png") no-repeat;
+  background-size: 100% 100%;
+  /* background: linear-gradient(0deg, #ddf5fc, #b1d8f2); */
   padding-top: 98px;
   padding-bottom: 196px;
 }
