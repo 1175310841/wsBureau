@@ -1527,7 +1527,7 @@ span.buble {
     top: 50%;
   }
   .news,.serve {
-    padding-top: 0;
+    /* padding-top: 0; */
   }
   .news {
     align-items: center;
