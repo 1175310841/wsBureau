@@ -20,17 +20,27 @@
   overflow: hidden;
 }
 
-.imgBox {
-  position: absolute;
+.carousel_inner {
+  position: relative;
   top: 0px;
   left: 0px;
+  transition: left 0.8s ease;
   display: flex;
   justify-content: flex-start;
   height: 100%;
 }
 
+.carousel_item {
+  height: 100%;
+}
+
+.carousel_img {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 /* 图片默认样式 */
-.imgBox img {
+.carousel_inner img {
   flex-shrink: 0;
   height: 100%;
 }
@@ -880,20 +890,14 @@ span.buble {
     -webkit-transform: translateY(-15px);
   }
 }
-@media (max-width: 1650px) {
+/* @media (max-width: 1650px) {
   .index_navigation.sticky .nav_parent {
     width: 85%;
-  }
-  .index_navigation.sticky img:first-child {
-    /* margin-right: 50px; */
   }
 }
 @media (max-width: 1495px) {
   .index_navigation.sticky .nav_parent {
     width: 90%;
-  }
-  .index_navigation.sticky img:first-child {
-    /* margin-right: 20px; */
   }
   .search_box {
     margin-left: 0;
@@ -906,7 +910,7 @@ span.buble {
   .nav > li {
     padding: 10px 12px 11px;
   }
-}
+} */
 @media (max-width: 1220px) {
   html {
     font-size: 16px;
@@ -1510,7 +1514,7 @@ span.buble {
 }
 @media (min-width: 1220px) {
   body {
-    height: 100vh !important;
+    height: calc(100vh / var(--zoom)) !important;
     overflow: hidden;
   }
   #app {
@@ -1518,7 +1522,7 @@ span.buble {
     top: 0px;
   }
   .carousel,.news,.serve {
-    height: 100vh;
+    height: calc(100vh / var(--zoom));
   }
   .carousel_btn {
     top: 43%;

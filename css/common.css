@@ -471,6 +471,8 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 100;
 }
 
 .logo_bottom {
@@ -508,7 +510,7 @@ nav {
   width: 224px;
   border-radius: 10px;
   padding: 10px 0;
-  max-height: 100px;
+  /* max-height: 100px; */
   overflow: auto;
   z-index: 100;
 }

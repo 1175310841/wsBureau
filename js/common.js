@@ -1,3 +1,4 @@
+var appIndex = 0
 // 手机右上角图标点击事件
 const menuEl = document.querySelector(".menu");
 const phoneNavEl = document.getElementById("phoneNav");
@@ -15,6 +16,8 @@ menuEl.addEventListener("click", () => {
 window.onbeforeunload = function () {
   document.documentElement.scrollTop = 0; //ie下
   document.body.scrollTop = 0; //非ie
+  appIndex = 0
+  document.querySelector("#app").style.top = 0
 };
 
 // 移动导航手风琴效果

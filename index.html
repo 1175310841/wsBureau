@@ -25,30 +25,15 @@
       </div>
       <!-- 轮播图 -->
       <div class="carousel_bg">
-        <div class="SwiperBox" :style="{width: `${imgWidth}px`}" @mouseenter="MouseFun('移入')"
-          @mouseleave="MouseFun('移出')">
+        <div class="SwiperBox" id="SwiperBox">
           <!-- 图片 -->
-          <div class="imgBox" :style="{left:`-${leftVal}px`,transition:`${ition}s`}">
-            <!-- <img :style="{width: `${imgWidth}px`}" :src="item.imgUrl" v-for="(item,index) in imgList" :key="index" /> -->
-            <!-- 复制第一张放到最后,以实现无缝无线循环滚动效果 -->
-            <!-- <img :style="{width: `${imgWidth}px`}" :src="imgList[0].imgUrl" alt="" /> -->
-            <div class="ripples"
-              v-for="(item,index) in imgList" :key="index"
-              style="height: 100%; background-repeat: no-repeat;"
-              :style="{width: imgWidth+'px', backgroundImage: 'url('+item.imgUrl+')'}"
-            ></div>
-            <div class="ripples"
-              style="height: 100%; background-repeat: no-repeat;"
-              :style="{width: imgWidth+'px', backgroundImage: 'url('+imgList[0].imgUrl+')'}"
-            ></div>
+          <div class="carousel_inner">
+            <div class="carousel_item" v-for="(item,index) in imgList" :key="index">
+              <div class="carousel_img" :style="{backgroundImage: 'url('+item.imgUrl+')'}"></div>
+            </div>
           </div>
-          <!-- 左箭头按钮 -->
-          <!-- <div class="leftBtn" @click="throttle(PrevFun)">&larr;</div> -->
-          <!-- 右箭头按钮 -->
-          <!-- <div class="rightBtn" @click="throttle(NextFun)">&rarr;</div> -->
           <div class="carousel_btn">
-            <div @click="instFun(index)" v-for="(item,index) in imgList.length" :key="index"
-              :class="['carousel_btn_item',index==imgShow?'instActv':'']"></div>
+            <div v-for="(item,index) in imgList.length" :key="index" class="carousel_btn_item"></div>
           </div>
         </div>
       </div>
@@ -794,12 +779,6 @@
             { imgUrl: "./imgs/index/carouselBg4.png" },
             { imgUrl: "./imgs/index/carouselBg5.png" },
           ],
-          leftVal: 0, // 轮播图盒子的偏移值
-          flag: true, // 用来节流防止重复点击
-          start: null, // 自动执行下一张定的时器
-          imgWidth: 0, // 在这里填写你需要的图片宽度
-          ition: 0.8, // 设置轮播图过度时间
-          imgShow: 0, // 表示当前显示的图片索引
           serveList: [
             { path: './html/onlineServiceHall/waterPrice.html', url: './imgs/index/counter.png', txt: '供水价格' },
             { path: './html/onlineServiceHall/waterWindow.html', url: './imgs/index/serce.png', txt: '服务窗口查询' },
@@ -818,85 +797,9 @@
         };
       },
       mounted() {
-        this.timing();
-        this.imgWidth = document.body.clientWidth
-        window.onresize = () => {  //监听屏幕的改变
-          clearTimeout(this.timer)
-          this.timer = setTimeout(() => {
-            this.refresh();
-          }, 500)
-        };
         this.arrowsTxtWidth = this.$refs.arrowsTxt.offsetWidth
       },
       methods: {
-        refresh() {
-          let width = document.body.clientWidth;
-          this.imgWidth = width
-          this.arrowsTxtWidth = this.$refs.arrowsTxt.offsetWidth
-          this.leftVal = 0
-        },
-        MouseFun(type) {
-          type == "移入" ? clearTimeout(this.start) : this.timing();
-        },
-        timing() {
-          this.start = setInterval(() => {
-            this.NextFun();
-          }, 10000);
-        },
-        // 这里通过额外封装的节流函数触发 PrevFun() 和 NextFun(),以达到防止重复点击的效果
-        throttle(fun) {
-          if (this.flag) {
-            this.flag = false;
-            fun(); // 此为模板中传递进来的PrevFun()或NextFun()函数
-            setTimeout(() => {
-              this.flag = true;
-            }, 1200); // 节流间隔时间
-          }
-        },
-        // 上一张
-        PrevFun() {
-          if (this.leftVal == 0) {
-            // 判断显示的图片 是 第一张时执行
-            // this.imgList.length是指循环图片数组的图片个数
-            this.ition = 0; // 将过渡时间变成0，瞬间位移到最后一张图
-            this.imgShow = this.imgList.length - 1; // 将高亮小点改为最后一张图
-            this.leftVal = this.imgList.length * this.imgWidth; // 瞬间移动
-            setTimeout(() => {
-              // 通过延时障眼法,归原过渡时间,执行真正的“上一张”函数
-              this.ition = 0.8;
-              this.leftVal -= this.imgWidth;
-            }, this.ition * 1000);
-          } else {
-            // 判断显示的图片 不是 第一张时执行
-            this.ition = 0.8;
-            this.leftVal -= this.imgWidth;
-            this.imgShow--;
-          }
-        },
-        // 下一张
-        NextFun() {
-          if (this.leftVal == (this.imgList.length - 1) * this.imgWidth) {
-            // 判断显示的图片 是 最后一张时执行
-            this.ition = 0.8;
-            this.leftVal += this.imgWidth;
-            this.imgShow = 0;
-            setTimeout(() => {
-              this.ition = 0;
-              this.leftVal = 0;
-            }, this.ition * 1000);
-          } else {
-            // 判断显示的图片 不是 最后一张时执行
-            this.ition = 0.8;
-            this.leftVal += this.imgWidth;
-            this.imgShow++;
-          }
-        },
-        // 点击小圆点
-        instFun(index) {
-          this.ition = 0.8;
-          this.leftVal = index * this.imgWidth;
-          this.imgShow = index;
-        },
         arrowsLeftImg() {
           if (this.leftArrowVal == 0) return
           this.leftArrowVal = this.leftArrowVal - this.arrowsTxtWidth
