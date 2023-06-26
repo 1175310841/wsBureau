@@ -79,7 +79,10 @@ if (os.isPc) {
   let footHeight = null;
   let flag = true;
 
-  let zoom = window.innerWidth / 1920;
+  let zoom = 1
+  if (document.body.clientWidth > 1220) {
+    zoom = window.innerWidth / 1920;
+  }
   document.body.style.setProperty("--zoom", zoom);
   document.body.style.zoom = zoom;
 
