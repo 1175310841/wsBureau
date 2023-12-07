@@ -98,13 +98,20 @@ form > .form_item:first-child {
   display: flex;
   align-items: center;
 }
+.choose_one_of_three+.form_item {
+  border-top: 1px solid #dddddd;
+}
 .choose_one_of_three_left {
   width: 760px;
   box-sizing: border-box;
   padding-right: 20px;
 }
+.choose_one_of_three_left .form_item:last-child {
+  border: 0;
+}
 .choose_one_of_three_right {
   width: 240px;
+  height: 220px;
   box-sizing: border-box;
   padding-left: 30px;
   display: flex;
