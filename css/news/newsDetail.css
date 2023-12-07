@@ -1,3 +1,6 @@
+td {
+  color: #394e69;
+}
 .main_content {
   width: 1200px;
   color: #394e69;
@@ -24,6 +27,8 @@
 }
 .details_essay {
   line-height: 30px;
+  width: 100%;
+  overflow: auto;
 }
 .details_essay p {
   text-indent: 2em;

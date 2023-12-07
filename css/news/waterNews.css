@@ -40,3 +40,8 @@
     width: 70px;
   }
 }
+@media (max-width: 650px) {
+  .list a:hover {
+    padding-left: 25px;
+  }
+}

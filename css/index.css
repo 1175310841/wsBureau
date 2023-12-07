@@ -569,6 +569,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 .imgnews_list {
@@ -841,6 +842,7 @@ span.buble {
 }
 
 .serve_body_right {
+  position: relative;
   cursor: pointer;
   width: 304px;
   height: 440px;
@@ -1135,7 +1137,9 @@ span.buble {
     padding: 0 15px 30px;
     box-sizing: border-box;
   }
-
+  .carousel_img {
+    background-size: 100%;
+  }
   .carousel .carousel_bg {
     position: absolute;
   }
@@ -1512,6 +1516,7 @@ span.buble {
     }
   }
 }
+
 @media (min-width: 1220px) {
   body {
     height: calc(100vh / var(--zoom)) !important;
