@@ -74,6 +74,25 @@ td {
 .operate_menu span {
   color: #186daa;
 }
+.annex_list {
+  width: 100%;
+}
+.annex_cont {
+  margin-top: 10px;
+  line-height: 24px;
+}
+.annex_cont li {
+  display: flex;
+  align-items: center;
+}
+.annex_cont img {
+  width: 17px;
+  height: 15px;
+  margin-right: 6px;
+}
+.annex_cont a {
+  text-decoration: underline;
+}
 @media (max-width: 1220px) {
   .main_content {
     width: 800px;
