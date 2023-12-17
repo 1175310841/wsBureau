@@ -1138,7 +1138,7 @@ span.buble {
     box-sizing: border-box;
   }
   .carousel_img {
-    background-size: 100%;
+    background-size: contain;
   }
   .carousel .carousel_bg {
     position: absolute;
