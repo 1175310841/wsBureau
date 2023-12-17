@@ -746,6 +746,9 @@ footer {
   .info_middle_div {
     margin-bottom: 10px;
   }
+  .info_middle_div > .website {
+    max-height: 140px;
+  }
 
   .info_middle > p {
     flex-direction: column;

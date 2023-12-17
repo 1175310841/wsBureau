@@ -14,10 +14,26 @@
   margin-bottom: 10px;
 }
 th {
-  color: #3ba3d9;
+  background-color: #196DAB;
+  color: #D2EBF2;
 }
 td {
   color: #394e69;
+}
+tr td:first-child {
+  background-color: #D2EBF2;
+  border-bottom: 1px solid #A8D5E6;
+}
+tr td:nth-child(2) {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D5F3FA;
+}
+tr td:last-child {
+  background-color: #F0FBFD;
+  border-bottom: 1px solid #D1F2FB;
+}
+table tr:last-child td {
+  border-bottom: 2px solid #186DAA;
 }
 @media (max-width: 1220px) {
   .main_content {
