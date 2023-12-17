@@ -172,9 +172,9 @@ $(function () {
   carouselItems[0].classList.add("carousel_active");
   carouselBtnItems[0].classList.add("instActv");
 
-  if (os.isPc) {
+  // if (os.isPc) {
     ripplesFtn($(".carousel_active .carousel_img"));
-  }
+  // }
 
   // 水涟漪
   function ripplesFtn(el) {
