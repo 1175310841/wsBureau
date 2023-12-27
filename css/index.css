@@ -847,7 +847,9 @@ span.buble {
   width: 304px;
   height: 440px;
   box-shadow: none;
-  background-color: #186daa;
+  /* background-color: #186daa; */
+  background: url("../imgs/index/hotline-1.jpg") no-repeat;
+  background-size: 100% 100%;
 }
 
 /* .serve_body_right img {
@@ -860,7 +862,7 @@ span.buble {
   transform: scale(1.2);
   box-shadow: 0px 0px 24px #186daa;
 } */
-.serve_body_right:hover img:nth-child(2) {
+.serve_body_right:hover img:nth-child(1) {
   animation: beating 2s forwards;
 }
 .serve_body_right img:nth-child(1) {
@@ -1496,7 +1498,7 @@ span.buble {
   .serve_body_right img:nth-child(3) {
     width: 130px;
   }
-  .serve_body_right:hover img:nth-child(2) {
+  .serve_body_right:hover img:nth-child(1) {
     animation: beatings 2s forwards;
   }
   @keyframes beatings {
