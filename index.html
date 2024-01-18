@@ -421,31 +421,76 @@
         <div class="news_head">
           <span class="small_title">新闻资讯</span>
           <ul class="news_nav">
-            <li :class="[TabIndex==0 ?'news_nav_active' :'']" @click="handoffNav(0)"><a>图片新闻</a></li>
+            <!-- <li :class="[TabIndex==0 ?'news_nav_active' :'']" @click="handoffNav(0)"><a>图片新闻</a></li>
             <li :class="[TabIndex==1 ?'news_nav_active' :'']" @click="handoffNav(1)"><a>水务新闻</a></li>
-            <li :class="[TabIndex==2 ?'news_nav_active' :'']" @click="handoffNav(2)"><a>党建园地</a></li>
+            <li :class="[TabIndex==2 ?'news_nav_active' :'']" @click="handoffNav(2)"><a>党建园地</a></li> -->
             <li><a href="./html/news/waterNews.html">更多</a></li>
           </ul>
         </div>
         <!-- 图片新闻 -->
         <div class="news_body" v-if="TabIndex==0">
           <div class="imgnews_left">
-            <div class="img">
-              <img src="./imgs/index/new_img.png" alt="">
-            </div>
-            <div class="news_arrows">
-              <div class="news_arrows_date fontstyle_date_en">
-                <span>06</span>
-                <span>2022-09</span>
+            <div class="imgnews_area">
+              <div class="imgnews_box">
+                <div class="img">
+                  <img src="./imgs/index/new_img.png" alt="">
+                </div>
+                <div class="news_arrows">
+                  <div class="news_arrows_date fontstyle_date_en">
+                    <span>06</span>
+                    <span>2022-09</span>
+                  </div>
+                  <div style="flex: 1;">
+                    <div class="news_arrows_title">青岛水务集团举办“智水观澜”论坛</div>
+                    <div class="news_arrows_draw"></div>
+                    <div class="news_arrows_txt">
+                      加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div style="flex: 1;">
-                <div class="news_arrows_title">青岛水务集团举办“智水观澜”论坛</div>
-                <div class="news_arrows_draw"></div>
-                <div class="news_arrows_txt">
-                  加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
+              <div class="imgnews_box">
+                <div class="img">
+                  <img src="./imgs/index/new_img.png" alt="">
+                </div>
+                <div class="news_arrows">
+                  <div class="news_arrows_date fontstyle_date_en">
+                    <span>06</span>
+                    <span>2022-09</span>
+                  </div>
+                  <div style="flex: 1;">
+                    <div class="news_arrows_title">青岛水务集团举办“智水观澜”论坛</div>
+                    <div class="news_arrows_draw"></div>
+                    <div class="news_arrows_txt">
+                      加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="imgnews_box">
+                <div class="img">
+                  <img src="./imgs/index/new_img.png" alt="">
+                </div>
+                <div class="news_arrows">
+                  <div class="news_arrows_date fontstyle_date_en">
+                    <span>06</span>
+                    <span>2022-09</span>
+                  </div>
+                  <div style="flex: 1;">
+                    <div class="news_arrows_title">青岛水务集团举办“智水观澜”论坛</div>
+                    <div class="news_arrows_draw"></div>
+                    <div class="news_arrows_txt">
+                      加快推进集团公司数字化、智能化转型升级，赋能企业高质量发展，9月5日，青岛水务集团举办“智水观澜”论坛，邀国内知名专家作专题报告，集团主要领导出席论坛，
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <ul class="imgnews_btn_box">
+              <li class="imgnews_btn"></li>
+              <li class="imgnews_btn"></li>
+              <li class="imgnews_btn"></li>
+            </ul>
           </div>
           <div class="imgnews_list">
             <!-- <a class="news_item_active">

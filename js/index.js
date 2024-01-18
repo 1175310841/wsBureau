@@ -249,4 +249,41 @@ $(function () {
     clearInterval(timer);
     timerFtn();
   }
+
+  // 新闻资讯轮播
+  let imgNewsWidth = $(".imgnews_left").width()
+  $('.imgnews_area').css('width', imgNewsWidth * $('.imgnews_area').children().length + 'px');
+  $('.imgnews_area').children().each(function () {
+    $(this).css('width', imgNewsWidth + 'px');
+  });
+  $(".imgnews_btn_box .imgnews_btn").eq(0).addClass("imgnews_btn_active");
+
+  // 定时器向左移动
+  let imgnewsBtnIndex = 0
+  let imgnewsBtnTimer;
+  function imgnewsBtnTimerFtn() {
+    imgnewsBtnTimer = setInterval(() => {
+      imgnewsBtnIndex++;
+      if (imgnewsBtnIndex > $('.imgnews_area').children().length - 1) {
+        imgnewsBtnIndex = 0;
+      }
+      initImgNewsBtn()
+    }, 3000);
+  }
+  imgnewsBtnTimerFtn();
+
+  // 点击小点触发
+  $('.imgnews_btn_box .imgnews_btn').click(function () {
+    imgnewsBtnIndex= $(this).index(); // 获取当前li元素在其同胞中的索引值
+    clearInterval(imgnewsBtnTimer);
+    initImgNewsBtn()
+    imgnewsBtnTimerFtn()
+  });
+  function initImgNewsBtn() {
+    $('.imgnews_area').css('left', -imgNewsWidth * imgnewsBtnIndex + 'px')
+    $('.imgnews_btn_box').children().each(function () {
+      $(this).removeClass("imgnews_btn_active");
+    });
+    $(".imgnews_btn_box .imgnews_btn").eq(imgnewsBtnIndex).addClass("imgnews_btn_active");
+  }
 });
