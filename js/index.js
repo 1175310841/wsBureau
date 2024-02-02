@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
 
 // 滚动动画效果
 const staggeringOption = {
-  delay: 300,
+  delay: 100,
   distance: "50px",
   duration: 500,
   easing: "ease-in-out",
