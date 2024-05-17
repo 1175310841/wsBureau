@@ -238,10 +238,12 @@ nav {
 .search_box img {
   cursor: pointer;
 }
-.search_box:hover {
+.search_box:hover,
+.search_box.search_box_focus {
   background-color: #186daa;
 }
-.search_box:hover .search_input {
+.search_box:hover .search_input,
+.search_box .search_input.search_input_focus {
   width: 200px;
   padding: 0 15px;
   box-sizing: border-box;

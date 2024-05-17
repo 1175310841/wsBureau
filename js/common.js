@@ -118,3 +118,19 @@ navPadLis.forEach((item) => {
 //     window.scroll(0, window.pageYOffset + step);
 //   }
 // }
+
+// 搜索框获取焦点保持父元素的hover效果
+const searchBox = document.querySelector('.search_box');
+const searchInput = document.querySelector('.search_input');
+
+searchInput.addEventListener('focus', function() {
+  searchBox.classList.add('search_box_focus');
+  searchInput.classList.add('search_input_focus');
+});
+
+searchInput.addEventListener('blur', function() {
+  setTimeout(function() {
+    searchBox.classList.remove('search_box_focus');
+    searchInput.classList.remove('search_input_focus');
+  }, 500);
+});
