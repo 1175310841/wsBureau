@@ -1206,3 +1206,12 @@ element plus
   flex: 1;
 }
 /*******************/
+.el-pager {
+  display: flex;
+  align-items: center;
+}
+.el-pager a {
+  padding: 0 6px;
+  margin: 0 5px;
+  white-space: nowrap;
+}
