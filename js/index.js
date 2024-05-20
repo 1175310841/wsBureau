@@ -52,28 +52,28 @@ setInterval(() => {
 }, 400);
 
 // 监测设备是不是电脑
-let os = (function () {
-  let ua = navigator.userAgent,
-    isWindowsPhone = /(?:Windows Phone)/.test(ua),
-    isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
-    isAndroid = /(?:Android)/.test(ua),
-    isFireFox = /(?:Firefox)/.test(ua),
-    isChrome = /(?:Chrome|CriOS)/.test(ua),
-    isTablet =
-      /(?:iPad|PlayBook)/.test(ua) ||
-      (isAndroid && !/(?:Mobile)/.test(ua)) ||
-      (isFireFox && /(?:Tablet)/.test(ua)),
-    isPhone = /(?:iPhone)/.test(ua) && !isTablet,
-    isPc = !isPhone && !isAndroid && !isSymbian;
-  return {
-    isTablet: isTablet,
-    isPhone: isPhone,
-    isAndroid: isAndroid,
-    isPc: isPc,
-  };
-})();
+// let os = (function () {
+//   let ua = navigator.userAgent,
+//     isWindowsPhone = /(?:Windows Phone)/.test(ua),
+//     isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+//     isAndroid = /(?:Android)/.test(ua),
+//     isFireFox = /(?:Firefox)/.test(ua),
+//     isChrome = /(?:Chrome|CriOS)/.test(ua),
+//     isTablet =
+//       /(?:iPad|PlayBook)/.test(ua) ||
+//       (isAndroid && !/(?:Mobile)/.test(ua)) ||
+//       (isFireFox && /(?:Tablet)/.test(ua)),
+//     isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+//     isPc = !isPhone && !isAndroid && !isSymbian;
+//   return {
+//     isTablet: isTablet,
+//     isPhone: isPhone,
+//     isAndroid: isAndroid,
+//     isPc: isPc,
+//   };
+// })();
 // console.log('os', os)
-if (os.isPc) {
+// if (os.isPc) {
   const app = document.querySelector("#app");
   let pageHeight = null;
   let footHeight = null;
@@ -154,7 +154,7 @@ if (os.isPc) {
       }, 500);
     }
   });
-}
+// }
 
 $(function () {
   let bodyWidth = document.body.clientWidth;
